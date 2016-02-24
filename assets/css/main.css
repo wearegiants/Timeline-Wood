@@ -4874,7 +4874,7 @@ input[type=button] {
   margin: auto;
   border-radius: 2px;
   overflow: hidden;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 0 75px rgba(0, 0, 0, 0.25);
   position: relative;
 }
 @media screen and (min-width: 300px) {
