@@ -4932,8 +4932,15 @@ input[type=button] {
 .header--sm {
   padding: 12.5px 0;
 }
-.header--md {
-  padding: 34.375px 0;
+@media screen and (min-width: 300px) {
+  .header--md {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 740px) {
+  .header--md {
+    padding: 34.375px 0;
+  }
 }
 .header--lg {
   padding: 75px 0;

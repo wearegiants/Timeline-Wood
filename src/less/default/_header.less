@@ -13,7 +13,13 @@
   }
   
   &--md {
-  	padding: @spaced*1.375 0;
+  	@media @min {
+  		padding: 0;	
+  	}
+  	@media @tablet {
+  		padding: @spaced*1.375 0;
+  	}
+  	
   }
   
   &--lg {
