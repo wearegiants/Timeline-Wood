@@ -1,5 +1,7 @@
 .title {
 
+  .titleFont();
+
 	&--bold {
 		font-weight: bold;
 	}
@@ -27,9 +29,17 @@
 .accent {
 
 	.accentFont();
+  font-weight: normal;
 
   &--sm {}
   &--md {}
-  &--lg {}
+  &--lg {
+    @media @min {
+      .font_size(24)
+    }
+    @media @tablet {
+      .font_size(40)
+    }
+  }
   
 }

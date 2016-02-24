@@ -1,4 +1,4 @@
-@height_default: 40px;
+@height_default: 50px;
 @height_nav:     70px;
 
 .animated(){
@@ -9,7 +9,7 @@
 }
 
 .buttons() {
-  .headerFont();
+  .mainFont();
   cursor: pointer;
   display: inline-block;
   margin: 0 0 10px 0;
@@ -37,6 +37,19 @@ input[type=button] {
 
   .buttons();
   text-decoration: none;
+
+  &.ss-gizmo {
+    &:before, &:after {
+      position: relative;
+      top: .175em;
+    }
+    &:after {
+      margin-left: 5px;
+    }
+    &:before {
+      margin-right: 5px;
+    }
+  }
 
   &--primary {
     .animated();
@@ -140,14 +153,13 @@ input[type=button] {
 
   &-mobile {
     display: block;
-    text-align: left;
     color: @white;
     font-weight: 300;
     margin: 0;
     padding: 0;
     .font_size(24);
-    height: 50px;
-    line-height: 50px;
+    height: 80px;
+    line-height: 80px;
   } 
 
   // Modifiers

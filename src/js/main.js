@@ -5,7 +5,7 @@ function mobileMenu(){
 	// Clone that thing
 	var a = $('#header-navigation').html();
 	var b = $('#mobile-menu_container').html(a);
-	$('#mobile-menu_container a').removeClass('btn-nav').addClass('btn-mobile');
+	$('#mobile-menu_container a').removeClass('btn-nav').addClass('btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-full');
 	$(".mobile-toggle").swap();
 }
 

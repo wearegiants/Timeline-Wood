@@ -18,8 +18,9 @@
 @yellow:      #FED406;
 @green:       #32B375;
 @darkgreen:   #0A693A;
-@blue:        #1CA4DE;
+@blue:        #00AEF0;
 @brown:       #9E6927;
+@red:         #FF2816;
 
 // UI
 @success:     #74C080;
@@ -40,7 +41,7 @@
 @white50:     rgba(255, 255, 255, 0.5);
 @white75:     rgba(255, 255, 255, 0.75);
 
-@black:       #333;
+@black:       #111;
 @white:       #fff;
 
 @spaced:      25px;
@@ -111,11 +112,6 @@ img.rounded {
   border-radius: 50%;
 }
 
-.centered {
-  float: none!important;
-  margin: auto!important;
-}
-
 .wrapper {
   padding: @spaced/1.5;
   &--extra {
@@ -142,6 +138,12 @@ img.rounded {
   &--bgGray {
     background: @bgGray
   }
+  &--blue {
+    background: @blue;
+  }
+  &--red {
+    background: @red;
+  }
 }
 
 .color {
@@ -153,6 +155,9 @@ img.rounded {
   }
   &--gray {
     color: @textGray
+  }
+  &--lightgray {
+    color: @gray;
   }
 }
 
@@ -215,10 +220,19 @@ img.rounded {
   z-index: 1;
 
   &__bottom {
-    top: 65%
+    top: 85%
   }
   &__top {
-    top: 35%
+    top: 15%
   }
   
+}
+
+.fl {
+  &--right {
+    float: right;
+  }
+  &--left {
+    float: left;
+  }
 }
