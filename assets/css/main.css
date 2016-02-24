@@ -4959,6 +4959,12 @@ input[type=button] {
 .footer {
   padding: 25px 0;
 }
+.footer__nav {
+  padding: 0;
+}
+.footer__nav li:before {
+  display: none;
+}
 .footer--sm {
   padding: 12.5px 0;
 }

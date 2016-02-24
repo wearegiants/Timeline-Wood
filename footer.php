@@ -9,7 +9,7 @@
 <footer id="footer" class="footer--md bg--bgGray">
 	<div class="fs-row">
 		<nav class="fs-cell fs-lg-fifth fs-md-half fs-sm-half">
-			<ul>
+			<ul class="footer__nav">
 				<li><a href="<?php echo the_permalink(7 ); ?>" class=""><?php echo get_the_title(7 ); ?></a></li>
 				<li><a href="<?php echo the_permalink(11); ?>" class=""><?php echo get_the_title(11); ?></a></li>
 				<li><a href="<?php echo the_permalink(33); ?>" class=""><?php echo get_the_title(33); ?></a></li>
@@ -18,7 +18,7 @@
 			</ul>
 		</nav>
 		<nav class="fs-cell fs-lg-fifth fs-md-half fs-sm-half">
-			<ul>
+			<ul class="footer__nav">
 				<li><a href="<?php echo the_permalink(13); ?>" class=""><?php echo get_the_title(13); ?></a></li>
 				<li><a href="<?php echo the_permalink(37); ?>" class=""><?php echo get_the_title(37); ?></a></li>
 				<li><a href="<?php echo the_permalink(39); ?>" class=""><?php echo get_the_title(39); ?></a></li>
