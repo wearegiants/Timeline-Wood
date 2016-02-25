@@ -65,7 +65,7 @@
 			<div class="fs-row">
 				<div class="fs-cell fs-all-full">
 					<div class="carousel__slide text-center">
-						<span class="quote__quote accent accent--lg color--white"><?php echo $quote['quote']; ?></span><br>
+						<span class="quote__title accent accent--lg color--white">"<?php echo $quote['quote']; ?>"</span><br>
 						<span class="quote__author accent color--white"><?php echo $quote['author']; ?></span>
 					</div>
 				</div>

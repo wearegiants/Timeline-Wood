@@ -1,12 +1,24 @@
 .footer {
 
 	padding: @spaced 0;
+  .font_size(13);
+  line-height: 1.9;
+  color: @gray;
+
+  a {
+    color: @black;
+  }
   
   &__logo {}
   
   &__nav {
     padding: 0;
     li {
+      margin: 0;
+      line-height: inherit;
+      a {
+        margin-left: 0;
+      }
       &:before {
         display: none;
       }
@@ -29,12 +41,30 @@
   	padding: @spaced*3 0;
   }
 
+  a {
+    @media @min {
+      
+    }
+    @media @tablet {
+      
+    }
+    
+  }
+
   .fl--right {
     @media @min {
       float: none;
     }
-    @media @tablet {
+    @media @mobile {
       float: right;
+    }
+  }
+
+  form {
+    label {
+      line-height: 1;
+      display: block;
+      margin-bottom: 10px;
     }
   }
   
