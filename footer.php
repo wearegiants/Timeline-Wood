@@ -31,9 +31,11 @@
 	<div class="fs-row">
 		<div class='fs-cell fs-all-full'>
 			<span class="">&copy; 2009-<?php echo date('Y'); ?> <?php bloginfo('name' );?>.</span>
+			<div class="fs-lg-hide fs-md-hide">
 			<a href="<?php echo the_permalink(18); ?>" class="">Privacy Policy</a>
 			<a href="<?php echo the_permalink(20); ?>" class="">Terms &amp; Conditions</a>
 			<a href="<?php echo the_permalink(22); ?>" class="">Cookies</a>
+			<div class="fs-lg-hide fs-md-hide">
 			<a href="<?php echo the_permalink(22); ?>" class="fl--right">+ Site Credits</a>
 		</div>
 	</div>

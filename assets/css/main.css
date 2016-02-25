@@ -5057,6 +5057,16 @@ input[type=button] {
 .footer--lg {
   padding: 75px 0;
 }
+@media screen and (min-width: 300px) {
+  .footer .fl__right {
+    float: none;
+  }
+}
+@media screen and (min-width: 740px) {
+  .footer .fl__right {
+    float: right;
+  }
+}
 #ticker {
   overflow: hidden;
   padding: 6.25px;
