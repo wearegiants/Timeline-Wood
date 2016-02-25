@@ -25,6 +25,38 @@
 	</div>
 </div>
 
+<hr class="invisible">
+
+<div class="fs-row">
+	<div class="fs-cell fs-lg-4 fs-md-3 fs-sm-full">
+		<div class="hero wallpaper bg--black relative" data-background-options='{"source":"http://i.imgur.com/6hgAqoe.jpg"}'></div>
+		<div class="text-center">
+			<br>
+			<span class="accent accent--sm color--gray">STORIES</span>
+			<h3 class="nomargin">Inside Stylist <br>Aninna Mislin's Home</h3>
+		</div>
+		<hr class="invisible">
+	</div>
+	<div class="fs-cell fs-lg-8 fs-md-3 fs-sm-full">
+		<div class="hero wallpaper bg--black relative" data-background-options='{"source":"http://i.imgur.com/Vcmy3WE.jpg"}'></div>
+		<div class="text-center">
+			<br>
+			<span class="accent accent--sm color--gray">HOW TO</span>
+			<h3 class="nomargin">Refresh your kitchen backsplash with  <br>Timeline Skinnies</h3>
+		</div>
+		<hr class="invisible">
+	</div>
+	<div class="fs-cell fs-all-full">
+		<div class="hero wallpaper bg--black relative" data-background-options='{"source":"http://i.imgur.com/5tCsSoh.jpg"}'></div>
+		<div class="text-center">
+			<br>
+			<span class="accent accent--sm color--gray">PRODUCTS</span>
+			<h3 class="nomargin">Explore our Color Series <br> Commercial Range</h3>
+		</div>
+		<hr class="invisible">
+	</div>
+</div>
+
 <div class="quotes hero hero--sm bg--blue relative">
 	<div class="centered">
 		<div class="fs-row">

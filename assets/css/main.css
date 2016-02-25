@@ -3961,6 +3961,9 @@ img.rounded {
 .fl--left {
   float: left;
 }
+.nomargin {
+  margin: 0;
+}
 *:link,
 *:visited,
 *:active,
@@ -4000,10 +4003,10 @@ h4,
 h5,
 h6 {
   font-family: 'Karla', sans-serif;
-  font-weight: 700;
+  font-weight: 400;
   color: #404040;
   line-height: inherit;
-  margin: 2% 0;
+  margin: 10px 0;
 }
 h1:first-child,
 h2:first-child,
@@ -4506,6 +4509,11 @@ table tr th {
 .accent {
   font-family: 'Karla', serif;
   font-weight: normal;
+  letter-spacing: 1px;
+}
+.accent--sm {
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
 @media screen and (min-width: 300px) {
   .accent--lg {
