@@ -30,14 +30,14 @@
 
 <header id="header" class="header header--md relative">
   <div class="fs-row">
-    <menu id="header-mobile" class="fs-cell fs-lg-2 fs-md-1 fs-sm-fourth">
-      <a data-swap-target="#mobile-menu" class="mobile-toggle btn btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</span></a>
+    <menu id="header-mobile" class="fs-cell fs-lg-third fs-md-2 fs-sm-fourth">
+      <a data-swap-target="#mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</a>
     </menu>
-    <menu id="header-main" class="fs-cell fs-lg-8 fs-md-2 fs-sm-half text-center">
-      <a href="/" id="header--logo" class="btn btn--logo btn--nav btn_first"><?php bloginfo('name' );?></a>
+    <menu id="header-main" class="fs-cell fs-lg-third fs-md-2 fs-sm-half text-center">
+      <a href="/" id="header--logo" class="btn btn--nav btn--logo btn_first"><?php bloginfo('name' );?></a>
     </menu>
-    <menu id="header-search" class="fs-cell fs-lg-2 fs-md-1 fs-sm-fourth text-right">
-      <a href="#search-modal" id="header--logo" class="open--modal btn btn--logo btn--nav btn_first ss-gizmo ss-search right"><span class="fs-sm-hide">Search</span></a>
+    <menu id="header-search" class="fs-cell fs-lg-third fs-md-2 fs-sm-fourth text-right">
+      <a href="#search-modal" id="header--logo" class="open--modal btn btn--nav btn_first ss-gizmo ss-search right"><span class="fs-sm-hide">Search</span></a>
     </menu>
     <menu id="header-navigation" class="fs-cell fs-lg-hide fs-md-hide fs-sm-hide text-right">
       <?php echo strip_tags(wp_nav_menu( $mainMenu ), '<a>' ); ?>

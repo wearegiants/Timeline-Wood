@@ -6,14 +6,14 @@
  */
 .fs_grid_row,
 .fs-grid .fs-row {
-  width: 98%;
+  width: 95%;
   margin-left: auto;
   margin-right: auto;
 }
 @media screen and (min-width: 500px) {
   .fs_grid_row,
   .fs-grid .fs-row {
-    width: 480px;
+    width: 90%;
   }
 }
 @media screen and (min-width: 740px) {
@@ -4230,8 +4230,6 @@ form input[type=url]--nav,
 form textarea--nav {
   margin-bottom: 0;
   font-weight: 400;
-  height: 70px;
-  line-height: 70px;
   background: transparent;
 }
 @media screen and (min-width: 300px) {
@@ -4242,6 +4240,8 @@ form textarea--nav {
   form input[type=url]--nav,
   form textarea--nav {
     padding: 0 5px;
+    height: 56px;
+    line-height: 56px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -4252,6 +4252,8 @@ form textarea--nav {
   form input[type=url]--nav,
   form textarea--nav {
     padding: 0 10px;
+    height: 70px;
+    line-height: 70px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -4271,18 +4273,10 @@ form input[type=tel]--logo,
 form input[type=url]--logo,
 form textarea--logo {
   background: transparent;
-  font-weight: 400;
-  height: 70px;
-  line-height: 70px;
-}
-form input[type=text]--logo:hover,
-form input[type=email]--logo:hover,
-form input[type=password]--logo:hover,
-form input[type=tel]--logo:hover,
-form input[type=url]--logo:hover,
-form textarea--logo:hover {
-  background: transparent;
-  text-decoration: none;
+  background: url('/assets/img/timeline.svg') center center no-repeat;
+  background-size: contain;
+  width: 100%;
+  text-indent: -9999px;
 }
 form input[type=text]--hamburg,
 form input[type=email]--hamburg,
@@ -4376,10 +4370,32 @@ form textarea-mobile {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  font-size: 24px;
-  font-size: 1.5rem;
-  height: 80px;
-  line-height: 80px;
+}
+@media screen and (min-width: 300px) {
+  form input[type=text]-mobile,
+  form input[type=email]-mobile,
+  form input[type=password]-mobile,
+  form input[type=tel]-mobile,
+  form input[type=url]-mobile,
+  form textarea-mobile {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 740px) {
+  form input[type=text]-mobile,
+  form input[type=email]-mobile,
+  form input[type=password]-mobile,
+  form input[type=tel]-mobile,
+  form input[type=url]-mobile,
+  form textarea-mobile {
+    text-align: center;
+    font-size: 24px;
+    font-size: 1.5rem;
+    height: 80px;
+    line-height: 80px;
+  }
 }
 form input[type=text]__first,
 form input[type=email]__first,
@@ -4594,8 +4610,6 @@ input[type=button] {
 .epm-submit-chimp--nav {
   margin-bottom: 0;
   font-weight: 400;
-  height: 70px;
-  line-height: 70px;
   background: transparent;
 }
 @media screen and (min-width: 300px) {
@@ -4603,6 +4617,8 @@ input[type=button] {
   .button--nav,
   .epm-submit-chimp--nav {
     padding: 0 5px;
+    height: 56px;
+    line-height: 56px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -4610,6 +4626,8 @@ input[type=button] {
   .button--nav,
   .epm-submit-chimp--nav {
     padding: 0 10px;
+    height: 70px;
+    line-height: 70px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -4623,15 +4641,10 @@ input[type=button] {
 .button--logo,
 .epm-submit-chimp--logo {
   background: transparent;
-  font-weight: 400;
-  height: 70px;
-  line-height: 70px;
-}
-.btn--logo:hover,
-.button--logo:hover,
-.epm-submit-chimp--logo:hover {
-  background: transparent;
-  text-decoration: none;
+  background: url('/assets/img/timeline.svg') center center no-repeat;
+  background-size: contain;
+  width: 100%;
+  text-indent: -9999px;
 }
 .btn--hamburg,
 .button--hamburg,
@@ -4698,10 +4711,26 @@ input[type=button] {
   font-weight: 300;
   margin: 0;
   padding: 0;
-  font-size: 24px;
-  font-size: 1.5rem;
-  height: 80px;
-  line-height: 80px;
+}
+@media screen and (min-width: 300px) {
+  .btn-mobile,
+  .button-mobile,
+  .epm-submit-chimp-mobile {
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .btn-mobile,
+  .button-mobile,
+  .epm-submit-chimp-mobile {
+    text-align: center;
+    font-size: 24px;
+    font-size: 1.5rem;
+    height: 80px;
+    line-height: 80px;
+  }
 }
 .btn__first,
 .button__first,
@@ -4794,6 +4823,11 @@ input[type=button] {
 @media screen and (min-width: 300px) {
   .hero {
     height: 335px;
+  }
+}
+@media screen and (min-width: 500px) {
+  .hero {
+    height: 300px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -4935,6 +4969,11 @@ input[type=button] {
 @media screen and (min-width: 300px) {
   .header--md {
     padding: 0;
+  }
+}
+@media screen and (min-width: 500px) {
+  .header--md {
+    padding: 25px 0;
   }
 }
 @media screen and (min-width: 740px) {
