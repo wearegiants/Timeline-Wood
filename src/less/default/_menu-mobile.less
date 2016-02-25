@@ -1,8 +1,16 @@
 #mobile {
 
 	&-menu {
+
 		display: none;
 		z-index: 9;
+
+		@media @min {
+			padding: @spaced*.5 0;
+		}
+		@media @tablet {
+			padding: @spaced*1.375 0;
+		}
 		
 		&.fs-swap {
 			&-active {

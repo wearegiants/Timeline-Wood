@@ -4817,6 +4817,16 @@ input[type=button] {
   display: none;
   z-index: 9;
 }
+@media screen and (min-width: 300px) {
+  #mobile-menu {
+    padding: 12.5px 0;
+  }
+}
+@media screen and (min-width: 740px) {
+  #mobile-menu {
+    padding: 34.375px 0;
+  }
+}
 #mobile-menu.fs-swap-active {
   display: block;
 }
@@ -4983,6 +4993,9 @@ input[type=button] {
 }
 .header--lg {
   padding: 75px 0;
+}
+#header.fs-swap-active {
+  background: #FEF155;
 }
 .hentry__title {
   font-weight: normal;

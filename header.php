@@ -28,10 +28,10 @@
 <body class="fs-grid">
 <div id="wrapper">
 
-<header id="header" class="header header--md relative">
+<header id="header" class="header header--md relative mobile-menu">
   <div class="fs-row">
     <menu id="header-mobile" class="fs-cell fs-lg-third fs-md-2 fs-sm-fourth">
-      <a data-swap-target="#mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</a>
+      <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</a>
     </menu>
     <menu id="header-main" class="fs-cell fs-lg-third fs-md-2 fs-sm-half text-center">
       <a href="/" id="header--logo" class="btn btn--nav btn--logo btn_first"><?php bloginfo('name' );?></a>
