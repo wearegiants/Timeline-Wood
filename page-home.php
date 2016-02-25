@@ -29,7 +29,7 @@
 	<div class="centered">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full">
-				<div class="carousel" data-carousel-options='{"controls":true,"pagination":false}'>
+				<div class="carousel carousel_fade" data-carousel-options='{"autoAdvance": true, "infinite": true, "single":true,"controls":false,"pagination":false}'>
 					<?php $quotes = get_field('quotes', 4); ?>
 					<?php foreach($quotes as $quote): ?>
 					<div class="carousel__slide text-center">
