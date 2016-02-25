@@ -57,22 +57,22 @@
 	</div>
 </div>
 
-<div class="quotes hero hero--sm bg--blue relative">
-	<div class="centered">
-		<div class="fs-row">
-			<div class="fs-cell fs-all-full">
-				<div class="carousel carousel_fade" data-carousel-options='{"autoAdvance": true, "infinite": true, "single":true,"controls":false,"pagination":false}'>
-					<?php $quotes = get_field('quotes', 4); ?>
-					<?php foreach($quotes as $quote): ?>
+<div class="carousel" data-carousel-options='{"autoAdvance": true, "infinite": true,"controls":false,"pagination":false}'>
+<?php $quotes = get_field('quotes', 4); ?>
+<?php foreach($quotes as $quote): ?>
+	<div class="quotes hero hero--sm bg--blue relative">
+		<div class="centered">
+			<div class="fs-row">
+				<div class="fs-cell fs-all-full">
 					<div class="carousel__slide text-center">
 						<span class="quote__quote accent accent--lg color--white"><?php echo $quote['quote']; ?></span><br>
 						<span class="quote__author accent color--white"><?php echo $quote['author']; ?></span>
 					</div>
-					<?php endforeach; ?>
 				</div>
 			</div>
 		</div>
 	</div>
+<?php endforeach; ?>
 </div>
 
 <?php get_footer(); ?>
