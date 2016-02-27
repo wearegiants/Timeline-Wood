@@ -21,6 +21,7 @@
 @blue:        #00AEF0;
 @brown:       #9E6927;
 @red:         #FF2816;
+@darkBlue:    #035DA9;
 
 // UI
 @success:     #74C080;
@@ -127,22 +128,25 @@ img.rounded {
 
 .bg {
   &--black {
-    background: @black;
+    background-color: @black;
   }
   &--white {
-    background: @white;
+    background-color: @white;
   }
   &--gray, &--grey {
-    background: @gray
+    background-color: @gray
   }
   &--bgGray {
-    background: @bgGray
+    background-color: @bgGray
   }
   &--blue {
-    background: @blue;
+    background-color: @blue;
+  }
+  &--darkBlue {
+    background-color: @darkBlue;
   }
   &--red {
-    background: @red;
+    background-color: @red;
   }
 }
 
@@ -158,6 +162,23 @@ img.rounded {
   }
   &--lightgray {
     color: @gray;
+  }
+}
+
+blockquote {
+  @media @min {
+    margin-left: 0;
+    padding-left: @spaced*.75;
+    margin-right: 0;
+    padding-right: @spaced*.75;
+    border-left: 2px solid @bgGray;
+  }
+  @media @tablet {
+    margin-left: 0;
+    padding-left: @spaced;
+    margin-right: 0;
+    padding-right: @spaced;
+    border-left: 2px solid @bgGray;
   }
 }
 

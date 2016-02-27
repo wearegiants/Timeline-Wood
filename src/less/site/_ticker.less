@@ -1,10 +1,22 @@
 #ticker {
 
 	overflow: hidden;
-	padding: @spaced/4;
+	height: 30px;
+	line-height: 30px;
+	text-transform: uppercase;
+	.font_size(11);
 
 	&__wrapper {
 		width: 9999px;
+		animation: marquee 50s linear infinite;
+		&:hover {
+			animation-play-state: paused
+		}
 	}
 
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0) }
+    100% { transform: translateX(-200em) }
 }

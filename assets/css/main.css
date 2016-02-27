@@ -3868,23 +3868,26 @@ img.rounded {
   width: 100%;
 }
 .bg--black {
-  background: #151515;
+  background-color: #151515;
 }
 .bg--white {
-  background: #fff;
+  background-color: #fff;
 }
 .bg--gray,
 .bg--grey {
-  background: #999999;
+  background-color: #999999;
 }
 .bg--bgGray {
-  background: #F2F2F2;
+  background-color: #F2F2F2;
 }
 .bg--blue {
-  background: #00AEF0;
+  background-color: #00AEF0;
+}
+.bg--darkBlue {
+  background-color: #035DA9;
 }
 .bg--red {
-  background: #FF2816;
+  background-color: #FF2816;
 }
 .color--black {
   color: #151515;
@@ -3897,6 +3900,24 @@ img.rounded {
 }
 .color--lightgray {
   color: #999999;
+}
+@media screen and (min-width: 300px) {
+  blockquote {
+    margin-left: 0;
+    padding-left: 18.75px;
+    margin-right: 0;
+    padding-right: 18.75px;
+    border-left: 2px solid #F2F2F2;
+  }
+}
+@media screen and (min-width: 740px) {
+  blockquote {
+    margin-left: 0;
+    padding-left: 25px;
+    margin-right: 0;
+    padding-right: 25px;
+    border-left: 2px solid #F2F2F2;
+  }
 }
 .alert {
   font-size: 15px;
@@ -4223,6 +4244,12 @@ table tr th {
     font-size: 72px;
     font-size: 4.5rem;
   }
+}
+.title.capped {
+  text-transform: uppercase;
+}
+.title.spaced {
+  letter-spacing: 1px;
 }
 .accent {
   font-family: 'Karla', serif;
@@ -4817,10 +4844,40 @@ input[type=button] {
 }
 #ticker {
   overflow: hidden;
-  padding: 6.25px;
+  height: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-size: 0.6875rem;
 }
 #ticker__wrapper {
   width: 9999px;
+  -webkit-animation: marquee 50s linear infinite;
+          animation: marquee 50s linear infinite;
+}
+#ticker__wrapper:hover {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+@-webkit-keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200em);
+            transform: translateX(-200em);
+  }
+}
+@keyframes marquee {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-200em);
+            transform: translateX(-200em);
+  }
 }
 #bag {
   position: relative;

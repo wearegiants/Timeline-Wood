@@ -1,8 +1,8 @@
 </div>
 
-<div id="ticker" class="bg--red">
-	<div id="ticker__wrapper" class="mono mono--sm color--white">
-		<?php the_field('ticker',4); ?>
+<div id="ticker" class="marquee bg--darkBlue">
+	<div id="ticker__wrapper" class="marquee-content_items mono mono--sm color--white">
+		<div><?php the_field('ticker',4); ?></div>
 	</div>
 </div>
 
@@ -51,11 +51,11 @@
 	<hr class="invisible compact">
 	<div class="fs-row">
 		<div class='fs-cell fs-all-full'>
-			<span class="">&copy; 2009-<?php echo date('Y'); ?> <?php bloginfo('name' );?>.</span>
+			<span class="">&copy; 2009-<?php echo date('Y'); ?> <?php bloginfo('name' );?>.</span>&nbsp;
 			<div class="fs-lg-hide fs-md-hide"></div>
-			<a href="<?php echo the_permalink(18); ?>" class=""><?php echo get_the_title(18); ?></a>
-			<a href="<?php echo the_permalink(20); ?>" class=""><?php echo get_the_title(20); ?></a>
-			<a href="<?php echo the_permalink(22); ?>" class=""><?php echo get_the_title(22); ?></a>
+			<a href="<?php echo the_permalink(18); ?>" class=""><?php echo get_the_title(18); ?>.</a>&nbsp;
+			<a href="<?php echo the_permalink(20); ?>" class=""><?php echo get_the_title(20); ?>.</a>&nbsp;
+			<a href="<?php echo the_permalink(22); ?>" class=""><?php echo get_the_title(22); ?>.</a>&nbsp;
 			<div class="fs-lg-hide fs-md-hide fs-sm-hide"></div>
 			<a href="<?php echo the_permalink(22); ?>" class="fl--right">+ Site Credits</a>
 		</div>
