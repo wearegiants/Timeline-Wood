@@ -13,7 +13,13 @@
   
   &__content{
   	margin-bottom: @spaced*3;
-  	.font_size(18);
+    @media @min {
+      .font_size(16);  
+    }
+    @media @desktop {
+      .font_size(18);
+    }
+  	
   }
   
   &__footer{}

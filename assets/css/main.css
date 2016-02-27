@@ -4215,7 +4215,7 @@ table tr th {
 table tr th {
   text-align: center;
 }
-@media screen and (min-width: 980px) {
+@media screen and (min-width: 300px) {
   .emphasized {
     font-size: 110%;
   }
@@ -4788,8 +4788,18 @@ input[type=button] {
 }
 .hentry__content {
   margin-bottom: 75px;
-  font-size: 18px;
-  font-size: 1.125rem;
+}
+@media screen and (min-width: 300px) {
+  .hentry__content {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 980px) {
+  .hentry__content {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 .hentry__carousel-wrapper {
   overflow: hidden;
