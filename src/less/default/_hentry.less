@@ -18,6 +18,24 @@
   
   &__footer{}
 
+  &__carousel {
+    &-wrapper {
+      overflow: hidden;
+    }
+    &-slide {
+      @media @min {
+        margin-right: @spaced;  
+      }
+      @media @tablet {
+        margin-right: @spaced*2;  
+      }
+      img {
+        display: block;
+        margin: auto;
+      }
+    }
+  }
+
   img {
   	display: block;
   	max-width: 100%;

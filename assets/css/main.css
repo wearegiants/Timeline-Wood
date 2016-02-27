@@ -4215,6 +4215,16 @@ table tr th {
 table tr th {
   text-align: center;
 }
+@media screen and (min-width: 980px) {
+  .emphasized {
+    font-size: 110%;
+  }
+}
+@media screen and (min-width: 980px) {
+  .emphasized {
+    font-size: 120%;
+  }
+}
 .title {
   font-family: 'Karla', serif;
 }
@@ -4780,6 +4790,23 @@ input[type=button] {
   margin-bottom: 75px;
   font-size: 18px;
   font-size: 1.125rem;
+}
+.hentry__carousel-wrapper {
+  overflow: hidden;
+}
+@media screen and (min-width: 300px) {
+  .hentry__carousel-slide {
+    margin-right: 25px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .hentry__carousel-slide {
+    margin-right: 50px;
+  }
+}
+.hentry__carousel-slide img {
+  display: block;
+  margin: auto;
 }
 .hentry img {
   display: block;

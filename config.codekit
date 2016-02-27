@@ -2303,6 +2303,15 @@
 		"shouldRunBless": 0,
 		"useLibsass": 0
 		},
+	"\/shopify\/timeline-wood-63212293\/assets\/timeline.css": {
+		"fileType": 16,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/shopify\/timeline-wood-63212293\/assets\/timeline.css",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
 	"\/shopify\/timeline-wood-63212293\/config\/settings_data.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -10788,6 +10797,26 @@
 		"relativeURLS": 0,
 		"shouldRunAutoprefixer": 1,
 		"shouldRunBless": 0,
+		"strictImports": 0,
+		"strictMath": 0,
+		"strictUnits": 0
+		},
+	"\/src\/less\/shopify.less": {
+		"allowInsecureImports": 0,
+		"createSourceMap": 0,
+		"disableJavascript": 0,
+		"fileType": 1,
+		"ieCompatibility": 1,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/less\/shopify.less",
+		"outputAbbreviatedPath": "\/shopify\/timeline-wood-63212293\/assets\/timeline.css",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
+		"outputStyle": 1,
+		"relativeURLS": 0,
+		"shouldRunAutoprefixer": 1,
+		"shouldRunBless": 1,
 		"strictImports": 0,
 		"strictMath": 0,
 		"strictUnits": 0
