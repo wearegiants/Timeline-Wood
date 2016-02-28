@@ -21,7 +21,18 @@ function openModal(){
 	});
 }
 
+function arrangeBlog(){
+	var $grid = $('.grid').isotope({
+		itemSelector: '.grid-item',
+		percentPosition: true,
+	});
+	$grid.imagesLoaded().progress( function() {
+  	$grid.isotope('layout');
+	});
+}
+
 $(document).ready(function(){
 	mobileMenu();
 	openModal();
+	arrangeBlog();
 });

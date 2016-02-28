@@ -11,4 +11,6 @@
 // Other Plugins
 // @codekit-prepend "../bower_components/components-modernizr/modernizr.js"
 // @codekit-prepend "../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"
+// @codekit-prepend "../bower_components/isotope/dist/isotope.pkgd.js"
+// @codekit-prepend "../bower_components/imagesloaded/imagesloaded.pkgd.js"
 // @codekit-prepend "marquee.js"

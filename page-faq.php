@@ -1,10 +1,17 @@
-<?php Themewrangler::setup_page();get_header(/***Template Name: Glossary */); ?>
+<?php 
 
-<div class="hero hero--sm bg--bgGray relative">
+	Themewrangler::setup_page();get_header(/***Template Name: Glossary */);
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
+	$thumb_url = $thumb_url_array[0];
+
+?>
+
+<div class="hero hero--sm bg--bgGray relative wallpaper" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
 	<div class="centered">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full">
-				<h2 class="title title--md text-center capped spaced"><?php the_title(); ?></h2>
+				<h2 class="title title--md text-center capped spaced color--white"><?php the_title(); ?></h2>
 			</div>
 		</div>
 	</div>

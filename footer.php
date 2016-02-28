@@ -35,9 +35,10 @@
 		</div>
 		<hr class="fs-cell fs-lg-hide fs-md-full fs-sm-3 divider">
 		<div class="fs-cell fs-xl-4 fs-lg-5 fs-md-full fs-sm-full">
-			<form>
+			<form class="footer__form relative">
 				<label class="color--black accent accent--md">Join Our Newsletter</label>
 				<input type="text" placeholder="Email Address">
+				<input type="submit" value="Submit" class="footer__form-submit bg--darkBlue">
 			</form>
 			<div class="fs-row">
 				<a href="" class="accent accent--sm fs-cell fs-all-fifth">Facebook</a>
@@ -49,15 +50,22 @@
 		</div>
 	</div>
 	<hr class="invisible compact">
-	<div class="fs-row">
+	<div class="fs-row footer__links">
 		<div class='fs-cell fs-all-full'>
 			<span class="">&copy; 2009-<?php echo date('Y'); ?> <?php bloginfo('name' );?>.</span>&nbsp;
 			<div class="fs-lg-hide fs-md-hide"></div>
-			<a href="<?php echo the_permalink(18); ?>" class=""><?php echo get_the_title(18); ?>.</a>&nbsp;
-			<a href="<?php echo the_permalink(20); ?>" class=""><?php echo get_the_title(20); ?>.</a>&nbsp;
-			<a href="<?php echo the_permalink(22); ?>" class=""><?php echo get_the_title(22); ?>.</a>&nbsp;
+			<a href="<?php echo the_permalink(13); ?>#<?php echo get_post(18)->post_name; ?>" class=""><?php echo get_the_title(18); ?>.</a>&nbsp;
+			<a href="<?php echo the_permalink(13); ?>#<?php echo get_post(20)->post_name; ?>" class=""><?php echo get_the_title(20); ?>.</a>&nbsp;
+			<a href="<?php echo the_permalink(13); ?>#<?php echo get_post(22)->post_name; ?>" class=""><?php echo get_the_title(22); ?>.</a>&nbsp;
 			<div class="fs-lg-hide fs-md-hide fs-sm-hide"></div>
-			<a href="<?php echo the_permalink(22); ?>" class="fl--right">+ Site Credits</a>
+      <span class="footer-credits fl--right text-right">
+      	<span class="footer-credits__wrapper">
+					<span class="footer-credits__link-wrapper"><a href="<?php echo the_permalink(22); ?>" class="">+ Site Credits</a></span>
+					<span class="footer-credits__link-wrapper">
+						<a target="_blank" href="#" class="">Design by 12:01</a> — 
+						<a target="_blank" href="http://wearegiants.com" class="">Code by WeAreGiants.</a></span>
+				</span>
+			</span>
 		</div>
 	</div>
 </footer>

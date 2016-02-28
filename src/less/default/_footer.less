@@ -60,11 +60,47 @@
     }
   }
 
-  form {
+  &__form {
     label {
       line-height: 1;
       display: block;
       margin-bottom: 10px;
+    }
+    &-submit {
+      position: absolute;
+      right: 10px;
+      bottom: 12px;
+      height: 32px!important;
+      width: 32px!important;
+      padding: 0!important;
+      text-indent: -9999px;
+      background-color: @darkBlue!important;
+      border-radius: 50%!important;
+    }
+  }
+
+  &__links {
+    a,span {
+      display: inline-block;
+      height: 20px;
+      line-height: 20px;
+    }
+  }
+
+  &-credits {
+    display: block;
+    height: 20px;
+    overflow: hidden;
+    &__wrapper {
+      position: relative;
+      transition: 300ms ease;
+      &:hover {
+        transform: translateY(-100%)
+      }
+    }
+
+    &__link-wrapper {
+      display: block!important;
     }
   }
   
