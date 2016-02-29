@@ -33,7 +33,7 @@
       <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</a>
     </menu>
     <menu id="header-main" class="fs-cell fs-lg-third fs-md-2 fs-sm-half text-center">
-      <a href="/" id="header--logo" class="btn btn--nav btn--logo btn_first"><?php bloginfo('name' );?></a>
+      <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo btn_first"><?php bloginfo('name' );?></a>
     </menu>
     <menu id="header-search" class="fs-cell fs-lg-third fs-md-2 fs-sm-fourth text-right">
       <a href="#search-modal" id="header--logo" class="open--modal btn btn--nav btn_first ss-gizmo ss-search right"><span class="fs-sm-hide">Search</span></a>

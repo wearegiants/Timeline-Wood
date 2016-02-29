@@ -2312,6 +2312,17 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
+	"\/shopify\/timeline-wood-63212293\/assets\/timeline.js": {
+		"fileType": 64,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/shopify\/timeline-wood-63212293\/assets\/timeline.js",
+		"outputAbbreviatedPath": "\/shopify\/timeline-wood-63212293\/assets\/min\/timeline-min.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
 	"\/shopify\/timeline-wood-63212293\/config\/settings_data.json": {
 		"fileType": 524288,
 		"ignore": 1,
@@ -11198,6 +11209,17 @@
 		"outputAbbreviatedPath": "\/src\/js\/min\/marquee-min.js",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
+		"outputStyle": 1,
+		"syntaxCheckerStyle": 1
+		},
+	"\/src\/js\/shopify.js": {
+		"fileType": 64,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/src\/js\/shopify.js",
+		"outputAbbreviatedPath": "\/shopify\/timeline-wood-63212293\/assets\/timeline.js",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 1,
 		"outputStyle": 1,
 		"syntaxCheckerStyle": 1
 		},

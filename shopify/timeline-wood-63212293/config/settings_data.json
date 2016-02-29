@@ -17,7 +17,7 @@
     "color_drawer_text": "#1a1a1a",
     "color_footer_bg": "#f9f9f9",
     "color_footer_text": "#5c5c5c",
-    "type_header_family": "Google_Karla_700_sans",
+    "type_header_family": "Google_Karla_400_sans",
     "type_header_base_size": "25px",
     "type_button_base_size": "16px",
     "type_header_transform": false,
@@ -153,7 +153,7 @@
       "type_base_size": "15px",
       "type_button_base_size": "16px",
       "type_header_base_size": "25px",
-      "type_header_family": "Google_Karla_700_sans",
+      "type_header_family": "Google_Karla_400_sans",
       "type_header_spacing": "0.05em",
       "type_header_transform": false,
       "vendor_enable": true

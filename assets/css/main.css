@@ -4412,6 +4412,12 @@ input[type=button] {
   width: 100%;
   text-indent: -9999px;
 }
+.btn--logo.shopify,
+.button--logo.shopify,
+.epm-submit-chimp--logo.shopify {
+  background: url('timeline.svg') center center no-repeat;
+  background-size: contain;
+}
 .btn--hamburg,
 .button--hamburg,
 .epm-submit-chimp--hamburg {
