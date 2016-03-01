@@ -31,6 +31,31 @@ function arrangeBlog(){
 	});
 }
 
+$(function() {
+  var masonryPreloadedInit = true;
+   // On page load, initiate Masonry
+   if($('.grid').length){		
+      var $containerPreloaded = $('.grid');   	
+      $containerPreloaded.isotope({
+         itemSelector: '.grid-item'
+         });	
+      masonryPreloadedInit = false;
+   }
+   
+   // almComplete
+   $.fn.almComplete = function(alm){
+      if($('.grid').length){
+         var $containerPreloaded = $('.grid');
+         if(!masonryPreloadedInit){
+            $containerPreloaded.isotope('reloadItems');
+            $containerPreloaded.imagesLoaded( function() {
+               $containerPreloaded.isotope();
+            });
+         }
+      }
+   };
+});
+
 $(document).ready(function(){
 	mobileMenu();
 	openModal();

@@ -6,6 +6,7 @@
 <?php get_template_part( 'parts/entry-blog'); ?>
 </div>
 <?php endwhile; endif; ?>
+<?php echo do_shortcode('[ajax_load_more preloaded="true" preloaded_amount="6" post_type="post" pause="true" scroll="false" transition="fade"]' );?>
 </div>
 
 <?php get_footer(); ?>
