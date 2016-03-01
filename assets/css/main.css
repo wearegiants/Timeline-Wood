@@ -4519,6 +4519,18 @@ input[type=button] {
 .epm-submit-chimp__full {
   width: 100%;
 }
+#load-more {
+  background-color: #FF2816;
+  color: #151515;
+  background-color: #F2F2F2;
+}
+#load-more:hover {
+  background-color: #e5e5e5;
+}
+#load-more.done {
+  pointer-events: none;
+  opacity: .5;
+}
 #error {
   position: relative;
 }
@@ -4834,6 +4846,11 @@ input[type=button] {
 }
 .hentry .alignleft {
   float: left;
+}
+.hentry__loadmore {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 .widget-title {
   margin-bottom: 5px;

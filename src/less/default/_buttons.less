@@ -188,3 +188,15 @@ input[type=button] {
   }
 
 }
+#load-more {
+  background-color: @red;
+  color: @black;
+  background-color: @bgGray;
+  &:hover {
+    background-color: darken(@bgGray, 5%)
+  }
+  &.done {
+    pointer-events: none;
+    opacity: .5;
+  }
+}
