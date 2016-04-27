@@ -58,7 +58,7 @@ $(function(){
 			
 		} else {
 		
-			$('#bagtotal').html('<div class="centertext" style="font-size:14px;">Your bag is empty!</div>');
+			$('#bagtotal').html('<div class="text-center">Your bag is empty!</div>');
 			$('#mobile_bag').html('0');
 		
 		}
