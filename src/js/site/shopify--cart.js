@@ -13,7 +13,7 @@ $(function(){
 		return objects;
 	}
 
-	$.getJSON('http://divvies.myshopify.com/cart.json?callback=?').done(function(x){
+	$.getJSON('http://timeline-wood.myshopify.com/cart.json?callback=?').done(function(x){
 		
 		//console.log(x);
 							
@@ -27,14 +27,14 @@ $(function(){
 			
 			$.each(items, function(i, item) {
 								   
-				$.getJSON('http://divvies.myshopify.com/products/' + items[i].handle + '.json?callback=?').done(function(p){
+				$.getJSON('http://timeline-wood.myshopify.com/products/' + items[i].handle + '.json?callback=?').done(function(p){
 					
 					//console.log(p);
 					
 					if (items[i].image) {
 						var image = '<div class="fs-cell fs-all-half"><img class="img-responsive" src="' + items[i].image + '" alt=""></div>';
 					} else {
-						var image = '<img src="http://industrystandardny.com/wp-content/themes/industry-standard/images/image-20.jpg" alt="">';
+						var image = '<img src="/assets/images/image-20.jpg" alt="">';
 					}
 					
 					var variant = items[i].variant_id;
@@ -47,13 +47,13 @@ $(function(){
 					
 					var price = (items[i].price / 100) * items[i].quantity;
 					
-					$('#items').append('<div class="item fs-row clearfix">' + image + '<div class="desc fs-cell fs-all-half text-left"><a href="http://shop.industrystandardny.com/products/' + items[i].handle + '">' + p.product.title + '</a><br /><span>' + p.product.options[0].name + ' ' + vartitle + '</span></div><div class="price fs-cell fs-all-half text-left">$' + price + '</div></div>');
+					$('#items').append('<div class="item fs-row clearfix">' + image + '<div class="desc fs-cell fs-all-half text-left"><a href="http://timeline-wood.myshopify.comproducts/' + items[i].handle + '">' + p.product.title + '</a><br /><span>' + p.product.options[0].name + ' ' + vartitle + '</span></div><div class="price fs-cell fs-all-half text-left">$' + price + '</div></div>');
 					
 				});
 		
 			});
 			
-			$('#bagtotal').append('<div class="total clearfix">Subtotal <span>$' + x_total + '</span></div><div class="view centertext"><a href="http://shop.industrystandardny.com/cart">View or edit your bag</a></div><a href="http://shop.industrystandardny.com/cart" class="button_link centertext"><span>Checkout</span></a>');
+			$('#bagtotal').append('<div class="total clearfix">Subtotal <span>$' + x_total + '</span></div><div class="view centertext"><a href="http://timeline-wood.myshopify.com/cart">View or edit your bag</a></div><a href="http://timeline-wood.myshopify.comcart" class="button_link centertext"><span>Checkout</span></a>');
 			$('#mobile_bag').html(x_items);
 			
 		} else {
@@ -67,12 +67,12 @@ $(function(){
 
 	$('#open_bag').click(function(e) {
 		e.preventDefault();
-		$('#bag').stop().slideDown();
+		$('#bag').addClass('is-visible');
 	});
 
 	$('#close_bag').click(function(e) {
 		e.preventDefault();
-		$('#bag').stop().slideUp();
+		$('#bag').removeClass('is-visible');
 	});
 
 	$('#toggle').click(function(e) {

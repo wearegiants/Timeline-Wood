@@ -1,3 +1,4 @@
+// @codekit-prepend "site/shopify--cart.js"
 // @codekit-prepend "site/default-ui.js"
 // @codekit-prepend "site/hero.js"
 

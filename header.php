@@ -27,8 +27,8 @@
 <body class="fs-grid">
 <div id="wrapper">
 
-<header id="header" class="header header--sm relative mobile-menu">
-  <div class="fs-row">
+<header id="header" class="relative mobile-menu relative">
+  <div class="fs-row relative header header--sm ">
     <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
       <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</a>
     </menu>
@@ -36,10 +36,8 @@
       <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo btn_first"><?php bloginfo('name' );?></a>
     </menu>
     <menu id="header-search" class="fs-cell fs-lg-fifth fs-md-fourth fs-sm-fourth text-right">
-      <ul>
-        <li><a href="#search-modal" id="header--logo" class="open--modal btn btn--nav btn_first ss-gizmo ss-search right"><span class="fs-md-hide fs-sm-hide">Search</span></a></li>
-        <li><a href="#search-modal" id="header--logo" class="open--modal btn btn--nav btn_first ss-gizmo ss-cart right"><span class="fs-md-hide fs-sm-hide">Bag</span></a></li>
-      </ul>
+      <a href="#search-modal" id="header--logo" class="open--modal btn btn--nav btn_first ss-gizmo ss-search right"><span class="fs-md-hide fs-sm-hide">Search</span></a>
+      <?php include locate_template('parts/store/shopify--bag.php' ); ?>
     </menu>
     <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-7 fs-md-hide fs-sm-hide">
       <?php echo strip_tags(wp_nav_menu( $mainMenu ), '<a>' ); ?>

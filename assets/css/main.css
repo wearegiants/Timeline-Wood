@@ -4992,11 +4992,16 @@ input[type=button] {
   }
 }
 #bag {
-  position: relative;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  opacity: 0;
+}
+#bag.is-visible {
+  opacity: 1;
 }
 #bag--wrapper {
   background: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.25);
   position: absolute;
   right: 0;
   z-index: 99;

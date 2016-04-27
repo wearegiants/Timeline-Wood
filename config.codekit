@@ -11247,7 +11247,7 @@
 		},
 	"\/src\/js\/site\/shopify--cart.js": {
 		"fileType": 64,
-		"ignore": 0,
+		"ignore": 1,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/src\/js\/site\/shopify--cart.js",
 		"outputAbbreviatedPath": "\/src\/js\/site\/min\/shopify--cart-min.js",

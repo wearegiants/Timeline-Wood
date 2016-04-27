@@ -1,6 +1,5 @@
-<a class="btn btn-nav" href="#">Cart <span id="mobile_bag"></span></a>
+<a id="open_bag" class="btn--nav btn btn__last ss-gizmo ss-cart right" href="#">Bag</a>
 <span id="bag">
-	<a href="#" class="title centertext">Your Bag</a>
 	<div id="bag--wrapper" class="wrapper text-left">
 		<div class="text fs-row">
 			<div class="fs-cell fs-full-all" id="items"></div>
