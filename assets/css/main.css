@@ -4328,17 +4328,17 @@ input[type=button] {
 .button.ss-gizmo:after,
 .epm-submit-chimp.ss-gizmo:after {
   position: relative;
-  top: .175em;
+  top: .2em;
 }
 .btn.ss-gizmo:after,
 .button.ss-gizmo:after,
 .epm-submit-chimp.ss-gizmo:after {
-  margin-left: 5px;
+  margin-left: 8px;
 }
 .btn.ss-gizmo:before,
 .button.ss-gizmo:before,
 .epm-submit-chimp.ss-gizmo:before {
-  margin-right: 5px;
+  margin-right: 8px;
 }
 .btn--primary:active,
 .button--primary:active,
@@ -4391,7 +4391,7 @@ input[type=button] {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
-    padding: 0 10px;
+    padding: 0 16px;
     height: 70px;
     line-height: 70px;
   }
@@ -4400,7 +4400,7 @@ input[type=button] {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
-    padding: 0 15px;
+    padding: 0 20px;
   }
 }
 .btn--logo,
@@ -4796,6 +4796,18 @@ input[type=button] {
 }
 #header.fs-swap-active {
   background: #FEF155;
+}
+#header-search ul {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+#header-search ul li {
+  display: inline-block;
+  margin-left: 20px;
+}
+#header-search ul li:before {
+  display: none;
 }
 .hentry__title {
   font-weight: normal;
