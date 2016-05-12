@@ -2044,10 +2044,12 @@ th {
 }
 .mfp-zoom-out-cur,
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 .mfp-zoom {
   cursor: pointer;
+  cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
 .mfp-auto-cursor .mfp-content {
@@ -4994,9 +4996,11 @@ input[type=button] {
   top: 100%;
   right: 0;
   opacity: 0;
+  z-index: -99;
 }
 #bag.is-visible {
   opacity: 1;
+  z-index: 99;
 }
 #bag--wrapper {
   background: #fff;
