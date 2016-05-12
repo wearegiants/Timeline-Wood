@@ -1,0 +1,35 @@
+.page {
+	&-title {
+		margin: 0;
+		line-height: 1.2;
+		.font_size(28);
+		color: @black;
+		text-transform: uppercase;
+		margin-bottom: @spaced;
+		span {
+			border-bottom: 2px solid @black;
+		}
+	}
+	&-content {
+		padding: @spaced 0;
+		color: @textGray;
+		font-family: georgia;
+		a {
+			color: @black;
+			text-decoration: underline;
+		}
+		p {
+			color: inherit;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		.wrapper {
+			padding-top: 0;
+			padding-bottom: 0;
+		}
+		&__wrap {
+			padding: @spaced*2.25 0;
+		}
+	}
+}

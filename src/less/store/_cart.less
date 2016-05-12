@@ -1,0 +1,69 @@
+.mfp-cart {
+
+  .mfp {
+
+    &-close {
+      color: @white;
+    }
+
+    &-content {
+      padding: 0 @spaced/2;
+    }
+
+    &-container {
+
+      background: @black;
+      right: 0;
+      left: auto;
+      padding: 0;
+      transform: translateX(100%);
+      transition: 300ms ease;
+      color: @white;
+      overflow-y: scroll; /* has to be scroll, not auto */
+      -webkit-overflow-scrolling: touch;
+
+      @media @min {
+        width: 320px;
+      }
+      @media @tablet {
+        width: 500px;
+      }
+
+      .cart {
+        &-form {
+          margin: 0;
+        }
+        &-row {
+          max-width: 100%;
+        }
+        &-title {
+          color: @white;
+          margin: 0;
+          margin-bottom: 2px;
+          line-height: 1.2;
+          text-transform: uppercase;
+          .font_size(28);
+        }
+      }
+
+    }
+
+  }
+
+  &.mfp {
+    &-bg {
+      background: none;
+    }
+  }
+
+}
+
+.is-viewing--cart {
+  overflow: hidden;
+  height: 100%;
+  .mfp-cart {
+    .mfp-container {
+      transform: translateX(0%);
+    }
+  }
+}

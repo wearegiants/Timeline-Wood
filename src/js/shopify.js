@@ -1,2 +1,2 @@
-// @codekit-prepend "../../assets/js/vendor.min.js"
-// @codekit-prepend "../../assets/js/main.min.js"
+// @codekit-prepend "vendor.js"
+// @codekit-prepend "main.js"

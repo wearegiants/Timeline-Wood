@@ -11,15 +11,35 @@ function mobileMenu(){
 }
 
 function openModal(){
-	$('.open--modal').magnificPopup({
-		type: 'inline',
-		preloader: false,
-		modal: true
-	});
-	$(document).on('click', '.popup-modal-dismiss', function (e) {
-		e.preventDefault();
-		$.magnificPopup.close();
-	});
+  $('.open--modal').magnificPopup({
+    type: 'inline',
+    preloader: false,
+    modal: true
+  });
+  $('.cart-link').magnificPopup({
+    type: 'ajax',
+    midClick: true,
+    removalDelay: 1000,
+    alignTop: true,
+    overflowY: 'scroll',
+    //modal: true,
+    mainClass: 'mfp-cart fs-grid',
+    callbacks: {
+      parseAjax: function(mfpResponse) {
+        mfpResponse.data = $(mfpResponse.data).find('#cart');
+      },
+      ajaxContentAdded: function() {
+        $('body').addClass('is-viewing--cart');
+      },
+      beforeClose: function() {
+        $('body').removeClass('is-viewing--cart');  
+      }
+    }
+  });
+  $(document).on('click', '.popup-modal-dismiss', function (e) {
+    e.preventDefault();
+    $.magnificPopup.close();
+  });
 }
 
 function arrangeBlog(){
