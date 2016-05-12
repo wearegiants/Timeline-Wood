@@ -1,0 +1,9 @@
+<div class="nav-band">
+  <div class="fs-row">
+    <div class="fs-cell fs-lg-10 fs-md-6 fs-sm-3 fs-centered">
+      {% for collection in collections %}
+      <div class="fs-cell fs-lg-fourth fs-md-fourth fs-sm-half fs-contained text-center"><a href="{{ collection.url }}">{{ collection.title }}</a></div>
+      {% endfor %}
+    </div>
+  </div>
+</div>

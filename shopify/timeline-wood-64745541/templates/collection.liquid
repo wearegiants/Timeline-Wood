@@ -1,0 +1,15 @@
+<div id="collection" class="header--lg">
+  <div class="fs-row">
+    <div class="fs-cell fs-all-full">
+
+{% for product in collection.products %}
+
+      <div class="fs-cell fs-lg-third fs-md-half fs-sm-full fs-contained">
+        {% include 'product-grid-item' with products_per_row %}
+      </div>
+      
+{% endfor %}
+
+    </div>
+  </div>
+</div>

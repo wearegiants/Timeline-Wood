@@ -1,0 +1,21 @@
+<h1 class="product-title" itemprop="name">{{ product.title }}</h1>
+
+<div class="product-price" id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="delta">
+  <meta itemprop="priceCurrency" content="{{ shop.currency }}" />
+  {% if product.available %}
+  <link itemprop="availability" href="http://schema.org/InStock" />
+  {% else %}
+  <link itemprop="availability" href="http://schema.org/OutOfStock" />
+  {% endif %}
+  <span class="color--black">
+    {% assign variant = product.selected_or_first_available_variant %}
+    {% if product.compare_at_price > product.price %}
+    <span class="product-price on-sale" itemprop="price">{{ variant.price | money }}</span>
+    <s class="product-compare-price">{{ variant.compare_at_price | money }}</s>
+    {% else %}
+    <span class="product-price" itemprop="price">{{ variant.price | money }}</span>
+    {% endif %}
+  </span>
+</div>
+
+<hr class="invisible compact">
