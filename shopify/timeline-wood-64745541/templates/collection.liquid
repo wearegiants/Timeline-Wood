@@ -1,15 +1,17 @@
-<div id="collection" class="header--lg">
-  <div class="fs-row">
-    <div class="fs-cell fs-all-full">
-
-{% for product in collection.products %}
-
-      <div class="fs-cell fs-lg-third fs-md-half fs-sm-full fs-contained">
-        {% include 'product-grid-item' with products_per_row %}
-      </div>
-      
-{% endfor %}
-
+<div id="collection">
+  <div class="hero hero--sm wallpaper" data-background-options='{"source":"{{ collection.image | img_url: '2048x2048' }}"}'>
+    <div class="centered text-center">
+      <h3 class="color--white">{{ collection.title | upcase }}</h3>
+      <span class="color--white">For your skinny days</span>
     </div>
+  </div>
+  <hr class="invisible">
+  <div class="fs-row">
+    {% for product in collection.products %}
+    <div class="fs-cell fs-lg-third fs-md-half fs-sm-full">
+      {% include 'product-grid-item' with products_per_row %}
+      <hr class="invisible">
+    </div>
+    {% endfor %}
   </div>
 </div>

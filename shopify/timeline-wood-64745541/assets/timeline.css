@@ -5075,7 +5075,7 @@ input[type=button] {
 .nav-band {
   padding: 18.75px 0;
   background: #fce7e4;
-  margin-bottom: 50px;
+  margin-bottom: 0;
 }
 .page-title {
   margin: 0;
