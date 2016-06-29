@@ -5,6 +5,7 @@
     <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
     <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
 
+    {% unless collection.title == '' %}<h4>{{ collection.title }}</h4>{% endunless %}
     <h1 class="product-title" itemprop="name">{{ product.title }}</h1>
 
     <div class="product-price" id="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer" class="delta">
