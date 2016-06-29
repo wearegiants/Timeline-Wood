@@ -4365,9 +4365,12 @@ input[type=button] {
   color: inherit;
   padding: 0;
   font-weight: normal;
-  border-bottom: 1px solid;
+  border-bottom: 1px solid #EB7366;
   border-radius: 0;
   margin: 0;
+  height: 25px;
+  line-height: 25px;
+  color: #EB7366;
 }
 .btn--nav,
 .button--nav,
@@ -4994,9 +4997,11 @@ input[type=button] {
   top: 100%;
   right: 0;
   opacity: 0;
+  z-index: -99;
 }
 #bag.is-visible {
   opacity: 1;
+  z-index: 99;
 }
 #bag--wrapper {
   background: #fff;

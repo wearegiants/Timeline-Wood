@@ -10,6 +10,14 @@ function mobileMenu(){
 	$(".mobile-toggle").swap();
 }
 
+function scrollFixed(){
+  //$('.product-info').scrollToFixed( { bottom: 0, limit: $('.product-page__footer').offset().top } );
+
+  $('.product-info').scrollToFixed({ 
+      //limit: $('.product-page__footer').offset().top 
+  });
+}
+
 function openModal(){
   $('.open--modal').magnificPopup({
     type: 'inline',
@@ -81,4 +89,5 @@ $(document).ready(function(){
 	mobileMenu();
 	openModal();
 	arrangeBlog();
+  scrollFixed();
 });
