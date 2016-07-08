@@ -32,7 +32,7 @@ $(function(){
 					//console.log(p);
 					
 					if (items[i].image) {
-						var image = '<div class="fs-cell fs-all-half"><img class="img-responsive" src="' + items[i].image + '" alt=""></div>';
+						var image = '<div class="fs-cell fs-all-third"><img class="img-responsive" src="' + items[i].image + '" alt=""></div>';
 					} else {
 						var image = '<img src="/assets/images/image-20.jpg" alt="">';
 					}
@@ -47,13 +47,13 @@ $(function(){
 					
 					var price = (items[i].price / 100) * items[i].quantity;
 					
-					$('#items').append('<div class="item fs-row clearfix">' + image + '<div class="desc fs-cell fs-all-half text-left"><a href="http://timeline-wood.myshopify.comproducts/' + items[i].handle + '">' + p.product.title + '</a><br /><span>' + p.product.options[0].name + ' ' + vartitle + '</span></div><div class="price fs-cell fs-all-half text-left">$' + price + '</div></div>');
+					$('#items').append('<div class="item fs-row clearfix">' + image + '<div class="desc fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left"><a href="http://timeline-wood.myshopify.comproducts/' + items[i].handle + '">' + p.product.title + '</a></div><div class="price fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left">$' + price + '</div></div>');
 					
 				});
 		
 			});
 			
-			$('#bagtotal').append('<div class="total clearfix">Subtotal <span>$' + x_total + '</span></div><div class="view centertext"><a href="http://timeline-wood.myshopify.com/cart">View or edit your bag</a></div><a href="http://timeline-wood.myshopify.com/cart" class="button_link centertext"><span>Checkout</span></a>');
+			$('#bagtotal').append('<div class="bag-meta text-right"><div class="total clearfix">Subtotal <span>$' + x_total + '</span></div><small>Shipping and taxes calculated at checkout</small></div><a href="http://timeline-wood.myshopify.com/cart" class="button_link bag-checkout btn btn--full centertext"><span class="ss-gizmo ss-right right">Checkout</span></a>');
 			$('#mobile_bag').html(x_items);
 			
 		} else {

@@ -3737,7 +3737,7 @@ img.rounded {
   background-color: #F2F2F2;
 }
 .bg--blue {
-  background-color: #00AEF0;
+  background-color: #0C5FA8;
 }
 .bg--darkBlue {
   background-color: #035DA9;
@@ -4865,40 +4865,100 @@ input[type=button] {
             transform: translateX(-200em);
   }
 }
-#bag {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  opacity: 0;
-  z-index: -99;
+.bag-checkout {
+  background: #0C5FA8;
+  color: #fff;
 }
-#bag.is-visible {
-  opacity: 1;
-  z-index: 99;
+.bag-checkout span:after {
+  position: relative;
+  top: .125em;
+  margin-left: 8px;
 }
-#bag--wrapper {
-  background: #fff;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
-  position: absolute;
-  right: 0;
-  z-index: 99;
-  -webkit-transform: translateY(-25px);
-          transform: translateY(-25px);
+.bag-meta {
+  border-top: 1px solid #E7E7EC;
+  margin: 25px 0;
+  padding-top: 25px;
+}
+.bag-meta .total {
+  color: #151515;
 }
 @media screen and (min-width: 300px) {
-  #bag--wrapper {
+  .bag-header {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .bag-header {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+@media screen and (min-width: 300px) {
+  .bag-wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .bag-wrapper {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+.bag-divider.top {
+  margin-top: 0;
+}
+.bag-close {
+  position: relative;
+}
+.bag-close a {
+  padding-right: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.bag-close a:after {
+  position: relative;
+  top: .125em;
+  position: absolute;
+  font-size: 32px;
+  font-size: 2rem;
+  top: 3px;
+  right: 0;
+}
+#bag {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  right: 0;
+  background: #F2F2F2;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: 300ms ease;
+  transition: 300ms ease;
+  z-index: 99;
+}
+@media screen and (min-width: 300px) {
+  #bag {
     width: 300px;
   }
 }
 @media screen and (min-width: 740px) {
-  #bag--wrapper {
+  #bag {
     width: 400px;
   }
+}
+#bag.is-visible {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
 }
 #bag img {
   display: block;
   max-width: 100%;
   height: auto;
+}
+#bag--wrapper {
+  padding-top: 0;
 }
 .collection-item__thumb {
   margin-bottom: 12.5px;
