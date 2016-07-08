@@ -1216,300 +1216,6 @@
 }
 /**
 	 * @class
-	 * @name .fs-checkbox-element
-	 * @type element
-	 * @description Target elmement
-	 */
-/**
-	 * @class
-	 * @name .fs-checkbox
-	 * @type element
-	 * @description Base widget class
-	 */
-/**
-	 * @class
-	 * @name .fs-checkbox.fs-checkbox-checked
-	 * @type modifier
-	 * @description Indicates checked state
-	 */
-/**
-	 * @class
-	 * @name .fs-checkbox.fs-checkbox-radio
-	 * @type modifier
-	 * @description Indicates radio interface
-	 */
-/**
-	 * @class
-	 * @name .fs-checkbox.fs-checkbox-toggle
-	 * @type modifier
-	 * @description Indicates toggle interface
-	 */
-/**
-	 * @class
-	 * @name .fs-checkbox.fs-checkbox-focus
-	 * @type modifier
-	 * @description Indicates focused state
-	 */
-/**
-	 * @class
-	 * @name .fs-checkbox.fs-checkbox-disabled
-	 * @type modifier
-	 * @description Indicates disabled state
-	 */
-.fs-checkbox {
-  /**
-		 * @class
-		 * @name .fs-checkbox-enabled
-		 * @type modifier
-		 * @description Indicates enabled state
-		 */
-  /**
-		 * @class
-		 * @name .fs-checkbox-label
-		 * @type element
-		 * @description Label element
-		 */
-  /**
-		 * @class
-		 * @name .fs-checkbox-marker
-		 * @type element
-		 * @description Marker element
-		 */
-  /**
-		 * @class
-		 * @name .fs-checkbox-flag
-		 * @type element
-		 * @description Flag element
-		 */
-}
-.fs-checkbox.fs-checkbox-enabled {
-  cursor: pointer;
-  margin: 0 0 10px 0;
-  overflow: hidden;
-}
-.fs-checkbox.fs-checkbox-enabled:focus {
-  box-shadow: none;
-  outline: none;
-}
-.fs-checkbox,
-.fs-checkbox:after,
-.fs-checkbox:before,
-.fs-checkbox *,
-.fs-checkbox *:after,
-.fs-checkbox *:before {
-  box-sizing: border-box;
-  -webkit-transition: none;
-  transition: none;
-  -webkit-user-select: none !important;
-     -moz-user-select: none !important;
-      -ms-user-select: none !important;
-          user-select: none !important;
-}
-.fs-checkbox-element_wrapper {
-  position: relative;
-  border: 0;
-  height: 0;
-  margin: 0;
-  opacity: 0;
-  overflow: hidden;
-  padding: 0;
-  width: 0;
-}
-.fs-checkbox-element {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  pointer-events: none;
-  -webkit-transition: none;
-  transition: none;
-}
-.fs-checkbox-label {
-  color: #666;
-  cursor: pointer;
-  display: block;
-  font-size: 14px;
-  line-height: 20px;
-  overflow: hidden;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-}
-.fs-checkbox-marker {
-  width: 20px;
-  height: 20px;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  cursor: pointer;
-  display: block;
-  float: left;
-  margin: 0 10px 0 0;
-}
-.fs-checkbox-flag {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-.fs-checkbox-flag:before {
-  width: 5px;
-  height: 10px;
-  border: 2px solid #999;
-  border-top: 0;
-  border-left: 0;
-  content: '';
-  display: block;
-  margin: 3px 0 0 6px;
-  -webkit-transition: -webkit-transform 0.15s ease;
-  transition: -webkit-transform 0.15s ease;
-  transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
-  -webkit-transform: rotate(45deg) scale(0);
-          transform: rotate(45deg) scale(0);
-}
-.fs-checkbox-checked .fs-checkbox-flag:before {
-  -webkit-transform: rotate(45deg) scale(1);
-          transform: rotate(45deg) scale(1);
-}
-.no-csstransforms .fs-checkbox-flag:before {
-  width: 100%;
-  height: 100%;
-  content: "\2713";
-  display: none;
-  line-height: 1;
-  text-align: center;
-}
-.no-csstransforms .fs-checkbox-checked .fs-checkbox-flag:before {
-  display: block;
-}
-.fs-checkbox-radio .fs-checkbox-marker {
-  border-radius: 100%;
-}
-.fs-checkbox-radio .fs-checkbox-flag {
-  background: #999;
-  border: 3px solid #fff;
-  border-radius: 100%;
-  -webkit-transform: scale(0);
-          transform: scale(0);
-  -webkit-transition: -webkit-transform 0.15s ease;
-  transition: -webkit-transform 0.15s ease;
-  transition: transform 0.15s ease;
-  transition: transform 0.15s ease, -webkit-transform 0.15s ease;
-}
-.fs-checkbox-radio .fs-checkbox-flag:before {
-  display: none;
-}
-.fs-checkbox-radio.fs-checkbox-checked .fs-checkbox-flag {
-  -webkit-transform: scale(1);
-          transform: scale(1);
-}
-.fs-checkbox-radio.fs-checkbox-checked .fs-checkbox-flag:before {
-  display: none;
-}
-.no-csstransforms .fs-checkbox-radio .fs-checkbox-flag:before {
-  display: none;
-}
-.no-csstransforms .fs-checkbox-radio.fs-checkbox-checked .fs-checkbox-flag:before {
-  display: block;
-}
-.fs-checkbox-focus .fs-checkbox-label {
-  color: #333;
-}
-.fs-checkbox-focus .fs-checkbox-marker {
-  border-color: #999;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-}
-.fs-checkbox-disabled {
-  cursor: default;
-  opacity: 0.5;
-}
-.fs-checkbox-disabled .fs-checkbox-label {
-  color: #666;
-  cursor: default;
-}
-.fs-checkbox-disabled .fs-checkbox-marker {
-  border-color: #ccc;
-  cursor: default;
-}
-.fs-checkbox-toggle {
-  position: relative;
-}
-.fs-checkbox-toggle .fs-checkbox-label {
-  line-height: 40px;
-}
-.fs-checkbox-toggle .fs-checkbox-marker {
-  width: 100px;
-  height: 40px;
-  position: relative;
-  border-radius: 3px;
-}
-.fs-checkbox-toggle .fs-checkbox-marker:after {
-  clear: both;
-  content: '';
-  display: table;
-}
-.fs-checkbox-toggle .fs-checkbox-flag {
-  width: 50%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #999;
-  border: 2px solid #fff;
-  border-radius: 3px;
-  display: block;
-  margin: 0;
-  -webkit-transition: left 0.15s ease;
-  transition: left 0.15s ease;
-}
-.fs-checkbox-toggle .fs-checkbox-flag:before {
-  display: none;
-}
-.fs-checkbox-toggle .fs-checkbox-flag:after {
-  width: 2px;
-  height: 10px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: #fff;
-  box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
-  content: '';
-  margin: auto;
-  opacity: 0.75;
-}
-.no-touch .fs-checkbox-toggle:hover .fs-checkbox-flag:after {
-  opacity: 1;
-}
-.fs-checkbox-toggle.fs-checkbox-checked .fs-checkbox-flag {
-  left: 50%;
-}
-.fs-checkbox-toggle.fs-checkbox-checked .fs-checkbox-flag:before {
-  display: none;
-}
-.fs-checkbox-toggle.fs-checkbox-disabled .fs-checkbox-flag:after {
-  display: none;
-}
-.fs-checkbox-toggle .fs-checkbox-state {
-  width: 50%;
-  color: #666;
-  display: block;
-  font-size: 12px;
-  line-height: 40px;
-  margin: 0;
-  text-align: center;
-  text-transform: uppercase;
-}
-.fs-checkbox-toggle .fs-checkbox-state_on {
-  float: left;
-}
-.fs-checkbox-toggle .fs-checkbox-state_off {
-  float: right;
-}
-/**
-	 * @class
 	 * @name .fs-background-element
 	 * @type element
 	 * @description Target elmement
@@ -1629,6 +1335,158 @@
 .fs-background-embed.fs-background-ready iframe {
   z-index: 0;
 }
+/**
+	 * @class
+	 * @name .fs-number-element
+	 * @type element
+	 * @description Target elmement
+	 */
+/**
+	 * @class
+	 * @name .fs-number
+	 * @type element
+	 * @description Base widget class
+	 */
+/**
+	 * @class
+	 * @name .fs-number.fs-number-disabled
+	 * @type modifier
+	 * @description Indicates disabled state
+	 */
+.fs-number {
+  position: relative;
+  border-radius: 3px;
+  margin: 0 0 10px 0;
+  overflow: hidden;
+  /**
+		 * @class
+		 * @name .fs-number-arrow
+		 * @type element
+		 * @description Arrow elmement
+		 */
+  /**
+		 * @class
+		 * @name .fs-number-arrow:after
+		 * @type element
+		 * @description Arrow icon
+		 */
+  /**
+		 * @class
+		 * @name .fs-number-arrow.fs-number-up
+		 * @type modifier
+		 * @description Indicates up state
+		 */
+  /**
+		 * @class
+		 * @name .fs-number-arrow.fs-number-down
+		 * @type modifier
+		 * @description Indicates up state
+		 */
+}
+.fs-number,
+.fs-number:after,
+.fs-number:before,
+.fs-number *,
+.fs-number *:after,
+.fs-number *:before {
+  box-sizing: border-box;
+  -webkit-transition: none;
+  transition: none;
+}
+.fs-number-element {
+  width: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  color: #222;
+  font-size: 15px;
+  line-height: 1;
+  overflow: hidden;
+  padding: 0 10px;
+  -moz-appearance: textfield;
+}
+.fs-number-element::-webkit-inner-spin-button,
+.fs-number-element::-webkit-outer-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+}
+.fs-number-element::-ms-clear {
+  display: none;
+}
+.fs-number-element:focus {
+  background-color: #fff;
+}
+.fs-number-disabled .fs-number-element {
+  background: #fff;
+  border-color: #ccc;
+  color: #ccc;
+}
+.fs-number-arrow {
+  width: 25px;
+  height: 50%;
+  position: absolute;
+  right: 0;
+  z-index: 1;
+  background: #fff;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  display: block;
+  overflow: hidden;
+  text-indent: 200%;
+  white-space: nowrap;
+}
+.no-opacity .fs-number-arrow {
+  text-indent: -999999px;
+}
+.fs-number-arrow:focus {
+  outline: none;
+}
+.fs-number-arrow:after {
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  content: '';
+  display: block;
+  margin: auto;
+}
+.fs-number-arrow.fs-number-up {
+  top: 0;
+}
+.fs-number-arrow.fs-number-up:after {
+  border-bottom: 5px solid #666;
+}
+.fs-number-arrow.fs-number-down {
+  bottom: 0;
+  border-top: none;
+}
+.fs-number-arrow.fs-number-down:after {
+  border-top: 5px solid #666;
+}
+.fs-number-disabled .fs-number-arrow {
+  cursor: default;
+}
+.fs-number-disabled .fs-number-arrow:after {
+  border-top-color: #ccc;
+  border-bottom-color: #ccc;
+}
+/*
+	@media screen and (min-width: 740px) {
+		.stepper:hover .stepper-input { background-color: #fff; }
+
+		.stepper .stepper-step:hover { background-color: #F9F9F9; }
+
+		.stepper.disabled .stepper-arrow { background: #fff; border-color: #eee; cursor: default; }
+	}
+
+	.stepper.disabled .stepper-input { background: #fff; border-color: #eee; color: #ccc; }
+	.stepper.disabled .stepper-arrow { background: #fff; border-color: #eee; cursor: default; }
+*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
@@ -3887,6 +3745,9 @@ img.rounded {
 .bg--red {
   background-color: #FF2816;
 }
+.bg--orange {
+  background-color: #EB7366;
+}
 .color--black {
   color: #151515;
 }
@@ -3982,6 +3843,9 @@ img.rounded {
 }
 .nomargin {
   margin: 0;
+}
+.hidden {
+  display: none;
 }
 *:link,
 *:visited,
@@ -4507,17 +4371,26 @@ input[type=button] {
 }
 .btn__first,
 .button__first,
-.epm-submit-chimp__first {
+.epm-submit-chimp__first,
+.btn--first,
+.button--first,
+.epm-submit-chimp--first {
   padding-left: 0;
 }
 .btn__last,
 .button__last,
-.epm-submit-chimp__last {
+.epm-submit-chimp__last,
+.btn--last,
+.button--last,
+.epm-submit-chimp--last {
   padding-right: 0;
 }
 .btn__full,
 .button__full,
-.epm-submit-chimp__full {
+.epm-submit-chimp__full,
+.btn--full,
+.button--full,
+.epm-submit-chimp--full {
   width: 100%;
 }
 #load-more {
@@ -5005,9 +4878,12 @@ input[type=button] {
 }
 #bag--wrapper {
   background: #fff;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.25);
   position: absolute;
   right: 0;
   z-index: 99;
+  -webkit-transform: translateY(-25px);
+          transform: translateY(-25px);
 }
 @media screen and (min-width: 300px) {
   #bag--wrapper {
@@ -5035,6 +4911,28 @@ input[type=button] {
     padding: 0 25px;
   }
 }
+.product-collection {
+  margin-top: 0;
+}
+.product-collection a {
+  color: #999999;
+}
+.product-collection a:hover {
+  color: #666666;
+}
+.product-title {
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.product-add__btn {
+  background: #EB7366 !important;
+  margin-bottom: 0!important;
+}
+.product-sku {
+  color: #999999;
+  display: block;
+  margin-top: 10px;
+}
 .product-item__header {
   padding-top: 12.5px;
 }
@@ -5057,7 +4955,19 @@ input[type=button] {
   transition: opacity 1200ms ease;
 }
 .product-item__price {
-  right: 0;
+  font-size: 20px;
+  font-size: 1.25rem;
+  box-shadow: inset 0 0 0 1px #151515;
+  height: 50px;
+  line-height: 50px;
+  display: inline-block;
+  padding: 0 25px;
+}
+.product-item__sku {
+  display: block;
+  position: relative;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
 }
 .product-item:hover .product-item__info {
   opacity: 1;
@@ -5115,6 +5025,16 @@ input[type=button] {
 }
 .page-content__wrap {
   padding: 56.25px 0;
+}
+.cart-header {
+  padding-bottom: 25px;
+}
+.cart-item__qty .quantity {
+  max-width: 100%;
+  display: block;
+  padding: 8px;
+  text-align: center;
+  box-shadow: 0 0 0 1px #CBCBD2;
 }
 .mfp-cart .mfp-close {
   color: #fff;

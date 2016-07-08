@@ -1,14 +1,16 @@
 <div class="product-item relative">
-  <a class="product-item__link covered" href="{{ product.url | within: collection }}"></a>
-  <div class="product-item__info covered">
-    <div class="centered text-center">
-      <!--<div class="product-item__sku">{{ product.price | money }}</div>-->
-      <div class="product-item__price">{{ product.price | money }}</div>
+  <div class="relative">
+    <a class="product-item__link covered" href="{{ product.url | within: collection }}"></a>
+    <div class="product-item__info covered">
+      <div class="centered text-center">
+        <div class="product-item__price">{{ product.price | money }}</div>
+        <small class="product-item__sku">SKU: {{ product.variants.first.sku }}</small>
+      </div>
     </div>
-  </div>
-  <div class="product-item__thumb">
-    <img class="product-item__image product-item__image--first img-responsive" src="{{ product.featured_image.src | img_url: '2048x2048' }}" alt="{{ product.featured_image.alt | escape }}">
-    {% comment %}<img class="product-item__image product-item__image--second img-responsive" src="{{ product.images[1] | product_img_url: '1024x1024' }}" alt="{{ product.featured_image.alt | escape }}">{% endcomment %}
+    <div class="product-item__thumb">
+      <img class="product-item__image product-item__image--first img-responsive" src="{{ product.featured_image.src | img_url: '2048x2048' }}" alt="{{ product.featured_image.alt | escape }}">
+      {% comment %}<img class="product-item__image product-item__image--second img-responsive" src="{{ product.images[1] | product_img_url: '1024x1024' }}" alt="{{ product.featured_image.alt | escape }}">{% endcomment %}
+    </div>
   </div>
   <header class="text-center product-item__header">
     <h2 class="product-item__title">{{ product.title }}</h2>

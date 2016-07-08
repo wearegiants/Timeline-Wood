@@ -1,4 +1,5 @@
 <div id="collection">
+  {% unless collection.products.size == 0 %}
   <div class="hero hero--sm wallpaper" data-background-options='{"source":"{{ collection.image | img_url: '2048x2048' }}"}'>
     <div class="centered text-center">
       <h3 class="color--white">{{ collection.title | upcase }}</h3>
@@ -14,4 +15,13 @@
     </div>
     {% endfor %}
   </div>
+  {% else %}
+  <div class="fs-row">
+    <div class="fs-cell fs-all-full">
+      <div class="hero relative">
+        <h2 class="centered text-center">Sorry, nothing in this collection yet.</h2>
+      </div>
+    </div>
+  </div>
+  {% endunless %}
 </div>

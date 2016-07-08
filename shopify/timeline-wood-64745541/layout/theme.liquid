@@ -35,7 +35,10 @@
 <div id="wrapper">
 {% include 'header' %}
 <div id="content-wrapper" class='fs-grid'>
+
+{% if template == 'collection' or template == 'product' or template == 'index' %}
 {% include 'nav_band' %}
+{% endif %}
 
 {% unless template == 'collection' %}
 <hr class="invisible">

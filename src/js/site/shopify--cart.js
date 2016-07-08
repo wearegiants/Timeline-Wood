@@ -53,7 +53,7 @@ $(function(){
 		
 			});
 			
-			$('#bagtotal').append('<div class="total clearfix">Subtotal <span>$' + x_total + '</span></div><div class="view centertext"><a href="http://timeline-wood.myshopify.com/cart">View or edit your bag</a></div><a href="http://timeline-wood.myshopify.comcart" class="button_link centertext"><span>Checkout</span></a>');
+			$('#bagtotal').append('<div class="total clearfix">Subtotal <span>$' + x_total + '</span></div><div class="view centertext"><a href="http://timeline-wood.myshopify.com/cart">View or edit your bag</a></div><a href="http://timeline-wood.myshopify.com/cart" class="button_link centertext"><span>Checkout</span></a>');
 			$('#mobile_bag').html(x_items);
 			
 		} else {

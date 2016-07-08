@@ -89,5 +89,5 @@ $(document).ready(function(){
 	mobileMenu();
 	openModal();
 	arrangeBlog();
-  scrollFixed();
+  //scrollFixed();
 });
