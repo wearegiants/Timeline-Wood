@@ -9,12 +9,12 @@
     <hr class="invisible" />
 
     <div class="fs-row cart-header">
-      <div class="fs-cell fs-lg-10 fs-md-6 fs-sm-3 fs-centered">
+      <div class="fs-cell fs-lg-10 fs-md-6 fs-sm-hide fs-centered">
         <div class="fs-row">
-          <div class="cart-item__desc fs-cell fs-lg-10 fs-lg-push-2 fs-md-4 fs-md-push-2 fs-sm-half">
-            <div class="fs-cell fs-lg-7 fs-md-3 fs-sm-half">&nbsp;</div>
-            <div class="fs-cell fs-lg-2 fs-md-2 fs-sm-1"><small>QUANTITY</small></div>
-            <div class="fs-cell fs-lg-3 fs-md-2 fs-sm-1"><div class="text-right"><small>TOTAL</small></div></div>
+          <div class="cart-item__desc fs-cell fs-lg-10 fs-lg-push-2 fs-md-4 fs-md-push-2 fs-sm-half fs-sm-push-half">
+            <div class="fs-cell fs-lg-7 fs-md-4 fs-sm-1">&nbsp;</div>
+            <div class="fs-cell fs-lg-2 fs-md-1 fs-sm-1"><small>QTY</small></div>
+            <div class="fs-cell fs-lg-3 fs-md-1 fs-sm-1"><div class="text-right"><small>TOTAL</small></div></div>
           </div>
         </div>
         <hr class="divider compact" />
@@ -26,20 +26,20 @@
       <div class="fs-cell fs-lg-10 fs-md-6 fs-sm-3 fs-centered">
         {% for item in cart.items %}
         <div class="cart-item fs-row cart-row relative">
-          <div class="cart-item__thumb fs-cell fs-lg-2 fs-md-2 fs-sm-half">
+          <div class="cart-item__thumb fs-cell fs-lg-2 fs-md-2 fs-sm-1">
             <img class="img-responsive" src="{{ item | img_url: 'large' }}"  alt="{{ item.title | escape }}" />
           </div>
           <div class="centered">
-            <div class="cart-item__desc fs-cell fs-lg-10 fs-lg-push-2 fs-md-4 fs-md-push-2 fs-sm-half">
+            <div class="cart-item__desc fs-cell fs-lg-10 fs-lg-push-2 fs-md-4 fs-md-push-2 fs-sm-2 fs-sm-push-1">
               <div class="fs-row">
-                <div class="fs-cell fs-lg-7 fs-md-3 fs-sm-half"><span class="cart-item__title">
+                <div class="fs-cell fs-lg-7 fs-md-3 fs-sm-3"><span class="cart-item__title">
                   <div class="cart-item__title">{{ item.title }}</div>
                   <a href="/cart/change?line={{ forloop.index }}&amp;quantity=0" class="btn btn--link"><small>Remove</small></a>
                 </span></div>
-                <div class="fs-cell fs-lg-2 fs-md-2 fs-sm-1"><span class="cart-item__qty">
+                <div class="fs-cell fs-lg-2 fs-md-2 fs-sm-3"><span class="cart-item__qty">
                   <input type="number" min="0" size="3" maxlength="3" class="quantity" name="updates[]" id="updates_{{ item.id }}" value="{{ item.quantity }}" />
                 </span></div>
-                <div class="fs-cell fs-lg-3 fs-md-2 fs-sm-1"><div class="text-right"><span class="cart-item__price">{{ item.price | money }}</span></div></div>
+                <div class="fs-cell fs-lg-3 fs-md-2 fs-sm-3"><div class="text-right"><span class="cart-item__price">{{ item.price | money }}</span></div></div>
               </div>
             </div>
           </div>

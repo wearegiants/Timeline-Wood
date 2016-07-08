@@ -4952,6 +4952,12 @@ input[type=button] {
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
+#bag .item {
+  margin-bottom: 25px;
+}
+#bag .item:last-child {
+  margin-bottom: 0;
+}
 #bag img {
   display: block;
   max-width: 100%;

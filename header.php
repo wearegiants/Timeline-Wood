@@ -35,7 +35,7 @@
     <menu id="header-main" class="fs-cell fs-lg-fifth fs-md-half fs-sm-half text-center">
       <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo btn_first"><?php bloginfo('name' );?></a>
     </menu>
-    <menu id="header-search" class="fs-cell fs-lg-fifth fs-md-fourth fs-sm-fourth text-right">
+    <menu id="header-search" class="fs-cell fs-lg-fifth fs-md-fourth fs-sm-half text-right">
       <a href="#search-modal" id="header--logo" class="open--modal btn btn--nav btn_first ss-gizmo ss-search right"><span class="fs-md-hide fs-sm-hide">Search</span></a>
       <?php include locate_template('parts/store/shopify--bag.php' ); ?>
     </menu>
