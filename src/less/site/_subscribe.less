@@ -8,26 +8,31 @@
     padding: @spaced*3;
     padding-bottom: @spaced;
   }
-  &-input {
-    display: block;
-    width: 100%;
-    border: 1px solid @white;
-    color: @white;
-    background: @red;
-    text-align: center;
-    padding: @spaced*.5;
-    margin-bottom: 20px;
-    .font_size(18);
-    &::placeholder { /* Chrome/Opera/Safari */
-      color: @white50;
+  &-form {
+    color: @black;
+    .subscribe {
+      &-input {
+        display: block;
+        width: 100%;
+        border: 1px solid @white;
+        color: @white;
+        background: @red;
+        text-align: center;
+        padding: @spaced*.5;
+        margin-bottom: 20px;
+        .font_size(18);
+        &::placeholder { /* Chrome/Opera/Safari */
+          color: @white50;
+        }
+      }
+      &-form-submit {
+        margin: 0 auto!important;
+        background: @white!important;
+        color: @red!important;
+        display: block!important;
+        padding: 0 @spaced*2!important;
+      }
     }
-  }
-  &-form-submit {
-    margin: 0 auto!important;
-    background: @white!important;
-    color: @red!important;
-    display: block!important;
-    padding: 0 @spaced*2!important;
   }
   &-close {
     color: @white;

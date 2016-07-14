@@ -4909,7 +4909,10 @@ input[type=button] {
   padding: 75px;
   padding-bottom: 25px;
 }
-.subscribe-input {
+.subscribe-form {
+  color: #151515;
+}
+.subscribe-form .subscribe-input {
   display: block;
   width: 100%;
   border: 1px solid #fff;
@@ -4921,23 +4924,23 @@ input[type=button] {
   font-size: 18px;
   font-size: 1.125rem;
 }
-.subscribe-input::-webkit-input-placeholder {
+.subscribe-form .subscribe-input::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
   color: rgba(255, 255, 255, 0.5);
 }
-.subscribe-input::-moz-placeholder {
+.subscribe-form .subscribe-input::-moz-placeholder {
   /* Chrome/Opera/Safari */
   color: rgba(255, 255, 255, 0.5);
 }
-.subscribe-input:-ms-input-placeholder {
+.subscribe-form .subscribe-input:-ms-input-placeholder {
   /* Chrome/Opera/Safari */
   color: rgba(255, 255, 255, 0.5);
 }
-.subscribe-input::placeholder {
+.subscribe-form .subscribe-input::placeholder {
   /* Chrome/Opera/Safari */
   color: rgba(255, 255, 255, 0.5);
 }
-.subscribe-form-submit {
+.subscribe-form .subscribe-form-submit {
   margin: 0 auto!important;
   background: #fff !important;
   color: #FF2816 !important;
