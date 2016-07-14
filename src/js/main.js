@@ -51,21 +51,27 @@ function openModal(){
 }
 
 function subscribe(){
-  $.magnificPopup.open({
-    items: {
-      src: '#mailchimp-modal' 
-    },
-    modal: true,
-    type: 'inline',
-    midClick: true,
-    removalDelay: 1000,
-    mainClass: 'mfp-subscribe fs-grid',
-  });
+  
   $( ".subscribe-form" ).submit(function( event ) {
-    //alert( "Handler for .submit() called." );
-    //event.preventDefault();
     $.magnificPopup.close();
+    $.cookie("subscribe", 1);
   });
+
+  var cookieValue = $.cookie("subscribe");
+
+  if (!cookieValue) {
+    $.magnificPopup.open({
+      items: {
+        src: '#mailchimp-modal' 
+      },
+      modal: true,
+      type: 'inline',
+      midClick: true,
+      removalDelay: 1000,
+      mainClass: 'mfp-subscribe fs-grid',
+    });
+  }
+  
 }
 
 function arrangeBlog(){
