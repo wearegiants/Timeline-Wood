@@ -35,11 +35,20 @@
 		</div>
 		<hr class="fs-cell fs-lg-hide fs-md-full fs-sm-3 divider">
 		<div class="fs-cell fs-xl-4 fs-lg-5 fs-md-full fs-sm-full">
-			<form class="footer__form relative">
-				<label class="color--black accent accent--md">Join Our Newsletter</label>
-				<input type="text" placeholder="Email Address">
-				<input type="submit" value="Submit" class="footer__form-submit bg--darkBlue">
-			</form>
+<?php
+  $form_action = '//noongoons.us10.list-manage.com/subscribe/post?u=a16967a3803d008fcfa3388a9&id=5108d57724';
+?>
+
+	    <form class="footer__form relative" action="<?php echo $form_action; ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
+      	<label class="color--black accent accent--md">Join Our Newsletter</label>
+        <input type="email" value="" placeholder="Email Address" name="EMAIL" id="Email" class="subscribe-input color--black" autocorrect="off" autocapitalize="off">
+        <span class="input-group-btn">
+          <button type="submit" class="footer__form-submit bg--darkBlue" name="subscribe" id="Subscribe">
+            <span class="newsletter__submit-text--large">Submit</span>
+          </button>
+        </span>
+	    </form>
+
 			<div class="fs-row">
 				<a href="" class="accent accent--sm fs-cell fs-all-fifth">Facebook</a>
 				<a href="" class="accent accent--sm text-center fs-cell fs-all-fifth">Instagram</a>

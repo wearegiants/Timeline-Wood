@@ -61,6 +61,11 @@ function subscribe(){
     removalDelay: 1000,
     mainClass: 'mfp-subscribe fs-grid',
   });
+  $( ".subscribe-form" ).submit(function( event ) {
+    //alert( "Handler for .submit() called." );
+    //event.preventDefault();
+    $.magnificPopup.close();
+  });
 }
 
 function arrangeBlog(){
