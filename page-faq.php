@@ -11,7 +11,7 @@
 	<div class="centered">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full">
-				<h2 class="title title--md text-center capped spaced color--white"><?php the_title(); ?></h2>
+				<h2 class="title title--md text-center capped spaced color--black"><?php the_title(); ?></h2>
 			</div>
 		</div>
 	</div>
@@ -34,10 +34,10 @@ $glossry_items = get_posts( $args );
 ?>
 
 <div class="fs-row">
-	<ul class="fs-cell fs-lg-3 fs-md-2 fs-sm-3">
+	<ul class="fs-cell fs-lg-3 fs-md-2 fs-sm-3 glossary-sidebar">
 
 <?php $counter=0; foreach ( $glossry_items as $post ) : setup_postdata( $post ); ?>
-		<li><a href="#<?php echo $post->post_name;?>"><?php the_title(); ?></a></li>
+		<li class="glossary-sidebar__item"><a href="#<?php echo $post->post_name;?>"><?php the_title(); ?></a></li>
 <?php $counter++; endforeach; ?>
 
 	</ul>

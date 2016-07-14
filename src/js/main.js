@@ -50,6 +50,19 @@ function openModal(){
   });
 }
 
+function subscribe(){
+  $.magnificPopup.open({
+    items: {
+      src: '#mailchimp-modal' 
+    },
+    modal: true,
+    type: 'inline',
+    midClick: true,
+    removalDelay: 1000,
+    mainClass: 'mfp-subscribe fs-grid',
+  });
+}
+
 function arrangeBlog(){
 	var $grid = $('.grid').isotope({
 		itemSelector: '.grid-item',
@@ -89,5 +102,6 @@ $(document).ready(function(){
 	mobileMenu();
 	openModal();
 	arrangeBlog();
+  subscribe();
   //scrollFixed();
 });

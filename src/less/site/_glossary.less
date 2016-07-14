@@ -1,0 +1,19 @@
+.glossary {
+  &-sidebar {
+    padding-left: 0;
+    &__item {
+      .font_size(17);
+      line-height: 1;
+      margin-bottom: @spaced;
+      &:before {
+        display: none;
+      }
+      a {
+        color: @gray;
+        &.active,&:hover {
+          color: @black;
+        }
+      }
+    }
+  }
+}

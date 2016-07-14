@@ -1,0 +1,42 @@
+.subscribe {
+  &-svg {
+    width: 120%;
+    display: block;
+    min-width: 100%;
+  }
+  &-close {
+    color: @white;
+  }
+}
+
+.mfp {
+  &-bg {
+    &.mfp-subscribe {
+      opacity: 0;
+      background: #fff;
+      transition: opacity 500ms ease;
+      &.mfp {
+        &-ready {
+          opacity: .8;
+        }
+        &-removing {
+          opacity: 0;
+        }
+      }
+    }
+  }
+  &-wrap {
+    &.mfp-subscribe {
+      opacity: 0;
+      transition: opacity 500ms ease;
+      &.mfp {
+        &-ready {
+          opacity: 1;
+        }
+        &-removing {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

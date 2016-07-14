@@ -21,7 +21,7 @@
 				</nav>
 				<nav class="fs-cell fs-lg-third fs-md-2 fs-sm-third fs-xs-half">
 					<ul class="footer__nav">
-						<li><a href="<?php echo the_permalink(133); ?>" class=""><?php echo get_the_title(133); ?></a></li>
+						<li><a href="<?php echo the_permalink(13); ?>" class=""><?php echo get_the_title(13); ?></a></li>
 						<li><a href="<?php echo the_permalink(37); ?>" class=""><?php echo get_the_title(37); ?></a></li>
 						<li><a href="<?php echo the_permalink(39); ?>" class=""><?php echo get_the_title(39); ?></a></li>
 						<li><a href="<?php echo the_permalink(41); ?>" class=""><?php echo get_the_title(41); ?></a></li>
