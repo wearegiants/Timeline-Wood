@@ -4001,12 +4001,6 @@ menu {
   margin: 0;
   padding: 0;
 }
-menu .btn:last-child {
-  padding-right: 0;
-}
-menu .btn:first-child {
-  padding-left: 0;
-}
 button {
   background: none;
   border: none;
@@ -4292,6 +4286,27 @@ input[type=button] {
 .epm-submit-chimp--logo.shopify {
   background: url('timeline.svg') center center no-repeat;
   background-size: contain;
+}
+@media screen and (min-width: 300px) {
+  .btn--logo,
+  .button--logo,
+  .epm-submit-chimp--logo {
+    margin-right: 5px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .btn--logo,
+  .button--logo,
+  .epm-submit-chimp--logo {
+    margin-right: 16px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .btn--logo,
+  .button--logo,
+  .epm-submit-chimp--logo {
+    margin-right: 25px;
+  }
 }
 .btn--hamburg,
 .button--hamburg,
@@ -4677,23 +4692,55 @@ input[type=button] {
 .header--lg {
   padding: 75px 0;
 }
+#header {
+  overflow: hidden;
+}
 #header .btn {
   color: #151515;
 }
-#header.fs-swap-active {
+#header-main__wrapper {
+  -webkit-transition: 500ms ease;
+  transition: 500ms ease;
+}
+#header.fs-swap-active #header-main__wrapper {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+#header-products {
+  display: none;
+  position: absolute;
+  width: 100%;
+}
+#header-products.fs-swap-active {
+  display: block;
+  z-index: 99;
+}
+#header-search {
+  position: absolute;
+  width: 100%;
+  z-index: 88;
+  -webkit-transition: 400ms;
+  transition: 400ms;
   background: #FEF155;
 }
-#header-search ul {
-  display: inline-block;
+#header-search.fs-swap-active {
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+}
+#header-search #s {
+  margin-bottom: 0;
+  height: 70px;
+  line-height: 70px;
   padding: 0;
-  margin: 0;
+  background: transparent;
 }
-#header-search ul li {
-  display: inline-block;
-  margin-left: 20px;
-}
-#header-search ul li:before {
+#header-search #searchsubmit {
   display: none;
+}
+#header-search__close {
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 .hentry__title {
   font-weight: normal;
@@ -5106,6 +5153,15 @@ input[type=button] {
   color: #999999;
   display: block;
   margin-top: 10px;
+}
+.product-drop .wrapper {
+  padding-top: 0;
+}
+.product-drop__thumb {
+  background: #F2F2F2;
+}
+.product-drop h4 {
+  margin-bottom: 0;
 }
 .product-item__header {
   padding-top: 12.5px;

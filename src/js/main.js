@@ -60,16 +60,18 @@ function subscribe(){
   var cookieValue = $.cookie("subscribe");
 
   if (!cookieValue) {
-    $.magnificPopup.open({
-      items: {
-        src: '#mailchimp-modal' 
-      },
-      modal: true,
-      type: 'inline',
-      midClick: true,
-      removalDelay: 1000,
-      mainClass: 'mfp-subscribe fs-grid',
-    });
+    if ( $('body').hasClass('home')) {
+      $.magnificPopup.open({
+        items: {
+          src: '#mailchimp-modal' 
+        },
+        modal: true,
+        type: 'inline',
+        midClick: true,
+        removalDelay: 1000,
+        mainClass: 'mfp-subscribe fs-grid',
+      });
+    }
   }
   
 }

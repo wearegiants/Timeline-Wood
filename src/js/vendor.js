@@ -16,4 +16,5 @@
 // @codekit-prepend "../bower_components/isotope/dist/isotope.pkgd.js"
 // @codekit-prepend "../bower_components/imagesloaded/imagesloaded.pkgd.js"
 // @codekit-prepend "../bower_components/ScrollToFixed/jquery-scrolltofixed.js"
+// @codekit-prepend "../bower_components/instafeed.js/instafeed.js"
 // @codekit-prepend "marquee.js"

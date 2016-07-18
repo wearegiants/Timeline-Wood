@@ -2,3 +2,4 @@
 $('.wallpaper').background();
 //$("input[type='number']").number();
 $('.carousel').carousel();
+$('.btn--swap').swap();
