@@ -47,9 +47,8 @@
   <div class="pinned pinned__bottom">
     <?php include locate_template('parts/mobile-menu.php' ); ?>
   </div>
-  <?php include locate_template('parts/header-products.php' ); ?>
   <?php include locate_template('parts/header-search.php' ); ?>
 </header>
-
+<?php include locate_template('parts/header-products.php' ); ?>
 
 <div id="content-wrapper" class='fs-grid'>
