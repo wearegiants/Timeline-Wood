@@ -4641,6 +4641,19 @@ input[type=button] {
   line-height: 70px;
   padding: 0;
   background: transparent;
+  color: rgba(0, 0, 0, 0.5);
+}
+#header-search #s::-webkit-input-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+#header-search #s::-moz-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+#header-search #s:-ms-input-placeholder {
+  color: rgba(0, 0, 0, 0.25);
+}
+#header-search #s::placeholder {
+  color: rgba(0, 0, 0, 0.25);
 }
 #header-search #searchsubmit {
   display: none;
@@ -4649,6 +4662,7 @@ input[type=button] {
   position: absolute;
   right: 0;
   top: 0;
+  color: rgba(0, 0, 0, 0.5);
 }
 .hentry__title {
   font-weight: normal;
