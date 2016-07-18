@@ -8,7 +8,7 @@
 
 ?>
 
-<div class="home__hero hero wallpaper bg--black relative" data-background-options='{"source":"<?php echo $featureImg['sizes']['gallery-lg']; ?>"}'>
+<div class="home__hero hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $featureImg['sizes']['gallery-lg']; ?>"}'>
 	<div class="centered">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white text-center">
@@ -29,7 +29,7 @@
 
 <div class="fs-row">
 	<div class="fs-cell fs-lg-4 fs-md-3 fs-sm-full">
-		<div class="hero wallpaper bg--black relative" data-background-options='{"source":"http://i.imgur.com/6hgAqoe.jpg"}'></div>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"http://i.imgur.com/6hgAqoe.jpg"}'></div>
 		<div class="text-center">
 			<br>
 			<span class="accent accent--sm color--gray">STORIES</span>
@@ -38,7 +38,7 @@
 		<hr class="invisible">
 	</div>
 	<div class="fs-cell fs-lg-8 fs-md-3 fs-sm-full">
-		<div class="hero wallpaper bg--black relative" data-background-options='{"source":"http://i.imgur.com/Vcmy3WE.jpg"}'></div>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"http://i.imgur.com/Vcmy3WE.jpg"}'></div>
 		<div class="text-center">
 			<br>
 			<span class="accent accent--sm color--gray">HOW TO</span>
@@ -47,7 +47,7 @@
 		<hr class="invisible">
 	</div>
 	<div class="fs-cell fs-all-full">
-		<div class="hero wallpaper bg--black relative" data-background-options='{"source":"http://i.imgur.com/5tCsSoh.jpg"}'></div>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"http://i.imgur.com/5tCsSoh.jpg"}'></div>
 		<div class="text-center">
 			<br>
 			<span class="accent accent--sm color--gray">PRODUCTS</span>

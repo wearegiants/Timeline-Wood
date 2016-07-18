@@ -6,14 +6,15 @@
  */
 .fs_grid_row,
 .fs-grid .fs-row {
-  width: 95%;
+  min-width: 300px;
   margin-left: auto;
   margin-right: auto;
 }
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 739px) {
   .fs_grid_row,
   .fs-grid .fs-row {
-    width: 90%;
+    width: 96%;
+    width: calc(100% - 40px);
   }
 }
 @media screen and (min-width: 740px) {
@@ -48,18 +49,24 @@
   width: 96%;
   width: calc(100% - 40px);
 }
-@media screen and (max-width: 739px) {
-  .fs_grid_row_fluid_sm,
-  .fs-grid-sm-fluid .fs-row {
-    width: 96%;
-    width: calc(100% - 40px);
+@media screen and (max-width: 499px) {
+  .fs_grid_row_adaptive,
+  .fs-grid-adaptive .fs-row {
+    width: 300px;
+  }
+}
+@media screen and (min-width: 500px) and (max-width: 739px) {
+  .fs_grid_row_adaptive,
+  .fs-grid-adaptive .fs-row {
+    width: 480px;
   }
 }
 .fs_grid_row_row,
 .fs-grid .fs-row .fs-row {
-  width: 102.48333333%;
-  margin-left: -1.24166667%;
-  margin-right: -1.24166667%;
+  min-width: auto;
+  width: 102.08333333%;
+  margin-left: -1.04166667%;
+  margin-right: -1.04166667%;
 }
 .fs_grid_row_row_contained,
 .fs-grid .fs-row [class*="fs-cell"][class*="-contained"] .fs-row {
@@ -67,12 +74,17 @@
   margin-left: 0;
   margin-right: 0;
 }
+.fs_grid_row_destroy {
+  width: auto;
+  margin-left: 0;
+  margin-right: 0;
+}
 .fs_grid_cell,
 .fs-grid .fs-row [class*="fs-cell"] {
-  width: 97.51666667%;
+  width: 97.91666667%;
   float: left;
-  margin-left: 1.24166667%;
-  margin-right: 1.24166667%;
+  margin-left: 1.04166667%;
+  margin-right: 1.04166667%;
 }
 .fs_grid_cell_centered,
 .fs-grid .fs-row [class*="fs-cell"][class*="-centered"] {
@@ -85,8 +97,8 @@
   box-sizing: content-box;
   margin-left: 0;
   margin-right: 0;
-  padding-left: 1.24166667%;
-  padding-right: 1.24166667%;
+  padding-left: 1.04166667%;
+  padding-right: 1.04166667%;
 }
 .fs_grid_cell_contained,
 .fs-grid .fs-row [class*="fs-cell"][class*="-contained"] {
@@ -97,6 +109,12 @@
 .fs-grid .fs-row [class*="fs-cell"][class*="-right"] {
   float: right;
 }
+.fs_grid_cell_destroy {
+  width: auto;
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+}
 * {
   box-sizing: border-box;
 }
@@ -105,31 +123,31 @@
   box-sizing: inherit;
 }
 .fs-grid .fs-row .fs-all-fifth {
-  width: 17.51666667%;
+  width: 17.91666667%;
 }
 .fs-grid .fs-row .fs-all-fourth {
-  width: 22.51666667%;
+  width: 22.91666667%;
 }
 .fs-grid .fs-row .fs-all-third {
-  width: 30.85%;
+  width: 31.25%;
 }
 .fs-grid .fs-row .fs-all-half {
-  width: 47.51666667%;
+  width: 47.91666667%;
 }
 .fs-grid .fs-row .fs-all-full {
-  width: 97.51666667%;
+  width: 97.91666667%;
 }
 .fs-grid .fs-row .fs-all-push-fifth {
-  margin-left: 21.24166667%;
+  margin-left: 21.04166667%;
 }
 .fs-grid .fs-row .fs-all-push-fourth {
-  margin-left: 26.24166667%;
+  margin-left: 26.04166667%;
 }
 .fs-grid .fs-row .fs-all-push-third {
-  margin-left: 34.575%;
+  margin-left: 34.375%;
 }
 .fs-grid .fs-row .fs-all-push-half {
-  margin-left: 51.24166667%;
+  margin-left: 51.04166667%;
 }
 .fs-grid .fs-row [class*="-contained"].fs-all-fifth {
   width: 20%;
@@ -161,21 +179,27 @@
 .fs-grid .fs-row .fs-all-hide {
   display: none;
 }
+.fs-grid .fs-row .fs-all-destroy {
+  width: auto;
+  float: none;
+  margin-left: 0;
+  margin-right: 0;
+}
 @media screen and (max-width:  739px) {
   .fs-grid .fs-row .fs-sm-1 {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-sm-2 {
-    width: 64.18333333%;
+    width: 64.58333333%;
   }
   .fs-grid .fs-row .fs-sm-3 {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-sm-push-1 {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-sm-push-2 {
-    margin-left: 67.90833333%;
+    margin-left: 67.70833333%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-sm-1 {
     width: 33.33333333%;
@@ -193,31 +217,31 @@
     margin-left: 66.66666667%;
   }
   .fs-grid .fs-row .fs-sm-fifth {
-    width: 17.51666667%;
+    width: 17.91666667%;
   }
   .fs-grid .fs-row .fs-sm-fourth {
-    width: 22.51666667%;
+    width: 22.91666667%;
   }
   .fs-grid .fs-row .fs-sm-third {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-sm-half {
-    width: 47.51666667%;
+    width: 47.91666667%;
   }
   .fs-grid .fs-row .fs-sm-full {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-sm-push-fifth {
-    margin-left: 21.24166667%;
+    margin-left: 21.04166667%;
   }
   .fs-grid .fs-row .fs-sm-push-fourth {
-    margin-left: 26.24166667%;
+    margin-left: 26.04166667%;
   }
   .fs-grid .fs-row .fs-sm-push-third {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-sm-push-half {
-    margin-left: 51.24166667%;
+    margin-left: 51.04166667%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-sm-fifth {
     width: 20%;
@@ -249,22 +273,28 @@
   .fs-grid .fs-row .fs-sm-hide {
     display: none;
   }
+  .fs-grid .fs-row .fs-sm-destroy {
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 @media screen and (max-width:  499px) {
   .fs-grid .fs-row .fs-xs-1 {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-xs-2 {
-    width: 64.18333333%;
+    width: 64.58333333%;
   }
   .fs-grid .fs-row .fs-xs-3 {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-xs-push-1 {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-xs-push-2 {
-    margin-left: 67.90833333%;
+    margin-left: 67.70833333%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-xs-1 {
     width: 33.33333333%;
@@ -282,31 +312,31 @@
     margin-left: 66.66666667%;
   }
   .fs-grid .fs-row .fs-xs-fifth {
-    width: 17.51666667%;
+    width: 17.91666667%;
   }
   .fs-grid .fs-row .fs-xs-fourth {
-    width: 22.51666667%;
+    width: 22.91666667%;
   }
   .fs-grid .fs-row .fs-xs-third {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-xs-half {
-    width: 47.51666667%;
+    width: 47.91666667%;
   }
   .fs-grid .fs-row .fs-xs-full {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-xs-push-fifth {
-    margin-left: 21.24166667%;
+    margin-left: 21.04166667%;
   }
   .fs-grid .fs-row .fs-xs-push-fourth {
-    margin-left: 26.24166667%;
+    margin-left: 26.04166667%;
   }
   .fs-grid .fs-row .fs-xs-push-third {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-xs-push-half {
-    margin-left: 51.24166667%;
+    margin-left: 51.04166667%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-xs-fifth {
     width: 20%;
@@ -338,40 +368,46 @@
   .fs-grid .fs-row .fs-xs-hide {
     display: none;
   }
+  .fs-grid .fs-row .fs-xs-destroy {
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 @media screen and (min-width:  740px) and (max-width:  979px) {
   .fs-grid .fs-row .fs-md-1 {
-    width: 14.18333333%;
+    width: 14.58333333%;
   }
   .fs-grid .fs-row .fs-md-2 {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-md-3 {
-    width: 47.51666667%;
+    width: 47.91666667%;
   }
   .fs-grid .fs-row .fs-md-4 {
-    width: 64.18333333%;
+    width: 64.58333333%;
   }
   .fs-grid .fs-row .fs-md-5 {
-    width: 80.85%;
+    width: 81.25%;
   }
   .fs-grid .fs-row .fs-md-6 {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-md-push-1 {
-    margin-left: 17.90833333%;
+    margin-left: 17.70833333%;
   }
   .fs-grid .fs-row .fs-md-push-2 {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-md-push-3 {
-    margin-left: 51.24166667%;
+    margin-left: 51.04166667%;
   }
   .fs-grid .fs-row .fs-md-push-4 {
-    margin-left: 67.90833333%;
+    margin-left: 67.70833333%;
   }
   .fs-grid .fs-row .fs-md-push-5 {
-    margin-left: 84.575%;
+    margin-left: 84.375%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-md-1 {
     width: 16.66666667%;
@@ -407,31 +443,31 @@
     margin-left: 83.33333333%;
   }
   .fs-grid .fs-row .fs-md-fifth {
-    width: 17.51666667%;
+    width: 17.91666667%;
   }
   .fs-grid .fs-row .fs-md-fourth {
-    width: 22.51666667%;
+    width: 22.91666667%;
   }
   .fs-grid .fs-row .fs-md-third {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-md-half {
-    width: 47.51666667%;
+    width: 47.91666667%;
   }
   .fs-grid .fs-row .fs-md-full {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-md-push-fifth {
-    margin-left: 21.24166667%;
+    margin-left: 21.04166667%;
   }
   .fs-grid .fs-row .fs-md-push-fourth {
-    margin-left: 26.24166667%;
+    margin-left: 26.04166667%;
   }
   .fs-grid .fs-row .fs-md-push-third {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-md-push-half {
-    margin-left: 51.24166667%;
+    margin-left: 51.04166667%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-md-fifth {
     width: 20%;
@@ -463,76 +499,82 @@
   .fs-grid .fs-row .fs-md-hide {
     display: none;
   }
+  .fs-grid .fs-row .fs-md-destroy {
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 @media screen and (min-width:  980px) {
   .fs-grid .fs-row .fs-lg-1 {
-    width: 5.85%;
+    width: 6.25%;
   }
   .fs-grid .fs-row .fs-lg-2 {
-    width: 14.18333333%;
+    width: 14.58333333%;
   }
   .fs-grid .fs-row .fs-lg-3 {
-    width: 22.51666667%;
+    width: 22.91666667%;
   }
   .fs-grid .fs-row .fs-lg-4 {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-lg-5 {
-    width: 39.18333333%;
+    width: 39.58333333%;
   }
   .fs-grid .fs-row .fs-lg-6 {
-    width: 47.51666667%;
+    width: 47.91666667%;
   }
   .fs-grid .fs-row .fs-lg-7 {
-    width: 55.85%;
+    width: 56.25%;
   }
   .fs-grid .fs-row .fs-lg-8 {
-    width: 64.18333333%;
+    width: 64.58333333%;
   }
   .fs-grid .fs-row .fs-lg-9 {
-    width: 72.51666667%;
+    width: 72.91666667%;
   }
   .fs-grid .fs-row .fs-lg-10 {
-    width: 80.85%;
+    width: 81.25%;
   }
   .fs-grid .fs-row .fs-lg-11 {
-    width: 89.18333333%;
+    width: 89.58333333%;
   }
   .fs-grid .fs-row .fs-lg-12 {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-lg-push-1 {
-    margin-left: 9.575%;
+    margin-left: 9.375%;
   }
   .fs-grid .fs-row .fs-lg-push-2 {
-    margin-left: 17.90833333%;
+    margin-left: 17.70833333%;
   }
   .fs-grid .fs-row .fs-lg-push-3 {
-    margin-left: 26.24166667%;
+    margin-left: 26.04166667%;
   }
   .fs-grid .fs-row .fs-lg-push-4 {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-lg-push-5 {
-    margin-left: 42.90833333%;
+    margin-left: 42.70833333%;
   }
   .fs-grid .fs-row .fs-lg-push-6 {
-    margin-left: 51.24166667%;
+    margin-left: 51.04166667%;
   }
   .fs-grid .fs-row .fs-lg-push-7 {
-    margin-left: 59.575%;
+    margin-left: 59.375%;
   }
   .fs-grid .fs-row .fs-lg-push-8 {
-    margin-left: 67.90833333%;
+    margin-left: 67.70833333%;
   }
   .fs-grid .fs-row .fs-lg-push-9 {
-    margin-left: 76.24166667%;
+    margin-left: 76.04166667%;
   }
   .fs-grid .fs-row .fs-lg-push-10 {
-    margin-left: 84.575%;
+    margin-left: 84.375%;
   }
   .fs-grid .fs-row .fs-lg-push-11 {
-    margin-left: 92.90833333%;
+    margin-left: 92.70833333%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-lg-1 {
     width: 8.33333333%;
@@ -604,31 +646,31 @@
     margin-left: 91.66666667%;
   }
   .fs-grid .fs-row .fs-lg-fifth {
-    width: 17.51666667%;
+    width: 17.91666667%;
   }
   .fs-grid .fs-row .fs-lg-fourth {
-    width: 22.51666667%;
+    width: 22.91666667%;
   }
   .fs-grid .fs-row .fs-lg-third {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-lg-half {
-    width: 47.51666667%;
+    width: 47.91666667%;
   }
   .fs-grid .fs-row .fs-lg-full {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-lg-push-fifth {
-    margin-left: 21.24166667%;
+    margin-left: 21.04166667%;
   }
   .fs-grid .fs-row .fs-lg-push-fourth {
-    margin-left: 26.24166667%;
+    margin-left: 26.04166667%;
   }
   .fs-grid .fs-row .fs-lg-push-third {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-lg-push-half {
-    margin-left: 51.24166667%;
+    margin-left: 51.04166667%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-lg-fifth {
     width: 20%;
@@ -660,76 +702,82 @@
   .fs-grid .fs-row .fs-lg-hide {
     display: none;
   }
+  .fs-grid .fs-row .fs-lg-destroy {
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 @media screen and (min-width:  1220px) {
   .fs-grid .fs-row .fs-xl-1 {
-    width: 5.85%;
+    width: 6.25%;
   }
   .fs-grid .fs-row .fs-xl-2 {
-    width: 14.18333333%;
+    width: 14.58333333%;
   }
   .fs-grid .fs-row .fs-xl-3 {
-    width: 22.51666667%;
+    width: 22.91666667%;
   }
   .fs-grid .fs-row .fs-xl-4 {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-xl-5 {
-    width: 39.18333333%;
+    width: 39.58333333%;
   }
   .fs-grid .fs-row .fs-xl-6 {
-    width: 47.51666667%;
+    width: 47.91666667%;
   }
   .fs-grid .fs-row .fs-xl-7 {
-    width: 55.85%;
+    width: 56.25%;
   }
   .fs-grid .fs-row .fs-xl-8 {
-    width: 64.18333333%;
+    width: 64.58333333%;
   }
   .fs-grid .fs-row .fs-xl-9 {
-    width: 72.51666667%;
+    width: 72.91666667%;
   }
   .fs-grid .fs-row .fs-xl-10 {
-    width: 80.85%;
+    width: 81.25%;
   }
   .fs-grid .fs-row .fs-xl-11 {
-    width: 89.18333333%;
+    width: 89.58333333%;
   }
   .fs-grid .fs-row .fs-xl-12 {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-xl-push-1 {
-    margin-left: 9.575%;
+    margin-left: 9.375%;
   }
   .fs-grid .fs-row .fs-xl-push-2 {
-    margin-left: 17.90833333%;
+    margin-left: 17.70833333%;
   }
   .fs-grid .fs-row .fs-xl-push-3 {
-    margin-left: 26.24166667%;
+    margin-left: 26.04166667%;
   }
   .fs-grid .fs-row .fs-xl-push-4 {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-xl-push-5 {
-    margin-left: 42.90833333%;
+    margin-left: 42.70833333%;
   }
   .fs-grid .fs-row .fs-xl-push-6 {
-    margin-left: 51.24166667%;
+    margin-left: 51.04166667%;
   }
   .fs-grid .fs-row .fs-xl-push-7 {
-    margin-left: 59.575%;
+    margin-left: 59.375%;
   }
   .fs-grid .fs-row .fs-xl-push-8 {
-    margin-left: 67.90833333%;
+    margin-left: 67.70833333%;
   }
   .fs-grid .fs-row .fs-xl-push-9 {
-    margin-left: 76.24166667%;
+    margin-left: 76.04166667%;
   }
   .fs-grid .fs-row .fs-xl-push-10 {
-    margin-left: 84.575%;
+    margin-left: 84.375%;
   }
   .fs-grid .fs-row .fs-xl-push-11 {
-    margin-left: 92.90833333%;
+    margin-left: 92.70833333%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-xl-1 {
     width: 8.33333333%;
@@ -801,31 +849,31 @@
     margin-left: 91.66666667%;
   }
   .fs-grid .fs-row .fs-xl-fifth {
-    width: 17.51666667%;
+    width: 17.91666667%;
   }
   .fs-grid .fs-row .fs-xl-fourth {
-    width: 22.51666667%;
+    width: 22.91666667%;
   }
   .fs-grid .fs-row .fs-xl-third {
-    width: 30.85%;
+    width: 31.25%;
   }
   .fs-grid .fs-row .fs-xl-half {
-    width: 47.51666667%;
+    width: 47.91666667%;
   }
   .fs-grid .fs-row .fs-xl-full {
-    width: 97.51666667%;
+    width: 97.91666667%;
   }
   .fs-grid .fs-row .fs-xl-push-fifth {
-    margin-left: 21.24166667%;
+    margin-left: 21.04166667%;
   }
   .fs-grid .fs-row .fs-xl-push-fourth {
-    margin-left: 26.24166667%;
+    margin-left: 26.04166667%;
   }
   .fs-grid .fs-row .fs-xl-push-third {
-    margin-left: 34.575%;
+    margin-left: 34.375%;
   }
   .fs-grid .fs-row .fs-xl-push-half {
-    margin-left: 51.24166667%;
+    margin-left: 51.04166667%;
   }
   .fs-grid .fs-row [class*="-contained"].fs-xl-fifth {
     width: 20%;
@@ -857,146 +905,156 @@
   .fs-grid .fs-row .fs-xl-hide {
     display: none;
   }
+  .fs-grid .fs-row .fs-xl-destroy {
+    width: auto;
+    float: none;
+    margin-left: 0;
+    margin-right: 0;
+  }
 }
 /**
-	 * @class
-	 * @name .fs-carousel-element
-	 * @type element
-	 * @description Target elmement
-	 */
+ * @component
+ * @name Carousel
+ */
 /**
-	 * @class
-	 * @name .fs-carousel
-	 * @type element
-	 * @description Base widget class
-	 */
+ * @class
+ * @name .fs-carousel-element
+ * @type element
+ * @description Target element
+ */
 /**
-	 * @class
-	 * @name .fs-carousel.fs-enabled
-	 * @type modifier
-	 * @description Indicates enabled state
-	 */
+ * @class
+ * @name .fs-carousel
+ * @type element
+ * @description Base widget class
+ */
 /**
-	 * @class
-	 * @name .fs-carousel.fs-rtl
-	 * @type modifier
-	 * @description Indicates right to left display
-	 */
+ * @class
+ * @name .fs-carousel.fs-enabled
+ * @type modifier
+ * @description Indicates enabled state
+ */
 /**
-	 * @class
-	 * @name .fs-carousel.fs-carousel-auto_height
-	 * @type modifier
-	 * @description Indicates auto height sizing
-	 */
+ * @class
+ * @name .fs-carousel.fs-rtl
+ * @type modifier
+ * @description Indicates right to left display
+ */
 /**
-	 * @class
-	 * @name .fs-carousel.fs-carousel-contained
-	 * @type modifier
-	 * @description Indicates overflow: hidden
-	 */
+ * @class
+ * @name .fs-carousel.fs-carousel-auto_height
+ * @type modifier
+ * @description Indicates auto height sizing
+ */
 /**
-	 * @class
-	 * @name .fs-carousel.fs-carousel-single
-	 * @type modifier
-	 * @description Indicates single item display
-	 */
+ * @class
+ * @name .fs-carousel.fs-carousel-contained
+ * @type modifier
+ * @description Indicates overflow: hidden
+ */
+/**
+ * @class
+ * @name .fs-carousel.fs-carousel-single
+ * @type modifier
+ * @description Indicates single item display
+ */
 .fs-carousel {
   /**
-		 * @class
-		 * @name .fs-carousel-viewport
-		 * @type element
-		 * @description Carousel container
-		 */
+	 * @class
+	 * @name .fs-carousel-viewport
+	 * @type element
+	 * @description Carousel container
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-wrapper
-		 * @type element
-		 * @description Carousel container
-		 */
+	 * @class
+	 * @name .fs-carousel-wrapper
+	 * @type element
+	 * @description Carousel container
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-container
-		 * @type element
-		 * @description Canister container
-		 */
+	 * @class
+	 * @name .fs-carousel-container
+	 * @type element
+	 * @description Canister container
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-canister
-		 * @type element
-		 * @description Item container
-		 */
+	 * @class
+	 * @name .fs-carousel-canister
+	 * @type element
+	 * @description Item container
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-canister
-		 * @type element
-		 * @description Item container
-		 */
+	 * @class
+	 * @name .fs-carousel-canister
+	 * @type element
+	 * @description Item container
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-item
-		 * @type element
-		 * @description Individual item
-		 */
+	 * @class
+	 * @name .fs-carousel-item
+	 * @type element
+	 * @description Individual item
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-controls
-		 * @type element
-		 * @description Controls container
-		 */
+	 * @class
+	 * @name .fs-carousel-controls
+	 * @type element
+	 * @description Controls container
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-controls.fs-carousel-visible
-		 * @type modifier
-		 * @description Indicates visible state
-		 */
+	 * @class
+	 * @name .fs-carousel-controls.fs-carousel-visible
+	 * @type modifier
+	 * @description Indicates visible state
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-control
-		 * @type element
-		 * @description Control element
-		 */
+	 * @class
+	 * @name .fs-carousel-control
+	 * @type element
+	 * @description Control element
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-control.fs-carousel-control_previous
-		 * @type modifier
-		 * @description Indicates previous control
-		 */
+	 * @class
+	 * @name .fs-carousel-control.fs-carousel-control_previous
+	 * @type modifier
+	 * @description Indicates previous control
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-control.fs-carousel-control_next
-		 * @type modifier
-		 * @description Indicates next control
-		 */
+	 * @class
+	 * @name .fs-carousel-control.fs-carousel-control_next
+	 * @type modifier
+	 * @description Indicates next control
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-control.fs-carousel-control_disabled
-		 * @type modifier
-		 * @description Indicates disbaled state
-		 */
+	 * @class
+	 * @name .fs-carousel-control.fs-carousel-control_disabled
+	 * @type modifier
+	 * @description Indicates disbaled state
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-pagination
-		 * @type element
-		 * @description Item element
-		 */
+	 * @class
+	 * @name .fs-carousel-pagination
+	 * @type element
+	 * @description Item element
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-pagination.fs-carousel-visible
-		 * @type modifier
-		 * @description Indicates visible state
-		 */
+	 * @class
+	 * @name .fs-carousel-pagination.fs-carousel-visible
+	 * @type modifier
+	 * @description Indicates visible state
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-page
-		 * @type element
-		 * @description Pagiantion item element
-		 */
+	 * @class
+	 * @name .fs-carousel-page
+	 * @type element
+	 * @description Pagiantion item element
+	 */
   /**
-		 * @class
-		 * @name .fs-carousel-page.fs-carousel-active
-		 * @type modifier
-		 * @description Indicates active state
-		 */
+	 * @class
+	 * @name .fs-carousel-page.fs-carousel-active
+	 * @type modifier
+	 * @description Indicates active state
+	 */
 }
 .fs-carousel.fs-carousel-enabled {
   width: 100%;
@@ -1105,108 +1163,24 @@
   display: block;
 }
 .fs-carousel-enabled .fs-carousel-control {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  border: 0;
+  border: none;
   cursor: pointer;
-  display: block;
   padding: 0;
-  visibility: hidden;
-  width: 40px;
-  height: 40px;
-  background: #fff;
-  border-radius: 100%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.25);
-  margin: auto;
-  opacity: 0;
-  overflow: hidden;
-  text-indent: 200%;
-  -webkit-transition: opacity 0.15s ease, visibility 0.15s ease;
-  transition: opacity 0.15s ease, visibility 0.15s ease;
-  white-space: nowrap;
-}
-.fs-carousel-enabled .fs-carousel-control:before {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  content: '';
-  margin: auto;
-}
-.no-opacity .fs-carousel-enabled .fs-carousel-control {
-  text-indent: -999px;
-}
-.fs-carousel-enabled .fs-carousel-control.fs-carousel-visible {
-  visibility: visible;
-  opacity: 1;
-}
-.fs-carousel-enabled .fs-carousel-control_previous,
-.fs-carousel-enabled.fs-carousel-rtl .fs-carousel-control_next {
-  right: auto;
-  left: 20px;
-}
-.fs-carousel-enabled .fs-carousel-control_previous:before,
-.fs-carousel-enabled.fs-carousel-rtl .fs-carousel-control_next:before {
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-right: 10.5px solid #333;
-  border-left: none;
-  margin-left: 13.7px;
-  margin-right: auto;
-}
-.fs-carousel-enabled .fs-carousel-control_next,
-.fs-carousel-enabled.fs-carousel-rtl .fs-carousel-control_previous {
-  right: 20px;
-  left: auto;
-}
-.fs-carousel-enabled .fs-carousel-control_next:before,
-.fs-carousel-enabled.fs-carousel-rtl .fs-carousel-control_previous:before {
-  border-top: 7px solid transparent;
-  border-bottom: 7px solid transparent;
-  border-left: 10.5px solid #333;
-  border-right: none;
-  margin-right: 13.7px;
-  margin-left: auto;
-}
-.fs-carousel-enabled .fs-carousel-control_disabled {
-  opacity: 0;
 }
 .fs-carousel-pagination {
   display: none;
 }
 .fs-carousel-enabled .fs-carousel-pagination {
   width: 100%;
-  margin: 10px 0 0;
-  padding: 0;
-  text-align: center;
 }
 .fs-carousel-enabled .fs-carousel-pagination.fs-carousel-visible {
   display: block;
 }
 .fs-carousel-enabled .fs-carousel-page {
-  border: 0;
+  border: none;
   cursor: pointer;
   display: inline-block;
   padding: 0;
-  width: 10px;
-  height: 10px;
-  background: #333;
-  border-radius: 100%;
-  margin: 0 3px;
-  opacity: 0.5;
-  overflow: hidden;
-  text-indent: 200%;
-  white-space: nowrap;
-}
-.no-opacity .fs-carousel-enabled .fs-carousel-page {
-  text-indent: -999px;
-}
-.fs-carousel-enabled .fs-carousel-page.fs-carousel-active {
-  opacity: 1;
 }
 .fs-carousel-enabled.fs-carousel-rtl {
   direction: rtl;
@@ -1215,62 +1189,66 @@
   float: right;
 }
 /**
-	 * @class
-	 * @name .fs-background-element
-	 * @type element
-	 * @description Target elmement
-	 */
+ * @component
+ * @name Background
+ */
 /**
-	 * @class
-	 * @name .fs-background
-	 * @type element
-	 * @description Base widget class
-	 */
+ * @class
+ * @name .fs-background-element
+ * @type element
+ * @description Target elmement
+ */
+/**
+ * @class
+ * @name .fs-background
+ * @type element
+ * @description Base widget class
+ */
 .fs-background {
   overflow: hidden;
   position: relative;
   /**
-		 * @class
-		 * @name .fs-background-container
-		 * @type element
-		 * @description Container element
-		 */
+	 * @class
+	 * @name .fs-background-container
+	 * @type element
+	 * @description Container element
+	 */
   /**
-		 * @class
-		 * @name .fs-background-media
-		 * @type element
-		 * @description Media element
-		 */
+	 * @class
+	 * @name .fs-background-media
+	 * @type element
+	 * @description Media element
+	 */
   /**
-		 * @class
-		 * @name .fs-background-media.fs-background-animated
-		 * @type modifier
-		 * @description Indicates animated state
-		 */
+	 * @class
+	 * @name .fs-background-media.fs-background-animated
+	 * @type modifier
+	 * @description Indicates animated state
+	 */
   /**
-		 * @class
-		 * @name .fs-background-media.fs-background-navtive
-		 * @type modifier
-		 * @description Indicates native support
-		 */
+	 * @class
+	 * @name .fs-background-media.fs-background-navtive
+	 * @type modifier
+	 * @description Indicates native support
+	 */
   /**
-		 * @class
-		 * @name .fs-background-media.fs-background-fixed
-		 * @type modifier
-		 * @description Indicates fixed positioning
-		 */
+	 * @class
+	 * @name .fs-background-media.fs-background-fixed
+	 * @type modifier
+	 * @description Indicates fixed positioning
+	 */
   /**
-		 * @class
-		 * @name .fs-background-embed
-		 * @type element
-		 * @description Embed/iFrame element
-		 */
+	 * @class
+	 * @name .fs-background-embed
+	 * @type element
+	 * @description Embed/iFrame element
+	 */
   /**
-		 * @class
-		 * @name .fs-background-embed.fs-background-embed-ready
-		 * @type modifier
-		 * @description Indicates ready state
-		 */
+	 * @class
+	 * @name .fs-background-embed.fs-background-embed-ready
+	 * @type modifier
+	 * @description Indicates ready state
+	 */
 }
 .fs-background,
 .fs-background-container,
@@ -1290,6 +1268,8 @@
   position: absolute;
   top: 0;
   bottom: 0;
+  -webkit-transition: opacity 0.5s linear;
+  transition: opacity 0.5s linear;
   opacity: 0;
 }
 .fs-background-media.fs-background-animated {
@@ -1336,52 +1316,54 @@
   z-index: 0;
 }
 /**
-	 * @class
-	 * @name .fs-number-element
-	 * @type element
-	 * @description Target elmement
-	 */
+ * @component
+ * @name Number
+ */
 /**
-	 * @class
-	 * @name .fs-number
-	 * @type element
-	 * @description Base widget class
-	 */
+ * @class
+ * @name .fs-number-element
+ * @type element
+ * @description Target elmement
+ */
 /**
-	 * @class
-	 * @name .fs-number.fs-number-disabled
-	 * @type modifier
-	 * @description Indicates disabled state
-	 */
+ * @class
+ * @name .fs-number
+ * @type element
+ * @description Base widget class
+ */
+/**
+ * @class
+ * @name .fs-number.fs-number-disabled
+ * @type modifier
+ * @description Indicates disabled state
+ */
 .fs-number {
   position: relative;
-  border-radius: 3px;
-  margin: 0 0 10px 0;
   overflow: hidden;
   /**
-		 * @class
-		 * @name .fs-number-arrow
-		 * @type element
-		 * @description Arrow elmement
-		 */
+	 * @class
+	 * @name .fs-number-arrow
+	 * @type element
+	 * @description Arrow elmement
+	 */
   /**
-		 * @class
-		 * @name .fs-number-arrow:after
-		 * @type element
-		 * @description Arrow icon
-		 */
+	 * @class
+	 * @name .fs-number-arrow:after
+	 * @type element
+	 * @description Arrow icon
+	 */
   /**
-		 * @class
-		 * @name .fs-number-arrow.fs-number-up
-		 * @type modifier
-		 * @description Indicates up state
-		 */
+	 * @class
+	 * @name .fs-number-arrow.fs-number-up
+	 * @type modifier
+	 * @description Indicates up state
+	 */
   /**
-		 * @class
-		 * @name .fs-number-arrow.fs-number-down
-		 * @type modifier
-		 * @description Indicates up state
-		 */
+	 * @class
+	 * @name .fs-number-arrow.fs-number-down
+	 * @type modifier
+	 * @description Indicates up state
+	 */
 }
 .fs-number,
 .fs-number:after,
@@ -1395,14 +1377,7 @@
 }
 .fs-number-element {
   width: 100%;
-  background: #fff;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  color: #222;
-  font-size: 15px;
-  line-height: 1;
   overflow: hidden;
-  padding: 0 10px;
   -moz-appearance: textfield;
 }
 .fs-number-element::-webkit-inner-spin-button,
@@ -1413,80 +1388,13 @@
 .fs-number-element::-ms-clear {
   display: none;
 }
-.fs-number-element:focus {
-  background-color: #fff;
-}
-.fs-number-disabled .fs-number-element {
-  background: #fff;
-  border-color: #ccc;
-  color: #ccc;
-}
 .fs-number-arrow {
-  width: 25px;
-  height: 50%;
-  position: absolute;
-  right: 0;
-  z-index: 1;
-  background: #fff;
-  border: 1px solid #ccc;
-  cursor: pointer;
-  display: block;
-  overflow: hidden;
-  text-indent: 200%;
-  white-space: nowrap;
-}
-.no-opacity .fs-number-arrow {
-  text-indent: -999999px;
-}
-.fs-number-arrow:focus {
-  outline: none;
-}
-.fs-number-arrow:after {
-  width: 0;
-  height: 0;
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  border-left: 5px solid transparent;
-  border-right: 5px solid transparent;
-  content: '';
-  display: block;
-  margin: auto;
-}
-.fs-number-arrow.fs-number-up {
-  top: 0;
-}
-.fs-number-arrow.fs-number-up:after {
-  border-bottom: 5px solid #666;
-}
-.fs-number-arrow.fs-number-down {
-  bottom: 0;
-  border-top: none;
-}
-.fs-number-arrow.fs-number-down:after {
-  border-top: 5px solid #666;
+  border: none;
+  padding: 0;
 }
 .fs-number-disabled .fs-number-arrow {
   cursor: default;
 }
-.fs-number-disabled .fs-number-arrow:after {
-  border-top-color: #ccc;
-  border-bottom-color: #ccc;
-}
-/*
-	@media screen and (min-width: 740px) {
-		.stepper:hover .stepper-input { background-color: #fff; }
-
-		.stepper .stepper-step:hover { background-color: #F9F9F9; }
-
-		.stepper.disabled .stepper-arrow { background: #fff; border-color: #eee; cursor: default; }
-	}
-
-	.stepper.disabled .stepper-input { background: #fff; border-color: #eee; color: #ccc; }
-	.stepper.disabled .stepper-arrow { background: #fff; border-color: #eee; cursor: default; }
-*/
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Set default font family to sans-serif.
