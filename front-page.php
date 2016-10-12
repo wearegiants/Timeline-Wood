@@ -1,6 +1,6 @@
 <?php 
 
-	Themewrangler::setup_page();get_header(/***Template Name: Home Page */); 
+	Themewrangler::setup_page();get_header(); 
 	$thumb_id = get_post_thumbnail_id();
 	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
 	$thumb_url = $thumb_url_array[0];
@@ -12,7 +12,7 @@
 	<div class="centered">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white text-center">
-				<span class="title title--xl">Spring Cleaning</span><br>
+				<span class="title title--xl"><?php the_field('feature_headline'); ?></span><br>
 			</div>
 		</div>
 	</div>
