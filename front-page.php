@@ -28,33 +28,58 @@
 <hr class="invisible">
 
 <div class="fs-row">
+	<?php $articles = get_field('articles'); ?>
+	<?php if ($articles): ?>
+	<?php $i = 1; foreach($articles as $article): ?>
+	<?php 
+		$article_title = $article['title'];
+		$article_subtitle = $article['subtitle'];
+		$article_link = $article['link'];
+		$article_image = $article['image']['sizes']['large'];
+	?>
+
+
+	<?php if($i == 1): ?>
 	<div class="fs-cell fs-lg-4 fs-md-3 fs-sm-full">
-		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"http://i.imgur.com/6hgAqoe.jpg"}'></div>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
 		<div class="text-center">
 			<br>
-			<span class="accent accent--sm color--gray">STORIES</span>
-			<h3 class="nomargin">Inside Stylist <br>Aninna Mislin's Home</h3>
+			<a href="<?php echo $article_link; ?>">
+				<span class="accent accent--sm color--gray"><?php echo $article_subtitle; ?></span>
+				<h3 class="nomargin"><?php echo $article_title; ?></h3>
+			</a>
 		</div>
 		<hr class="invisible">
 	</div>
+	<?php endif; ?>
+	<?php if($i == 2): ?>
 	<div class="fs-cell fs-lg-8 fs-md-3 fs-sm-full">
-		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"http://i.imgur.com/Vcmy3WE.jpg"}'></div>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
 		<div class="text-center">
 			<br>
-			<span class="accent accent--sm color--gray">HOW TO</span>
-			<h3 class="nomargin">Refresh your kitchen backsplash with  <br>Timeline Skinnies</h3>
+			<a href="<?php echo $article_link; ?>">
+				<span class="accent accent--sm color--gray"><?php echo $article_subtitle; ?></span>
+				<h3 class="nomargin"><?php echo $article_title; ?></h3>
+			</a>
 		</div>
 		<hr class="invisible">
 	</div>
+	<?php endif; ?>
+	<?php if($i == 3): ?>
 	<div class="fs-cell fs-all-full">
-		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"http://i.imgur.com/5tCsSoh.jpg"}'></div>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
 		<div class="text-center">
 			<br>
-			<span class="accent accent--sm color--gray">PRODUCTS</span>
-			<h3 class="nomargin">Explore our Color Series <br> Commercial Range</h3>
+			<a href="<?php echo $article_link; ?>">
+				<span class="accent accent--sm color--gray"><?php echo $article_subtitle; ?></span>
+				<h3 class="nomargin"><?php echo $article_title; ?></h3>
+			</a>
 		</div>
 		<hr class="invisible">
 	</div>
+	<?php endif; ?>
+	<?php $i++; endforeach; ?>
+	<?php endif; ?>
 </div>
 
 <div class="carousel" data-carousel-options='{"autoAdvance": true, "infinite": true,"controls":false,"pagination":false}'>
