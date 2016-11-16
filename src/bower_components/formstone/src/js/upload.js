@@ -15,6 +15,44 @@
 
 	/**
 	 * @method private
+	 * @name setup
+	 * @description Setup plugin.
+	 */
+
+	function setup() {
+		var blobSliceMethods = [
+				'mozSlice',
+				'webkitSlice',
+				'slice'
+			];
+
+		if (Formstone.support.file) {
+			var testFile = false;
+
+			try {
+				testFile = new File([""], "f");
+			} catch (e) {}
+
+			if (!testFile) {
+				// Safari & IE/Edge :/
+				try {
+					testFile = new Blob([""], {});
+				} catch (e) {}
+			}
+
+			if (testFile) {
+				for (var i in blobSliceMethods) {
+					if (blobSliceMethods.hasOwnProperty(i) && blobSliceMethods[i] in testFile) {
+						BlobSliceMethod = blobSliceMethods[i];
+						break;
+					}
+				}
+			}
+		}
+	}
+
+	/**
+	 * @method private
 	 * @name construct
 	 * @description Builds instance.
 	 * @param data [object] "Instance data"
@@ -23,6 +61,10 @@
 	function construct(data) {
 		if (Formstone.support.file) {
 			var html = "";
+
+			if (!BlobSliceMethod) {
+				data.chunked = false;
+			}
 
 			if (data.label !== false) {
 				html += '<div class="' + RawClasses.target + '">';
@@ -86,6 +128,7 @@
 	 * @name abortUpload
 	 * @description Cancels all active uploads.
 	 * @param data [object] "Instance data"
+	 * @param index [int] "File index"
 	 */
 
 	/**
@@ -107,7 +150,11 @@
 				if ($.type(index) === "undefined" || (index >= 0 && file.index === index)) {
 					// Abort all
 					if (file.started && !file.complete) {
-						file.transfer.abort();
+						if (data.chunked) {
+							file.chunkTransfer.abort();
+						} else {
+							file.transfer.abort();
+						}
 					} else {
 						abortFile(data, file, "abort");
 					}
@@ -120,6 +167,15 @@
 		checkQueue(data);
 	}
 
+	/**
+	 * @method private
+	 * @name abortFile
+	 * @description Aborts file.
+	 * @param data [object] "Instance data"
+	 * @param formData [object] "Target form"
+	 * @param file [object] "Target file"
+	 */
+
 	function abortFile(data, file, error) {
 		file.error = true;
 		data.$el.trigger(Events.fileError, [ file, error ]);
@@ -127,6 +183,21 @@
 		if (!data.aborting) {
 			checkQueue(data);
 		}
+	}
+
+	/**
+	 * @method private
+	 * @name abortChunk
+	 * @description Aborts file chunk.
+	 * @param data [object] "Instance data"
+	 * @param formData [object] "Target form"
+	 * @param file [object] "Target file"
+	 */
+
+	function abortChunk(data, file, error) {
+		data.$el.trigger(Events.chunkError, [ file, error ]);
+
+		abortFile(data, file, error);
 	}
 
 	/**
@@ -379,17 +450,7 @@
 		for (var j in data.queue) {
 			if (data.queue.hasOwnProperty(j)) {
 				if (!data.queue[j].started) {
-					var formData = new FormData();
-
-					formData.append(data.postKey, data.queue[j].file);
-
-					for (var k in data.postData) {
-						if (data.postData.hasOwnProperty(k)) {
-							formData.append(k, data.postData[k]);
-						}
-					}
-
-					uploadFile(data, formData, data.queue[j]);
+					uploadFile(data, data.queue[j]);
 				}
 
 				transfering++;
@@ -417,59 +478,153 @@
 	 * @description Uploads file.
 	 * @param data [object] "Instance data"
 	 * @param file [object] "Target file"
-	 * @param formData [object] "Target form"
 	 */
 
-	function uploadFile(data, formData, file) {
-		// Modify data before upload
-		formData = data.beforeSend.call(Window, formData, file);
-
-		if (file.size >= data.maxSize || formData === false || file.error === true) {
-			abortFile(data, file, (!formData ? "abort" : "size"));
-		} else {
+	function uploadFile(data, file) {
+		if (file.size >= data.maxSize || file.error === true) {
+			abortFile(data, file, "size");
+		} else if (data.chunked) {
+			// Chunked upload
 			file.started = true;
-			file.transfer = $.ajax({
+
+			file.chunkSize = (1024 * data.chunkSize);
+			file.totalChunks = Math.ceil( file.size / file.chunkSize );
+			file.currentChunk = 0;
+
+			data.$el.trigger(Events.fileStart, [ file ]);
+
+			uploadChunk(data, file);
+		} else {
+			var formData = new FormData();
+
+			formData.append(data.postKey, file.file);
+			formData = setFormData(data, formData, file);
+
+			if (formData === false) {
+				abortFile(data, file, "abort");
+			} else {
+				// Standard upload
+				file.started = true;
+				file.transfer = $.ajax({
+					url         : data.action,
+					data        : formData,
+					dataType    : data.dataType,
+					type        : "POST",
+					contentType : false,
+					processData : false,
+					cache       : false,
+					xhr: function() {
+						var $xhr = $.ajaxSettings.xhr();
+
+						if ($xhr.upload) {
+							// Clean progress event
+							$xhr.upload.addEventListener("progress", function(e) {
+								var percent = 0,
+									position = e.loaded || e.position,
+									total = e.total;
+
+								if (e.lengthComputable) {
+									percent = Math.ceil((position / total) * 100);
+								}
+
+								data.$el.trigger(Events.fileProgress, [ file, percent ]);
+							}, false);
+						}
+
+						return $xhr;
+					},
+					beforeSend: function(jqXHR, settings) {
+						data.$el.trigger(Events.fileStart, [ file ]);
+					},
+					success: function(response, status, jqXHR) {
+						file.complete = true;
+						data.$el.trigger(Events.fileComplete, [ file, response ]);
+
+						checkQueue(data);
+					},
+					error: function(jqXHR, status, error) {
+						abortFile(data, file, error);
+					}
+				});
+			}
+		}
+	}
+
+	/**
+	 * @method private
+	 * @name uploadChunk
+	 * @description Uploads file chunk.
+	 * @param data [object] "Instance data"
+	 * @param formData [object] "Target form"
+	 * @param file [object] "Target file"
+	 */
+
+	function uploadChunk(data, file) {
+		var chunkStart = (file.chunkSize * file.currentChunk),
+			chunkEnd   = (chunkStart + file.chunkSize);
+
+		if (chunkEnd > file.size) {
+			chunkEnd = file.size;
+		}
+
+		var newChunk = file.file[ BlobSliceMethod ]( chunkStart, chunkEnd ),
+			formData = new FormData();
+
+		formData.append(data.postKey, newChunk, file.file.name);
+		formData.append("chunks", file.totalChunks);
+		formData.append("chunk", file.currentChunk);
+
+		formData = setFormData(data, formData, file);
+
+		if (formData === false) {
+			abortFile(data, file, "abort");
+		} else {
+			file.chunkTransfer = $.ajax({
 				url         : data.action,
 				data        : formData,
 				dataType    : data.dataType,
 				type        : "POST",
-				contentType :false,
+				contentType : false,
 				processData : false,
 				cache       : false,
-				xhr: function() {
-					var $xhr = $.ajaxSettings.xhr();
-
-					if ($xhr.upload) {
-						// Clean progress event
-						$xhr.upload.addEventListener("progress", function(e) {
-							var percent = 0,
-								position = e.loaded || e.position,
-								total = e.total;
-
-							if (e.lengthComputable) {
-								percent = Math.ceil((position / total) * 100);
-							}
-
-							data.$el.trigger(Events.fileProgress, [ file, percent ]);
-						}, false);
-					}
-
-					return $xhr;
-				},
 				beforeSend: function(jqXHR, settings) {
-					data.$el.trigger(Events.fileStart, [ file ]);
+					data.$el.trigger(Events.chunkStart, [ file ]);
 				},
 				success: function(response, status, jqXHR) {
-					file.complete = true;
-					data.$el.trigger(Events.fileComplete, [ file, response ]);
+					file.currentChunk++;
 
-					checkQueue(data);
+					data.$el.trigger(Events.chunkComplete, [ file ]);
+
+					var percent = Math.ceil((file.currentChunk / file.totalChunks) * 100);
+					data.$el.trigger(Events.fileProgress, [ file, percent ]);
+
+					if (file.currentChunk < file.totalChunks) {
+						uploadChunk(data, file);
+					} else {
+						file.complete = true;
+						data.$el.trigger(Events.fileComplete, [ file, response ]);
+
+						checkQueue(data);
+					}
 				},
 				error: function(jqXHR, status, error) {
-					abortFile(data, file, error);
+					abortChunk(data, file, error);
 				}
 			});
 		}
+	}
+
+	function setFormData(data, formData, file) {
+		for (var i in data.postData) {
+			if (data.postData.hasOwnProperty(i)) {
+				formData.append(i, data.postData[i]);
+			}
+		}
+
+		// Modify data before upload
+		formData = data.beforeSend.call(data.$el, formData, file);
+
+		return formData;
 	}
 
 	/**
@@ -492,6 +647,8 @@
 			 * @param action [string] "Where to submit uploads"
 			 * @param autoUpload [boolean] <false> "Beging upload when files are dropped"
 			 * @param beforeSend [function] "Run before request sent, must return modified formdata or `false` to cancel"
+			 * @param chunked [boolean] <false> "Use chunked uploading, if supported"
+			 * @param chunkSize [int] <100> "Size to chunk, in kB"
 			 * @param customClass [string] <''> "Class applied to instance"
 			 * @param dataType [string] <'html'> "Data type of AJAX request"
 			 * @param label [string] <'Drag and drop files or click to select'> "Drop target text; `false` to disable"
@@ -509,6 +666,8 @@
 				action         : "",
 				autoUpload     : true,
 				beforeSend     : function(formdata) { return formdata; },
+				chunked        : false,
+				chunkSize      : 100,
 				customClass    : "",
 				dataType       : "html",
 				label          : "Drag and drop files or click to select",
@@ -531,6 +690,7 @@
 			],
 
 			methods: {
+				_setup        : setup,
 				_construct    : construct,
 				_destruct     : destruct,
 
@@ -549,10 +709,16 @@
 		Functions     = Plugin.functions,
 
 		Window        = Formstone.window,
-		$Window       = Formstone.$window;
+		$Window       = Formstone.$window,
+
+		// Internal
+		BlobSliceMethod = false;
 
 		/**
 		 * @events
+		 * @event chunkcomplete "File chunk complete"
+		 * @event chunkstart "File chunk starting"
+		 * @event chunkerror "File chunk error"
 		 * @event complete "All uploads are complete"
 		 * @event filecomplete "Specific upload complete"
 		 * @event filedragenter "File dragged into target"
@@ -565,6 +731,9 @@
 		 * @event queued "Files are queued for upload"
 		 */
 
+		Events.chunkComplete   = "chunkcomplete";
+		Events.chunkError      = "chunkerror";
+		Events.chunkStart      = "chunkstart";
 		Events.complete        = "complete";
 		Events.fileComplete    = "filecomplete";
 		Events.fileDragEnter   = "filedragenter";

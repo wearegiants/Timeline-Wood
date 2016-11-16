@@ -3,7 +3,7 @@
 <div class="about">
 <?php $slides = get_field('about'); ?>
 <?php if($slides): ?>
-<div class="about__slide-container carousel" data-carousel-options='{"infinite": true,"controls":true,"pagination":false}'>
+<div class="about__slide-container carousel fs-light" data-carousel-options='{"infinite": true,"controls":true,"pagination":false,"theme":"fs-light"}'>
 <?php $counter = 1; foreach($slides as $slide): ?>
 
 	<div id="slide-<?php echo $counter; ?>" class="about__slide hero hero--lg relative bg--<?php echo $slide['background']; ?>" data-height-modifier="#header">

@@ -656,9 +656,9 @@
 		return _props;
 	}
 
-	// Set Transition Information
+	// Set Browser Prefixes
 
-	function setTransitionInformation() {
+	function setBrowserPrefixes() {
 		var transitionEvents = {
 				"WebkitTransition"    : "webkitTransitionEnd",
 				"MozTransition"       : "transitionend",
@@ -679,12 +679,11 @@
 			transitionEvent       = "transitionend",
 			transitionProperty    = "",
 			transformProperty     = "",
-			test                  = document.createElement("div"),
+			testDiv               = document.createElement("div"),
 			i;
 
-
 		for (i in transitionEvents) {
-			if (transitionEvents.hasOwnProperty(i) && i in test.style) {
+			if (transitionEvents.hasOwnProperty(i) && i in testDiv.style) {
 				transitionEvent = transitionEvents[i];
 				Formstone.support.transition = true;
 				break;
@@ -694,7 +693,7 @@
 		Events.transitionEnd = transitionEvent + ".{ns}";
 
 		for (i in transitionProperties) {
-			if (transitionProperties.hasOwnProperty(i) && transitionProperties[i] in test.style) {
+			if (transitionProperties.hasOwnProperty(i) && transitionProperties[i] in testDiv.style) {
 				transitionProperty = transitionProperties[i];
 				break;
 			}
@@ -703,7 +702,7 @@
 		Formstone.transition = transitionProperty;
 
 		for (i in transformProperties) {
-			if (transformProperties.hasOwnProperty(i) && transformProperties[i] in test.style) {
+			if (transformProperties.hasOwnProperty(i) && transformProperties[i] in testDiv.style) {
 				Formstone.support.transform = true;
 				transformProperty = transformProperties[i];
 				break;
@@ -773,9 +772,9 @@
 
 	Events.clickTouchStart = Events.click + " " + Events.touchStart;
 
-	// Transitions
+	// Browser Prefixes
 
-	setTransitionInformation();
+	setBrowserPrefixes();
 
 	window.Formstone = Formstone;
 

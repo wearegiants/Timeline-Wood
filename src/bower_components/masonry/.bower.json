@@ -47,7 +47,7 @@
     "tag": "v3.3.2",
     "commit": "48ed97fd2ebf0c126833bef6b29aff51781701e2"
   },
-  "_source": "git://github.com/desandro/masonry.git",
+  "_source": "https://github.com/desandro/masonry.git",
   "_target": "~3.3.0",
   "_originalSource": "masonry"
 }

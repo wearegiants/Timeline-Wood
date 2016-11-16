@@ -6,7 +6,8 @@
 			"jquery",
 			"./core",
 			"./touch",
-			"./transition"
+			"./transition",
+			"./viewer"
 		], factory);
 	} else {
 		factory(jQuery, Formstone);
@@ -110,13 +111,17 @@
 				isMobile           : (Formstone.isMobile || data.mobile),
 				isTouch            : Formstone.support.touch,
 				isAnimating        : true,
+				isZooming          : false,
 				oldContentHeight   : 0,
 				oldContentWidth    : 0,
 				metaHeight         : 0,
 				thumbnailHeight    : 0,
 				captionOpen        : false,
-				thumbnailsOpen     : false
+				thumbnailsOpen     : false,
+				tapTimer           : null
 			}, data);
+
+			Instance.isViewer = (Instance.isMobile && data.viewer && typeof $.fn.fsViewer !== undefined);
 
 			// Check target type
 			var $el            = data.$el,
@@ -145,8 +150,9 @@
 			// Kill event
 			Functions.killEvent(e);
 
-			// Touch
-			Instance.touch = (data.touch && Instance.isMobile && Instance.isTouch);
+			// Viewport
+			Instance.$viewportMeta = $('meta[name="viewport"]');
+			Instance.viewportContent = (Instance.$viewportMeta.length) ? Instance.$viewportMeta.attr("content") : false;
 
 			// Double the margin
 			Instance.margin *= 2;
@@ -418,8 +424,6 @@
 			Instance.$lightbox.fsTransition("destroy");
 			Instance.$content.fsTransition("destroy");
 
-			clearTouch();
-
 			Instance.$lightbox.addClass(RawClasses.animating).fsTransition({
 				property: "opacity"
 			},
@@ -451,6 +455,12 @@
 
 			if (Instance.isMobile) {
 				$Locks.removeClass(RawClasses.lock);
+
+				if (Instance.$viewportMeta) {
+					Instance.$viewportMeta.attr("content", Instance.viewportContent);
+				} else {
+					Instance.$viewportMeta.remove();
+				}
 			}
 		}
 	}
@@ -465,7 +475,15 @@
 		var position = calculatePosition(),
 			durration = Instance.isMobile ? 0 : Instance.duration;
 
-		if (!Instance.isMobile) {
+		if (Instance.isMobile) {
+			var viewportContent = 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no';
+
+			if (Instance.$viewportMeta) {
+				Instance.$viewportMeta.attr("content", viewportContent);
+			} else {
+				Instance.$viewportMeta = $("head").append('<meta name="viewport" content="' + viewportContent + '">');
+			}
+		} else {
 			Instance.$controls.css({
 				marginTop: ((Instance.contentHeight - Instance.controlHeight - Instance.metaHeight + Instance.thumbnailHeight) / 2)
 			});
@@ -701,166 +719,53 @@
 	 */
 
 	function loadImage(source) {
-		Instance.hasScaled = false;
+		if (Instance.isViewer) {
+			Instance.$imageContainer = $('<div class="' + RawClasses.image_container + '"><img></div>');
+			Instance.$image = Instance.$imageContainer.find("img");
 
-		// Cache current image
-		Instance.$imageContainer = $('<div class="' + RawClasses.image_container + '"><img></div>');
-		Instance.$image = Instance.$imageContainer.find("img");
-
-		Instance.$image.one(Events.load, function() {
-			var naturalSize = calculateNaturalSize(Instance.$image);
-
-			Instance.naturalHeight = naturalSize.naturalHeight;
-			Instance.naturalWidth  = naturalSize.naturalWidth;
-
-			if (Instance.retina) {
-				Instance.naturalHeight /= 2;
-				Instance.naturalWidth  /= 2;
-			}
+			Instance.$image.attr("src", source)
+						   .addClass(RawClasses.image);
 
 			Instance.$content.prepend(Instance.$imageContainer);
 
-			// Size content to be sure it fits the viewport
 			sizeImage();
 
-			openLightbox();
+			Instance.$imageContainer.one("loaded.viewer", function() {
+				openLightbox();
+			}).fsViewer({
+				theme: Instance.theme
+			});
+		} else {
+			// Cache current image
+			Instance.$imageContainer = $('<div class="' + RawClasses.image_container + '"><img></div>');
+			Instance.$image = Instance.$imageContainer.find("img");
 
-			if (Instance.touch) {
-				cacheScale();
-				onScale({
-					scale: 1,
-					deltaX: 0,
-					deltaY: 0
-				});
-				onScaleEnd();
+			Instance.$image.one(Events.load, function() {
+				var naturalSize = calculateNaturalSize(Instance.$image);
 
-				Instance.$content.fsTouch({
-					pan      : true,
-					scale    : true,
-					// swipe    : true
-				}).on(Events.scaleStart, onScaleStart)
-				  .on(Events.scaleEnd, onScaleEnd)
-				  .on(Events.scale, onScale);
+				Instance.naturalHeight = naturalSize.naturalHeight;
+				Instance.naturalWidth  = naturalSize.naturalWidth;
 
-/*
-				if (!Instance.visible && Instance.isMobile && Instance.gallery.active) {
-					Instance.$content.fsTouch({
-						axis: "x",
-						swipe: true
-					}).on(Events.swipe, onSwipe);
+				if (Instance.retina) {
+					Instance.naturalHeight /= 2;
+					Instance.naturalWidth  /= 2;
 				}
-*/
-			}
-		}).error(loadError)
-		  .attr("src", source)
-		  .addClass(RawClasses.image);
 
-		// If image has already loaded into cache, trigger load event
-		if (Instance.$image[0].complete || Instance.$image[0].readyState === 4) {
-			Instance.$image.trigger(Events.load);
-		}
-	}
+				Instance.$content.prepend(Instance.$imageContainer);
 
-	function clearTouch() {
-		if (Instance.$image && Instance.$image.length) {
-			Instance.$content.fsTouch("destroy");
-		}
-	}
+				// Size content to be sure it fits the viewport
+				sizeImage();
 
-	function cacheScale() {
-		Instance.scalePosition = Instance.$imageContainer.position();
+				openLightbox();
+			}).error(loadError)
+			  .attr("src", source)
+			  .addClass(RawClasses.image);
 
-		Instance.scaleY = Instance.scalePosition.top;
-		Instance.scaleX = Instance.scalePosition.left;
-
-		Instance.scaleHeight = Instance.$image.outerHeight();
-		Instance.scaleWidth  = Instance.$image.outerWidth();
-	}
-
-	function onScaleStart(e) {
-		cacheScale();
-
-		Instance.$lightbox.addClass(RawClasses.scaling);
-	}
-
-	function onScale(e) {
-		Instance.targetContainerY = Instance.scaleY + e.deltaY;
-		Instance.targetContainerX = Instance.scaleX + e.deltaX;
-
-		Instance.targetImageHeight = Instance.scaleHeight * e.scale;
-		Instance.targetImageWidth  = Instance.scaleWidth  * e.scale;
-
-		if (Instance.targetImageHeight < Instance.scaleMinHeight) {
-			Instance.targetImageHeight = Instance.scaleMinHeight;
-		}
-		if (Instance.targetImageHeight > Instance.scaleMaxHeight) {
-			Instance.targetImageHeight = Instance.scaleMaxHeight;
-		}
-
-		if (Instance.targetImageWidth < Instance.scaleMinWidth) {
-			Instance.targetImageWidth = Instance.scaleMinWidth;
-		}
-		if (Instance.targetImageWidth > Instance.scaleMaxWidth) {
-			Instance.targetImageWidth = Instance.scaleMaxWidth;
-		}
-
-		Instance.hasScaled = true;
-		Instance.isScaling = true;
-
-		Instance.$imageContainer.css({
-			top:  Instance.targetContainerY,
-			left: Instance.targetContainerX
-		});
-
-		Instance.$image.css({
-			height    : Instance.targetImageHeight,
-			width     : Instance.targetImageWidth,
-			top       : -(Instance.targetImageHeight / 2),
-			left      : -(Instance.targetImageWidth  / 2)
-		});
-	}
-
-	function onScaleEnd(e) {
-		cacheScale();
-
-		Instance.isScaling = false;
-
-		var conHeight = Instance.$container.outerHeight() - Instance.metaHeight,
-			conWidth  = Instance.$container.outerWidth();
-
-		Instance.scaleMinY    = conHeight - ( Instance.scaleHeight / 2 );
-		Instance.scaleMinX    = conWidth  - ( Instance.scaleWidth  / 2 );
-		Instance.scaleMaxY    = ( Instance.scaleHeight / 2 );
-		Instance.scaleMaxX    = ( Instance.scaleWidth  / 2 );
-
-		if (Instance.scaleHeight < conHeight) {
-			Instance.scalePosition.top = conHeight / 2;
-		} else {
-			if (Instance.scalePosition.top < Instance.scaleMinY) {
-				Instance.scalePosition.top = Instance.scaleMinY;
-			}
-			if (Instance.scalePosition.top > Instance.scaleMaxY) {
-				Instance.scalePosition.top = Instance.scaleMaxY;
+			// If image has already loaded into cache, trigger load event
+			if (Instance.$image[0].complete || Instance.$image[0].readyState === 4) {
+				Instance.$image.trigger(Events.load);
 			}
 		}
-
-		if (Instance.scaleWidth < conWidth) {
-			Instance.scalePosition.left = conWidth / 2;
-		} else {
-			if (Instance.scalePosition.left < Instance.scaleMinX) {
-				Instance.scalePosition.left = Instance.scaleMinX;
-			}
-			if (Instance.scalePosition.left > Instance.scaleMaxX) {
-				Instance.scalePosition.left = Instance.scaleMaxX;
-			}
-		}
-
-		Instance.$lightbox.removeClass(RawClasses.scaling);
-
-		Instance.$imageContainer.css({
-			left: Instance.scalePosition.left,
-			top:  Instance.scalePosition.top
-		});
 	}
 
 	/**
@@ -918,11 +823,17 @@
 						Instance.spacerHeight = Instance.$tools.outerHeight(true);
 					}
 
-					Instance.spacerHeight += Instance.$thumbnails.outerHeight(true) + 10;
-
 					// Content match viewport
 					Instance.contentHeight = Instance.viewportHeight;
 					Instance.contentWidth  = Instance.viewportWidth;
+
+					if (!Instance.isTouch) {
+						Instance.$content.css({
+							height: Instance.contentHeight - Instance.spacerHeight // - 10
+						});
+					}
+
+					Instance.spacerHeight += Instance.$thumbnails.outerHeight(true) + 10;
 
 					fitImage();
 
@@ -953,24 +864,12 @@
 					});
 				}
 
-				if (!Instance.hasScaled) {
-					Instance.$image.css({
-						height: Instance.targetImageHeight,
-						width:  Instance.targetImageWidth
-					});
-
-					if (Instance.touch) {
-						Instance.$image.css({
-							top     : -(Instance.targetImageHeight / 2),
-							left    : -(Instance.targetImageWidth  / 2)
-						});
-					} else {
-						Instance.$image.css({
-							marginTop     : Instance.imageMarginTop,
-							marginLeft    : Instance.imageMarginLeft
-						});
-					}
-				}
+				Instance.$image.css({
+					height        : Instance.targetImageHeight,
+					width         : Instance.targetImageWidth,
+					marginTop     : Instance.imageMarginTop,
+					marginLeft    : Instance.imageMarginLeft
+				});
 
 				if (!Instance.isMobile) {
 					Instance.metaHeight = Instance.$meta.outerHeight(true);
@@ -983,13 +882,6 @@
 				}
 
 				count ++;
-			}
-
-			if (Instance.touch) {
-				Instance.scaleMinHeight    = Instance.targetImageHeight;
-				Instance.scaleMinWidth     = Instance.targetImageWidth;
-				Instance.scaleMaxHeight    = Instance.naturalHeight;
-				Instance.scaleMaxWidth     = Instance.naturalWidth;
 			}
 		}
 	}
@@ -1092,7 +984,6 @@
 
 	function sizeVideo() {
 		// Set initial vars
-
 		Instance.windowHeight = Instance.viewportHeight = Formstone.windowHeight - Instance.mobilePaddingVertical   - Instance.paddingVertical;
 		Instance.windowWidth  = Instance.viewportWidth  = Formstone.windowWidth  - Instance.mobilePaddingHorizontal - Instance.paddingHorizontal;
 		Instance.videoMarginTop = 0;
@@ -1103,14 +994,14 @@
 				Instance.$controlBox.css({
 					width: Formstone.windowWidth
 				});
-				Instance.spacerHeight = Instance.$controls.outerHeight(true);
+				Instance.spacerHeight = Instance.$controls.outerHeight(true) + 10;
 			} else {
 				Instance.$tools.css({
 					width: Formstone.windowWidth
 				});
 				Instance.spacerHeight = Instance.$tools.outerHeight(true);
+				Instance.spacerHeight += Instance.$thumbnails.outerHeight(true) + 10;
 			}
-			Instance.spacerHeight = Instance.$thumbnails.outerHeight(true) + 10;
 
 			Instance.viewportHeight -= Instance.spacerHeight;
 
@@ -1202,7 +1093,6 @@
 		if (!Instance.isAnimating && !$control.hasClass(RawClasses.control_disabled)) {
 			Instance.isAnimating = true;
 
-			clearTouch();
 			closeCaption();
 
 			Instance.gallery.index += ($control.hasClass(RawClasses.control_next)) ? 1 : -1;
@@ -1240,7 +1130,6 @@
 		if (!Instance.isAnimating && !$thumbnail.hasClass(RawClasses.active)) {
 			Instance.isAnimating = true;
 
-			clearTouch();
 			closeCaption();
 
 			Instance.gallery.index = Instance.$thumbnailItems.index($thumbnail);
@@ -1266,7 +1155,7 @@
 	function updateThumbnails() {
 		// Thumbnails
 		if (Instance.thumbnails) {
-			var $thumb     = Instance.$thumbnailItems.eq(Instance.gallery.index);
+			var $thumb = Instance.$thumbnailItems.eq(Instance.gallery.index);
 
 			Instance.$thumbnailItems.removeClass(RawClasses.active);
 			$thumb.addClass(RawClasses.active);
@@ -1299,6 +1188,9 @@
 
 	function cleanGallery() {
 		if (typeof Instance.$imageContainer !== 'undefined') {
+			if (Instance.isViewer) {
+				Instance.$imageContainer.fsViewer("destroy");
+			}
 			Instance.$imageContainer.remove();
 		}
 		if (typeof Instance.$videoWrapper !== 'undefined') {
@@ -1473,19 +1365,8 @@
 		Instance.$image.off(Events.namespace);
 
 		appendObject($error);
-	}
 
-	/**
-	 * @method private
-	 * @name onSwipe
-	 * @description Handles swipe event
-	 * @param e [object] "Event data"
-	 */
-
-	function onSwipe(e) {
-		if (!Instance.captionOpen) {
-			Instance.$controls.filter((e.directionX === "left") ? Classes.control_next : Classes.control_previous).trigger(Events.click);
-		}
+		$Window.trigger(Events.error);
 	}
 
 	/**
@@ -1571,6 +1452,7 @@
 	 * @dependency core.js
 	 * @dependency touch.js
 	 * @dependency transition.js
+	 * @dependency viewer.js (optional)
 	 */
 
 	var Plugin = Formstone.Plugin("lightbox", {
@@ -1602,10 +1484,10 @@
 			 * @param theme [string] <"fs-light"> "Theme class name"
 			 * @param thumbnails [boolean] <false> "Flag to display thumbnail strip"
 			 * @param top [int] <0> "Target top position; over-rides centering"
-			 * @param touch [boolean] <true> "Flag to allow touch zoom on 'mobile' rendering"
 			 * @param videoFormatter [array] <[]> "Object of video formatter objects containing a 'pattern' regex and 'format' callback"
 			 * @param videoRatio [number] <0.5625> "Video height / width ratio (9 / 16 = 0.5625)"
 			 * @param videoWidth [int] <800> "Video max width"
+			 * @param viewer [boolean] <false> "Flag to force 'Viewer' rendering, if available"
 			 */
 
 			defaults: {
@@ -1635,7 +1517,6 @@
 				theme          : "fs-light",
 				thumbnails     : false,
 				top            : 0,
-				touch          : true,
 				videoFormatter : {
 					"youtube": {
 						pattern : /(?:youtube\.com\/(?:[^\/]+\/.+\/|(?:v|e(?:mbed)?)\/|.*[?&]v=)|youtu\.be\/)([^"&?\/ ]{11})/,
@@ -1647,13 +1528,15 @@
 					}
 				},
 				videoRatio     : 0.5625,
-				videoWidth     : 800
+				videoWidth     : 800,
+				viewer         : true
 			},
 
 			classes: [
 				"loading",
 				"animating",
 				"scaling",
+				"zooming",
 				"fixed",
 				"mobile",
 				"touch",
@@ -1704,6 +1587,7 @@
 			 * @events
 			 * @event open.lightbox "Lightbox opened; Triggered on window"
 			 * @event close.lightbox "Lightbox closed; Triggered on window"
+			 * @event error.lightbox "Lightbox error; Triggered on window"
 			 */
 
 			events: {

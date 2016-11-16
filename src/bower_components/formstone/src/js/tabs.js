@@ -338,15 +338,13 @@
 			 * @param maxWidth [string] <Infinity> "Width at which to auto-disable plugin"
 			 * @param mobileMaxWidth [string] <'740px'> "Width at which to auto-disable mobile styles"
 			 * @param theme [string] <"fs-light"> "Theme class name"
-			 * @param vertical [boolean] <false> "Flag to draw vertical tab set"
 			 */
 
 			defaults: {
 				customClass       : "",
 				maxWidth          : Infinity,
 				mobileMaxWidth    : "740px",
-				theme             : "fs-light",
-				vertical          : false
+				theme             : "fs-light"
 			},
 
 			classes: [

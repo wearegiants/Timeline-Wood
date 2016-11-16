@@ -40,7 +40,7 @@
       <?php include locate_template('parts/store/shopify--bag.php' ); ?>
     </menu>
     <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-md-hide fs-sm-hide">
-      <a href="#" data-swap-target="#header-products" class="btn btn--nav btn--swap">Products</a>
+      <a href="#" data-swap-target="#header-products" class="btn btn--nav btn--products product--swap">Products</a>
       <?php echo strip_tags(wp_nav_menu( $mainMenu ), '<a>' ); ?>
     </menu>
   </div>

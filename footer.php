@@ -1,10 +1,31 @@
 </div>
 
-<div id="ticker" class="marquee bg--darkBlue">
+<div id="ticker" class="marquee bg--lightBlue">
 	<div id="ticker__wrapper" class="marquee-content_items mono mono--sm color--white">
-		<div><?php the_field('ticker',4); ?></div>
+		<div>
+			<?php the_field('ticker',4); ?>
+			<?php the_field('ticker',4); ?>
+			<?php the_field('ticker',4); ?>
+			<?php the_field('ticker',4); ?>
+			<?php the_field('ticker',4); ?>		
+		</div>
 	</div>
 </div>
+
+<?php if(is_front_page()): ?>
+<hr class="invisible">
+
+<div class="fs-row">
+	<div class="fs-cell fs-all-full">
+		<div class="insta-wrapper">
+			<div class="text-center"><a class="btn btn--big btn--outlined" href="http://instagram.com/timelinewood" target="blank">Instagram</a></div>
+			<?php echo do_shortcode('[instashow id="1"]'); ?>
+		</div>
+	</div>
+</div>
+
+<hr class="invisible">
+<?php endif; ?>
 
 <footer id="footer" class="footer footer--md bg--bgGray">
 	<div class="fs-row">

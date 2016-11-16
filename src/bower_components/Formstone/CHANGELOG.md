@@ -2,6 +2,29 @@
 
 <!-- -->
 
+### 1.3.0
+
+* Added Viewer component
+* Added file chunking to Upload
+* Added load error event to Background
+* Added `jumpItem` method to Carousel
+* Aliased `jump`, `previous`, and `next` methods to `jumpPage`, `previousPage`, and `nextPage` in Carousel
+* Fixed protocol agnostic YouTube thumbnail in Background
+* Fixed Navigation styles in fs-light base theme
+* Fixed issue with mobile dropdown options in Pagination
+
+### 1.2.2
+
+* Fixed issue with Dropdown options in WebKit/Blink on mobile
+
+### 1.2.1
+
+* Added ability to define custom fields for scroll depth events in Analytics
+* Fixed issue with accessing target element from `beforeSend` callback in Upload
+* Fixed video sizing issue in Lightbox
+* Fixed link actions in Pagination
+* Removed erroneous `vertical` option in Tabs
+
 ### 1.2.0
 
 * Added `lazy` and `lazyEdge` options to Background

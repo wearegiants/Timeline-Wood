@@ -3,5 +3,8 @@ $('.wallpaper').background({
 	lazy: true
 });
 //$("input[type='number']").number();
-$('.carousel').carousel();
+$('.carousel').carousel({
+	theme: 'fs-light'
+});
 $('.btn--swap').swap();
+$('.product--swap').swap();

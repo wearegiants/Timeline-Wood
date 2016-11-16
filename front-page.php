@@ -82,10 +82,10 @@
 	<?php endif; ?>
 </div>
 
-<div class="carousel" data-carousel-options='{"autoAdvance": true, "infinite": true,"controls":false,"pagination":false}'>
+<div class="carousel bg--lightBlue" data-carousel-options='{"autoAdvance": true, "infinite": true,"controls":false,"pagination":false}'>
 <?php $quotes = get_field('quotes', 4); ?>
 <?php foreach($quotes as $quote): ?>
-	<div class="quotes hero hero--sm bg--blue relative">
+	<div class="quotes hero hero--sm bg--lightBlue relative">
 		<div class="centered">
 			<div class="fs-row">
 				<div class="fs-cell fs-all-full">

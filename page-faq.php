@@ -11,7 +11,7 @@
 	<div class="centered">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full">
-				<h2 class="title title--md text-center capped spaced color--black"><?php the_title(); ?></h2>
+				<h2 class="title title--md text-center capped spaced nomargin color--black"><?php the_title(); ?></h2>
 			</div>
 		</div>
 	</div>
@@ -48,7 +48,7 @@ $glossry_items = get_posts( $args );
 			<h2 class="title title--md capped spaced"><?php the_title(); ?></h2>
 			<?php the_content(); ?>
 		</div>
-		<hr class="invisible">
+		<hr class="divider">
 <?php $counter++; endforeach; ?>
 
 	</div>

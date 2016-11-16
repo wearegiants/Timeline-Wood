@@ -3,7 +3,7 @@
   "id": "formstone",
   "codename": "formstone",
   "realname": "Formstone",
-  "version": "1.2.0",
+  "version": "1.3.0",
   "description": "Library of modular front end components.",
   "repository": {
     "type": "git",
@@ -13,6 +13,7 @@
   "homepage_short": "formstone.it",
   "demo": "http://formstone.it/demo/",
   "license": "GPL-3.0",
+  "main": "dist/js/core.js",
   "author": {
     "name": "Ben Plum",
     "email": "mr@benplum.com",
@@ -30,9 +31,9 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-jshint": "^1.0.0",
     "grunt-contrib-less": "^1.3.0",
-    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "^1.0.0",
-    "grunt-include-replace": "^4.0.1",
+    "grunt-include-replace": "^5.0.0",
     "grunt-modernizr": "^1.0.2",
     "grunt-newer": "^1.2.0",
     "grunt-npm2bower-sync": "^0.9.1",
@@ -45,6 +46,61 @@
   },
   "scripts": {
     "postinstall": "node ./node_modules/bower/bin/bower install"
+  },
+  "src": {
+    "css": {
+      "dist/css/grid.css": [
+        "src/less/grid.less"
+      ],
+      "dist/css/grid.ie.css": [
+        "src/less/grid.ie.less"
+      ],
+      "dist/css/background.css": [
+        "src/less/background.less"
+      ],
+      "dist/css/carousel.css": [
+        "src/less/carousel.less"
+      ],
+      "dist/css/checkbox.css": [
+        "src/less/checkbox.less"
+      ],
+      "dist/css/dropdown.css": [
+        "src/less/dropdown.less"
+      ],
+      "dist/css/lightbox.css": [
+        "src/less/lightbox.less"
+      ],
+      "dist/css/navigation.css": [
+        "src/less/navigation.less"
+      ],
+      "dist/css/number.css": [
+        "src/less/number.less"
+      ],
+      "dist/css/pagination.css": [
+        "src/less/pagination.less"
+      ],
+      "dist/css/range.css": [
+        "src/less/range.less"
+      ],
+      "dist/css/scrollbar.css": [
+        "src/less/scrollbar.less"
+      ],
+      "dist/css/tabs.css": [
+        "src/less/tabs.less"
+      ],
+      "dist/css/tooltip.css": [
+        "src/less/tooltip.less"
+      ],
+      "dist/css/upload.css": [
+        "src/less/upload.less"
+      ],
+      "dist/css/viewer.css": [
+        "src/less/viewer.less"
+      ],
+      "dist/css/themes/light.css": [
+        "src/less/themes/light.less"
+      ]
+    }
   },
   "site": {
     "css": {
@@ -80,6 +136,7 @@
         "dist/js/touch.js",
         "dist/js/transition.js",
         "dist/js/upload.js",
+        "dist/js/viewer.js",
         "demo/js/src/site.js",
         "demo/js/src/modules/demo.js"
       ],

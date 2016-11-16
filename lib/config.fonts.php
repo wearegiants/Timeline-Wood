@@ -1,1 +1,2 @@
-<link href='https://fonts.googleapis.com/css?family=PT+Serif|Karla:400,700' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Karla:400,700|Source+Code+Pro' rel='stylesheet' type='text/css'>
+

@@ -133,7 +133,11 @@
 
 	function onPointerStart(e) {
 		var data     = e.data,
-			touch    = ($.type(data.touches) !== "undefined") ? data.touches[0] : null;
+			touch    = ($.type(data.touches) !== "undefined" && data.touches.length) ? data.touches[0] : null;
+
+		if (touch) {
+			data.$el.off(Events.mouseDown);
+		}
 
 		if (!data.touching) {
 			data.startE      = e.originalEvent;
@@ -171,7 +175,7 @@
 		if (!data.touching) {
 			data.touching = true;
 
-			if (data.pan) {
+			if (data.pan && !touch) {
 				$Window.on(Events.mouseMove, data, onPointerMove)
 					   .on(Events.mouseUp, data, onPointerEnd);
 			}
@@ -203,7 +207,7 @@
 
 	function onPointerMove(e) {
 		var data      = e.data,
-			touch     = ($.type(data.touches) !== "undefined") ? data.touches[0] : null,
+			touch     = ($.type(data.touches) !== "undefined" && data.touches.length) ? data.touches[0] : null,
 			newX      = (touch) ? touch.pageX : e.pageX,
 			newY      = (touch) ? touch.pageY : e.pageY,
 			deltaX    = newX - data.startX,
@@ -258,34 +262,6 @@
 
 	/**
 	 * @method private
-	 * @name bindLink
-	 * @description Bind events to internal links
-	 * @param $link [object] "Object to bind"
-	 * @param data [object] "Instance data"
-	 */
-
-	function bindLink($link, data) {
-		$link.on(Events.click, data, onLinkClick);
-
-		// http://www.elijahmanor.com/how-to-access-jquerys-internal-data/
-		var events = $._data($link[0], "events")["click"];
-		events.unshift(events.pop());
-	}
-
-	/**
-	 * @method private
-	 * @name onLinkClick
-	 * @description Handles clicks to internal links
-	 * @param e [object] "Event data"
-	 */
-
-	function onLinkClick(e) {
-		Functions.killEvent(e, true);
-		e.data.$links.off(Events.click);
-	}
-
-	/**
-	 * @method private
 	 * @name onPointerEnd
 	 * @description Handles pointer end / cancel.
 	 * @param e [object] "Event data"
@@ -296,7 +272,7 @@
 
 		// Pan / Swipe / Scale
 
-		var touch     = ($.type(data.touches) !== "undefined") ? data.touches[0] : null,
+		var touch     = ($.type(data.touches) !== "undefined" && data.touches.length) ? data.touches[0] : null,
 			newX      = (touch) ? touch.pageX : e.pageX,
 			newY      = (touch) ? touch.pageY : e.pageY,
 			deltaX    = newX - data.startX,
@@ -366,7 +342,41 @@
 			*/
 		}
 
+		if (touch) {
+			data.touchTimer = Functions.startTimer(data.touchTimer, 5, function() {
+				data.$el.on(Events.mouseDown, data, onPointerStart);
+			});
+		}
+
 		data.touching = false;
+	}
+
+	/**
+	 * @method private
+	 * @name bindLink
+	 * @description Bind events to internal links
+	 * @param $link [object] "Object to bind"
+	 * @param data [object] "Instance data"
+	 */
+
+	function bindLink($link, data) {
+		$link.on(Events.click, data, onLinkClick);
+
+		// http://www.elijahmanor.com/how-to-access-jquerys-internal-data/
+		var events = $._data($link[0], "events")["click"];
+		events.unshift(events.pop());
+	}
+
+	/**
+	 * @method private
+	 * @name onLinkClick
+	 * @description Handles clicks to internal links
+	 * @param e [object] "Event data"
+	 */
+
+	function onLinkClick(e) {
+		Functions.killEvent(e, true);
+		e.data.$links.off(Events.click);
 	}
 
 	/**

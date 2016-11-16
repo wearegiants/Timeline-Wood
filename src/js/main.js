@@ -18,6 +18,15 @@ function scrollFixed(){
   });
 }
 
+function productHover(){
+  $('.btn--products').hover(function(){
+    $(".product--swap").swap("activate"); 
+  });
+  $('#content-wrapper').hover(function(){
+    $(".product--swap").swap("deactivate"); 
+  });
+}
+
 function openModal(){
   $('.open--modal').magnificPopup({
     type: 'inline',
@@ -65,7 +74,7 @@ function subscribe(){
         items: {
           src: '#mailchimp-modal' 
         },
-        modal: true,
+        //modal: true,
         type: 'inline',
         midClick: true,
         removalDelay: 1000,
@@ -116,5 +125,6 @@ $(document).ready(function(){
 	openModal();
 	arrangeBlog();
   subscribe();
+  productHover();
   //scrollFixed();
 });
