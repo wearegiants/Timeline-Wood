@@ -2229,6 +2229,12 @@
 		"oAP": "\/page-blog.php",
 		"oF": 0
 		},
+	"\/page-contact.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-contact.php",
+		"oF": 0
+		},
 	"\/page-faq.php": {
 		"ft": 8192,
 		"oA": 0,
@@ -11155,6 +11161,16 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/src\/less\/css\/ss-glyphish-outlined.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/src\/less\/css\/ss-glyphish-outlined-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/src\/less\/default\/_base.less": {
 		"aP": 0,
 		"bl": 0,
@@ -11503,7 +11519,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 0,
+		"oA": 1,
 		"oAP": "\/src\/less\/css\/ss-glyphish-outlined.css",
 		"oF": 0,
 		"oS": 0,
@@ -11574,6 +11590,23 @@
 		"oA": 0,
 		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/timeline.css",
 		"oF": 2,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/src\/less\/site\/_contact.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/less\/css\/_contact.css",
+		"oF": 0,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,

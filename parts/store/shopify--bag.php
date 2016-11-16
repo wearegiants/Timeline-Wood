@@ -4,7 +4,7 @@
     <div class="fs-row">
       <div class="fs-cell fs-all-full text-right">
         <span class="btn btn--nav bag-close">
-          <a href="#" class="ss-gizmo ss-delete right" id="close_bag">Cart </a>
+          <a href="#" class="ss-gizmo ss-delete right" id="close_bag">Bag </a>
         </span>
       </div>
     </div>

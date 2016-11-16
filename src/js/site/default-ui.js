@@ -4,7 +4,7 @@ $('.wallpaper').background({
 });
 //$("input[type='number']").number();
 $('.carousel').carousel({
-	theme: 'fs-light'
+	//theme: 'fs-light'
 });
 $('.btn--swap').swap();
 $('.product--swap').swap();
