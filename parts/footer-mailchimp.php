@@ -5,7 +5,7 @@
     <h1 class="modal__title color--white text-center">Sign up for our mailing list:</h1>
 
     <?php
-      $form_action = '//noongoons.us10.list-manage.com/subscribe/post?u=a16967a3803d008fcfa3388a9&id=5108d57724';
+      $form_action = get_field('mailchimp_action_url', 11);
     ?>
 
     <form class="subscribe-form" action="<?php echo $form_action; ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
