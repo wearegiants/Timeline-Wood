@@ -1,9 +1,19 @@
-.wpcf7 {
+.contact {
+  &-map {
+    iframe {
+      width: 100%;
+      display: block;
+    }
+  }
+}
+
+.wpcf7, .contact__subscribe {
 
 	&-text, &-textarea {
 		box-shadow: 0 0 0 1px @lightGray;
 		border-radius: 1px;
 		margin-bottom: @spaced!important;
+    color: @textGray;
 	}
 	&-submit {
 		background-color: @orange!important;

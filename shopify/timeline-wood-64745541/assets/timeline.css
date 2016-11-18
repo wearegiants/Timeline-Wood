@@ -8361,13 +8361,21 @@ input[type=button] {
 .insta-wrapper .btn {
   margin-bottom: 0;
 }
+.contact-map iframe {
+  width: 100%;
+  display: block;
+}
 .wpcf7-text,
-.wpcf7-textarea {
+.contact__subscribe-text,
+.wpcf7-textarea,
+.contact__subscribe-textarea {
   box-shadow: 0 0 0 1px #CBCBD2;
   border-radius: 1px;
   margin-bottom: 25px !important;
+  color: #666666;
 }
-.wpcf7-submit {
+.wpcf7-submit,
+.contact__subscribe-submit {
   background-color: #EB7366 !important;
 }
 .bag-checkout {
