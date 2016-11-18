@@ -7964,6 +7964,14 @@ input[type=button] {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
+.header__icon--search img {
+  position: relative;
+  top: -1px;
+}
+.header__icon--bag img {
+  position: relative;
+  top: -3px;
+}
 .header--sm {
   padding: 12.5px 0;
 }
@@ -8120,6 +8128,21 @@ input[type=button] {
 .footer a {
   color: #151515;
 }
+.footer__links {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-size: 0.625rem;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: normal;
+}
+.footer__links a {
+  color: #999999;
+  text-decoration: underline;
+}
+.footer__links a:hover {
+  color: #151515;
+}
 .footer__nav {
   padding: 0;
 }
@@ -8203,8 +8226,9 @@ input[type=button] {
   height: 30px;
   line-height: 30px;
   text-transform: uppercase;
-  font-size: 11px;
-  font-size: 0.6875rem;
+  letter-spacing: 1px;
+  font-size: 10px;
+  font-size: 0.625rem;
   font-family: 'Source Code Pro', monospace;
   font-weight: normal;
 }
@@ -8333,6 +8357,9 @@ input[type=button] {
   .insta-wrapper {
     margin: 0 -50px;
   }
+}
+.insta-wrapper .btn {
+  margin-bottom: 0;
 }
 .wpcf7-text,
 .wpcf7-textarea {

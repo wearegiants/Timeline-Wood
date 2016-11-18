@@ -1,17 +1,5 @@
 </div>
 
-<div id="ticker" class="marquee bg--lightBlue">
-	<div id="ticker__wrapper" class="marquee-content_items mono mono--sm color--white">
-		<div>
-			<?php the_field('ticker',4); ?>
-			<?php the_field('ticker',4); ?>
-			<?php the_field('ticker',4); ?>
-			<?php the_field('ticker',4); ?>
-			<?php the_field('ticker',4); ?>		
-		</div>
-	</div>
-</div>
-
 <?php if(is_front_page()): ?>
 <hr class="invisible">
 
@@ -24,8 +12,19 @@
 	</div>
 </div>
 
-<hr class="invisible">
 <?php endif; ?>
+
+<div id="ticker" class="marquee bg--blue">
+	<div id="ticker__wrapper" class="marquee-content_items mono mono--sm color--white">
+		<div>
+			<?php the_field('ticker',4); ?>
+			<?php the_field('ticker',4); ?>
+			<?php the_field('ticker',4); ?>
+			<?php the_field('ticker',4); ?>
+			<?php the_field('ticker',4); ?>		
+		</div>
+	</div>
+</div>
 
 <footer id="footer" class="footer footer--md bg--bgGray">
 	<div class="fs-row">

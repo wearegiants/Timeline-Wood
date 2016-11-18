@@ -10,6 +10,20 @@
   }
   
   &__logo {}
+
+  &__links {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    .font_size(10);
+    .monoFont();
+    a {
+      color: @gray;
+      text-decoration: underline;
+      &:hover {
+        color: @black;
+      }
+    }
+  }
   
   &__nav {
     padding: 0;

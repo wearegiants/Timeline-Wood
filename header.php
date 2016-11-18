@@ -36,7 +36,10 @@
       <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo"><?php bloginfo('name' );?></a>
     </menu>
     <menu class="fs-cell fs-xl-fifth fs-lg-3 fs-md-fourth fs-sm-half text-right">
-      <a href="#" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn_first ss-gizmo ss-search right"><span class="fs-md-hide fs-sm-hide">Search</span></a>
+      <a href="#" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn_first header__icon--search">
+        <span class="fs-md-hide fs-sm-hide">Search</span>&nbsp;
+        <img src="/assets/img/magnify.svg" alt="Search">
+      </a>
       <?php include locate_template('parts/store/shopify--bag.php' ); ?>
     </menu>
     <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-md-hide fs-sm-hide">
