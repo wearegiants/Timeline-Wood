@@ -5,6 +5,22 @@
       display: block;
     }
   }
+  &-desc {
+    small {
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      .font_size(9);
+    }
+    a {
+      color: @orange;
+      text-decoration: underline;
+      small {
+        text-transform: none;
+        letter-spacing: 0px;
+        .font_size(14);
+      }
+    }
+  }
 }
 
 .wpcf7, .contact__subscribe {

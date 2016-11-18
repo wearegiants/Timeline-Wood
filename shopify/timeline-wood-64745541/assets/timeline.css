@@ -8365,6 +8365,22 @@ input[type=button] {
   width: 100%;
   display: block;
 }
+.contact-desc small {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 9px;
+  font-size: 0.5625rem;
+}
+.contact-desc a {
+  color: #EB7366;
+  text-decoration: underline;
+}
+.contact-desc a small {
+  text-transform: none;
+  letter-spacing: 0px;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
 .wpcf7-text,
 .contact__subscribe-text,
 .wpcf7-textarea,

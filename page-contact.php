@@ -20,7 +20,11 @@
 <hr class="invisible">
 <?php #Contact ?>
 <div class="fs-row">
-	<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-3"><?php the_field('description'); ?></div>
+	<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-3">
+		<div class="contact-desc">
+			<?php the_field('description'); ?>
+		</div>
+	</div>
 	<div class="fs-cell fs-lg-8 fs-lg-push-1 fs-md-4 fs-sm-3">
 		<div class="contact-map">
 			<?php the_field('map'); ?>
