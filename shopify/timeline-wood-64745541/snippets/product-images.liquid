@@ -2,7 +2,7 @@
   <div class="fs-row">
     <div class="fs-cell fs-all-full">
       {% for image in product.images %}
-      <div>
+      <div class="product-images--single">
         <img class="img-responsive" src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}" />
       </div>
       {% endfor %}

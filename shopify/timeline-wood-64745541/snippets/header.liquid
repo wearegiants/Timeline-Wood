@@ -1,41 +1,65 @@
-<header id="header" class="relative mobile-menu relative">
-<div class="fs-row relative header header--sm ">
-<menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
-<a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</a>
-</menu>
-<menu id="header-main" class="fs-cell fs-lg-fifth fs-md-half fs-sm-half text-center">
-<a href="http://timeline.com.s147445.gridserver.com" id="header--logo" class="shopify btn btn--nav btn--logo btn_first">Timeline Wood</a>
-</menu>
-<menu id="header-search" class="fs-cell fs-lg-fifth fs-md-fourth fs-sm-half text-right">
-<a href="#search-modal" id="header--logo" class="open--modal btn btn--nav btn_first ss-gizmo ss-search right"><span class="fs-md-hide fs-sm-hide">Search</span></a>
-<a id="open_bag" class="btn--nav btn btn__last ss-gizmo ss-cart right" href="#">Bag</a>
-<div id="bag">
-<div class="bag-header header header--sm">
-<div class="fs-row">
-<div class="fs-cell fs-all-full text-right">
-<span class="btn btn--nav bag-close">
-<a href="#" class="ss-gizmo ss-delete right" id="close_bag">Cart </a>
-</span>
-</div>
-</div>
-</div>
-<hr class="bag-divider divider top">
-<div id="bag--wrapper" class="bag-wrapper text-left">
-<div class="fs-row">
-<div class="fs-cell fs-full-all" id="items"></div>
-<div class="fs-cell fs-full-all" id="bagtotal"></div>
-</div>
-</div>
-</div>    </menu>
-<menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-7 fs-md-hide fs-sm-hide">
-<a class="btn btn--nav"href="http://timeline-wood.myshopify.com/">Products</a>
-<a class="btn btn--nav"href="http://timeline.com.s147445.gridserver.com/commercial-applications/">Commercial</a>
-<a class="btn btn--nav"href="http://timeline.com.s147445.gridserver.com/retailers/">Retailers</a>
-<a class="btn btn--nav"href="http://timeline.com.s147445.gridserver.com/about/">About</a>
-</menu>
-</div>
-<div class="pinned pinned__bottom">
-<div id="mobile-menu" class="text-center bg--black header header--md mobile-menu">
-<div id="mobile-menu_container" class="fs-row"></div>
+<header id="header" class="relative mobile-menu relative fs-swap-target fs-swap-enabled">
+  <div class="fs-row relative header header--sm" id="header-main__wrapper">
+    <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
+      <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last fs-swap-element fs-swap-enabled"><span class="fs-sm-hide">Menu</span></a>
+    </menu>
+    <menu id="header-main" class="fs-cell fs-lg-fifth fs-md-half fs-sm-half text-center">
+      <a href="http://timeline.com.s147445.gridserver.com" id="header--logo" class="btn btn--nav btn--logo shopify">Timeline Wood</a>
+    </menu>
+    <menu class="fs-cell fs-xl-fifth fs-lg-3 fs-md-fourth fs-sm-half text-right">
+      <a href="#" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn_first header__icon--search fs-swap-element fs-swap-enabled">
+        <span class="fs-md-hide fs-sm-hide">Search</span>&nbsp;
+        <img src="{{'magnify.svg' | asset_url }}" alt="Search">
+      </a>
+      <a id="open_bag" class="btn--nav btn btn__last header__icon--bag" href="#">
+        <span>Bag</span>&nbsp;
+        <img src="{{ 'bag.svg' | asset_url }}" alt="Search">
+      </a>
+      <div id="bag">
+        <div class="bag-header header header--sm">
+          <div class="fs-row">
+            <div class="fs-cell fs-all-full text-right">
+              <span class="btn btn--nav bag-close">
+                <a href="#" class="ss-gizmo ss-delete right" id="close_bag">Bag </a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <hr class="bag-divider divider top">
+        <div id="bag--wrapper" class="bag-wrapper text-left">
+          <div class="fs-row">
+            <div class="fs-cell fs-full-all" id="items"></div>
+            <div class="fs-cell fs-full-all" id="bagtotal"><div class="text-center">Your bag is empty!</div></div>
+          </div>
+        </div>
+      </div>    
+    </menu>
+    <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-md-hide fs-sm-hide">
+      <a href="#" data-swap-target="#header-products" class="btn btn--nav btn--products product--swap fs-swap-element fs-swap-enabled">Products</a>
+      <a class="btn btn--nav" href="http://timeline.com.s147445.gridserver.com/commercial-applications/">Commercial</a>
+      <a class="btn btn--nav" href="http://timeline.com.s147445.gridserver.com/retailers/">Retailers</a>
+      <a class="btn btn--nav" href="http://timeline.com.s147445.gridserver.com/about/">About</a>
+    </menu>
+  </div>
+  <div class="pinned pinned__bottom">
+    <div id="mobile-menu" class="text-center bg--black header header--md mobile-menu fs-swap-target fs-swap-enabled">
+    <div id="mobile-menu_container" class="fs-row">
+      <a href="#" data-swap-target="#header-products" class="btn btn--nav btn--products product--swap fs-swap-element fs-swap-enabled btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half">Products</a>
+      <a class="btn btn--nav btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half" href="http://timeline.com.s147445.gridserver.com/commercial-applications/">Commercial</a>
+      <a class="btn btn--nav btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half" href="http://timeline.com.s147445.gridserver.com/retailers/">Retailers</a>
+      <a class="btn btn--nav btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half" href="http://timeline.com.s147445.gridserver.com/about/">About</a>
+    </div>
 </div>  </div>
-</header>
+  <div id="header-search" class="header header--sm fs-swap-target fs-swap-enabled">
+  <div class="fs-row">
+    <div class="fs-cell fs-all-full relative">
+      <form method="get" id="searchform" action="http://timeline.com.s147445.gridserver.com/">
+        <div>
+          <input type="text" size="18" placeholder="Search" "value="" name="s" id="s">
+          <input type="submit" id="searchsubmit" value="Search" class="btn">
+        </div>
+      </form>
+      <a href="#" id="header-search__close" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn__last ss-gizmo ss-delete right fs-swap-element fs-swap-enabled"></a>
+    </div>
+  </div>
+</div></header>

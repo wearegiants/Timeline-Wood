@@ -5,7 +5,9 @@
   <div class="fs-cell fs-lg-half fs-md-half fs-sm-3 collection-item text-center collection-item__{{ collection.handle }}">
     <div class="collection-item__thumb">
     	<a href="{{ collection.url }}">
-    		<div class="hero hero--sm wallpaper" data-background-options='{"source":"{{ collection.image | img_url: 'grande' }}"}'></div>
+    		<div class="wallpaper" data-background-options='{"source":"{{ collection.image | img_url: 'grande' }}"}'>
+         <img src="{{ 'transparent.png' | asset_url }}" class="img-responsive" />
+        </div>
     	</a>
     </div>
     <header class="collection-item__header">
