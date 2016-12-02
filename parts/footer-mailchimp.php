@@ -23,25 +23,27 @@
 </div>
 
 <script>
-  $( ".subscribe-form" ).submit(function( event ) {
-    $.magnificPopup.close();
-    $.cookie("subscribe", 1);
-  });
+  $(document).ready(function(){
+    $( ".subscribe-form" ).submit(function( event ) {
+      $.magnificPopup.close();
+      $.cookie("subscribe", 1);
+    });
 
-  var cookieValue = $.cookie("subscribe");
+    var cookieValue = $.cookie("subscribe");
 
-  if (!cookieValue) {
-    if ( $('body').hasClass('home')) {
-      $.magnificPopup.open({
-        items: {
-          src: '#mailchimp-modal' 
-        },
-        //modal: true,
-        type: 'inline',
-        midClick: true,
-        removalDelay: 1000,
-        mainClass: 'mfp-subscribe fs-grid',
-      });
+    if (!cookieValue) {
+      if ( $('body').hasClass('home')) {
+        $.magnificPopup.open({
+          items: {
+            src: '#mailchimp-modal' 
+          },
+          //modal: true,
+          type: 'inline',
+          midClick: true,
+          removalDelay: 1000,
+          mainClass: 'mfp-subscribe fs-grid',
+        });
+      }
     }
-  }
+  });
 </script>

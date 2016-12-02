@@ -40,7 +40,7 @@
 
 
 	<?php if($i == 1): ?>
-	<div class="fs-cell fs-lg-4 fs-md-3 fs-sm-full">
+	<div class="home-module fs-cell fs-lg-8 fs-md-3 fs-sm-full">
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
 		<div class="text-center">
 			<br>
@@ -53,7 +53,7 @@
 	</div>
 	<?php endif; ?>
 	<?php if($i == 2): ?>
-	<div class="fs-cell fs-lg-8 fs-md-3 fs-sm-full">
+	<div class="home-module fs-cell fs-lg-4 fs-md-3 fs-sm-full">
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
 		<div class="text-center">
 			<br>
@@ -66,7 +66,7 @@
 	</div>
 	<?php endif; ?>
 	<?php if($i == 3): ?>
-	<div class="fs-cell fs-all-full">
+	<div class="home-module fs-cell fs-all-full">
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
 		<div class="text-center">
 			<br>

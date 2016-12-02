@@ -11961,6 +11961,23 @@
 		"sM": 0,
 		"sU": 0
 		},
+	"\/src\/less\/site\/_home.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/less\/css\/_home.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
 	"\/src\/less\/site\/_insta.less": {
 		"aP": 0,
 		"bl": 0,

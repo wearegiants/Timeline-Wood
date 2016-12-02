@@ -100,7 +100,7 @@
 	</div>
 </footer>
 
-<?php if(is_front_page()){ include locate_template('parts/footer-mailchimp.php' ); } ?>
+<?php #if(is_front_page()){ include locate_template('parts/footer-mailchimp.php' ); } ?>
 <?php include locate_template('parts/footer-search.php' ); ?>
 
 </div><!--Wrapper-->

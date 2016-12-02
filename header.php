@@ -27,7 +27,7 @@
 <body <?php body_class('fs-grid'); ?>>
 <div id="wrapper">
 
-<header id="header" class="relative mobile-menu relative">
+<header id="header" class="relative mobile-menu relative fs-grid-fluid">
   <div class="fs-row relative header header--sm" id="header-main__wrapper">
     <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
       <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</a>
@@ -43,7 +43,7 @@
       <?php include locate_template('parts/store/shopify--bag.php' ); ?>
     </menu>
     <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-md-hide fs-sm-hide">
-      <a href="#" data-swap-target="#header-products" class="btn btn--nav btn--products product--swap">Products</a>
+      <a href="http://timeline-wood.myshopify.com" data-swap-target="#header-products" class="btn btn--nav btn--products product--swap">Products</a>
       <?php echo strip_tags(wp_nav_menu( $mainMenu ), '<a>' ); ?>
     </menu>
   </div>
