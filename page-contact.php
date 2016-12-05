@@ -43,11 +43,11 @@
 		<form class="contact__subscribe" action="<?php echo $form_action; ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
       <div class="input-group">
         <input type="email" value="" placeholder="Enter your email address" name="EMAIL" id="Email" class="contact__subscribe-text color--black" autocorrect="off" autocapitalize="off">
-        <span class="input-group-btn">
+        <div class="input-group-btn text-right">
           <button type="submit" class="subscribe-form-submit bg--orange color--white ss-gizmo ss-right right" name="subscribe" id="Subscribe">
             <span class="newsletter__submit-text--large">Submit</span>
           </button>
-        </span>
+        </div>
       </div>
     </form>
 	</div>

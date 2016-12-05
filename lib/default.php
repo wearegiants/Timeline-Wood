@@ -7,8 +7,11 @@
 
   function register_my_menu() {
     register_nav_menu('main-menu',__( 'Main Menu' ));
+    register_nav_menu('footer-left',__( 'Footer Left' ));
+    register_nav_menu('footer-right',__( 'Footer Right' ));
   }
   add_action( 'init', 'register_my_menu' );
+  
   add_theme_support( 'post-thumbnails' );
 
   // Adding Widgets
@@ -28,4 +31,4 @@
     return preg_replace('/<a /', '<a class="btn btn--nav"', $ulclass);
   }
 
-  add_filter('wp_nav_menu','add_menuclass');
+  //add_filter('wp_nav_menu','add_menuclass');

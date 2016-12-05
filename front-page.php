@@ -5,13 +5,18 @@
 	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
 	$thumb_url = $thumb_url_array[0];
 	$featureImg = get_field('feature_image', 4);
+	$featureVid = get_field('feature_video_background', 4);
 
 ?>
 
+<?php if($featureVid): ?>
+<div class="home__hero hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $featureVid; ?>"}}'>
+<?php else: ?>
 <div class="home__hero hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $featureImg['sizes']['gallery-lg']; ?>"}'>
+<?php endif; ?>
 	<div class="centered">
 		<div class="fs-row">
-			<div class="fs-cell fs-all-full color--white text-center">
+			<div class="fs-cell fs-all-full <?php the_field('feature_headline_color'); ?> text-center">
 				<span class="title title--xl"><?php the_field('feature_headline'); ?></span><br>
 			</div>
 		</div>
@@ -36,12 +41,17 @@
 		$article_subtitle = $article['subtitle'];
 		$article_link = $article['link'];
 		$article_image = $article['image']['sizes']['large'];
+		$article_video = $article['video_background'];
 	?>
 
 
 	<?php if($i == 1): ?>
 	<div class="home-module fs-cell fs-lg-8 fs-md-3 fs-sm-full">
+		<?php if($article_video): ?>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
+		<?php else: ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
+		<?php endif; ?>
 		<div class="text-center">
 			<br>
 			<a href="<?php echo $article_link; ?>">
@@ -54,7 +64,11 @@
 	<?php endif; ?>
 	<?php if($i == 2): ?>
 	<div class="home-module fs-cell fs-lg-4 fs-md-3 fs-sm-full">
+		<?php if($article_video): ?>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
+		<?php else: ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
+		<?php endif; ?>
 		<div class="text-center">
 			<br>
 			<a href="<?php echo $article_link; ?>">
@@ -67,7 +81,11 @@
 	<?php endif; ?>
 	<?php if($i == 3): ?>
 	<div class="home-module fs-cell fs-all-full">
+		<?php if($article_video): ?>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
+		<?php else: ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
+		<?php endif; ?>
 		<div class="text-center">
 			<br>
 			<a href="<?php echo $article_link; ?>">

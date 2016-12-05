@@ -24,15 +24,49 @@
 }
 
 .wpcf7, .contact__subscribe {
-
+  &-form {
+    position: relative;
+  }
+  &-response {
+    &-output {
+      clear: both;
+      margin: 0!important;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      height: 50px;
+      line-height: 45px;
+      text-align: center;
+      padding: 0!important;
+      background: @white;
+    }
+  }
 	&-text, &-textarea {
 		box-shadow: 0 0 0 1px @lightGray;
 		border-radius: 1px;
 		margin-bottom: @spaced!important;
     color: @textGray;
 	}
-	&-submit {
+  .text-right {
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  }
+	.btn--submit {
 		background-color: @orange!important;
+    float: right;
+    margin-bottom: 0;
+    color: @white;
+    &:after {
+      margin-left: -12px;
+    }
+    input {
+      padding: 0;
+      margin: 0;
+      background: transparent;
+    }
 	}
 
 }

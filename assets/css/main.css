@@ -7244,6 +7244,17 @@ select {
   background-size: 10px auto;
   min-width: 150px;
 }
+select.ss-icon:before,
+select.ss-gizmo:before,
+select.ss-icon:after,
+select.ss-gizmo:after {
+  position: relative;
+  top: .2em;
+}
+select.ss-icon:after,
+select.ss-gizmo:after {
+  margin-left: 3px;
+}
 select option {
   font-weight: 400!important;
   -webkit-font-smoothing: antialiased;
@@ -7363,6 +7374,35 @@ input[type=button] {
   background: #666666;
   color: #fff;
 }
+button.ss-icon:before,
+input[type=submit].ss-icon:before,
+input[type=search].ss-icon:before,
+input[type=button].ss-icon:before,
+button.ss-gizmo:before,
+input[type=submit].ss-gizmo:before,
+input[type=search].ss-gizmo:before,
+input[type=button].ss-gizmo:before,
+button.ss-icon:after,
+input[type=submit].ss-icon:after,
+input[type=search].ss-icon:after,
+input[type=button].ss-icon:after,
+button.ss-gizmo:after,
+input[type=submit].ss-gizmo:after,
+input[type=search].ss-gizmo:after,
+input[type=button].ss-gizmo:after {
+  position: relative;
+  top: .2em;
+}
+button.ss-icon:after,
+input[type=submit].ss-icon:after,
+input[type=search].ss-icon:after,
+input[type=button].ss-icon:after,
+button.ss-gizmo:after,
+input[type=submit].ss-gizmo:after,
+input[type=search].ss-gizmo:after,
+input[type=button].ss-gizmo:after {
+  margin-left: 3px;
+}
 .btn,
 .button,
 .epm-submit-chimp {
@@ -7378,6 +7418,29 @@ input[type=button] {
   line-height: 50px;
   -webkit-font-smoothing: antialiased;
   text-decoration: none;
+}
+.btn.ss-icon:before,
+.button.ss-icon:before,
+.epm-submit-chimp.ss-icon:before,
+.btn.ss-gizmo:before,
+.button.ss-gizmo:before,
+.epm-submit-chimp.ss-gizmo:before,
+.btn.ss-icon:after,
+.button.ss-icon:after,
+.epm-submit-chimp.ss-icon:after,
+.btn.ss-gizmo:after,
+.button.ss-gizmo:after,
+.epm-submit-chimp.ss-gizmo:after {
+  position: relative;
+  top: .2em;
+}
+.btn.ss-icon:after,
+.button.ss-icon:after,
+.epm-submit-chimp.ss-icon:after,
+.btn.ss-gizmo:after,
+.button.ss-gizmo:after,
+.epm-submit-chimp.ss-gizmo:after {
+  margin-left: 3px;
 }
 .btn.ss-gizmo:before,
 .button.ss-gizmo:before,
@@ -7910,6 +7973,13 @@ input[type=button] {
 #header.fs-swap-active #header-main__wrapper {
   transform: translateY(-100%);
 }
+#header-navigation ul {
+  margin-bottom: 0;
+  padding: 0;
+}
+#header-navigation ul li:before {
+  display: none;
+}
 #header-products {
   display: none;
   position: absolute;
@@ -8035,17 +8105,21 @@ input[type=button] {
 .footer__links a:hover {
   color: #151515;
 }
-.footer__nav {
+.footer__nav,
+.footer ul {
   padding: 0;
 }
-.footer__nav li {
+.footer__nav li,
+.footer ul li {
   margin: 0;
   line-height: inherit;
 }
-.footer__nav li a {
+.footer__nav li a,
+.footer ul li a {
   margin-left: 0;
 }
-.footer__nav li:before {
+.footer__nav li:before,
+.footer ul li:before {
   display: none;
 }
 .footer--sm {
@@ -8074,10 +8148,10 @@ input[type=button] {
 }
 .footer__form-submit {
   position: absolute;
-  right: 10px;
-  bottom: 12px;
-  height: 32px!important;
-  width: 32px!important;
+  right: 12px;
+  bottom: 16px;
+  height: 26px!important;
+  width: 26px!important;
   padding: 0!important;
   text-indent: -9999px;
   background-color: #035DA9 !important;
@@ -8088,6 +8162,7 @@ input[type=button] {
   display: inline-block;
   height: 20px;
   line-height: 20px;
+  text-decoration: none;
 }
 .footer-credits {
   display: block;
@@ -8116,7 +8191,7 @@ input[type=button] {
   font-size: 1.5rem;
 }
 .quote__title {
-  line-height: 1.4;
+  line-height: 1.3;
   text-transform: uppercase;
   letter-spacing: 2px;
   margin-bottom: 1px;
@@ -8234,6 +8309,25 @@ input[type=button] {
 .insta-wrapper .btn {
   margin-bottom: 0;
 }
+.insta-wrapper .instashow-gallery {
+  height: auto!important;
+}
+.insta-wrapper .instashow-gallery-wrapper {
+  height: auto!important;
+}
+.insta-wrapper .instashow-gallery-wrapper:after {
+  display: block;
+  content: '';
+  clear: both;
+}
+.insta-wrapper .instashow-gallery-view {
+  font-family: 'SuperGroteskPro', 'Karla', serif !important;
+  font-weight: normal !important;
+  padding-top: 0!important;
+  padding-bottom: 0!important;
+  height: auto!important;
+  position: relative!important;
+}
 .contact-map iframe {
   width: 100%;
   display: block;
@@ -8254,6 +8348,23 @@ input[type=button] {
   font-size: 14px;
   font-size: 0.875rem;
 }
+.wpcf7-form,
+.contact__subscribe-form {
+  position: relative;
+}
+.wpcf7-response-output,
+.contact__subscribe-response-output {
+  clear: both;
+  margin: 0!important;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  line-height: 45px;
+  text-align: center;
+  padding: 0!important;
+  background: #fff;
+}
 .wpcf7-text,
 .contact__subscribe-text,
 .wpcf7-textarea,
@@ -8263,9 +8374,28 @@ input[type=button] {
   margin-bottom: 25px !important;
   color: #666666;
 }
-.wpcf7-submit,
-.contact__subscribe-submit {
+.wpcf7 .text-right:after,
+.contact__subscribe .text-right:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.wpcf7 .btn--submit,
+.contact__subscribe .btn--submit {
   background-color: #EB7366 !important;
+  float: right;
+  margin-bottom: 0;
+  color: #fff;
+}
+.wpcf7 .btn--submit:after,
+.contact__subscribe .btn--submit:after {
+  margin-left: -12px;
+}
+.wpcf7 .btn--submit input,
+.contact__subscribe .btn--submit input {
+  padding: 0;
+  margin: 0;
+  background: transparent;
 }
 .bag-checkout {
   background: #0C5FA8;

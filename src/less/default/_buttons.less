@@ -19,6 +19,15 @@
   height: @height_default;
   line-height: @height_default;
   -webkit-font-smoothing: antialiased;
+  &.ss-icon, &.ss-gizmo {
+    &:before, &:after {
+      position: relative;
+      top: .2em;
+    }
+    &:after {
+      margin-left: 3px;
+    }
+  }
 }
 
 button,

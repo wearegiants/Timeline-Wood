@@ -8,9 +8,27 @@
     }
     .instashow {
       &-gallery {
+        height: auto!important;
+        &-wrapper {
+          height: auto!important;
+          &:after {
+            display: block;
+            content: '';
+            clear: both;
+          }
+          //margin-top: -75px!important;
+        }
         &-view {
-          //padding-top: 0;
-          //padding-bottom: 0;
+          .mainFont()!important;
+          padding-top: 0!important;
+          padding-bottom: 0!important;
+          height: auto!important;
+          position: relative!important;
+          &-active {
+
+            //padding-top: 0;
+            //padding-bottom: 0;
+          }
         }
       }
     }
