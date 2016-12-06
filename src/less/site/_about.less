@@ -1,0 +1,43 @@
+.about {
+  &--nav {
+    @media @tablet {
+      position: fixed;
+      margin-bottom: 0;
+      right: @spaced;
+      top: 50%;
+      z-index: 9;
+      transform: translateY(-50%);
+      li {
+        margin-bottom: 8px;
+        &:before {
+          display: none;
+        }
+        a {
+          display: block;
+          @size: 8px;
+          height: @size;
+          width: @size;
+          border-radius: 50%;
+          background: @white25;
+          text-indent: -9999px;
+        }
+        &.current {
+          a {
+            background: @white;
+          }
+        }
+      }
+    }
+  }
+  &__slide {
+    &-container {
+      padding: 0;
+      margin: 0;
+      li {
+        &:before {
+          display: none;
+        }
+      }
+    }
+  }
+}

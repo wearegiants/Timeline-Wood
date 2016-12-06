@@ -8403,6 +8403,40 @@ input[type=button].ss-gizmo:after {
   margin: 0;
   background: transparent;
 }
+@media screen and (min-width: 740px) {
+  .about--nav {
+    position: fixed;
+    margin-bottom: 0;
+    right: 25px;
+    top: 50%;
+    z-index: 9;
+    transform: translateY(-50%);
+  }
+  .about--nav li {
+    margin-bottom: 8px;
+  }
+  .about--nav li:before {
+    display: none;
+  }
+  .about--nav li a {
+    display: block;
+    height: 8px;
+    width: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    text-indent: -9999px;
+  }
+  .about--nav li.current a {
+    background: #fff;
+  }
+}
+.about__slide-container {
+  padding: 0;
+  margin: 0;
+}
+.about__slide-container li:before {
+  display: none;
+}
 .bag-checkout {
   background: #0C5FA8;
   color: #fff;

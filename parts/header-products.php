@@ -3,7 +3,7 @@
     <div class="fs-cell fs-lg-10 fs-md-full fs-sm-3 fs-centered">
       <div class="wrapper bg--black-75">
         <div class="fs-row">
-<?php $rows = get_field('product_collections'); ?>
+<?php $rows = get_field('product_collections',4); ?>
 <?php $items = count($rows); ?>
 <?php $i=1; foreach ($rows as $row):?>
 <?php $image = $row['thumbnail']; ?>

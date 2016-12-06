@@ -27,7 +27,7 @@
 <body <?php body_class('fs-grid'); ?>>
 <div id="wrapper">
 
-<header id="header" class="relative mobile-menu relative fs-grid-fluid">
+<header id="header" class="relative mobile-menu pinned pinned--top pinned--fixed relative fs-grid-fluid">
   <div id="header-main__wrapper">
     <div class="fs-row relative header header--sm">
       <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
@@ -59,5 +59,6 @@
   </div>
   <?php include locate_template('parts/header-search.php' ); ?>
 </header>
-
+<?php /*<div class="header header--sm"><span class="btn btn--nav">&nbsp;</span></div>*/?>
 <div id="content-wrapper" class='fs-grid'>
+

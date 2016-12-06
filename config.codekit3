@@ -5469,7 +5469,7 @@
 	"\/src\/bower_components\/instafeed.js\/instafeed.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 1,
+		"oA": 2,
 		"oAP": "\/src\/bower_components\/instafeed.js\/instafeed.js",
 		"oF": 0,
 		"sC": 1,
@@ -5600,6 +5600,87 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/src\/bower_components\/isotope\/README.mdown",
+		"oF": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/bower.json": {
+		"ft": 524288,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/bower.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/demo.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/demo.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/filter.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/filter.html",
+		"oF": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/hash.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/hash.html",
+		"oF": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/index.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/index.html",
+		"oF": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/jquery.nav.js": {
+		"ft": 64,
+		"mi": 1,
+		"oA": 1,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/jquery.nav.js",
+		"oF": 0,
+		"sC": 1,
+		"tS": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/multiple.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/multiple.html",
+		"oF": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/non-existing.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/non-existing.html",
+		"oF": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/README.md": {
+		"cS": 0,
+		"eF": 1,
+		"eL": 1,
+		"eLB": 0,
+		"ema": 1,
+		"eSQ": 1,
+		"ft": 4096,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/README.md",
+		"oF": 0,
+		"oFM": 0,
+		"oS": 0,
+		"pHT": 0,
+		"pME": 1,
+		"rFN": 0,
+		"uCM": 0
+		},
+	"\/src\/bower_components\/jQuery-One-Page-Nav-master\/top.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/src\/bower_components\/jQuery-One-Page-Nav-master\/top.html",
 		"oF": 0
 		},
 	"\/src\/bower_components\/jquery.transit\/.bower.json": {
@@ -11921,6 +12002,23 @@
 		"oA": 0,
 		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/timeline.css",
 		"oF": 2,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/src\/less\/site\/_about.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/less\/css\/_about.css",
+		"oF": 0,
 		"oS": 0,
 		"rU": 0,
 		"sI": 0,
