@@ -7929,6 +7929,13 @@ input[type=button].ss-gizmo:after {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
+.header__product-btn {
+  position: static;
+}
+.header__product-btn:hover #header-products {
+  opacity: 1;
+  pointer-events: auto;
+}
 .header__icon--search img {
   position: relative;
   top: -1px;
@@ -7936,9 +7943,6 @@ input[type=button].ss-gizmo:after {
 .header__icon--bag img {
   position: relative;
   top: -3px;
-}
-.header--sm {
-  padding: 12.5px 0;
 }
 @media screen and (min-width: 300px) {
   .header--md {
@@ -7958,9 +7962,6 @@ input[type=button].ss-gizmo:after {
 .header--lg {
   padding: 75px 0;
 }
-#header {
-  overflow: hidden;
-}
 #header .btn {
   color: #151515;
 }
@@ -7969,6 +7970,9 @@ input[type=button].ss-gizmo:after {
 }
 #header-main__wrapper {
   transition: 500ms ease;
+  position: relative;
+  z-index: 89;
+  background: #fff;
 }
 #header.fs-swap-active #header-main__wrapper {
   transform: translateY(-100%);
@@ -7981,9 +7985,13 @@ input[type=button].ss-gizmo:after {
   display: none;
 }
 #header-products {
-  display: none;
+  transition: opacity 300ms ease;
+  opacity: 0;
+  pointer-events: none;
   position: absolute;
   width: 100%;
+  left: 0;
+  z-index: 99;
 }
 #header-products.fs-swap-active {
   display: block;
@@ -7994,10 +8002,8 @@ input[type=button].ss-gizmo:after {
   width: 100%;
   z-index: 88;
   transition: 400ms;
+  top: 0;
   background: #FEF155;
-}
-#header-search.fs-swap-active {
-  transform: translateY(-100%);
 }
 #header-search #s {
   margin-bottom: 0;

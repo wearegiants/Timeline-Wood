@@ -28,32 +28,36 @@
 <div id="wrapper">
 
 <header id="header" class="relative mobile-menu relative fs-grid-fluid">
-  <div class="fs-row relative header header--sm" id="header-main__wrapper">
-    <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
-      <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</a>
-    </menu>
-    <menu id="header-main" class="fs-cell fs-lg-fifth fs-md-half fs-sm-half text-center">
-      <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo"><?php bloginfo('name' );?></a>
-    </menu>
-    <menu class="fs-cell fs-xl-4 fs-lg-3 fs-md-fourth fs-sm-half text-right">
-      <a href="#" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn_first header__icon--search">
-        <span class="fs-md-hide fs-sm-hide">Search</span>&nbsp;
-        <img src="/assets/img/magnify.svg" alt="Search">
-      </a>
-      <?php include locate_template('parts/store/shopify--bag.php' ); ?>
-    </menu>
-    <menu id="header-navigation" class="fs-cell fs-xl-5 fs-lg-6 fs-md-hide fs-sm-hide">
-      <ul>
-        <?php /*<li class="btn btn--nav"><a href="http://timeline-wood.myshopify.com" data-swap-target="#header-products" class="btn--products product--swap">Products</a></li>*/ ?>
-        <?php echo wp_nav_menu( $mainMenu ); ?>
-      </ul>
-    </menu>
+  <div id="header-main__wrapper">
+    <div class="fs-row relative header header--sm">
+      <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
+        <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</span></a>
+      </menu>
+      <menu id="header-main" class="fs-cell fs-lg-fifth fs-md-half fs-sm-half text-center">
+        <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo"><?php bloginfo('name' );?></a>
+      </menu>
+      <menu class="fs-cell fs-xl-4 fs-lg-3 fs-md-fourth fs-sm-half text-right">
+        <a href="#" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn_first header__icon--search">
+          <span class="fs-md-hide fs-sm-hide">Search</span>&nbsp;
+          <img src="/assets/img/magnify.svg" alt="Search">
+        </a>
+        <?php include locate_template('parts/store/shopify--bag.php' ); ?>
+      </menu>
+      <menu id="header-navigation" class="fs-cell fs-xl-5 fs-lg-6 fs-md-hide fs-sm-hide">
+        <ul>
+          <li class="btn btn--nav btn--first header__product-btn">
+            <a href="http://timeline-wood.myshopify.com" class="btn--products">Products</a>
+            <?php include locate_template('parts/header-products.php' ); ?>
+          </li>
+          <?php echo wp_nav_menu( $mainMenu ); ?>
+        </ul>
+      </menu>
+    </div>
   </div>
   <div class="pinned pinned__bottom">
     <?php include locate_template('parts/mobile-menu.php' ); ?>
   </div>
   <?php include locate_template('parts/header-search.php' ); ?>
 </header>
-<?php #include locate_template('parts/header-products.php' ); ?>
 
 <div id="content-wrapper" class='fs-grid'>
