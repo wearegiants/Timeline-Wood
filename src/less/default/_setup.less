@@ -16,7 +16,7 @@
 
 // Colors
 @yellow:      #FEF155;
-@green:       #32B375;
+@green:       #76C28E;
 @darkgreen:   #0A693A;
 @blue:        #0C5FA8;
 @brown:       #9E6927;
@@ -100,10 +100,15 @@
 }
 
 // Helpers
-.img-responsive {
-  display: block;
-  max-width: 100%;
-  height: auto;
+.img {
+  &-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  &-rounded {
+    border-radius: 50%;
+  }
 }
 
 .invisible {
@@ -164,6 +169,9 @@ img.rounded {
   }
   &--orange {
     background-color: @orange;
+  }
+  &--green {
+    background-color: @green;
   }
 }
 

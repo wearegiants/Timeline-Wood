@@ -6901,6 +6901,9 @@ html:hover [class^="ss-"] {
   max-width: 100%;
   height: auto;
 }
+.img-rounded {
+  border-radius: 50%;
+}
 .invisible {
   visibility: hidden;
 }
@@ -6957,6 +6960,9 @@ img.rounded {
 }
 .bg--orange {
   background-color: #EB7366;
+}
+.bg--green {
+  background-color: #76C28E;
 }
 .color--black {
   color: #151515;
@@ -8403,6 +8409,10 @@ input[type=button].ss-gizmo:after {
   margin: 0;
   background: transparent;
 }
+.wpcf7 .btn--submit.bg--green,
+.contact__subscribe .btn--submit.bg--green {
+  background-color: #76C28E !important;
+}
 @media screen and (min-width: 740px) {
   .about--nav {
     position: fixed;
@@ -8436,6 +8446,23 @@ input[type=button].ss-gizmo:after {
 }
 .about__slide-container li:before {
   display: none;
+}
+.swatch-title {
+  width: 100%;
+  display: block;
+  text-align: center;
+  color: #151515;
+  opacity: 0;
+  transition: 300ms ease;
+}
+.swatch img {
+  transition: opacity 300ms ease;
+}
+.swatch:hover img {
+  opacity: .375;
+}
+.swatch:hover .swatch-title {
+  opacity: 1;
 }
 .bag-checkout {
   background: #0C5FA8;

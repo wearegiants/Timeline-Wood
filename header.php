@@ -36,14 +36,14 @@
       <menu id="header-main" class="fs-cell fs-lg-fifth fs-md-half fs-sm-half text-center">
         <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo"><?php bloginfo('name' );?></a>
       </menu>
-      <menu class="fs-cell fs-xl-4 fs-lg-3 fs-md-fourth fs-sm-half text-right">
+      <menu class="fs-cell fs-xl-3 fs-lg-3 fs-md-fourth fs-sm-half text-right">
         <a href="#" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn_first header__icon--search">
           <span class="fs-md-hide fs-sm-hide">Search</span>&nbsp;
           <img src="/assets/img/magnify.svg" alt="Search">
         </a>
         <?php include locate_template('parts/store/shopify--bag.php' ); ?>
       </menu>
-      <menu id="header-navigation" class="fs-cell fs-xl-5 fs-lg-6 fs-md-hide fs-sm-hide">
+      <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-md-hide fs-sm-hide">
         <ul>
           <li class="btn btn--nav btn--first header__product-btn">
             <a href="http://timeline-wood.myshopify.com" class="btn--products">Products</a>
@@ -59,6 +59,6 @@
   </div>
   <?php include locate_template('parts/header-search.php' ); ?>
 </header>
-<?php /*<div class="header header--sm"><span class="btn btn--nav">&nbsp;</span></div>*/?>
+<div class="header header--sm"><span class="btn btn--nav">&nbsp;</span></div>
 <div id="content-wrapper" class='fs-grid'>
 

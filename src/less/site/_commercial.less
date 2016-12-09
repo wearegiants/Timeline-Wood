@@ -1,0 +1,21 @@
+.swatch {
+  &-title {
+    width: 100%;
+    display: block;
+    text-align: center;
+    color: @black;
+    opacity: 0;
+    transition: 300ms ease;
+  }
+  img {
+    transition: opacity 300ms ease;
+  }
+  &:hover {
+    img {
+      opacity: .375;
+    }
+    .swatch-title {
+      opacity: 1;
+    }
+  }
+}
