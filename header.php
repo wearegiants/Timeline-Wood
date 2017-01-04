@@ -33,17 +33,17 @@
       <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
         <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</span></a>
       </menu>
-      <menu id="header-main" class="fs-cell fs-lg-fifth fs-md-half fs-sm-half text-center">
+      <menu id="header-main" class="fs-cell fs-lg-2 fs-md-half fs-sm-half text-center">
         <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo"><?php bloginfo('name' );?></a>
       </menu>
-      <menu class="fs-cell fs-xl-3 fs-lg-3 fs-md-fourth fs-sm-half text-right">
+      <menu class="fs-cell fs-xl-fourth fs-lg-fourth fs-md-fourth fs-sm-half text-right">
         <a href="#" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn_first header__icon--search">
           <span class="fs-md-hide fs-sm-hide">Search</span>&nbsp;
           <img src="/assets/img/magnify.svg" alt="Search">
         </a>
         <?php include locate_template('parts/store/shopify--bag.php' ); ?>
       </menu>
-      <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-md-hide fs-sm-hide">
+      <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-lg-push-1 fs-md-hide fs-sm-hide text-center">
         <ul>
           <li class="btn btn--nav btn--first header__product-btn">
             <a href="http://timeline-wood.myshopify.com" class="btn--products">Products</a>

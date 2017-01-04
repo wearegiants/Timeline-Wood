@@ -6892,7 +6892,13 @@ html:hover [class^="ss-"] {
 }
 @font-face {
   font-family: 'SuperGroteskPro';
-  src: url('/assets/fonts/SuperGroteskPro.eot?#iefix') format('embedded-opentype'), url('/assets/fonts/SuperGroteskPro.otf') format('opentype'), url('/assets/fonts/SuperGroteskPro.woff') format('woff'), url('/assets/fonts/SuperGroteskPro.ttf') format('truetype'), url('/assets/fonts/SuperGroteskPro.svg#SuperGroteskPro') format('svg');
+  src: url('/assets/fonts/SuperGroteskWeb.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'SuperGroteskPro Medium';
+  src: url('/assets/fonts/SuperGroteskWeb-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -8513,7 +8519,6 @@ input[type=button].ss-gizmo:after {
 }
 .bag-close a {
   padding-right: 40px;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 .bag-close a:after {

@@ -4,7 +4,7 @@ $(window).resize(function(){
   var hh = $('#header').height();
 
 	$('.hero--wh').css({
-		height: wh-hh,
+		height: (wh-hh)*.8,
 	});
 
 }).resize();

@@ -8663,7 +8663,6 @@ input[type=button].ss-gizmo:after {
 }
 .bag-close a {
   padding-right: 40px;
-  text-transform: uppercase;
   letter-spacing: 1px;
 }
 .bag-close a:after {

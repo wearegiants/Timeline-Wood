@@ -10,9 +10,9 @@
 ?>
 
 <?php if($featureVid): ?>
-<div class="home__hero hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $featureVid; ?>"}}'>
+<div class="home__hero hero hero--wh wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $featureVid; ?>"}}'>
 <?php else: ?>
-<div class="home__hero hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $featureImg['sizes']['gallery-lg']; ?>"}'>
+<div class="home__hero hero hero--wh wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $featureImg['sizes']['gallery-lg']; ?>"}'>
 <?php endif; ?>
 	<div class="centered">
 		<div class="fs-row">
@@ -46,7 +46,7 @@
 
 
 	<?php if($i == 1): ?>
-	<div class="home-module fs-cell fs-lg-8 fs-md-3 fs-sm-full">
+	<div class="home-module fs-cell fs-lg-4 fs-md-3 fs-sm-full">
 		<?php if($article_video): ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
 		<?php else: ?>
@@ -63,7 +63,7 @@
 	</div>
 	<?php endif; ?>
 	<?php if($i == 2): ?>
-	<div class="home-module fs-cell fs-lg-4 fs-md-3 fs-sm-full">
+	<div class="home-module fs-cell fs-lg-8 fs-md-3 fs-sm-full">
 		<?php if($article_video): ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
 		<?php else: ?>
@@ -100,16 +100,18 @@
 	<?php endif; ?>
 </div>
 
+<hr class="invisible">
+
 <div class="carousel bg--lightBlue" data-carousel-options='{"autoAdvance": true, "infinite": true,"controls":false,"pagination":false}'>
 <?php $quotes = get_field('quotes', 4); ?>
 <?php foreach($quotes as $quote): ?>
-	<div class="quotes hero hero--sm bg--lightBlue relative">
+	<div class="quotes hero hero--sm relative" style="background-color:<?php echo $quote['background_color']; ?>; color: <?php echo $quote['font_color']; ?>; ">
 		<div class="centered">
 			<div class="fs-row">
 				<div class="fs-cell fs-all-full">
 					<div class="carousel__slide text-center">
-						<span class="quote__title accent accent--lg color--white">"<?php echo $quote['quote']; ?>"</span><br>
-						<span class="quote__author accent color--white"><?php echo $quote['author']; ?></span>
+						<span class="quote__title accent accent--lg">"<?php echo $quote['quote']; ?>"</span><br>
+						<span class="quote__author accent"><?php echo $quote['author']; ?></span>
 					</div>
 				</div>
 			</div>
@@ -117,5 +119,4 @@
 	</div>
 <?php endforeach; ?>
 </div>
-
 <?php get_footer(); ?>

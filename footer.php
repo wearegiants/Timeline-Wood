@@ -2,7 +2,6 @@
 
 <?php if(is_front_page()): ?>
 <hr class="invisible">
-
 <div class="fs-row">
 	<div class="fs-cell fs-all-full">
 		<div class="insta-wrapper">
