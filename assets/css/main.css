@@ -8530,17 +8530,10 @@ input[type=button].ss-gizmo:after {
 .bag-close {
   position: relative;
 }
-.bag-close a {
-  padding-right: 40px;
-  letter-spacing: 1px;
-}
 .bag-close a:after {
   position: relative;
-  top: .125em;
-  position: absolute;
-  font-size: 32px;
-  font-size: 2rem;
-  top: 3px;
+  top: .3em;
+  margin-left: 9px;
   right: 0;
 }
 #bag {

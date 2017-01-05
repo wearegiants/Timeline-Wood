@@ -6,7 +6,7 @@
   <div class="bag-header header header--sm">
     <div class="fs-row">
       <div class="fs-cell fs-all-full text-right">
-        <span class="btn btn--nav bag-close">
+        <span class="btn btn--nav bag-close btn--last">
           <a href="#" class="ss-gizmo ss-delete right" id="close_bag">Bag </a>
         </span>
       </div>
