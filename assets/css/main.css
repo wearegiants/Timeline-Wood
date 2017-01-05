@@ -8603,6 +8603,9 @@ input[type=button].ss-gizmo:after {
   display: block;
   margin-top: 10px;
 }
+.product-drop .wrapper {
+  background: rgba(70, 70, 70, 0.9);
+}
 .product-drop__thumb {
   background: #F2F2F2;
 }
