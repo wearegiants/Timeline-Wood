@@ -7069,6 +7069,9 @@ img.rounded {
 .color--lightgray {
   color: #999999;
 }
+.color--darkblue {
+  color: #035DA9;
+}
 @media screen and (min-width: 300px) {
   blockquote {
     margin-left: 0;
@@ -8214,10 +8217,20 @@ input[type=button].ss-gizmo:after {
   font-size: 13px;
   font-size: 0.8125rem;
   line-height: 1.9;
-  color: #999999;
+  color: #151515;
 }
 .footer a {
   color: #151515;
+  border-bottom: 1px solid transparent;
+}
+.footer a:hover {
+  border-bottom: 1px solid;
+}
+.footer-socials a {
+  color: #035DA9;
+}
+.footer-address a {
+  color: #76C28E;
 }
 .footer__links {
   text-transform: uppercase;

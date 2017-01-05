@@ -3,10 +3,26 @@
 	padding: @spaced 0;
   .font_size(13);
   line-height: 1.9;
-  color: @gray;
+  color: @black;
 
   a {
     color: @black;
+    border-bottom: 1px solid transparent;
+    &:hover {
+      border-bottom: 1px solid
+    }
+  }
+
+  &-socials {
+    a {
+      color: @darkBlue;
+    }
+  }
+
+  &-address {
+    a {
+      color: @green;
+    }
   }
   
   &__logo {}

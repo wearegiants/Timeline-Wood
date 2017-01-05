@@ -13,7 +13,13 @@
 
 <?php endif; ?>
 
-<div id="ticker" class="marquee bg--blue">
+<?php
+	// Random array of colors for the ticker. 
+	$input = array("blue", "green", "red", "orange", "darkBlue", "lightBlue");
+	$rand_keys = array_rand($input, 2);
+?>
+
+<div id="ticker" class="marquee bg--<?php echo $input[$rand_keys[0]] . "\n"; ?>">
 	<div id="ticker__wrapper" class="marquee-content_items mono mono--sm color--white">
 		<div>
 			<?php the_field('ticker',4); ?>
@@ -29,7 +35,7 @@
 	<div class="fs-row">
 		<div class="fs-cell fs-xl-8 fs-lg-7 fs-md-full fs-sm-3">
 			<div class="fs-row">
-				<nav class="fs-cell fs-lg-third fs-md-2 fs-sm-third fs-xs-half">
+				<nav class="footer-nav fs-cell fs-lg-third fs-md-2 fs-sm-third fs-xs-half">
 					<?php 
 						$footerLeft = array(
 				    'container'       => false,
@@ -47,10 +53,10 @@
 				  ?>
 					<?php echo wp_nav_menu( $footerLeft ); ?>
 				</nav>
-				<nav class="fs-cell fs-lg-third fs-md-2 fs-sm-third fs-xs-half">
+				<nav class="footer-socials fs-cell fs-lg-third fs-md-2 fs-sm-third fs-xs-half">
 					<?php echo wp_nav_menu( $footerRight ); ?>
 				</nav>
-				<div class="fs-cell fs-lg-third fs-md-2 fs-sm-third fs-xs-half">
+				<div class="footer-address fs-cell fs-lg-third fs-md-2 fs-sm-third fs-xs-half">
 					<?php the_field('address', 4); ?>
 				</div>
 			</div>
