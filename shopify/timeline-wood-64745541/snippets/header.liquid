@@ -1,3 +1,144 @@
+<header id="header" class="relative mobile-menu pinned pinned--top pinned--fixed relative fs-grid-fluid fs-swap-target fs-swap-enabled">
+  <div id="header-main__wrapper">
+    <div class="fs-row relative header header--sm">
+      <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
+        <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last fs-swap-element fs-swap-enabled"><span class="fs-sm-hide">Menu</span></a>
+      </menu>
+      <menu id="header-main" class="fs-cell fs-lg-2 fs-md-half fs-sm-half text-center">
+        <a href="http://timelinewood.com" id="header--logo" class="btn btn--nav btn--logo shopify">Timeline Wood</a>
+      </menu>
+      <menu class="fs-cell fs-xl-fourth fs-lg-fourth fs-md-fourth fs-sm-half text-right">
+        <a href="#" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn_first header__icon--search fs-swap-element fs-swap-enabled">
+          <span class="fs-md-hide fs-sm-hide">Search</span>&nbsp;
+          <img src="{{'magnify.svg' | asset_url }}" alt="Search">
+        </a>
+        <a id="open_bag" class="btn--nav btn btn__last header__icon--bag" href="#">
+          <span>Bag</span>&nbsp;
+          <img src="{{ 'bag.svg' | asset_url }}" alt="Search">
+        </a>
+        <div id="bag">
+          <div class="bag-header header header--sm">
+            <div class="fs-row">
+              <div class="fs-cell fs-all-full text-right">
+                <span class="btn btn--nav bag-close btn--last">
+                  <a href="#" class="ss-gizmo ss-delete right" id="close_bag">Bag </a>
+                </span>
+            </div>
+          </div>
+        </div>
+        <hr class="bag-divider divider top">
+        <div id="bag--wrapper" class="bag-wrapper text-left">
+          <div class="fs-row">
+            <div class="fs-cell fs-full-all" id="items"></div>
+            <div class="fs-cell fs-full-all" id="bagtotal"><div class="text-center">Your bag is empty!</div></div>
+          </div>
+        </div>
+      </div>      
+    </menu>
+    <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-lg-push-1 fs-md-hide fs-sm-hide text-center">
+    <ul>
+      <li class="btn btn--nav btn--first header__product-btn">
+        <a href="http://timeline-wood.myshopify.com" class="btn--products">Products</a>
+        <div id="header-products" class="product-drop text-center">
+          <div class="fs-row relative">
+            <div class="fs-cell fs-lg-10 fs-md-full fs-sm-3 fs-centered">
+              <div class="">
+                <div class="fs-row">
+                  <div class="fs-cell fs-lg-fourth fs-lg-push-fourth fs-contained product-drop__item product-1">
+                    <div class="wrapper">
+                      <a href="http://timeline-wood.myshopify.com/collections/skinnies/" class="product-drop__link">
+                        <div class="product-drop__thumb">
+                          <img src="http://timelinewood.com/wp-content/uploads/2016/02/Skinnies_Box_Perspective0303-320x320.jpg" class="img-responsive" alt="Skinnies">
+                        </div>
+                        <h4 class="color--white">Skinnies</h4>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="fs-cell fs-lg-fourth fs-contained product-drop__item product-2">
+                    <div class="wrapper">
+                      <a href="http://timeline-wood.myshopify.com/collections/skinnies/" class="product-drop__link">
+                        <div class="product-drop__thumb">
+                          <img src="http://timelinewood.com/wp-content/uploads/2016/02/Crates_0272-sq-320x320.jpg" class="img-responsive" alt="Crates">
+                        </div>
+                        <h4 class="color--white">Crates</h4>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>          
+      </li>
+      <li class="btn btn--nav menu-item menu-commercial"><a href="http://timelinewood.com/commercial-applications/">Commercial</a></li>
+      <li class="btn btn--nav menu-item menu-retailers"><a href="http://timelinewood.com/retailers/">Retailers</a></li>
+      <li class="btn btn--nav menu-item menu-about"><a href="http://timelinewood.com/about/">About</a></li>
+      <li class="btn btn--nav menu-item menu-contact"><a href="http://timelinewood.com/contact/">Contact</a></li>
+    </ul>
+  </menu>
+</div>
+</div>
+<div class="pinned pinned__bottom">
+<div id="mobile-menu" class="text-center bg--black header header--md mobile-menu fs-swap-target fs-swap-enabled">
+<div id="mobile-menu_container" class="fs-row">
+<ul>
+<li class="btn btn--nav btn--first header__product-btn">
+<a href="http://timeline-wood.myshopify.com" class="btn--products btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half">Products</a>
+<div id="header-products" class="product-drop text-center">
+<div class="fs-row relative">
+<div class="fs-cell fs-lg-10 fs-md-full fs-sm-3 fs-centered">
+<div class="">
+<div class="fs-row">
+<div class="fs-cell fs-lg-fourth fs-lg-push-fourth fs-contained product-drop__item product-1">
+<div class="wrapper">
+<a href="http://timeline-wood.myshopify.com/collections/skinnies/" class="product-drop__link btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half">
+<div class="product-drop__thumb">
+  <img src="http://timelinewood.com/wp-content/uploads/2016/02/Skinnies_Box_Perspective0303-320x320.jpg" class="img-responsive" alt="Skinnies">
+</div>
+<h4 class="color--white">Skinnies</h4>
+</a>
+</div>
+</div>
+<div class="fs-cell fs-lg-fourth fs-contained product-drop__item product-2">
+<div class="wrapper">
+<a href="http://timeline-wood.myshopify.com/collections/skinnies/" class="product-drop__link btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half">
+<div class="product-drop__thumb">
+  <img src="http://timelinewood.com/wp-content/uploads/2016/02/Crates_0272-sq-320x320.jpg" class="img-responsive" alt="Crates">
+</div>
+<h4 class="color--white">Crates</h4>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>          </li>
+<li class="btn btn--nav menu-item menu-commercial"><a href="http://timelinewood.com/commercial-applications/" class="btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half">Commercial</a></li>
+<li class="btn btn--nav menu-item menu-retailers"><a href="http://timelinewood.com/retailers/" class="btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half">Retailers</a></li>
+<li class="btn btn--nav menu-item menu-about"><a href="http://timelinewood.com/about/" class="btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half">About</a></li>
+<li class="btn btn--nav menu-item menu-contact"><a href="http://timelinewood.com/contact/" class="btn-mobile fs-cell fs-lg-fourth fs-md-fourth fs-sm-third fs-xs-half">Contact</a></li>
+</ul>
+</div>
+</div>  </div>
+<div id="header-search" class="header header--sm fs-swap-target fs-swap-enabled">
+<div class="fs-row">
+<div class="fs-cell fs-all-full relative">
+<form method="get" id="searchform" action="http://timelinewood.com/">
+<div>
+<input type="text" size="18" placeholder="Search" "value="" name="s" id="s">
+<input type="submit" id="searchsubmit" value="Search" class="btn">
+</div>
+</form>
+<a href="#" id="header-search__close" data-swap-linked="swap_linked_1" data-swap-target="#header, #header-search" class="btn btn--nav btn--swap btn__last ss-gizmo ss-delete right fs-swap-element fs-swap-enabled"></a>
+</div>
+</div>
+</div></header>
+
+<div class="header header--sm"><span class="btn btn--nav">&nbsp;</span></div>
+
+{% comment %}
+
 <header id="header" class="relative mobile-menu relative fs-swap-target fs-swap-enabled">
   <div class="fs-row relative header header--sm" id="header-main__wrapper">
     <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-hide">
@@ -63,3 +204,5 @@
     </div>
   </div>
 </div></header>
+
+{% endcomment %}
