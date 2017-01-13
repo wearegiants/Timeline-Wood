@@ -8138,7 +8138,7 @@ input[type=button].ss-gizmo:after {
   border-bottom: 1px solid transparent;
 }
 .footer a:hover {
-  border-bottom: 1px solid;
+  text-decoration: underline;
 }
 .footer-socials a {
   color: #035DA9;

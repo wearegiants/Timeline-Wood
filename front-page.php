@@ -50,7 +50,7 @@
 		<?php if($article_video): ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
 		<?php else: ?>
-		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
+		<a href="<?php echo $article_link; ?>" class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></a>
 		<?php endif; ?>
 		<div class="text-center">
 			<br>
@@ -67,7 +67,7 @@
 		<?php if($article_video): ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
 		<?php else: ?>
-		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
+		<a href="<?php echo $article_link; ?>" class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></a>
 		<?php endif; ?>
 		<div class="text-center">
 			<br>
@@ -84,7 +84,7 @@
 		<?php if($article_video): ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
 		<?php else: ?>
-		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></div>
+		<a href="<?php echo $article_link; ?>" class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></a>
 		<?php endif; ?>
 		<div class="text-center">
 			<br>
