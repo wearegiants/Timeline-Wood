@@ -45,7 +45,7 @@
 	?>
 
 
-	<?php if($i == 1): ?>
+	<?php if($i == 2): ?>
 	<div class="home-module fs-cell fs-lg-4 fs-md-3 fs-sm-full">
 		<?php if($article_video): ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
@@ -62,8 +62,8 @@
 		<hr class="invisible">
 	</div>
 	<?php endif; ?>
-	<?php if($i == 2): ?>
-	<div class="home-module fs-cell fs-lg-8 fs-md-3 fs-sm-full">
+	<?php if($i == 1): ?>
+	<div class="home-module fs-cell fs-lg-8 fs-md-3 fs-sm-full fs-right">
 		<?php if($article_video): ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
 		<?php else: ?>

@@ -14,7 +14,7 @@
 	<div id="slide-<?php echo $counter; ?>" class="about__slide hero hero--wh relative bg--<?php echo $slide['background']; ?>" data-height-modifier="#header">
 		<div class="centered">
 			<div class="fs-row">
-				<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 fs-centered">
+				<div class="fs-cell fs-lg-7 fs-md-5 fs-sm-3 fs-centered">
 					<div class="wrapper wrapper--extra bg--white">
 						<header class="about__slide-header text-center">
 							<h2 class="title title--lg color--<?php echo $slide['text_color']; ?>"><?php echo $slide['title']; ?></h2>
