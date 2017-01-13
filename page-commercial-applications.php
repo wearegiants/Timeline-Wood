@@ -25,7 +25,7 @@
 	<div class="fs-cell fs-lg-8 fs-lg-push-1 fs-md-4 fs-sm-3">
 		<div class="carousel">
 <?php foreach($asks as $image): ?>
-			<div><img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>"></div>
+			<div class="carousel-slide"><img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>"></div>
 <?php endforeach; ?>
 		</div>
 	</div>
@@ -56,9 +56,9 @@
 	<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-3"><?php the_field('ask_our_customers'); ?></div>
 	<?php $asks = get_field('ask_our_customers_gallery'); ?>
 	<div class="fs-cell fs-lg-8 fs-lg-push-1 fs-md-4 fs-sm-3">
-		<div class="carousel">
+		<div id="cust-carousel" class="carousel">
 <?php foreach($asks as $image): ?>
-			<div class="carousel-slide"><img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>"></div>
+			<div><div class="carousel-slide"><img src="<?php echo $image['sizes']['large']; ?>" class="img-responsive" alt="<?php echo $image['alt']; ?>"></div></div>
 <?php endforeach; ?>
 		</div>
 	</div>
