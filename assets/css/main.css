@@ -7928,6 +7928,9 @@ input[type=button].ss-gizmo:after {
 .pinned__bottom {
   top: 100%;
 }
+.carousel-slide {
+  padding: 0 1px;
+}
 .carousel_fade .fs-carousel-item {
   opacity: 0;
   visibility: hidden;
