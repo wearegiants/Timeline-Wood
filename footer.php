@@ -65,7 +65,7 @@
 		<div class="fs-cell fs-xl-4 fs-lg-5 fs-md-full fs-sm-full">
 		
 <?php
-  $form_action = '//noongoons.us10.list-manage.com/subscribe/post?u=a16967a3803d008fcfa3388a9&id=5108d57724';
+  $form_action = '//timelinewood.us6.list-manage.com/subscribe/post?u=58784e16aacb58ebef5701fbf&amp;id=a8269cf156';
 ?>
 
 	    <form class="footer__form relative" action="<?php echo $form_action; ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
@@ -110,7 +110,7 @@
 	</div>
 </footer>
 
-<?php #if(is_front_page()){ include locate_template('parts/footer-mailchimp.php' ); } ?>
+<?php if(is_front_page()){ include locate_template('parts/footer-mailchimp.php' ); } ?>
 <?php include locate_template('parts/footer-search.php' ); ?>
 
 </div><!--Wrapper-->
