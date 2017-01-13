@@ -6,6 +6,8 @@
 
 .hero {
 
+  display: block;
+
 	@media @min {
 		height: @hero - 200;
 	}
@@ -18,6 +20,18 @@
 	@media @desktop {
 		height: @hero
 	}
+
+  &--xs {
+    @media @min {
+      height: 75px;
+    }
+    @media @tablet {
+      height: 100px;
+    }
+    @media @desktop {
+      height: 125px;
+    }
+  }
 
   &--sm {
   	@media @min {

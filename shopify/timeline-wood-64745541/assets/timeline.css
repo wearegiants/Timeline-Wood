@@ -7057,6 +7057,9 @@ img.rounded {
 .bg--green {
   background-color: #76C28E;
 }
+.bg--yellow {
+  background-color: #FEF155;
+}
 .color--black {
   color: #151515;
 }
@@ -7884,6 +7887,9 @@ input[type=button].ss-gizmo:after {
 #mobile-menu.fs-swap-active {
   display: block;
 }
+.hero {
+  display: block;
+}
 @media screen and (min-width: 300px) {
   .hero {
     height: 335px;
@@ -7902,6 +7908,21 @@ input[type=button].ss-gizmo:after {
 @media screen and (min-width: 980px) {
   .hero {
     height: 535px;
+  }
+}
+@media screen and (min-width: 300px) {
+  .hero--xs {
+    height: 75px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .hero--xs {
+    height: 100px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .hero--xs {
+    height: 125px;
   }
 }
 @media screen and (min-width: 300px) {
