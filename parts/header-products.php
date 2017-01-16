@@ -26,7 +26,7 @@
 ?>
           <div class="fs-cell <?php echo $lgPush; ?> fs-contained product-drop__item product-<?php echo $i; ?>">
             <div class="wrapper">
-              <a href="<?php echo 'http://timeline-wood.myshopify.com/collections/skinnies/' #echo $row['url']; ?>" class="product-drop__link">
+              <a href="<?php echo $row['url']; ?>" class="product-drop__link">
                 <div class="product-drop__thumb">
                   <img src="<?php echo $image['sizes']['gallery-sm']; ?>" class="img-responsive" alt="<?php echo $row['title']; ?>" />
                 </div>
