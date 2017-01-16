@@ -48,7 +48,7 @@
       <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-lg-push-1 fs-md-hide fs-sm-hide text-center">
         <ul>
           <li class="btn btn--nav btn--first header__product-btn">
-            <a href="http://timeline-wood.myshopify.com" class="btn--products">Products</a>
+            <a href="http://shop.timelinewood.com" class="btn--products">Products</a>
             <?php include locate_template('parts/header-products.php' ); ?>
           </li>
           <?php echo wp_nav_menu( $mainMenu ); ?>
