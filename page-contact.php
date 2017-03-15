@@ -7,17 +7,8 @@
 
 ?>
 
-<div class="hero hero--sm bg--bgGray relative wallpaper" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
-	<div class="centered">
-		<div class="fs-row">
-			<div class="fs-cell fs-all-full">
-				<h2 class="title title--md text-center capped spaced nomargin color--black"><?php the_title(); ?></h2>
-			</div>
-		</div>
-	</div>
-</div>
+<?php include locate_template('parts/page-header.php' ); ?>
 
-<hr class="invisible">
 <?php #Contact ?>
 <div class="fs-row">
 	<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-3">

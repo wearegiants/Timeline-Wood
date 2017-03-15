@@ -6980,7 +6980,7 @@ img.rounded {
   color: #fff;
 }
 .color--gray {
-  color: #666666;
+  color: #222222;
 }
 .color--lightgray {
   color: #999999;
@@ -7010,7 +7010,7 @@ img.rounded {
   font-size: 15px;
   font-size: 0.9375rem;
   background: #E7E7EC;
-  color: #666666;
+  color: #222222;
   display: block;
   margin: 0 0 10px 0;
   font-weight: 400;
@@ -7089,7 +7089,7 @@ body {
   font-family: 'SuperGroteskPro', 'Karla', serif;
   font-weight: normal;
   -webkit-font-smoothing: antialiased;
-  color: #666666;
+  color: #222222;
   line-height: 1.5;
 }
 body * {
@@ -7108,7 +7108,7 @@ h5,
 h6 {
   font-family: 'SuperGroteskPro', 'Karla', serif;
   font-weight: normal;
-  color: #404040;
+  color: #000000;
   line-height: 1.2;
   margin: 10px 0;
 }
@@ -7253,6 +7253,7 @@ select {
   height: 50px;
   line-height: 50px;
   -webkit-font-smoothing: antialiased;
+  transition: opacity 400ms ease;
   font-size: 15px;
   font-size: 0.9375rem;
   border-radius: 2px;
@@ -7272,6 +7273,9 @@ select.ss-gizmo:after {
 select.ss-icon:after,
 select.ss-gizmo:after {
   margin-left: 3px;
+}
+select:hover {
+  opacity: .75;
 }
 select option {
   font-weight: 400!important;
@@ -7388,8 +7392,9 @@ input[type=button] {
   height: 50px;
   line-height: 50px;
   -webkit-font-smoothing: antialiased;
+  transition: opacity 400ms ease;
   transition: background-color 300ms ease;
-  background: #666666;
+  background: #222222;
   color: #fff;
 }
 button.ss-icon:before,
@@ -7421,6 +7426,12 @@ input[type=search].ss-gizmo:after,
 input[type=button].ss-gizmo:after {
   margin-left: 3px;
 }
+button:hover,
+input[type=submit]:hover,
+input[type=search]:hover,
+input[type=button]:hover {
+  opacity: .75;
+}
 .btn,
 .button,
 .epm-submit-chimp {
@@ -7435,6 +7446,7 @@ input[type=button].ss-gizmo:after {
   height: 50px;
   line-height: 50px;
   -webkit-font-smoothing: antialiased;
+  transition: opacity 400ms ease;
   text-decoration: none;
 }
 .btn.ss-icon:before,
@@ -7459,6 +7471,11 @@ input[type=button].ss-gizmo:after {
 .button.ss-gizmo:after,
 .epm-submit-chimp.ss-gizmo:after {
   margin-left: 3px;
+}
+.btn:hover,
+.button:hover,
+.epm-submit-chimp:hover {
+  opacity: .75;
 }
 .btn.ss-gizmo:before,
 .button.ss-gizmo:before,
@@ -7548,6 +7565,11 @@ input[type=button].ss-gizmo:after {
   .epm-submit-chimp--nav {
     padding: 0 25px;
   }
+}
+.btn--nav:hover,
+.button--nav:hover,
+.epm-submit-chimp--nav:hover {
+  opacity: 1;
 }
 .btn--logo,
 .button--logo,
@@ -8019,7 +8041,7 @@ input[type=button].ss-gizmo:after {
   color: #151515;
 }
 #header .btn:hover {
-  color: #666666;
+  color: #222222;
 }
 #header-main__wrapper {
   transition: 500ms ease;
@@ -8444,7 +8466,7 @@ input[type=button].ss-gizmo:after {
   box-shadow: 0 0 0 1px #CBCBD2;
   border-radius: 1px;
   margin-bottom: 25px !important;
-  color: #666666;
+  color: #222222;
 }
 .wpcf7 .text-right:after,
 .contact__subscribe .text-right:after {
@@ -8471,7 +8493,7 @@ input[type=button].ss-gizmo:after {
 }
 .wpcf7 .btn--submit.bg--green,
 .contact__subscribe .btn--submit.bg--green {
-  background-color: #76C28E !important;
+  background-color: #151515 !important;
 }
 @media screen and (min-width: 740px) {
   .about--nav {
@@ -8635,7 +8657,7 @@ input[type=button].ss-gizmo:after {
   color: #999999;
 }
 .product-collection a:hover {
-  color: #666666;
+  color: #222222;
 }
 .product-title {
   margin-bottom: 0;
@@ -8714,6 +8736,9 @@ input[type=button].ss-gizmo:after {
   background: #fce7e4;
   margin-bottom: 0;
 }
+.page-header {
+  padding: 75px 0;
+}
 .page-title {
   margin: 0;
   line-height: 1.2;
@@ -8728,7 +8753,7 @@ input[type=button].ss-gizmo:after {
 }
 .page-content {
   padding: 25px 0;
-  color: #666666;
+  color: #222222;
   font-family: georgia;
 }
 .page-content a {

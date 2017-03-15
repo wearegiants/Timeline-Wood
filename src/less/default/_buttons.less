@@ -28,6 +28,10 @@
       margin-left: 3px;
     }
   }
+  transition: opacity 400ms ease;
+  &:hover {
+    opacity: .75;
+  }
 }
 
 button,
@@ -111,6 +115,9 @@ input[type=button] {
     }
     @media @desktop {
       padding: 0 25px;
+    }
+    &:hover {
+      opacity: 1;
     }
   }
 

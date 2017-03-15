@@ -25,7 +25,7 @@
 	<div class="centered centered__bottom">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full color--white text-center">
-				<span href="<?php the_field('feature_link_url', 4); ?>" class="btn btn--primary accent bg--red ss-gizmo ss-right right"><?php the_field('feature_link_title', 4); ?></span>
+				<span href="<?php the_field('feature_link_url', 4); ?>" class="btn btn--primary accent bg--black ss-gizmo ss-right right"><?php the_field('feature_link_title', 4); ?></span>
 			</div>
 		</div>
 	</div>
