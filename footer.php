@@ -64,19 +64,10 @@
 		<hr class="fs-cell fs-lg-hide fs-md-full fs-sm-3 divider">
 		<div class="fs-cell fs-xl-4 fs-lg-5 fs-md-full fs-sm-full">
 		
-<?php
-  $form_action = '//timelinewood.us6.list-manage.com/subscribe/post?u=58784e16aacb58ebef5701fbf&amp;id=a8269cf156';
-?>
-
-	    <form class="footer__form relative" action="<?php echo $form_action; ?>" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" target="_blank">
-      	<label class="color--black accent accent--md">Join Our Newsletter</label>
-        <input type="email" value="" placeholder="Email Address" name="EMAIL" id="Email" class="subscribe-input color--black" autocorrect="off" autocapitalize="off">
-        <span class="input-group-btn">
-          <button type="submit" class="footer__form-submit bg--darkBlue" name="subscribe" id="Subscribe">
-            <span class="newsletter__submit-text--large">Submit</span>
-          </button>
-        </span>
-	    </form>
+	    <div class="footer__form relative">
+      	<span class="color--black accent accent--md">Join Our Newsletter</span>
+      	<?php echo do_shortcode('[epm_mailchimp]' ); ?>
+	    </div>
 
 	    <?php /*
 			<div class="fs-row">
@@ -105,14 +96,14 @@
 					<span class="footer-credits__link-wrapper"><a href="<?php echo the_permalink(22); ?>" class="">+ <u>Site Credits</u></a></span>
 					<span class="footer-credits__link-wrapper">
 						<a target="_blank" href="#" class="">Design by 12:01</a> — 
-						<a target="_blank" href="http://wearegiants.com" class="">Code by WeAreGiants.</a></span>
+						<a target="_blank" href="http://howler.la" class="">Code by HOWLER</a></span>
 				</span>
 			</span>
 		</div>
 	</div>
 </footer>
 
-<?php if(is_front_page()){ include locate_template('parts/footer-mailchimp.php' ); } ?>
+<?php if(is_front_page()){ include locate_template('parts/footer-mailchimp-easy.php' ); } ?>
 <?php include locate_template('parts/footer-search.php' ); ?>
 
 </div><!--Wrapper-->

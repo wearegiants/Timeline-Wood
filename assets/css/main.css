@@ -8270,6 +8270,37 @@ input[type=button]:hover {
 .footer-credits__link-wrapper {
   display: block!important;
 }
+.footer .epm-sign-up {
+  position: relative;
+}
+.footer .epm-sign-up-button {
+  position: absolute;
+  right: 12px;
+  bottom: 16px;
+  height: 26px!important;
+  width: 26px!important;
+  padding: 0!important;
+  text-indent: -9999px;
+  background-color: #035DA9 !important;
+  border-radius: 50%!important;
+}
+.footer .epm-sign-up-form label {
+  display: none;
+}
+.footer .epm-sign-up-form .email {
+  border: 0;
+  background-color: #fff;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.footer .epm-sign-up-form .epm-message {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  margin: 0;
+  transform: translateY(105%);
+  color: #999999;
+}
 .home__hero-link {
   z-index: 2;
 }
@@ -8394,6 +8425,32 @@ input[type=button]:hover {
 }
 .mfp-wrap.mfp-subscribe.mfp-removing {
   opacity: 0;
+}
+.subscribe-wrapper .epm-sign-up-form {
+  text-align: center;
+}
+.subscribe-wrapper .epm-sign-up-button {
+  margin: auto!important;
+  display: inline-block !important;
+  margin-bottom: 0!important;
+  background-color: #fff !important;
+  color: #FF2816 !important;
+}
+.subscribe-wrapper .epm-form-field {
+  text-align: center;
+}
+.subscribe-wrapper .epm-form-field label {
+  display: none;
+}
+.subscribe-wrapper .epm-form-field #epm-email.email {
+  background-color: transparent!important;
+  border: 1px solid #fff;
+  color: #fff;
+  text-align: center;
+}
+.subscribe-wrapper .epm-form-field #epm-email.email::placeholder {
+  /* Chrome/Opera/Safari */
+  color: rgba(255, 255, 255, 0.75);
 }
 @media screen and (min-width: 980px) {
   .insta-wrapper {

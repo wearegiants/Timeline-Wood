@@ -8,14 +8,7 @@ $thumb_url = $thumb_url_array[0];
 ?>
 
 <article <?php post_class(); ?>>
-	<header class="hentry__header text-center">
-		<div class="hero hero relative bg--black wallpaper" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
-			<div class="centered">
-				<h1 class="hentry__title title--xl color--white"><?php the_title(); ?></h1>
-			</div>
-		</div>
-	</header>
-	<hr class="invisible">
+	<?php include locate_template('parts/page-header.php' ); ?>
 	<div class="hentry__content">
 		<div class="fs-row">
 			<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 fs-centered">

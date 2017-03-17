@@ -70,3 +70,37 @@
     }
   }
 }
+// Mailchimp
+.subscribe-wrapper {
+  .epm {
+    &-sign-up {
+      &-form {
+        text-align: center;
+      }
+      &-button {
+        margin: auto!important;
+        display: inline-block!important;
+        margin-bottom: 0!important;
+        background-color: @white!important;
+        color: @red!important;
+      }
+    }
+    &-form-field {
+      text-align: center;
+      label {
+        display: none;
+      }
+      #epm-email {
+        &.email {
+          background-color: transparent!important;
+          border: 1px solid @white;
+          color: @white;
+          text-align: center;
+          &::placeholder { /* Chrome/Opera/Safari */
+            color: @white75;
+          }
+        }
+      }
+    }
+  }
+}
