@@ -3,11 +3,6 @@
 <div class="about">
 <?php $slides = get_field('about'); ?>
 <?php if($slides): ?>
-<ul class="about--nav single-page">
-	<?php $i=1; foreach($slides as $slide): ?>
-  <li <?php if($i==1): ?>class="current"<?php endif; ?>><a href="#slide-<?php echo $i; ?>"><?php echo $slide['title']; ?></a></li>
-	<?php $i++; endforeach; ?>
-</ul>
 <div class="about__slide-container">
 <?php $counter = 1; foreach($slides as $slide): ?>
 

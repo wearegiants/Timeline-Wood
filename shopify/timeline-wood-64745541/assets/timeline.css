@@ -8106,6 +8106,9 @@ input[type=button]:hover {
   -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
+.header {
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.02);
+}
 .header__product-btn {
   position: static;
 }
@@ -8661,6 +8664,10 @@ input[type=button]:hover {
 .contact__subscribe-form {
   position: relative;
 }
+.wpcf7 label,
+.contact__subscribe label {
+  display: none;
+}
 .wpcf7-response-output,
 .contact__subscribe-response-output {
   clear: both;
@@ -8677,7 +8684,9 @@ input[type=button]:hover {
 .wpcf7-text,
 .contact__subscribe-text,
 .wpcf7-textarea,
-.contact__subscribe-textarea {
+.contact__subscribe-textarea,
+.wpcf7 #epm-email,
+.contact__subscribe #epm-email {
   box-shadow: 0 0 0 1px #CBCBD2;
   border-radius: 1px;
   margin-bottom: 25px !important;
@@ -8690,24 +8699,32 @@ input[type=button]:hover {
   clear: both;
 }
 .wpcf7 .btn--submit,
-.contact__subscribe .btn--submit {
+.contact__subscribe .btn--submit,
+.wpcf7 .epm-submit-chimp,
+.contact__subscribe .epm-submit-chimp {
   background-color: #EB7366 !important;
   float: right;
   margin-bottom: 0;
   color: #fff;
 }
 .wpcf7 .btn--submit:after,
-.contact__subscribe .btn--submit:after {
+.contact__subscribe .btn--submit:after,
+.wpcf7 .epm-submit-chimp:after,
+.contact__subscribe .epm-submit-chimp:after {
   margin-left: -12px;
 }
 .wpcf7 .btn--submit input,
-.contact__subscribe .btn--submit input {
+.contact__subscribe .btn--submit input,
+.wpcf7 .epm-submit-chimp input,
+.contact__subscribe .epm-submit-chimp input {
   padding: 0;
   margin: 0;
   background: transparent;
 }
 .wpcf7 .btn--submit.bg--green,
-.contact__subscribe .btn--submit.bg--green {
+.contact__subscribe .btn--submit.bg--green,
+.wpcf7 .epm-submit-chimp.bg--green,
+.contact__subscribe .epm-submit-chimp.bg--green {
   background-color: #151515 !important;
 }
 @media screen and (min-width: 740px) {
