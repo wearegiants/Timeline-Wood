@@ -1,4 +1,4 @@
-<a id="open_bag" class="btn--nav btn btn__last header__icon--bag" href="#">
+<a id="open_bag" class="btn--nav btn header__icon--bag" href="#">
   <span>Bag</span>&nbsp;
   <img src="/assets/img/bag.svg" alt="Search">
 </a>

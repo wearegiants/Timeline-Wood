@@ -7058,7 +7058,7 @@ img.rounded {
   background-color: #76C28E;
 }
 .bg--yellow {
-  background-color: #FEF155;
+  background-color: #fffd38;
 }
 .color--black {
   color: #151515;
@@ -8179,7 +8179,7 @@ input[type=button]:hover {
   }
 }
 #header-commercial {
-  background-color: #FEF155;
+  background-color: #fffd38;
   float: right;
   height: 60px;
   padding: 0 37.5px;
@@ -8188,7 +8188,7 @@ input[type=button]:hover {
   padding-top: 8px;
 }
 #header-commercial:hover {
-  background-color: #feed22;
+  background-color: #fffc05;
 }
 #header-main__wrapper {
   -webkit-transition: 500ms ease;
@@ -8196,6 +8196,13 @@ input[type=button]:hover {
   position: relative;
   z-index: 89;
   background: #fff;
+}
+@media screen and (min-width: 980px) {
+  #header-main__wrapper > .fs-row {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
 }
 #header.fs-swap-active #header-main__wrapper {
   -webkit-transform: translateY(-100%);
@@ -8262,7 +8269,7 @@ input[type=button]:hover {
   -webkit-transition: 400ms;
   transition: 400ms;
   top: 0;
-  background: #FEF155;
+  background: #fffd38;
 }
 #header-search #s {
   margin-bottom: 0;
