@@ -7594,14 +7594,6 @@ input[type=button]:hover {
   transition: none;
   margin: 0 -10px;
 }
-.btn--logo:hover,
-.button--logo:hover,
-.epm-submit-chimp--logo:hover {
-  background: #151515 url('/assets/img/timeline-blue.svg') center center no-repeat;
-  background-size: contain;
-  border-left: 10px solid #151515;
-  border-right: 10px solid #151515;
-}
 .btn--logo.shopify,
 .button--logo.shopify,
 .epm-submit-chimp--logo.shopify {
@@ -8087,6 +8079,18 @@ input[type=button]:hover {
 }
 #header-navigation ul li {
   position: relative;
+}
+#header-navigation ul li.menu-item-has-children {
+  border-radius: 0;
+}
+#header-navigation ul li.menu-item-has-children:hover {
+  background-color: #0C5FA8;
+}
+#header-navigation ul li.menu-item-has-children:hover a {
+  color: #fff;
+}
+#header-navigation ul li.menu-item-has-children:hover ul {
+  background-color: #0C5FA8;
 }
 #header-navigation ul li:hover a {
   text-decoration: underline;

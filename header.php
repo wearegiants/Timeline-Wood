@@ -36,11 +36,11 @@
       <menu id="header-main" class="fs-cell fs-lg-2 fs-md-half fs-sm-half text-center">
         <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo"><?php bloginfo('name' );?></a>
       </menu>
-      <menu class="fs-cell fs-xl-fourth fs-lg-fourth fs-md-fourth fs-sm-half text-right">
-        <a id="header-commercial" href="#">Commercial Products <br>for Architects + Designers</a>
+      <menu class="fs-cell fs-xl-4 fs-lg-5 fs-md-fourth fs-sm-half text-right">
+        <a id="header-commercial" href="#" class="fs-sm-hide fs-md-hide">Commercial Products <br>for Architects + Designers</a>
         <?php include locate_template('parts/store/shopify--bag.php' ); ?>
       </menu>
-      <menu id="header-navigation" class="fs-cell fs-xl-6 fs-lg-6 fs-lg-push-1 fs-md-hide fs-sm-hide text-center">
+      <menu id="header-navigation" class="fs-cell fs-xl-5 fs-lg-5 fs-md-hide fs-sm-hide">
         <ul>
           <?php echo wp_nav_menu( $mainMenu ); ?>
         </ul>
