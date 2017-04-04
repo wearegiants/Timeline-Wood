@@ -14,6 +14,8 @@
   }
 
   &__icon {
+    display: block;
+    float: right;
     &--search {
       img {
         position: relative;
@@ -67,6 +69,19 @@
       color: @textGray;
     }
   }
+  &-commercial {
+    background-color: @yellow;
+    float: left;
+    display: block;
+    height: @height_nav;
+    padding: 0 @spaced*1.5;
+    text-align: center;
+    line-height: 1.3;
+    padding-top: 8px;
+    &:hover {
+      background-color: darken(@yellow, 10%)
+    }
+  }
   &-main {
     &__wrapper {
       transition: 500ms ease;
@@ -90,8 +105,43 @@
       margin-bottom: 0;
       padding: 0;
       li {
+        position: relative;
+        &:hover {
+          a {
+            text-decoration: underline;
+          }
+          ul {
+            li {
+              a {
+                text-decoration: none;
+                &:hover {
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
         &:before {
           display: none;
+        }
+        ul {
+          background-color: @white;
+          position: absolute;
+          padding: 0 @spaced*1.5 @spaced*.5 @spaced;
+          text-align: left;
+          margin-left: -@spaced;
+          display: none;
+          box-shadow: 0 3px 5px rgba(0,0,0,.1);
+          li {
+            line-height: 30px;
+            height: auto;
+            white-space: nowrap;
+          }
+        }
+        &:hover {
+          ul {
+            display: block;
+          }
         }
       }
     }

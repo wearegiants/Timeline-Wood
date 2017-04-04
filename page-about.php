@@ -10,7 +10,7 @@
 		<div class="centered">
 			<div class="fs-row">
 				<div class="fs-cell fs-lg-7 fs-md-5 fs-sm-3 fs-centered">
-					<div class="wrapper wrapper--extra bg--white">
+					<div class="wrapper wrapper--extra">
 						<header class="about__slide-header text-center">
 							<h2 class="title title--lg color--<?php echo $slide['text_color']; ?>"><?php echo $slide['title']; ?></h2>
 						</header>
@@ -22,6 +22,7 @@
 			</div>
 		</div>
 		<?php if($slide['image']): ?>
+		<div class="about__slide-bg-overlay covered"></div>
 		<div class="about__slide-bg covered wallpaper" data-background-options='{"source":"<?php echo $slide['image']['sizes']['gallery-xl']; ?>"}'></div>
 		<?php endif; ?>
 	</div>

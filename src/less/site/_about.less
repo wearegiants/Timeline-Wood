@@ -30,6 +30,15 @@
     }
   }
   &__slide {
+    .centered {
+      z-index: 10;
+    }
+    &-bg {
+      &-overlay {
+        background-color: rgba(0,0,0,.33);
+        z-index: 9;
+      }
+    }
     &-container {
       padding: 0;
       margin: 0;

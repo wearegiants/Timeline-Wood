@@ -19,6 +19,7 @@
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full <?php the_field('feature_headline_color'); ?> text-center">
 				<span class="title title--xl"><?php the_field('feature_headline'); ?></span><br>
+				<span class="title title--md"><?php the_field('feature_subheadline'); ?></span><br>
 			</div>
 		</div>
 	</div>

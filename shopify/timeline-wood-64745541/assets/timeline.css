@@ -7419,6 +7419,15 @@ table tr th {
 .title--bold {
   font-weight: bold;
 }
+.title--md {
+  line-height: 1.2;
+}
+@media screen and (min-width: 740px) {
+  .title--md {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
 .title--lg {
   line-height: 1.2;
 }
@@ -7646,8 +7655,8 @@ input[type=button]:hover {
   .button--nav,
   .epm-submit-chimp--nav {
     padding: 0 5px;
-    height: 56px;
-    line-height: 56px;
+    height: 48px;
+    line-height: 48px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -7655,8 +7664,8 @@ input[type=button]:hover {
   .button--nav,
   .epm-submit-chimp--nav {
     padding: 0 16px;
-    height: 70px;
-    line-height: 70px;
+    height: 60px;
+    line-height: 60px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -7689,7 +7698,7 @@ input[type=button]:hover {
 .btn--logo:hover,
 .button--logo:hover,
 .epm-submit-chimp--logo:hover {
-  background: #151515 url('/assets/img/timeline-white.svg') center center no-repeat;
+  background: #151515 url('/assets/img/timeline-blue.svg') center center no-repeat;
   background-size: contain;
   border-left: 10px solid #151515;
   border-right: 10px solid #151515;
@@ -8116,6 +8125,10 @@ input[type=button]:hover {
   opacity: 1;
   pointer-events: auto;
 }
+.header__icon {
+  display: block;
+  float: right;
+}
 .header__icon--search img {
   position: relative;
   top: -1px;
@@ -8148,6 +8161,19 @@ input[type=button]:hover {
 #header .btn:hover {
   color: #222222;
 }
+#header-commercial {
+  background-color: #FEF155;
+  float: left;
+  display: block;
+  height: 60px;
+  padding: 0 37.5px;
+  text-align: center;
+  line-height: 1.3;
+  padding-top: 8px;
+}
+#header-commercial:hover {
+  background-color: #feed22;
+}
 #header-main__wrapper {
   -webkit-transition: 500ms ease;
   transition: 500ms ease;
@@ -8163,8 +8189,37 @@ input[type=button]:hover {
   margin-bottom: 0;
   padding: 0;
 }
+#header-navigation ul li {
+  position: relative;
+}
+#header-navigation ul li:hover a {
+  text-decoration: underline;
+}
+#header-navigation ul li:hover ul li a {
+  text-decoration: none;
+}
+#header-navigation ul li:hover ul li a:hover {
+  text-decoration: underline;
+}
 #header-navigation ul li:before {
   display: none;
+}
+#header-navigation ul li ul {
+  background-color: #fff;
+  position: absolute;
+  padding: 0 37.5px 12.5px 25px;
+  text-align: left;
+  margin-left: -25px;
+  display: none;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+#header-navigation ul li ul li {
+  line-height: 30px;
+  height: auto;
+  white-space: nowrap;
+}
+#header-navigation ul li:hover ul {
+  display: block;
 }
 #header-products {
   -webkit-transition: opacity 300ms ease;
@@ -8191,8 +8246,8 @@ input[type=button]:hover {
 }
 #header-search #s {
   margin-bottom: 0;
-  height: 70px;
-  line-height: 70px;
+  height: 60px;
+  line-height: 60px;
   padding: 0;
   background: transparent;
   color: rgba(0, 0, 0, 0.5);
@@ -8403,6 +8458,9 @@ input[type=button]:hover {
   text-indent: -9999px;
   background-color: #035DA9 !important;
   border-radius: 50%!important;
+  margin-bottom: 4px;
+  -webkit-transition: 400ms ease;
+  transition: 400ms ease;
 }
 .footer .epm-sign-up-form label {
   display: none;
@@ -8424,6 +8482,10 @@ input[type=button]:hover {
 }
 .home__hero-link {
   z-index: 2;
+}
+.home__hero .title strong,
+.home__hero .title b {
+  font-weight: 900;
 }
 .home-module .accent {
   text-transform: uppercase;
@@ -8754,6 +8816,13 @@ input[type=button]:hover {
   .about--nav li.current a {
     background: #fff;
   }
+}
+.about__slide .centered {
+  z-index: 10;
+}
+.about__slide-bg-overlay {
+  background-color: rgba(0, 0, 0, 0.33);
+  z-index: 9;
 }
 .about__slide-container {
   padding: 0;

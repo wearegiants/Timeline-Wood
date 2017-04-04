@@ -14,12 +14,6 @@
 	<div class="fs-cell fs-lg-3 fs-md-2 fs-sm-3">
 		<div class="contact-desc">
 			<?php the_field('description'); ?>
-      EMPLOYMENT OPPORTUNITIES
-Timeline is currently hiring at our new manufacturing facility in Portland, OR. Please send resume + cover letter to info@timelinewood.com
-
-
-INTERNSHIPS
-Timeline is seeking a few qualified and highly motivated individuals to intern at our new design studio in Portland, OR for Spring 2015. Qualified candidates must be able to commit to AT LEAST 2 full days a week. This is a design studio + office internship where interns will be participating in ALL areas of studio functions from working with the designers to communicating with contractors and vendors, working with sales staff, updating social media, maintaining databases, shipping packages, answering phones and assisting with clientele. Please submit a cover letter explaining why you are interested in the position and why you believe you are a good candidate along with a PDF version of your resume in the body of the email to info@timelinewood.com Only serious, organized and reliable candidates need apply.
 		</div>
 	</div>
 	<div class="fs-cell fs-lg-8 fs-lg-push-1 fs-md-4 fs-sm-3">
