@@ -8023,6 +8023,9 @@ input[type=button]:hover {
   position: relative;
   top: -1px;
 }
+.header__icon--bag {
+  float: right;
+}
 .header__icon--bag img {
   position: relative;
   top: -3px;
@@ -8053,8 +8056,7 @@ input[type=button]:hover {
 }
 #header-commercial {
   background-color: #FEF155;
-  float: left;
-  display: block;
+  float: right;
   height: 60px;
   padding: 0 37.5px;
   text-align: center;
