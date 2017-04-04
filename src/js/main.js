@@ -101,6 +101,16 @@ $(document).ready(function(){
   //subscribe();
   productHover();
   //scrollFixed();
+
+  $('#header-navigation .menu-item-has-children').hover(
+      function(){
+        $('.home__hero').addClass('is-active');
+      },
+      function(){
+        $('.home__hero').removeClass('is-active');
+      }
+  );
+
   $('.single-page').onePageNav({
     currentClass: 'current',
     changeHash: false,
@@ -117,5 +127,5 @@ $(document).ready(function(){
     scrollChange: function($currentListItem) {
         //I get fired when you enter a section and I pass the list item of the section
     }
-});
+  });
 });

@@ -1,5 +1,14 @@
 .home {
   &__hero {
+    background-color: @gray;
+    .fs-background-container {
+      transition: opacity 300ms ease;
+    }
+    &.is-active {
+      .fs-background-container {
+        opacity: .75;
+      }
+    }
     &-link {
       z-index: 2;
       //background: @red;

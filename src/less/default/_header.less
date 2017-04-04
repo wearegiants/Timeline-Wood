@@ -16,6 +16,7 @@
   &__icon {
     display: block;
     float: right;
+
     &--search {
       img {
         position: relative;
@@ -31,7 +32,7 @@
     }
   }
   
-  &__logo {}
+  &--logo {}
   
   &__nav {}
   
@@ -68,6 +69,26 @@
     color: @black;
     &:hover {
       color: @textGray;
+    }
+  }
+  &--logo {
+    @media @min {
+      width: 100%;
+      display: block;
+      margin: auto;
+      padding: 0;
+    }
+    @media @tablet {
+      width: 70%;
+      display: block;
+      margin: auto;
+      padding: 0;
+    }
+    @media @desktop {
+      width: 225px;
+      float: left;
+      padding: 0;
+      margin-right: 10px;
     }
   }
   &-commercial {
@@ -109,12 +130,12 @@
         &.menu-item-has-children {
           border-radius: 0;
           &:hover {
-            background-color: @blue;
+            //background-color: @blue;
             a {
-              color: @white;
+              //color: @white;
             }
             ul {
-              background-color: @blue;
+              //background-color: @blue;
             }
           }
         }
@@ -126,6 +147,7 @@
             li {
               a {
                 text-decoration: none;
+                color: @blue;
                 &:hover {
                   text-decoration: underline;
                 }

@@ -6953,7 +6953,7 @@ img.rounded {
   background-color: #F2F2F2;
 }
 .bg--blue {
-  background-color: #0C5FA8;
+  background-color: #233def;
 }
 .bg--darkBlue {
   background-color: #035DA9;
@@ -7396,7 +7396,6 @@ input[type=button] {
   display: inline-block;
   margin: 0 0 10px 0;
   text-align: center;
-  border-radius: 2px;
   padding: 0 20px;
   height: 50px;
   line-height: 50px;
@@ -7450,7 +7449,6 @@ input[type=button]:hover {
   display: inline-block;
   margin: 0 0 10px 0;
   text-align: center;
-  border-radius: 2px;
   padding: 0 20px;
   height: 50px;
   line-height: 50px;
@@ -7555,8 +7553,8 @@ input[type=button]:hover {
   .button--nav,
   .epm-submit-chimp--nav {
     padding: 0 5px;
-    height: 48px;
-    line-height: 48px;
+    height: 60px;
+    line-height: 60px;
   }
 }
 @media screen and (min-width: 740px) {
@@ -7572,7 +7570,7 @@ input[type=button]:hover {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
-    padding: 0 25px;
+    padding: 0 20px;
   }
 }
 .btn--nav:hover,
@@ -7584,8 +7582,8 @@ input[type=button]:hover {
 .button--logo,
 .epm-submit-chimp--logo {
   background: transparent;
-  background: url('/assets/img/timeline.svg') center center no-repeat;
-  background-size: contain;
+  background: #151515 url('/assets/img/timeline-white.svg') center center no-repeat;
+  background-size: 90% auto;
   width: 100%;
   text-indent: -9999px;
   border-left: 10px solid transparent;
@@ -7597,7 +7595,7 @@ input[type=button]:hover {
 .btn--logo.shopify,
 .button--logo.shopify,
 .epm-submit-chimp--logo.shopify {
-  background: url('timeline.svg') center center no-repeat;
+  background: #151515 url('timeline-white.svg') center center no-repeat;
   background-size: contain;
 }
 @media screen and (min-width: 300px) {
@@ -8054,6 +8052,30 @@ input[type=button]:hover {
 #header .btn:hover {
   color: #222222;
 }
+@media screen and (min-width: 300px) {
+  #header--logo {
+    width: 100%;
+    display: block;
+    margin: auto;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 740px) {
+  #header--logo {
+    width: 70%;
+    display: block;
+    margin: auto;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 980px) {
+  #header--logo {
+    width: 225px;
+    float: left;
+    padding: 0;
+    margin-right: 10px;
+  }
+}
 #header-commercial {
   background-color: #FEF155;
   float: right;
@@ -8085,20 +8107,12 @@ input[type=button]:hover {
 #header-navigation ul li.menu-item-has-children {
   border-radius: 0;
 }
-#header-navigation ul li.menu-item-has-children:hover {
-  background-color: #0C5FA8;
-}
-#header-navigation ul li.menu-item-has-children:hover a {
-  color: #fff;
-}
-#header-navigation ul li.menu-item-has-children:hover ul {
-  background-color: #0C5FA8;
-}
 #header-navigation ul li:hover a {
   text-decoration: underline;
 }
 #header-navigation ul li:hover ul li a {
   text-decoration: none;
+  color: #233def;
 }
 #header-navigation ul li:hover ul li a:hover {
   text-decoration: underline;
@@ -8366,6 +8380,15 @@ input[type=button]:hover {
   margin: 0;
   transform: translateY(105%);
   color: #999999;
+}
+.home__hero {
+  background-color: #999999;
+}
+.home__hero .fs-background-container {
+  transition: opacity 300ms ease;
+}
+.home__hero.is-active .fs-background-container {
+  opacity: .75;
 }
 .home__hero-link {
   z-index: 2;
@@ -8695,7 +8718,7 @@ input[type=button]:hover {
   opacity: 1;
 }
 .bag-checkout {
-  background: #0C5FA8;
+  background: #233def;
   color: #fff;
 }
 .bag-checkout span:after {
