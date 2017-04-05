@@ -20,7 +20,7 @@
 
 <div class="commercial">
 	<div class="fs-row">
-		<div class="fs-cell fs-lg-3 fs-md-full fs-sm-full">
+		<div class="fs-cell fs-lg-4 fs-md-full fs-sm-full">
 			<span class="title--sm color--red uppercase"><?php the_field('subhead'); ?></span>
 			<h1><?php the_title(); ?></h1>
 		</div>
@@ -36,7 +36,7 @@
 			</div>
 			<div class="wrapper fs-lg-hide"></div>
 		</div>
-		<div class="fs-cell fs-lg-3 fs-md-full fs-sm-full"><?php the_content(); ?></div>
+		<div class="fs-cell fs-lg-4 fs-md-full fs-sm-full"><?php the_content(); ?></div>
 	</div>
 </div>
 
