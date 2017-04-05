@@ -6892,7 +6892,7 @@ html:hover [class^="ss-"] {
 }
 @font-face {
   font-family: 'SuperGroteskPro';
-  src: url('/assets/fonts/SuperGroteskWeb-Medium.woff') format('woff');
+  src: url('/assets/fonts/SuperGroteskWeb.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -8926,12 +8926,16 @@ input[type=button]:hover {
 .page-header {
   padding: 75px 0;
 }
+.page-header .title {
+  font-weight: bold;
+}
 .page-title {
   margin: 0;
   line-height: 1.2;
   font-size: 28px;
   font-size: 1.75rem;
   color: #151515;
+  font-weight: bold;
   text-transform: uppercase;
   margin-bottom: 25px;
 }
