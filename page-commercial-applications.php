@@ -21,7 +21,7 @@
 <div class="commercial">
 	<div class="fs-row">
 		<div class="fs-cell fs-lg-4 fs-md-full fs-sm-full">
-			<span class="title--sm color--red uppercase"><?php the_field('subhead'); ?></span>
+			<strong class="title--sm color--red uppercase"><?php the_field('subhead'); ?></strong>
 			<h1><?php the_title(); ?></h1>
 		</div>
 		<div class="fs-cell fs-lg-8 fs-md-full fs-sm-full fs-right">

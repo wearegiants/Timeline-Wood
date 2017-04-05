@@ -8198,7 +8198,7 @@ input[type=button]:hover {
   padding-top: 8px;
 }
 #header-commercial:hover {
-  background-color: #fffc05;
+  text-decoration: underline;
 }
 #header-main__wrapper {
   -webkit-transition: 500ms ease;

@@ -6892,15 +6892,14 @@ html:hover [class^="ss-"] {
 }
 @font-face {
   font-family: 'SuperGroteskPro';
-  src: url('/assets/fonts/SuperGroteskWeb.woff') format('woff');
+  src: url('/assets/fonts/SuperGroteskWeb-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'SuperGroteskPro Medium';
+  font-family: 'SuperGroteskPro';
   src: url('/assets/fonts/SuperGroteskWeb-Medium.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+  font-weight: bold;
 }
 .img-responsive {
   display: block;
@@ -8096,7 +8095,7 @@ input[type=button]:hover {
   padding-top: 8px;
 }
 #header-commercial:hover {
-  background-color: #fffc05;
+  text-decoration: underline;
 }
 #header-main__wrapper {
   transition: 500ms ease;
