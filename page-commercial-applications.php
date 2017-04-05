@@ -37,10 +37,9 @@
 			<div class="wrapper fs-lg-hide"></div>
 		</div>
 		<div class="fs-cell fs-lg-4 fs-md-full fs-sm-full"><?php the_content(); ?></div>
+		<hr class="divider black big fs-cell fs-all-full" />
 	</div>
 </div>
-
-<hr class="divider big" />
 
 <?php 
   endforeach; wp_reset_postdata(); 

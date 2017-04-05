@@ -7283,6 +7283,9 @@ hr.compact {
 hr.big {
   margin: 50px 0;
 }
+hr.black {
+  background-color: #151515;
+}
 iframe {
   border: none;
 }
@@ -7351,6 +7354,7 @@ select {
   display: inline-block;
   margin: 0 0 10px 0;
   text-align: center;
+  font-weight: bold;
   padding: 0 20px;
   height: 50px;
   line-height: 50px;
@@ -7502,6 +7506,7 @@ input[type=button] {
   display: inline-block;
   margin: 0 0 10px 0;
   text-align: center;
+  font-weight: bold;
   padding: 0 20px;
   height: 50px;
   line-height: 50px;
@@ -7557,6 +7562,7 @@ input[type=button]:hover {
   display: inline-block;
   margin: 0 0 10px 0;
   text-align: center;
+  font-weight: bold;
   padding: 0 20px;
   height: 50px;
   line-height: 50px;
@@ -7618,6 +7624,12 @@ input[type=button]:hover {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
   opacity: .9;
+}
+.btn--secondary,
+.button--secondary,
+.epm-submit-chimp--secondary {
+  height: 40px;
+  line-height: 40px;
 }
 .btn--disabled,
 .button--disabled,
@@ -7786,6 +7798,20 @@ input[type=button]:hover {
   height: 1px;
   background: rgba(0, 0, 0, 0.25);
   box-shadow: 0 0.25em 0 0 rgba(0, 0, 0, 0.25), 0 0.5em 0 0 rgba(0, 0, 0, 0.25);
+}
+.btn--arrow,
+.button--arrow,
+.epm-submit-chimp--arrow {
+  font-weight: bold;
+}
+.btn--arrow:after,
+.button--arrow:after,
+.epm-submit-chimp--arrow:after {
+  font-family: 'SSGizmo';
+  content: '➡';
+  position: relative;
+  top: .3em;
+  margin-left: 5px;
 }
 .btn-mobile,
 .button-mobile,
@@ -8116,7 +8142,7 @@ input[type=button]:hover {
   transition-delay: 0s;
 }
 .header {
-  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.02);
+  box-shadow: 0 1px 0px #000000;
 }
 .header__product-btn {
   position: static;
