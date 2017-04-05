@@ -34,6 +34,7 @@
 				</div>
 <?php endforeach; ?>
 			</div>
+			<div class="wrapper fs-lg-hide"></div>
 		</div>
 		<div class="fs-cell fs-lg-3 fs-md-full fs-sm-full"><?php the_content(); ?></div>
 	</div>
