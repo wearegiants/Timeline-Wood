@@ -6988,6 +6988,9 @@ img.rounded {
 .color--darkblue {
   color: #035DA9;
 }
+.color--red {
+  color: #FF2816;
+}
 @media screen and (min-width: 300px) {
   blockquote {
     margin-left: 0;
@@ -7073,6 +7076,10 @@ img.rounded {
 }
 .hidden {
   display: none;
+}
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 *:link,
 *:visited,
@@ -7322,6 +7329,9 @@ table tr th {
 }
 .title--bold {
   font-weight: bold;
+}
+.title--sm {
+  font-size: 80%;
 }
 .title--md {
   line-height: 1.2;

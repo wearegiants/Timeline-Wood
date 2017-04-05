@@ -4,6 +4,8 @@
   add_image_size( 'gallery-sm', 320 , 320, true );
   add_image_size( 'gallery-lg', 1280, 720, true );
   add_image_size( 'gallery-xl', 1400, 900, true );
+  add_image_size( 'gallery-sq', 1000, 1000, true );
+  add_image_size( 'gallery-photo', 1280, 1024, true );
 
   function register_my_menu() {
     register_nav_menu('main-menu',__( 'Main Menu' ));

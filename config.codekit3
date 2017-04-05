@@ -2281,6 +2281,12 @@
 		"oAP": "\/page-blog.php",
 		"oF": 0
 		},
+	"\/page-commercial-applications-old.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-commercial-applications-old.php",
+		"oF": 0
+		},
 	"\/page-commercial-applications.php": {
 		"ft": 8192,
 		"oA": 2,
