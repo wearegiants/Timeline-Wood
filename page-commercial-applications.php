@@ -11,8 +11,8 @@
     'post_type'      => 'page',
     'posts_per_page' => -1,
     'post_parent'    => $post->ID,
-    'order'          => 'DESC',
-    'orderby'        => 'menu_order'
+    'orderby'        => 'menu_order',
+    'order'          => 'ASC',
   );
   $home_posts = get_posts( $home_args );
   foreach ( $home_posts as $post ) : setup_postdata( $post );
