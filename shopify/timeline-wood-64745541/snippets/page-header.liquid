@@ -1,0 +1,9 @@
+{% if template contains 'collection' %}
+  {% assign title = collection.title %}
+{% else if template contains 'index' %}
+  {% assign title = 'Products' %}
+{% endif %}
+
+<div class="page-header">
+  <h2 class="title title--md text-center capped spaced nomargin color--black">{{ title }}</h2>
+</div>

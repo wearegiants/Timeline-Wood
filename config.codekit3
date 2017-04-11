@@ -7,7 +7,7 @@
 		"uuidString": "EB914A48-AD1C-4DDC-A064-03A60C563D64"
 		}
 	],
-"creatorBuild": "25568",
+"creatorBuild": "25813",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -636,7 +636,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/images\/sprite.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/images\/sprite@2x.png": {
 		"ft": 32768,
@@ -644,7 +647,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/images\/sprite@2x.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/animated-overlay.gif": {
 		"ft": 4194304,
@@ -660,7 +666,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_2EA2CC_40x100.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_aaaaaa_40x100.png": {
 		"ft": 32768,
@@ -668,7 +677,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_aaaaaa_40x100.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_E14D43_40x100.png": {
 		"ft": 32768,
@@ -676,7 +688,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_E14D43_40x100.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_F0F0F0_40x100.png": {
 		"ft": 32768,
@@ -684,7 +699,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_F0F0F0_40x100.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_F9F9F9_40x100.png": {
 		"ft": 32768,
@@ -692,7 +710,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_F9F9F9_40x100.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_ffffff_40x100.png": {
 		"ft": 32768,
@@ -700,7 +721,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_0_ffffff_40x100.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_75_ffffff_40x100.png": {
 		"ft": 32768,
@@ -708,7 +732,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_flat_75_ffffff_40x100.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_highlight-soft_0_ffffff_1x100.png": {
 		"ft": 32768,
@@ -716,7 +743,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-bg_highlight-soft_0_ffffff_1x100.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_222222_256x240.png": {
 		"ft": 32768,
@@ -724,7 +754,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_222222_256x240.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_2EA2CC_256x240.png": {
 		"ft": 32768,
@@ -732,7 +765,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_2EA2CC_256x240.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_444444_256x240.png": {
 		"ft": 32768,
@@ -740,7 +776,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_444444_256x240.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_454545_256x240.png": {
 		"ft": 32768,
@@ -748,7 +787,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_454545_256x240.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_DDDDDD_256x240.png": {
 		"ft": 32768,
@@ -756,7 +798,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_DDDDDD_256x240.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_ffffff_256x240.png": {
 		"ft": 32768,
@@ -764,7 +809,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/images\/ui-icons_ffffff_256x240.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/datepicker\/jquery-ui-1.10.4.custom.css": {
 		"aP": 0,
@@ -926,7 +974,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/select2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/select2_locale_ar.js": {
 		"ft": 64,
@@ -1345,7 +1396,10 @@
 		"oA": 0,
 		"oAP": "\/lib\/advanced-custom-fields-pro\/assets\/inc\/select2\/select2x2.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/lib\/advanced-custom-fields-pro\/assets\/js\/acf-field-group.js": {
 		"ft": 64,
@@ -2383,7 +2437,10 @@
 		"oA": 0,
 		"oAP": "\/screenshot.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/search.php": {
 		"ft": 8192,
@@ -2445,7 +2502,9 @@
 		"oA": 0,
 		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/homepage.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/shopify\/timeline-wood-64745541\/assets\/icon--down.svg": {
 		"ft": 2097152,
@@ -2463,7 +2522,9 @@
 		"oA": 0,
 		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/IMG_0204.jpg",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/shopify\/timeline-wood-64745541\/assets\/magnify.svg": {
 		"ft": 2097152,
@@ -2510,7 +2571,10 @@
 		"oA": 0,
 		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/NG-circle-logo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/shopify\/timeline-wood-64745541\/assets\/preview.html": {
 		"ft": 8192,
@@ -2738,6 +2802,28 @@
 		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/SuperGroteskPro.woff",
 		"oF": 0
 		},
+	"\/shopify\/timeline-wood-64745541\/assets\/SuperGroteskWeb-Medium.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/SuperGroteskWeb-Medium.woff",
+		"oF": 0
+		},
+	"\/shopify\/timeline-wood-64745541\/assets\/SuperGroteskWeb.woff": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/SuperGroteskWeb.woff",
+		"oF": 0
+		},
+	"\/shopify\/timeline-wood-64745541\/assets\/timeline-white.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/timeline-white.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/shopify\/timeline-wood-64745541\/assets\/timeline.css": {
 		"aP": 0,
 		"bl": 0,
@@ -2773,7 +2859,10 @@
 		"oA": 0,
 		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/transparent.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/shopify\/timeline-wood-64745541\/assets\/vendor.min.js": {
 		"ft": 64,
@@ -2882,6 +2971,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/shopify\/timeline-wood-64745541\/snippets\/open-graph-tags.liquid",
+		"oF": 0
+		},
+	"\/shopify\/timeline-wood-64745541\/snippets\/page-header.liquid": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/shopify\/timeline-wood-64745541\/snippets\/page-header.liquid",
 		"oF": 0
 		},
 	"\/shopify\/timeline-wood-64745541\/snippets\/product-grid-item.liquid": {
@@ -9859,7 +9954,10 @@
 		"oA": 2,
 		"oAP": "\/src\/bower_components\/modernizr\/media\/Modernizr 2 Logo.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/src\/bower_components\/modernizr\/media\/Modernizr 2 Logo.svg": {
 		"ft": 2097152,
@@ -9877,7 +9975,10 @@
 		"oA": 2,
 		"oAP": "\/src\/bower_components\/modernizr\/media\/Modernizr-2-Logo-vertical-big.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/src\/bower_components\/modernizr\/media\/Modernizr-2-Logo-vertical-medium.png": {
 		"ft": 32768,
@@ -9885,7 +9986,10 @@
 		"oA": 2,
 		"oAP": "\/src\/bower_components\/modernizr\/media\/Modernizr-2-Logo-vertical-medium.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/src\/bower_components\/modernizr\/media\/Modernizr-2-Logo-vertical-small.png": {
 		"ft": 32768,
@@ -9893,7 +9997,10 @@
 		"oA": 2,
 		"oAP": "\/src\/bower_components\/modernizr\/media\/Modernizr-2-Logo-vertical-small.png",
 		"oF": 0,
-		"opt": 0
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
 		},
 	"\/src\/bower_components\/modernizr\/package.json": {
 		"ft": 524288,
@@ -12064,7 +12171,7 @@
 		"oA": 0,
 		"oAP": "\/shopify\/timeline-wood-64745541\/assets\/timeline.css",
 		"oF": 2,
-		"oS": 0,
+		"oS": 1,
 		"rU": 0,
 		"sI": 0,
 		"sM": 0,
@@ -13128,6 +13235,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-cond-assign": {
 			"active": 1,
 			"optionString": "'except-parens'"
@@ -13412,6 +13523,10 @@
 			"active": 0,
 			"optionString": ""
 			},
+		"no-prototype-builtins": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-redeclare": {
 			"active": 1,
 			"optionString": "{'builtinGlobals': false}"
@@ -13607,6 +13722,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"object-curly-newline": {
 			"active": 0,
@@ -14207,7 +14326,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -14230,14 +14350,6 @@
 		"autoOutputPathStyle": 0,
 		"orderOutput": 0,
 		"outputStyle": 1
-		},
-	"languageDefaultsJSX": {
-		"autoOutputAction": 0,
-		"autoOutputPathFilenamePattern": "*.js",
-		"autoOutputPathRelativePath": "",
-		"autoOutputPathReplace1": "jsx",
-		"autoOutputPathReplace2": "js",
-		"autoOutputPathStyle": 0
 		},
 	"languageDefaultsKIT": {
 		"autoOutputAction": 0,
@@ -14300,7 +14412,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"optimizerType": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,

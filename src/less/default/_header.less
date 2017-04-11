@@ -171,11 +171,25 @@
         ul {
           background-color: @white;
           position: absolute;
-          padding: 0 @spaced*1.5 @spaced*.5 @spaced;
+
+          @media @min {
+            padding: 0 5px @spaced*.5;
+          }
+          @media @tablet {
+            padding: 0 16px @spaced*.5;
+          }
+          @media @desktop {
+            padding: 0 20px @spaced*.5;
+          }
+
           text-align: left;
-          margin-left: -@spaced;
+          //margin-left: -@spaced;
+          margin-left: -1px;
           display: none;
-          box-shadow: 0 3px 5px rgba(0,0,0,.1);
+          border: 1px solid @black;
+          border-top: 0;
+          left: 0;
+          //box-shadow: 0 3px 5px rgba(0,0,0,.1);
           li {
             line-height: 30px;
             height: auto;

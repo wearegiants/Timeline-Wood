@@ -7617,33 +7617,13 @@ input[type=button]:hover {
   border-radius: 0;
   transition: none;
   margin: 0 -10px;
+  margin-right: 0!important;
 }
 .btn--logo.shopify,
 .button--logo.shopify,
 .epm-submit-chimp--logo.shopify {
   background: #000 url('timeline-white.svg') center center no-repeat;
-  background-size: contain;
-}
-@media screen and (min-width: 300px) {
-  .btn--logo,
-  .button--logo,
-  .epm-submit-chimp--logo {
-    margin-right: 5px;
-  }
-}
-@media screen and (min-width: 740px) {
-  .btn--logo,
-  .button--logo,
-  .epm-submit-chimp--logo {
-    margin-right: 16px;
-  }
-}
-@media screen and (min-width: 980px) {
-  .btn--logo,
-  .button--logo,
-  .epm-submit-chimp--logo {
-    margin-right: 25px;
-  }
+  background-size: 90% auto;
 }
 .btn--hamburg,
 .button--hamburg,
@@ -8170,11 +8150,27 @@ input[type=button]:hover {
 #header-navigation ul li ul {
   background-color: #fff;
   position: absolute;
-  padding: 0 37.5px 12.5px 25px;
   text-align: left;
-  margin-left: -25px;
+  margin-left: -1px;
   display: none;
-  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+  border: 1px solid #000;
+  border-top: 0;
+  left: 0;
+}
+@media screen and (min-width: 300px) {
+  #header-navigation ul li ul {
+    padding: 0 5px 12.5px;
+  }
+}
+@media screen and (min-width: 740px) {
+  #header-navigation ul li ul {
+    padding: 0 16px 12.5px;
+  }
+}
+@media screen and (min-width: 980px) {
+  #header-navigation ul li ul {
+    padding: 0 20px 12.5px;
+  }
 }
 #header-navigation ul li ul li {
   line-height: 30px;
