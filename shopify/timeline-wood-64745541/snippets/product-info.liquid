@@ -38,12 +38,16 @@
       <div class="fs-cell fs-lg-11 fs-md-6 fs-sm-3">
         <div class="fs-row">
           <div id="product-variants" class="product-variant {% if hide_default_title %} hidden{% endif %} fs-cell fs-lg-half fs-md-half fs-sm-3">
+            <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
+            <label for="Quantity" class="quantity-selector">Square Feet</label>
+            {% comment %}
             <select id="quantity" name="quantity" class="btn--full">
               <option selected disabled>Select Quantity</option>
               {% for i in (1..10) %}
               <option value="{{ i }}">{{ i }}</option>
               {% endfor %}
             </select>
+            {% endcomment %}
             <select id="product-select" name="id" class="hidden">
             {% for variant in product.variants %}
               <option{% if variant == product.selected_or_first_available_variant %} selected{% endif %} value="{{ variant.id }}" class="fs-cell fs-all-half">

@@ -6,5 +6,6 @@ $('.wallpaper').background({
 $('.carousel').carousel({
 	//theme: 'fs-light'
 });
+$("input[type='number']").number();
 $('.btn--swap').swap();
 $('.product--swap').swap();

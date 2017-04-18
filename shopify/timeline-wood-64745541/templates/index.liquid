@@ -2,7 +2,8 @@
 
 {% include 'page-header' %}
 
-{% for collection in collections %}
+{% for link in linklists.all-collections.links %}
+{% assign collection = link.object %}
 
   <div class="fs-cell fs-lg-half fs-md-half fs-sm-3 collection-item text-center collection-item__{{ collection.handle }}">
     <div class="collection-item__thumb">
