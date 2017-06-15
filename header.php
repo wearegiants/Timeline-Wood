@@ -27,7 +27,8 @@
 <body <?php body_class('fs-grid'); ?>>
 <div id="wrapper">
 
-<header id="header" class="relative mobile-menu pinned pinned--top pinned--fixed relative fs-grid-fluid">
+<div id="header-main__notification" class="text-center">Free shipping on all U.S. orders</div>
+<header id="header" class="relative mobile-menu pinned pinned--top relative fs-grid-fluid">
   <div id="header-main__wrapper">
     <div class="fs-row relative header header--sm">
       <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-fourth fs-contained">
@@ -40,8 +41,8 @@
         </ul>
       </menu>
       <menu class="fs-cell fs-lg-5 fs-md-fourth fs-sm-fourth text-right fs-contained">
-        <?php include locate_template('parts/store/shopify--bag.php' ); ?>
         <a id="header-commercial" href="/commercial-applications/" class="fs-sm-hide fs-md-hide">Commercial Products <br>for Architects + Designers</a>
+        <?php include locate_template('parts/store/shopify--bag.php' ); ?>
       </menu>
     </div>
   </div>

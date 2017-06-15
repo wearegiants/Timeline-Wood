@@ -7532,11 +7532,23 @@ input[type=button].fs-number-arrow {
 .epm-submit-chimp.ss-gizmo:before {
   margin-right: 8px;
 }
+.btn--primary,
+.button--primary,
+.epm-submit-chimp--primary {
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #000;
+}
 .btn--primary:active,
 .button--primary:active,
 .epm-submit-chimp--primary:active {
   transform: translateY(1px);
   opacity: .9;
+}
+.btn--primary:hover,
+.button--primary:hover,
+.epm-submit-chimp--primary:hover {
+  background-color: #000;
+  color: #fff;
 }
 .btn--secondary,
 .button--secondary,
@@ -8104,7 +8116,7 @@ input[type=button].fs-number-arrow {
 }
 @media screen and (min-width: 980px) {
   #header--logo {
-    width: 225px;
+    width: 200px;
     float: left;
     padding: 0;
     margin-right: 10px;
@@ -8121,6 +8133,15 @@ input[type=button].fs-number-arrow {
 }
 #header-commercial:hover {
   text-decoration: underline;
+}
+#header-main__notification {
+  height: 40px;
+  line-height: 40px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: #F2F2F2;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 #header-main__wrapper {
   transition: 500ms ease;

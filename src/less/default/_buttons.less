@@ -70,6 +70,12 @@ input[type=button] {
 
   &--primary {
     .animated();
+    background-color: @white;
+    box-shadow: 0 0 0 2px @black;
+    &:hover {
+      background-color: @black;
+      color: @white;
+    }
   }
 
   &--secondary {

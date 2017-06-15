@@ -14,19 +14,12 @@
 <?php else: ?>
 <div class="home__hero hero hero--wh wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $featureImg['sizes']['gallery-lg']; ?>"}'>
 <?php endif; ?>
-	<a class="home__hero-link covered" href="<?php the_field('feature_link_url', 4); ?>"></a>
 	<div class="centered">
 		<div class="fs-row">
 			<div class="fs-cell fs-all-full <?php the_field('feature_headline_color'); ?> text-center">
 				<span class="title title--xl"><?php the_field('feature_headline'); ?></span><br>
-				<span class="title title--md"><?php the_field('feature_subheadline'); ?></span><br>
-			</div>
-		</div>
-	</div>
-	<div class="centered centered__bottom">
-		<div class="fs-row">
-			<div class="fs-cell fs-all-full color--white text-center">
-				<span href="<?php the_field('feature_link_url', 4); ?>" class="btn btn--primary accent bg--black ss-gizmo ss-right right"><?php the_field('feature_link_title', 4); ?></span>
+				<span class="title title--md"><?php the_field('feature_subheadline'); ?></span><br><br><br>
+				<a href="<?php the_field('feature_link_url', 4); ?>" class="btn btn--primary accent bg--black ss-gizmo ss-right right"><?php the_field('feature_link_title', 4); ?></a>
 			</div>
 		</div>
 	</div>
