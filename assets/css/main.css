@@ -8050,7 +8050,7 @@ input[type=button].fs-number-arrow {
   transition-delay: 0s;
 }
 .header {
-  box-shadow: 0 1px 0px #000000;
+  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
 }
 .header__product-btn {
   position: static;
@@ -8119,7 +8119,7 @@ input[type=button].fs-number-arrow {
     width: 200px;
     float: left;
     padding: 0;
-    margin-right: 10px;
+    margin-right: 24px !important;
   }
 }
 #header-commercial {
@@ -8163,21 +8163,17 @@ input[type=button].fs-number-arrow {
   margin-bottom: 0;
   padding: 0;
 }
+#header-navigation ul > li > a:hover {
+  color: #233def;
+}
 #header-navigation ul li {
   position: relative;
 }
 #header-navigation ul li.menu-item-has-children {
   border-radius: 0;
 }
-#header-navigation ul li:hover a {
-  text-decoration: underline;
-}
 #header-navigation ul li:hover ul li a {
   text-decoration: none;
-  color: #233def;
-}
-#header-navigation ul li:hover ul li a:hover {
-  text-decoration: underline;
 }
 #header-navigation ul li:before {
   display: none;
@@ -8188,7 +8184,7 @@ input[type=button].fs-number-arrow {
   text-align: left;
   margin-left: -1px;
   display: none;
-  border: 1px solid #000;
+  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.1);
   border-top: 0;
   left: 0;
 }
@@ -8204,7 +8200,8 @@ input[type=button].fs-number-arrow {
 }
 @media screen and (min-width: 980px) {
   #header-navigation ul li ul {
-    padding: 0 20px 12.5px;
+    padding: 0 50px 12.5px;
+    margin-left: -25px;
   }
 }
 #header-navigation ul li ul li {
@@ -8485,6 +8482,15 @@ input[type=button].fs-number-arrow {
   color: #000;
   font-size: 24px;
   font-size: 1.5rem;
+}
+.home-module .hero {
+  background-color: #000;
+}
+.home-module .hero .fs-background-container {
+  transition: opacity 600ms ease;
+}
+.home-module:hover .fs-background-container {
+  opacity: .8;
 }
 .quote__title {
   line-height: 1.3;

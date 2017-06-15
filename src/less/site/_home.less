@@ -29,5 +29,16 @@
       color: @black;
       .font_size(24);
     }
+    .hero {
+      background-color: @black;
+      .fs-background-container {
+        transition: opacity 600ms ease;
+      }
+    }
+    &:hover {
+      .fs-background-container {
+        opacity: .8;
+      }
+    }
   }
 }
