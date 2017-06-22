@@ -16,6 +16,9 @@ function scrollFixed(){
   $('.product-info').scrollToFixed({ 
       //limit: $('.product-page__footer').offset().top 
   });
+  $('#header').scrollToFixed({ 
+      //limit: $('.product-page__footer').offset().top 
+  });
 }
 
 function productHover(){

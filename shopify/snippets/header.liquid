@@ -1,0 +1,60 @@
+<header id="header" class="mobile-menu relative fs-grid-fluid">
+  <div id="header-main__wrapper">
+    <div class="fs-row relative header header--sm">
+      <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-fourth fs-contained">
+        <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</span></a>
+      </menu>
+      <menu id="header-navigation" class="fs-cell fs-lg-7 fs-md-half fs-sm-half fs-contained">
+        <a href="{{ shop.url }}" id="header--logo" class="btn btn--nav btn--logo shopify">{{ shop.name }}</a>
+        <ul class="fs-md-hide fs-sm-hide">
+          {% for link in linklists.main-menu.links %}
+          {% assign has_sub_menu = false %}
+          {% assign has_sub_categories = false %}
+          {% assign parent_link_active = false %}
+          {% assign child_list_handle = link.title | handle %}
+          {% if linklists[child_list_handle] and linklists[child_list_handle].links.size > 0 %}
+            {% assign has_sub_menu = true %}
+            {% for l in linklists[child_list_handle].links %}
+              {% if handle != blank and handle == l.object.handle %}
+                {% assign parent_link_active = true %}
+              {% elsif page_title == l.title %}
+                {% assign parent_link_active = true %}
+              {% endif %}
+            {% endfor %}
+          {% elsif link.type == 'collection_link' and link.object.all_tags.size > 0 %}
+            {% assign has_sub_categories = true %}
+          {% endif %}
+          <li class="btn btn--nav menu-item menu-{{ link.handle }}">
+            <a href="{{ link.url }}">{{ link.title }}</a>
+            {% if has_sub_menu or has_sub_categories %}
+            <ul class="menu-sub">
+              {% if has_sub_menu %}
+                {% for l in linklists[child_list_handle].links %}
+                <li class="{% if l.active %} active{% endif %}">
+                  <a href="{{ l.url }}">{{ l.title }}</a>
+                </li>
+                {% endfor %}
+              {% elsif has_sub_categories %}
+                {% for tag in link.object.all_tags %}
+                <li class="{% if current_tags contains tag %} active{% endif %}">
+                  <a href="{{ link.url }}/{{ tag | handle }}">{{ tag }}</a>
+                </li>
+                {% endfor %}
+              {% endif %}
+            </ul>
+            {% endif %}
+          </li>
+          {% endfor %}
+        </ul>
+      </menu>
+      <menu class="fs-cell fs-lg-5 fs-md-fourth fs-sm-fourth text-right fs-contained">
+        <a id="header-commercial" href="/commercial-applications/" class="fs-sm-hide fs-md-hide">Commercial Products <br>for Architects + Designers</a>
+        {% include 'shopify-bag' %}
+      </menu>
+    </div>
+  </div>
+  <div class="pinned pinned__bottom">
+    <?php include locate_template('parts/mobile-menu.php' ); ?>
+  </div>
+  <?php include locate_template('parts/header-search.php' ); ?>
+</header>

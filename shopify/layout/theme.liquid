@@ -28,18 +28,12 @@
 {{ 'option_selection.js' | shopify_asset_url | script_tag }}
 <script>jQuery('html').removeClass('no-js').addClass('js');</script>
 <link href='https://fonts.googleapis.com/css?family=PT+Serif|Karla:400,700' rel='stylesheet' type='text/css'>
-
 </head>
 
 <body id="{{ page_title | handle }}" class="fs-grid {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 <div id="wrapper">
 {% include 'header' %}
 <div id="content-wrapper" class='fs-grid'>
-
-{% if template == 'collection' or template == 'product' or template == 'index' %}
-{% include 'nav_band' %}
-{% endif %}
-
 {{ content_for_layout }}
 </div>
 <hr class="invisible">

@@ -28,7 +28,7 @@
 <div id="wrapper">
 
 <div id="header-main__notification" class="text-center">Free shipping on all U.S. orders</div>
-<header id="header" class="relative mobile-menu pinned pinned--top relative fs-grid-fluid">
+<header id="header" class="mobile-menu relative fs-grid-fluid">
   <div id="header-main__wrapper">
     <div class="fs-row relative header header--sm">
       <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-fourth fs-contained">
@@ -51,6 +51,5 @@
   </div>
   <?php include locate_template('parts/header-search.php' ); ?>
 </header>
-<div class="header header--sm"><span class="btn btn--nav">&nbsp;</span></div>
 <div id="content-wrapper" class='fs-grid'>
 
