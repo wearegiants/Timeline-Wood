@@ -9,6 +9,7 @@
 // @codekit-prepend "../Formstone/dist/js/background.js"
 // @codekit-prepend "../Formstone/dist/js/number.js"
 // @codekit-prepend "../Formstone/dist/js/cookie.js"
+// @codekit-prepend "../Formstone/dist/js/lightbox.js"
 
 // Other Plugins
 // @codekit-prepend "../bower_components/components-modernizr/modernizr.js"

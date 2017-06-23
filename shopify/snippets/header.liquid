@@ -5,7 +5,7 @@
         <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</span></a>
       </menu>
       <menu id="header-navigation" class="fs-cell fs-lg-7 fs-md-half fs-sm-half fs-contained">
-        <a href="{{ shop.url }}" id="header--logo" class="btn btn--nav btn--logo shopify">{{ shop.name }}</a>
+        <a href="{{ shopURL }}" id="header--logo" class="btn btn--nav btn--logo shopify">{{ shop.name }}</a>
         <ul class="fs-md-hide fs-sm-hide">
           {% for link in linklists.main-menu.links %}
           {% assign has_sub_menu = false %}
@@ -48,7 +48,7 @@
         </ul>
       </menu>
       <menu class="fs-cell fs-lg-5 fs-md-fourth fs-sm-fourth text-right fs-contained">
-        <a id="header-commercial" href="/collections/commercial-products-for-architects-designers" class="fs-sm-hide fs-md-hide">Commercial Products <br>for Architects + Designers</a>
+        <a id="header-commercial" href="{{ shopURL }}/commercial-applications" class="fs-sm-hide fs-md-hide">Commercial Products <br>for Architects + Designers</a>
         {% include 'shopify-bag' %}
       </menu>
     </div>

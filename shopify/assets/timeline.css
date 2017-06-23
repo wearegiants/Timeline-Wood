@@ -2103,7 +2103,7 @@
   visibility: visible;
 }
 .fs-light.fs-lightbox-mobile {
-  background: #141A1E;
+  background: #fff;
   border-radius: 0;
   padding: 40px 0 0;
 }
@@ -2116,11 +2116,11 @@
   width: 40px;
   top: 0;
   right: 0;
-  background: #141A1E;
+  background: #fff;
   border-radius: 0;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-close:before {
-  color: #bdbdbd;
+  color: #424242;
   font-size: 28px;
   font-weight: 700;
   line-height: 36px;
@@ -2132,38 +2132,38 @@
   border-top-color: #e0e0e0;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-container {
-  background: #141A1E;
+  background: #fff;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-content {
-  background-color: #141A1E;
+  background-color: #fff;
   padding: 0 15px;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-tools {
-  background-color: #212121;
+  background-color: #F2F2F2;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-control {
   width: 50px;
   height: 100%;
   min-height: 50px;
-  background: #212121;
+  background: #F2F2F2;
   border-radius: 0;
   box-shadow: none;
 }
 .no-touchevents .fs-light.fs-lightbox-mobile .fs-lightbox-control:hover {
-  background: #212121;
+  background: #F2F2F2;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-control_previous {
   left: 0;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-control_previous:before {
-  border-right-color: #e0e0e0;
+  border-right-color: #212121;
   margin-left: 19px;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-control_next {
   right: 0;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-control_next:before {
-  border-left-color: #e0e0e0;
+  border-left-color: #212121;
   margin-right: 19px;
 }
 .no-touchevents .fs-light.fs-lightbox-mobile .fs-lightbox-control,
@@ -2182,7 +2182,7 @@
   padding: 15px 65px;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-position {
-  color: #e0e0e0;
+  color: #616161;
   font-size: 12px;
   margin: 0 0 5px;
   padding: 0 15px 0 0;
@@ -2217,7 +2217,7 @@
   bottom: 0;
   left: 0;
   z-index: 105;
-  background-color: #212121;
+  background-color: #F2F2F2;
   padding: 0 65px;
 }
 .fs-light.fs-lightbox-mobile.fs-lightbox-touch .fs-lightbox-toggle {
@@ -2270,7 +2270,7 @@
   position: absolute;
   right: 0;
   left: 0;
-  background: #141A1E;
+  background: #fff;
 }
 .fs-lightbox.fs-light .fs-viewer {
   top: 0;
@@ -2299,16 +2299,16 @@
 .fs-lightbox.fs-light .fs-viewer .fs-viewer-controls {
   height: 40px;
   width: 80px;
-  background: #141A1E;
+  background: #fff;
   padding: 0;
 }
 .fs-lightbox.fs-light .fs-viewer .fs-viewer-control,
 .no-touchevents .fs-lightbox.fs-light .fs-viewer .fs-viewer-control:hover {
   height: 40px;
   width: 40px;
-  background: #141A1E;
+  background: #fff;
   border-radius: 0;
-  color: #bdbdbd;
+  color: #424242;
   padding: 0;
 }
 .fs-lightbox.fs-light .fs-viewer .fs-viewer-control:after {
@@ -8166,6 +8166,9 @@ input[type=button].fs-number-arrow {
 }
 .header--lg {
   padding: 75px 0;
+}
+#header {
+  z-index: 20!important;
 }
 #header .btn {
   color: #000;

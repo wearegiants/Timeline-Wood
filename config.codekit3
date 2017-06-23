@@ -9946,7 +9946,7 @@
 	"\/src\/Formstone\/dist\/js\/lightbox.js": {
 		"ft": 64,
 		"mi": 1,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/src\/Formstone\/dist\/js\/min\/lightbox-min.js",
 		"oF": 0,
 		"sC": 1,
@@ -11088,7 +11088,7 @@
 		"ie": 1,
 		"iI": 0,
 		"ma": 0,
-		"oA": 2,
+		"oA": 1,
 		"oAP": "\/src\/Formstone\/src\/css\/lightbox.less",
 		"oF": 0,
 		"oS": 0,
