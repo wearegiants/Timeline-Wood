@@ -1,19 +1,26 @@
-{% include 'collection-listing' %}
+<div class="fs-row">
 
-{% comment %}
-<!-- Alternatively, if not using a snippet, use the code below. 
-To use the code below, get rid of the above 'include', and get rid of the comment tags, and you're in business. -->
-{% paginate collections by 6 %}
-  <h1>Collections</h1>
-  <ul class="grid clearfix">
-  {% for collection in collections %}
-    {% include 'collection-grid-item' with 'three-per-row' %}
-  {% endfor %}
-  </ul>
-  {% if paginate.pages > 1 %}
-  <div id="pagination">
-    {{ paginate | default_pagination }}
+{% include 'page-header' %}
+
+{% for link in linklists.all-collections.links %}
+{% assign collection = link.object %}
+
+  <div class="fs-cell fs-lg-half fs-md-half fs-sm-3 collection-item text-center collection-item__{{ collection.handle }}">
+    <div class="collection-item__thumb">
+      <a href="{{ collection.url }}">
+        <div class="wallpaper" data-background-options='{"source":"{{ collection.image | img_url: 'grande' }}"}'>
+         <img src="{{ 'transparent.png' | asset_url }}" class="img-responsive" />
+        </div>
+      </a>
+    </div>
+    <header class="collection-item__header">
+      <h2 class="collection-item__title">{{ collection.title }}</h2>
+    </header>
+    <div class="collection-item__desc">{{ collection.description }}</div>
+    <a class="collection-item__link btn btn--link" href="{{ collection.url }}">View Products</a>
+    <hr class="invisible">
   </div>
-  {% endif %}
-{% endpaginate %}
-{% endcomment %}
+
+{% endfor %}
+
+</div>

@@ -26,12 +26,8 @@
       </span>
     </div>
 
-    <small class="product-sku">SKU: {{ product.variants.first.sku }}</small>
-
     <hr class="invisible compact">
-
     <div class="product-desc">{{ product.description }}</div>
-
     <hr class="invisible compact">
 
     <div class="fs-row">
@@ -58,7 +54,7 @@
           </div> 
           <hr class="invisible compact fs-cell fs-lg-hide fs-md-hide fs-sm-3">
           <div class="product-add fs-cell fs-lg-half fs-md-half fs-sm-3" id="product-add">
-            <input type="submit" name="add" id="add" class="product-add__btn primary btn btn--full bg--orange ss-gizmo ss-right right" value="{{ add_to_cart | escape }}">
+            <input type="submit" name="add" id="add" class="product-add__btn primary btn btn--full btn--outlined ss-gizmo ss-right right" value="{{ add_to_cart | escape }}">
           </div>
         </div>
       </div> 

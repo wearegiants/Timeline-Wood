@@ -1,9 +1,18 @@
 <div class="product-images">
   <div class="fs-row">
-    <div class="fs-cell fs-all-full">
+    <div class="fs-cell fs-lg-10 fs-md-5 fs-sm-threequarters">
+      <div class="product-carousel">
+        {% for image in product.images %}
+        <div class="product-images--single">
+          <img class="img-responsive" src="{{ image | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}" />
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <div class="fs-cell fs-lg-2 fs-md-1 fs-sm-fourth">
       {% for image in product.images %}
-      <div class="product-images--single">
-        <img class="img-responsive" src="{{ image | img_url: '2048x2048' }}" alt="{{ image.alt | escape }}" />
+      <div class="product-images--thumb">
+        <img class="img-responsive" src="{{ image | img_url: 'medium_cropped' }}" alt="{{ image.alt | escape }}" />
       </div>
       {% endfor %}
     </div>

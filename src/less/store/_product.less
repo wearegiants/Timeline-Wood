@@ -3,9 +3,19 @@
 		&--single {
 			margin-bottom: @spaced;
 		}
+		&--thumb {
+			margin-bottom: @spaced*.75;
+			margin-right: 10px;
+			@media @tablet {
+				margin-right: 0;
+			}
+		}
 	}
 	&-collection {
 		margin-top: 0;
+		text-transform: uppercase;
+		.font_size(12);
+		letter-spacing: .5px;
 		a {
 			color: @gray;
 			&:hover {
@@ -17,9 +27,12 @@
 		margin-bottom: 0;
 		margin-top: 10px;
 	}
+	&-price {
+		color: @darkGray;
+	}
 	&-add {
 		&__btn {
-			background: @orange!important;
+			//background: @orange!important;
 			margin-bottom: 0!important;
 		}
 	}

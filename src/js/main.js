@@ -13,9 +13,9 @@ function mobileMenu(){
 function scrollFixed(){
   //$('.product-info').scrollToFixed( { bottom: 0, limit: $('.product-page__footer').offset().top } );
 
-  $('.product-info').scrollToFixed({ 
-      //limit: $('.product-page__footer').offset().top 
-  });
+  //$('.product-info').scrollToFixed({ 
+  //    //limit: $('.product-page__footer').offset().top 
+  //});
   $('#header').scrollToFixed({ 
       //limit: $('.product-page__footer').offset().top 
   });
@@ -103,7 +103,7 @@ $(document).ready(function(){
 	arrangeBlog();
   //subscribe();
   productHover();
-  //scrollFixed();
+  scrollFixed();
 
   $('#header-navigation .menu-item-has-children').hover(
       function(){

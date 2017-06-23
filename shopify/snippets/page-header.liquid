@@ -2,6 +2,8 @@
   {% assign title = collection.title %}
 {% else if template contains 'index' %}
   {% assign title = 'Products' %}
+{% else %}
+  {% assign title = 'Products' %}
 {% endif %}
 
 <div class="page-header">
