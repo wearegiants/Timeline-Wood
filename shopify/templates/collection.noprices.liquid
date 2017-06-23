@@ -4,7 +4,6 @@
   <div class="fs-row">
     {% for product in collection.products %}
     <div class="fs-cell fs-lg-third fs-md-half fs-sm-full">
-      {% assign price = product.price | money %}
       {% include 'product-grid-item' with price %}
       <hr class="invisible">
     </div>

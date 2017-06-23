@@ -3044,6 +3044,12 @@
 		"oAP": "\/shopify\/templates\/collection.liquid",
 		"oF": 0
 		},
+	"\/shopify\/templates\/collection.noprices.liquid": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/shopify\/templates\/collection.noprices.liquid",
+		"oF": 0
+		},
 	"\/shopify\/templates\/index.liquid": {
 		"ft": 8192,
 		"oA": 2,
