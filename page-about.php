@@ -1,35 +1,50 @@
-<?php Themewrangler::setup_page();get_header(/***Template Name: Slideshow */); ?>
+<?php 
+	Themewrangler::setup_page();get_header();
+	$thumb_id = get_post_thumbnail_id();
+	$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
+	$thumb_url = $thumb_url_array[0];
+	include locate_template('parts/page-header.php' );
+?>
 
-<div class="about">
-<?php $slides = get_field('about'); ?>
-<?php if($slides): ?>
-<div class="about__slide-container">
-<?php $counter = 1; foreach($slides as $slide): ?>
+<?php 
+  $home_args = array(
+    'post_type'      => 'page',
+    'posts_per_page' => -1,
+    'post_parent'    => $post->ID,
+    'orderby'        => 'menu_order',
+    'order'          => 'ASC',
+  );
+  $home_posts = get_posts( $home_args );
+  foreach ( $home_posts as $post ) : setup_postdata( $post );
+?>
 
-	<div id="slide-<?php echo $counter; ?>" class="about__slide hero hero--wh relative bg--<?php echo $slide['background']; ?>" data-height-modifier="#header">
-		<div class="centered">
-			<div class="fs-row">
-				<div class="fs-cell fs-lg-7 fs-md-5 fs-sm-3 fs-centered">
-					<div class="wrapper wrapper--extra">
-						<header class="about__slide-header text-center">
-							<h2 class="title title--lg color--<?php echo $slide['text_color']; ?>"><?php echo $slide['title']; ?></h2>
-						</header>
-						<div class="about__slide-content text-center color--<?php echo $slide['text_color']; ?>">
-							<?php echo $slide['content']; ?>
-						</div>
-					</div>
-				</div>
-			</div>
+<div class="commercial">
+	<div class="fs-row">
+		<div class="fs-cell fs-lg-4 fs-md-full fs-sm-full">
+			<strong class="title--sm color--red uppercase"><?php the_field('subhead'); ?></strong>
+			<h1><?php the_title(); ?></h1>
 		</div>
-		<?php if($slide['image']): ?>
-		<div class="about__slide-bg-overlay covered"></div>
-		<div class="about__slide-bg covered wallpaper" data-background-options='{"source":"<?php echo $slide['image']['sizes']['gallery-xl']; ?>"}'></div>
-		<?php endif; ?>
+		<div class="fs-cell fs-lg-8 fs-md-full fs-sm-full fs-right">
+			<?php $images = get_field('gallery'); ?>
+			<div class="carousel" data-carousel-options='{"autoHeight":true, "pagination":false}'>
+<?php foreach($images as $image): ?>
+				<div class="carousel-slide">
+					<img src="<?php echo $image['sizes']['gallery-photo']; ?>" class="img-responsive" />
+					<?php if($image['caption']): ?><div class="commercial-caption bg--yellow"><?php echo $image['caption']; ?></div><?php endif; ?>
+				</div>
+<?php endforeach; ?>
+			</div>
+			<div class="wrapper fs-lg-hide"></div>
+		</div>
+		<div class="fs-cell fs-lg-4 fs-md-full fs-sm-full"><?php the_content(); ?></div>
+		<hr class="divider black big fs-cell fs-all-full" />
 	</div>
+</div>
 
-<?php $counter++; endforeach; ?>
-</div>
-<?php endif; ?>
-</div>
+<?php 
+  endforeach; wp_reset_postdata(); 
+  get_footer();
+?>
+
 
 <?php get_footer(); ?>

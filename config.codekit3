@@ -2323,6 +2323,12 @@
 		"oAP": "\/lib\/tw_config.php",
 		"oF": 0
 		},
+	"\/page-about-the-brand.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-about-the-brand.php",
+		"oF": 0
+		},
 	"\/page-about.php": {
 		"ft": 8192,
 		"oA": 0,

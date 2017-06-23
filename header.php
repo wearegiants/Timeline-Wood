@@ -41,7 +41,7 @@
         </ul>
       </menu>
       <menu class="fs-cell fs-lg-5 fs-md-fourth fs-sm-fourth text-right fs-contained">
-        <a id="header-commercial" href="/commercial-applications/" class="fs-sm-hide fs-md-hide">Commercial Products <br>for Architects + Designers</a>
+        <a id="header-commercial" href="https://shop.timelinewood.com/collections/commercial-products-for-architects-designers" class="fs-sm-hide fs-md-hide">Commercial Products <br>for Architects + Designers</a>
         <?php include locate_template('parts/store/shopify--bag.php' ); ?>
       </menu>
     </div>
