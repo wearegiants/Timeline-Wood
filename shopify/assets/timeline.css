@@ -1845,7 +1845,7 @@
   z-index: 101;
   background: #fff;
   border-radius: 2px;
-  box-shadow: 0 0 25px #141A1E;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
 .fs-light.fs-lightbox-inline {
@@ -1885,7 +1885,7 @@
   transition: opacity 0.25s linear;
 }
 .fs-light.fs-lightbox-overlay.fs-lightbox-open {
-  opacity: 0.75;
+  opacity: 0.33;
 }
 .fs-lightbox.fs-light .fs-lightbox-close {
   width: 30px;
@@ -2230,7 +2230,7 @@
 .fs-light.fs-lightbox-mobile.fs-lightbox-touch .fs-lightbox-meta {
   z-index: 104;
   background: #424242;
-  box-shadow: 0 0 25px #141A1E;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   padding: 15px 15px 65px;
   transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
@@ -2241,7 +2241,7 @@
   height: 130px;
   z-index: 104;
   background: #424242;
-  box-shadow: 0 0 25px #141A1E;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   padding: 15px 0 65px;
   transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
@@ -6995,6 +6995,7 @@ img.rounded {
   padding: 87.5px;
 }
 .covered {
+  z-index: 50;
   height: 100%;
   left: 0;
   position: absolute;
@@ -7126,7 +7127,7 @@ img.rounded {
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 100%;
-  z-index: 1;
+  z-index: 51;
 }
 .centered__bottom {
   top: 85%;
@@ -9034,7 +9035,7 @@ input[type=button].fs-number-arrow {
 }
 @media screen and (min-width: 740px) {
   .product-order-modal {
-    width: 500px;
+    width: 550px;
   }
 }
 .product-order-modal h2 {
