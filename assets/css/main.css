@@ -7608,7 +7608,7 @@ img.rounded {
   color: #fff;
 }
 .color--gray {
-  color: #222222;
+  color: #999999;
 }
 .color--lightgray {
   color: #999999;
@@ -8772,7 +8772,9 @@ input[type=button].fs-number-arrow {
   line-height: 40px;
   text-transform: uppercase;
   letter-spacing: 2px;
-  background-color: #F2F2F2;
+  color: #fff;
+  background-color: #000;
+  font-weight: bold;
   font-size: 12px;
   font-size: 0.75rem;
 }
@@ -9538,12 +9540,32 @@ input[type=button].fs-number-arrow {
     padding: 0 25px;
   }
 }
+@media screen and (min-width: 300px) {
+  .product-order-modal {
+    width: 90%;
+  }
+}
+@media screen and (min-width: 740px) {
+  .product-order-modal {
+    width: 500px;
+  }
+}
+.product-order-modal h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 16px;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 18.75px;
+}
 .product-images--single {
   margin-bottom: 25px;
 }
 .product-images--thumb {
   margin-bottom: 18.75px;
   margin-right: 10px;
+  display: block;
 }
 @media screen and (min-width: 740px) {
   .product-images--thumb {
@@ -9568,7 +9590,7 @@ input[type=button].fs-number-arrow {
   margin-top: 10px;
 }
 .product-price {
-  color: #666666;
+  color: #333;
 }
 .product-add__btn {
   margin-bottom: 0!important;
@@ -9614,7 +9636,7 @@ input[type=button].fs-number-arrow {
 .product-item__price {
   font-size: 16px;
   font-size: 1rem;
-  color: #666666;
+  color: #333;
 }
 .product-item__sku {
   display: block;

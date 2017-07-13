@@ -28,7 +28,8 @@
       <div class="product-item relative">
         <div class="relative">
           <?php if ($images): ?>
-          <a class="product-item__link covered lightbox" data-lightbox-gallery="gallery-<?php echo $counter;  ?>" href="<?php echo $thumb_url; ?>"></a>
+          <a class="product-item__link covered" data-lightbox-gallery="gallery-<?php echo $counter;  ?>" href="<?php the_permalink(); ?>"></a>
+          <?php /*<a class="product-item__link covered lightbox" data-lightbox-gallery="gallery-<?php echo $counter;  ?>" href="<?php echo $thumb_url; ?>"></a> */ ?>
           <?php endif; ?>
           <div class="product-item__thumb">
             <img class="product-item__image product-item__image--first img-responsive" src="<?php echo $thumb_url ?>" alt="{{ product.featured_image.alt | escape }}">

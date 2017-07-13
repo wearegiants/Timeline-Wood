@@ -98,14 +98,15 @@
 					<span class="footer-credits__link-wrapper"><a href="<?php echo the_permalink(22); ?>" class="">+ <u>Site Credits</u></a></span>
 					<span class="footer-credits__link-wrapper">
 						<a target="_blank" href="#" class="">Design by 12:01</a> — 
-						<a target="_blank" href="http://howler.la" class="">Code by HOWLER</a></span>
+						<a target="_blank" href="http://howler.la" class="">Code by HOWLER</a>
+					</span>
 				</span>
 			</span>
 		</div>
 	</div>
 </footer>
 
-<?php #if(is_front_page()){ include locate_template('parts/footer-mailchimp-easy.php' ); } ?>
+<?php if(is_front_page()){ include locate_template('parts/footer-mailchimp-easy.php' ); } ?>
 <?php include locate_template('parts/footer-search.php' ); ?>
 
 </div><!--Wrapper-->

@@ -13,6 +13,6 @@ $("input[type='number']").number();
 $('.btn--swap').swap();
 $('.product--swap').swap();
 $('.lightbox').lightbox({
-  mobile: true,
-  viewer: false
+  //mobile: true,
+  //viewer: false
 });

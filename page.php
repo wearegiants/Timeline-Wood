@@ -1,5 +1,7 @@
 <?php 
 
+if ( $post->post_parent == '488' ) { include locate_template('page-commercial-product.php'); } else {
+
 Themewrangler::setup_page();get_header(); 
 $thumb_id = get_post_thumbnail_id();
 $thumb_url_array = wp_get_attachment_image_src($thumb_id, 'gallery-lg', true);
@@ -18,4 +20,4 @@ $thumb_url = $thumb_url_array[0];
 	</div>
 </article>
 
-<?php get_footer(); ?>
+<?php } get_footer(); ?>

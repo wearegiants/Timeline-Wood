@@ -2353,6 +2353,12 @@
 		"oAP": "\/page-commercial-applications.php",
 		"oF": 0
 		},
+	"\/page-commercial-product.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-commercial-product.php",
+		"oF": 0
+		},
 	"\/page-contact.php": {
 		"ft": 8192,
 		"oA": 2,
@@ -2904,6 +2910,12 @@
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/shopify\/snippets\/collection-listing.liquid",
+		"oF": 0
+		},
+	"\/shopify\/snippets\/fitguide-tee.liquid": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/shopify\/snippets\/fitguide-tee.liquid",
 		"oF": 0
 		},
 	"\/shopify\/snippets\/footer.liquid": {
