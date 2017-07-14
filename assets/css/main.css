@@ -7686,7 +7686,7 @@ img.rounded {
   top: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
-  z-index: 51;
+  z-index: 1;
 }
 .centered__bottom {
   top: 85%;
@@ -8244,12 +8244,19 @@ input[type=button].fs-number-arrow {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
-    padding: 0 16px;
+    padding: 0 14px;
     height: 60px;
     line-height: 60px;
   }
 }
 @media screen and (min-width: 980px) {
+  .btn--nav,
+  .button--nav,
+  .epm-submit-chimp--nav {
+    padding: 0 15px;
+  }
+}
+@media screen and (min-width: 1220px) {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
@@ -8484,21 +8491,54 @@ input[type=button].fs-number-arrow {
   padding-bottom: 0!important;
 }
 #mobile-menu {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  transition: 300ms ease;
+  height: 100vh;
+  background-color: #fff;
+}
+#mobile-menu-wrapper {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#mobile-menu .menu {
+  padding: 0;
+  margin: 0;
+}
+#mobile-menu .menu-item {
+  display: block;
+  padding: 0;
+  height: auto!important;
+  line-height: auto!important;
+  margin-bottom: 12.5px;
+  font-size: 32px;
+  font-size: 2rem;
+}
+#mobile-menu .menu-item:before {
   display: none;
-  z-index: 9;
 }
-@media screen and (min-width: 300px) {
-  #mobile-menu {
-    padding: 12.5px 0;
-  }
+#mobile-menu .menu .sub-menu {
+  padding: 0;
+  margin: 0;
+  height: auto!important;
+  line-height: auto!important;
 }
-@media screen and (min-width: 740px) {
-  #mobile-menu {
-    padding: 34.375px 0;
-  }
+#mobile-menu .menu .sub-menu .menu-item {
+  font-size: 17px;
+  font-size: 1.0625rem;
+  display: inline;
+  margin: 0 10px;
+  font-weight: normal;
 }
 #mobile-menu.fs-swap-active {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .hero {
   display: block;
@@ -8732,6 +8772,20 @@ input[type=button].fs-number-arrow {
 #header .btn:hover {
   color: #222222;
 }
+#header-mobile img {
+  position: relative;
+  top: -2px;
+  margin-right: 3px;
+}
+#header-mobile .close {
+  display: none;
+}
+#header-mobile a.fs-swap-active .close {
+  display: inline-block;
+}
+#header-mobile a.fs-swap-active .open {
+  display: none;
+}
 @media screen and (min-width: 300px) {
   #header--logo {
     width: 100%;
@@ -8744,7 +8798,7 @@ input[type=button].fs-number-arrow {
   #header--logo {
     width: 70%;
     display: block;
-    margin: auto;
+    margin: auto!important;
     padding: 0;
   }
 }
@@ -8791,9 +8845,6 @@ input[type=button].fs-number-arrow {
     width: 100%;
     max-width: 100%;
   }
-}
-#header.fs-swap-active #header-main__wrapper {
-  transform: translateY(-100%);
 }
 #header-navigation ul {
   margin-bottom: 0;
@@ -9436,6 +9487,97 @@ input[type=button].fs-number-arrow {
 }
 .swatch:hover .swatch-title {
   opacity: 1;
+}
+@media screen and (min-width: 300px) {
+  .commercial {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 980px) {
+  .commercial {
+    text-align: left;
+  }
+}
+.press-releases__image {
+  margin-bottom: 18.75px;
+}
+.press-releases__title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 12.5px;
+}
+.press-releases__caption {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  margin-bottom: 12.5px;
+}
+@media screen and (min-width: 980px) {
+  .press-releases__caption {
+    padding: 0 50px;
+  }
+}
+.press-releases__readmore {
+  font-size: 15px;
+  font-size: 0.9375rem;
+  color: #FF2816;
+  border-bottom: 1px solid;
+  display: inline-block;
+}
+.press-gallery-item:hover .press-gallery__image-caption {
+  opacity: 1;
+}
+.press-gallery__image {
+  width: 90%;
+  height: auto;
+  max-height: 80%;
+  width: auto;
+  display: block;
+  margin: auto;
+}
+.press-gallery__image-wrapper {
+  position: relative;
+  text-align: center;
+  transition: 300ms ease;
+  border-radius: 2px;
+}
+.press-gallery__image-wrapper a {
+  display: block;
+  padding: 15px;
+  width: 100%;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.press-gallery__image-wrapper a img {
+  mix-blend-mode: multiply;
+  margin: auto;
+}
+@media screen and (min-width: 300px) {
+  .press-gallery__image-wrapper {
+    height: 150px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .press-gallery__image-wrapper {
+    height: 150px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .press-gallery__image-wrapper {
+    height: 150px;
+  }
+}
+.press-gallery__image-caption {
+  margin-bottom: 25px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: #FF2816;
+  opacity: 0;
+  transition: 300ms ease;
+  font-size: 11px;
+  font-size: 0.6875rem;
 }
 .bag-checkout {
   background: #233def;

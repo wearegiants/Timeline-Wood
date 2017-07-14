@@ -28,7 +28,7 @@ $thumb_url = $thumb_url_array[0];
 <div class="fs-cell fs-all-half">
   <div class="hero relative bg--black wallpaper" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'>
     <div class="centered text-center">
-      <h1 class="color--white"><a href="<?php the_permalink(); ?>"></a><?php the_title(); ?></h1></h1>
+      <h1 class="color--white"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h1>
     </div>
     <div class="covered bg--black-50"></div>
   </div>

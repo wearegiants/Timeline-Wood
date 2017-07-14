@@ -98,7 +98,7 @@ $(function() {
 });
 
 $(document).ready(function(){
-	mobileMenu();
+	//mobileMenu();
 	openModal();
 	arrangeBlog();
   //subscribe();

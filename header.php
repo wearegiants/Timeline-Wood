@@ -32,24 +32,25 @@
   <div id="header-main__wrapper">
     <div class="fs-row relative header header--sm">
       <menu id="header-mobile" class="fs-cell fs-lg-hide fs-md-fourth fs-sm-fourth fs-contained">
-        <a data-swap-target=".mobile-menu" class="mobile-toggle btn--hamburg btn--nav btn_first btn_last"><span class="fs-sm-hide">Menu</span></a>
+        <a data-swap-target="#mobile-menu" href="#" class="swap btn--nav btn_first btn_last">
+          <img class="open" src="/assets/img/menu.svg">
+          <img class="close" src="/assets/img/x.svg">
+          <span class="fs-sm-hide">Menu</span>
+        </a>
       </menu>
-      <menu id="header-navigation" class="fs-cell fs-lg-7 fs-md-half fs-sm-half fs-contained">
+      <menu id="header-navigation" class="fs-cell fs-lg-8 fs-md-half fs-sm-half fs-contained">
         <a href="<?php echo get_site_url(); ?>" id="header--logo" class="btn btn--nav btn--logo"><?php bloginfo('name' );?></a>
         <ul class="fs-md-hide fs-sm-hide">
           <?php echo wp_nav_menu( $mainMenu ); ?>
         </ul>
       </menu>
-      <menu class="fs-cell fs-lg-5 fs-md-fourth fs-sm-fourth text-right fs-contained">
+      <menu class="fs-cell fs-lg-4 fs-md-fourth fs-sm-fourth text-right fs-contained">
         <a id="header-commercial" href="/commercial-applications" class="fs-sm-hide fs-md-hide">Commercial Products <br>for Architects + Designers</a>
         <?php include locate_template('parts/store/shopify--bag.php' ); ?>
       </menu>
     </div>
   </div>
-  <div class="pinned pinned__bottom">
-    <?php include locate_template('parts/mobile-menu.php' ); ?>
-  </div>
-  <?php include locate_template('parts/header-search.php' ); ?>
+  <?php include locate_template('parts/mobile-menu.php' ); ?>
 </header>
 <div id="content-wrapper" class='fs-grid'>
 

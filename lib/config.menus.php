@@ -8,4 +8,8 @@
     'items_wrap'      => '%3$s'
   );
 
+  $mobileMenu = array(
+    'theme_location'  => 'main-menu',
+  );
+
   

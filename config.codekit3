@@ -285,6 +285,16 @@
 		"plM": 3758088159,
 		"prP": 0
 		},
+	"\/assets\/img\/menu.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/menu.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
 	"\/assets\/img\/timeline-blue.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -310,6 +320,16 @@
 		"miP": 0,
 		"oA": 2,
 		"oAP": "\/assets\/img\/timeline.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/assets\/img\/x.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/assets\/img\/x.svg",
 		"oF": 0,
 		"opt": 0,
 		"plM": 3758088159,
@@ -2369,6 +2389,18 @@
 		"ft": 8192,
 		"oA": 0,
 		"oAP": "\/page-faq.php",
+		"oF": 0
+		},
+	"\/page-in-the-news.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-in-the-news.php",
+		"oF": 0
+		},
+	"\/page-press-releases.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-press-releases.php",
 		"oF": 0
 		},
 	"\/page-press-room.php": {
@@ -12294,6 +12326,23 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/src\/less\/css\/_insta.css",
+		"oF": 0,
+		"oS": 0,
+		"rU": 0,
+		"sI": 0,
+		"sM": 0,
+		"sU": 0
+		},
+	"\/src\/less\/site\/_press.less": {
+		"aP": 0,
+		"bl": 0,
+		"dJ": 0,
+		"ft": 1,
+		"ie": 1,
+		"iI": 0,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/src\/less\/css\/_press.css",
 		"oF": 0,
 		"oS": 0,
 		"rU": 0,
