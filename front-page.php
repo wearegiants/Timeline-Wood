@@ -19,7 +19,10 @@
 			<div class="fs-cell fs-all-full <?php the_field('feature_headline_color'); ?> text-center">
 				<span class="title title--xl"><?php the_field('feature_headline'); ?></span><br>
 				<span class="title title--md"><?php the_field('feature_subheadline'); ?></span><br><br><br>
-				<a href="<?php the_field('feature_link_url', 4); ?>" class="btn btn--primary accent bg--black ss-gizmo ss-right right"><?php the_field('feature_link_title', 4); ?></a>
+				<a href="<?php the_field('feature_link_url', 4); ?>" class="btn btn--primary accent bg--black">
+					<?php the_field('feature_link_title', 4); ?>
+					<img src="/assets/img/arrow-right.svg" alt="right" class="feathericon">	
+				</a>
 			</div>
 		</div>
 	</div>

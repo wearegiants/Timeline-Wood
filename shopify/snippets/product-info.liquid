@@ -1,7 +1,5 @@
 <form action="/cart/add" method="post" enctype="multipart/form-data">
-
   <div class="product-info">
-
     <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
     <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
 
@@ -35,7 +33,7 @@
         <div class="fs-row">
           <div id="product-variants" class="product-variant {% if hide_default_title %} hidden{% endif %} fs-cell fs-lg-half fs-md-half fs-sm-3">
             <input type="number" id="Quantity" name="quantity" value="1" min="1" class="quantity-selector">
-            <label for="Quantity" class="quantity-selector">Square Feet</label>
+            {% comment %}<label for="Quantity" class="quantity-selector">Square Feet</label>{% endcomment %}
             {% comment %}
             <select id="quantity" name="quantity" class="btn--full">
               <option selected disabled>Select Quantity</option>
@@ -56,10 +54,18 @@
           <div class="product-add fs-cell fs-lg-half fs-md-half fs-sm-3" id="product-add">
             <input type="submit" name="add" id="add" class="product-add__btn primary btn btn--full btn--outlined ss-gizmo ss-right right" value="{{ add_to_cart | escape }}">
           </div>
+          <div class="fs-cell fs-all-full">
+            <hr class="invisible compact">
+            <a href="#product-samples" class="lightbox">Order Samples</a>
+          </div>
         </div>
       </div> 
     </div>
-
   </div>
-
 </form>
+
+<div id="product-samples" style="display:none;">
+  <div id="product-samples-wrapper">
+    {% include 'related-products' %}
+  </div>
+</div>
