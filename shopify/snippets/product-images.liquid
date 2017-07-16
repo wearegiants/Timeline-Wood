@@ -1,7 +1,7 @@
 <div class="product-images">
   <div class="fs-row">
     <div class="fs-cell fs-lg-10 fs-md-5 fs-sm-threequarters">
-      <div class="product-carousel">
+      <div class="product-carousel" data-carousel-options='{"autoHeight":true}'>
         {% for image in product.images %}
         <div class="product-images--single">
           <img class="img-responsive" src="{{ image | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}" />
@@ -10,10 +10,12 @@
       </div>
     </div>
     <div class="fs-cell fs-lg-2 fs-md-1 fs-sm-fourth">
+      {% assign count = 0 %}
       {% for image in product.images %}
-      <div class="product-images--thumb">
+      {% assign count = count | plus: 1 %}
+      <a href="#" class="product-images--thumb" onclick="$('.product-carousel').carousel('jumpItem', {{ count }});">
         <img class="img-responsive" src="{{ image | img_url: 'medium_cropped' }}" alt="{{ image.alt | escape }}" />
-      </div>
+      </a>
       {% endfor %}
     </div>
   </div>
