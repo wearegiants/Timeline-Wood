@@ -14,7 +14,7 @@ function cartStuff(){
 			return objects;
 		}
 
-		$.getJSON('https://shop.timelinewood.com/cart.json?callback=?').done(function(x){
+		$.getJSON('//shop.timelinewood.com/cart.json?callback=?').done(function(x){
 			
 			//console.log(x);
 								
@@ -28,7 +28,7 @@ function cartStuff(){
 				
 				$.each(items, function(i, item) {
 									   
-					$.getJSON('https://shop.timelinewood.com/products/' + items[i].handle + '.json?callback=?').done(function(p){
+					$.getJSON('//shop.timelinewood.com/products/' + items[i].handle + '.json?callback=?').done(function(p){
 						
 						//console.log(p);
 						
@@ -48,7 +48,7 @@ function cartStuff(){
 						var price = (items[i].price / 100) * items[i].quantity;
 						var quantity = items[i].quantity;
 						
-						$('#items').append('<div class="item fs-row clearfix">' + image + '<div class="desc fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left"><a href="https://shop.timelinewood.comproducts/' + items[i].handle + '">' + p.product.title + '</a><div>Quantity: ' + quantity + '</div></div><div class="price fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left">$' + price + '</div></div>');
+						$('#items').append('<div class="item fs-row clearfix">' + image + '<div class="desc fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left"><a href="//shop.timelinewood.comproducts/' + items[i].handle + '">' + p.product.title + '</a><div>Quantity: ' + quantity + '</div></div><div class="price fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left">$' + price + '</div></div>');
 						
 					});
 			 
