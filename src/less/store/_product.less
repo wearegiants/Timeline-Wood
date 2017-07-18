@@ -16,6 +16,26 @@
 		}
 	}
 	&-images {
+		.fs-carousel {
+			.fs {
+				&-carousel {
+					&-control {
+						background-color: transparent!important;
+						&_next {
+							background: url('arrow-right.svg') center center no-repeat!important;
+							background-size: contain;
+						}
+						&_previous {
+							background: url('arrow-left.svg') center center no-repeat!important;
+							background-size: contain;
+						}
+						&:before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
 		&--single {
 			margin-bottom: @spaced;
 		}

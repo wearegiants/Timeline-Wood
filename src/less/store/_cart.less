@@ -1,86 +1,52 @@
 .cart {
-  &-header {
-    padding-bottom: @spaced;
-  }
+  //padding-top: @spaced*2;
+  padding-bottom: @spaced*2;
   &-item {
-    &__qty {
-      .quantity {
-        max-width: 100%;
+    &__cell {
+      &.image {
+        padding-right: @spaced;
+      }
+      &.remove {
+        img {
+          width: 18px;
+          height: 18px;
+          display: inline;
+        }
+      }
+      &.title {
+        letter-spacing: 1px;
+        small {
+          display: block;
+          clear: both;
+          color: @gray;
+          letter-spacing: 1px;
+        }
+      }
+      div {
         display: block;
-        padding: 8px;
-        text-align: center;
-        box-shadow: 0 0 0 1px @lightGray;
+        min-width: 100%;
+      }
+      a {
+        text-decoration: none;
+      }
+      @media @desktop {
+        height: 200px;
+        display: flex;
+        align-items: center;
+      }
+      img {
+        @media @min {
+          display: block;
+          height: auto;
+          width: 100%;
+        }
       }
     }
   }
-}
-
-.mfp-cart {
-
-  .mfp {
-
-    &-close {
-      color: @white;
-    }
-
-    &-content {
-      padding: 0 @spaced/2;
-    }
-
-    &-container {
-
-      background: @black;
-      right: 0;
-      left: auto;
-      padding: 0;
-      transform: translateX(100%);
-      transition: 300ms ease;
-      color: @white;
-      overflow-y: scroll; /* has to be scroll, not auto */
-      -webkit-overflow-scrolling: touch;
-
-      @media @min {
-        width: 320px;
-      }
-      @media @tablet {
-        width: 500px;
-      }
-
-      .cart {
-        &-form {
-          margin: 0;
-        }
-        &-row {
-          max-width: 100%;
-        }
-        &-title {
-          color: @white;
-          margin: 0;
-          margin-bottom: 2px;
-          line-height: 1.2;
-          text-transform: uppercase;
-          .font_size(28);
-        }
-      }
-
-    }
-
-  }
-
-  &.mfp {
-    &-bg {
-      background: none;
-    }
-  }
-
-}
-
-.is-viewing--cart {
-  overflow: hidden;
-  height: 100%;
-  .mfp-cart {
-    .mfp-container {
-      transform: translateX(0%);
+  .button {
+    &#update-cart {
+      background-color: @bgGray;
+      color: @black;
     }
   }
 }
