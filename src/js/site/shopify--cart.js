@@ -14,7 +14,7 @@ function cartStuff(){
 			return objects;
 		}
 
-		$.getJSON('http://shop.timelinewood.com/cart.json?callback=?').done(function(x){
+		$.getJSON('https://shop.timelinewood.com/cart.json?callback=?').done(function(x){
 			
 			//console.log(x);
 								
@@ -28,7 +28,7 @@ function cartStuff(){
 				
 				$.each(items, function(i, item) {
 									   
-					$.getJSON('http://shop.timelinewood.com/products/' + items[i].handle + '.json?callback=?').done(function(p){
+					$.getJSON('https://shop.timelinewood.com/products/' + items[i].handle + '.json?callback=?').done(function(p){
 						
 						//console.log(p);
 						
@@ -48,13 +48,13 @@ function cartStuff(){
 						var price = (items[i].price / 100) * items[i].quantity;
 						var quantity = items[i].quantity;
 						
-						$('#items').append('<div class="item fs-row clearfix">' + image + '<div class="desc fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left"><a href="http://shop.timelinewood.comproducts/' + items[i].handle + '">' + p.product.title + '</a><div>Quantity: ' + quantity + '</div></div><div class="price fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left">$' + price + '</div></div>');
+						$('#items').append('<div class="item fs-row clearfix">' + image + '<div class="desc fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left"><a href="https://shop.timelinewood.comproducts/' + items[i].handle + '">' + p.product.title + '</a><div>Quantity: ' + quantity + '</div></div><div class="price fs-cell fs-lg-8 fs-md-4 fs-sm-3 text-left">$' + price + '</div></div>');
 						
 					});
 			 
 				});
 				
-				$('#bagtotal').append('<div class="bag-meta text-right"><div class="total clearfix">Subtotal <span>$' + x_total + '</span></div><small>Shipping and taxes calculated at checkout</small></div><a href="http://shop.timelinewood.com/cart" class="button_link bag-checkout btn btn--full centertext"><span class="ss-gizmo ss-right right">Checkout</span></a>');
+				$('#bagtotal').append('<div class="bag-meta text-right"><div class="total clearfix">Subtotal <span>$' + x_total + '</span></div><small>Shipping and taxes calculated at checkout</small></div><a href="https://shop.timelinewood.com/cart" class="button_link bag-checkout btn btn--full centertext"><span class="ss-gizmo ss-right right">Checkout</span></a>');
 				$('#mobile_bag').html(x_items);
 				
 			} else {
@@ -85,7 +85,7 @@ function cartStuff(){
 }
 cartStuff();
 
-$("#add").on('click', function(){
+$(".product-add__btn").on('click', function(){
 	$('#items').empty();
 	$('#bagtotal').empty();
 	cartStuff();
