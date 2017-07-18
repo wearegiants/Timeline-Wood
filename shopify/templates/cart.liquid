@@ -23,8 +23,8 @@
         {% for item in cart.items %}
         <div id="cart-item-{{item.variant.id}}" class="cart-item fs-row full">
           <hr class="divider fs-cell fs-all-full fs-contained">
-          <div class="fs-cell fs-lg-2 fs-md-2 fs-sm-half fs-contained cart-item__cell image"><img src="{{ item | img_url: 'grande' }}" alt="{{ item.title | escape }}"></div>
-          <div class="fs-cell fs-lg-4 fs-md-4 fs-sm-half fs-contained cart-item__cell title">
+          <div class="fs-cell fs-lg-1 fs-md-2 fs-sm-half fs-contained cart-item__cell image"><img src="{{ item | img_url: 'grande' }}" alt="{{ item.title | escape }}"></div>
+          <div class="fs-cell fs-lg-5 fs-md-4 fs-sm-half fs-contained cart-item__cell title">
             {% assign title = item.title | split: ' - ' %}
             <div>
               <h2><a href="/collections/{{ item.product.collections.first.title | downcase }}#{{ item.product.handle }}">{{ title[0] }}</a></h2>
@@ -32,7 +32,13 @@
             </div>
           </div>
           <div class="fs-cell fs-lg-2 fs-md-4 fs-sm-half fs-contained cart-item__cell price">{{ item.price | money }}</div>
-          <div class="fs-cell fs-lg-1 fs-md-4 fs-sm-half fs-contained cart-item__cell qty"><input type="number" size="4" pattern="[0-9]*" name="updates[{{item.variant.id}}]" id="quantity-{{ item.variant.id }}" class="quantity" value="{{ item.quantity }}" min="1" onfocus="this.select();"/></div>
+          <div class="fs-cell fs-lg-1 fs-md-4 fs-sm-half fs-contained cart-item__cell qty">
+            {% unless item.title contains 'Sample' %}
+            <input type="number" size="4" pattern="[0-9]*" name="updates[{{item.variant.id}}]" id="quantity-{{ item.variant.id }}" class="quantity" value="{{ item.quantity }}" min="1" onfocus="this.select();"/>
+            {% else %}
+            &nbsp;
+            {% endunless %}
+          </div>
           <div class="fs-cell fs-lg-2 fs-md-4 fs-sm-half fs-contained cart-item__cell price"><div class="text-center">{{ item.line_price | money }}</div></div>
           <div class="fs-cell fs-lg-1 fs-md-4 fs-sm-half fs-contained cart-item__cell remove"><div class="text-right"><a href="/cart/change/{{item.variant.id}}?quantity=0"><img src="{{ 'x.svg'  | asset_url }}" alt="delete" /></a></div></div>
         </div>

@@ -7081,7 +7081,7 @@ input[type=button].fs-number-arrow {
 }
 @media screen and (min-width: 980px) {
   .cart-item__cell {
-    height: 200px;
+    height: 120px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
