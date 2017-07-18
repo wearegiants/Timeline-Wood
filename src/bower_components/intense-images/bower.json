@@ -1,0 +1,25 @@
+{
+  "name": "intense-images",
+  "version": "1.0.0",
+  "homepage": "https://github.com/MujibAzizi/intense-images",
+  "authors": [
+    "Tim Holman <timothy.w.holman@gmail.com>",
+    "Mujib Azizi <mujib@nilvola.nl>"
+  ],
+  "description": "A simple library to view large images up close using simple mouse interaction, and the full screen.",
+  "main": "intense.js",
+  "keywords": [
+    "intense",
+    "images",
+    "fullscreen"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests",
+    "demo"
+  ]
+}
