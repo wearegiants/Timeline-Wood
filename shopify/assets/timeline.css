@@ -5375,7 +5375,7 @@ input[type=button].fs-number-arrow {
   .btn--nav,
   .button--nav,
   .epm-submit-chimp--nav {
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
 @media screen and (min-width: 1220px) {
@@ -6767,6 +6767,9 @@ input[type=button].fs-number-arrow {
     padding-left: 50px;
     padding-right: 50px;
   }
+}
+.bag-header img {
+  display: inline!important;
 }
 @media screen and (min-width: 300px) {
   .bag-wrapper {

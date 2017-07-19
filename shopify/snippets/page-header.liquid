@@ -1,14 +1,22 @@
 {% if template contains 'collection' %}
   {% assign title = collection.title %}
+  {% assign content = collection.description %}
 {% else if template contains 'index' %}
   {% assign title = 'Products' %}
+{% else if template contains 'page' %}
+  {% assign title = page.title %}
+  {% assign content = page.content %}
 {% else %}
   {% assign title = 'Products' %}
 {% endif %}
 
 <div class="page-header">
   <h2 class="title title--md text-center capped spaced nomargin color--black">{{ title }}</h2>
-  <div class="page-header__content text-center">
-    {{ page.content }}
+  {% if content %}
+  <div class="page-header__content text-center fs-row">
+    <div class="fs-cell fs-lg-8 fs-md-4 fs-sm-3 fs-centered">
+      {{ content }}
+    </div>
   </div>
+  {% endif %}
 </div>
