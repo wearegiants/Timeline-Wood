@@ -1,5 +1,5 @@
 {% capture recommended %}{{ product.handle}}-sample{% endcapture %}
-{% for product in collection.products %}
+{% for product in collections.all.products %}
 {% if product.handle == recommended %}
 
 <form action="/cart/add" method="post" enctype="multipart/form-data">
