@@ -6,7 +6,7 @@
     }
     &.is-active {
       .fs-background-container {
-        opacity: .75;
+        //opacity: .75;
       }
     }
     &-link {
@@ -33,6 +33,14 @@
       background-color: @black;
       .fs-background-container {
         transition: opacity 600ms ease;
+      }
+    }
+    a {
+      &:hover {
+        color: @blue;
+        h3 {
+          color: @blue;
+        }
       }
     }
     &:hover {

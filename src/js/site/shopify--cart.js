@@ -23,6 +23,8 @@ function cartStuff(){
 			var x_total = x_total_cents / 100;
 					
 			if (x_total > 0) {
+
+				$('.cart-count').html(x_items);
 						
 				var items = x.items;
 				

@@ -18,7 +18,7 @@ Shopify.AjaxifyCart = (function($) {
   var _config = {
     
     // What you might want to change
-    addToCartBtnLabel:             'Add to cart',
+    addToCartBtnLabel:             'Add to Bag',
     addedToCartBtnLabel:           'Thank you!',
     addingToCartBtnLabel:          'Adding...',
     soldOutBtnLabel:               'Sold Out',
@@ -88,7 +88,7 @@ Shopify.AjaxifyCart = (function($) {
             // Re-enable add to cart button.
             $addToCartBtn.addClass('inverted');
             _setText($addToCartBtn, _config.addedToCartBtnLabel);
-            _showFeedback('success','<i class="fa fa-check"></i> Added to cart!.',$addToCartForm);
+            _showFeedback('success','<i class="fa fa-check"></i> Added to bag!.',$addToCartForm);
             setTimeout(function(){
               $('.cart-link').click();  
             },300);

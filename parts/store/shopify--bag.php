@@ -1,5 +1,5 @@
 <a id="open_bag" class="btn--nav btn header__icon--bag" href="#">
-  <span>Bag</span>&nbsp;
+  <span>Bag</span>&nbsp;(<span class="cart-count">0</span>)&nbsp;
   <img src="/assets/img/bag.svg" alt="Search">
 </a>
 <div id="bag">

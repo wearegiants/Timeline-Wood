@@ -18,9 +18,31 @@ transition-delay: 0.25s;
 .carousel_fade .fs-carousel-item.fs-carousel-visible {
 opacity: 1;
 visibility: visible;
-
 -webkit-transition-duration: 0.25s;
 transition-duration: 0.25s;
 -webkit-transition-delay: 0s;
 transition-delay: 0s;
+}
+
+.wp {
+  .fs-carousel {
+    .fs {
+      &-carousel {
+        &-control {
+          background-color: transparent!important;
+          &_next {
+            background: url('/assets/img/arrow-right.svg') center center no-repeat!important;
+            background-size: contain;
+          }
+          &_previous {
+            background: url('/assets/img/arrow-left.svg') center center no-repeat!important;
+            background-size: contain;
+          }
+          &:before {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }

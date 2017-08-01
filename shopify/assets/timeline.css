@@ -5035,9 +5035,6 @@ select.ss-icon:after,
 select.ss-gizmo:after {
   margin-left: 3px;
 }
-select:hover {
-  opacity: .75;
-}
 select.fs-number-arrow {
   margin: 0;
 }
@@ -5202,12 +5199,6 @@ input[type=search].ss-gizmo:after,
 input[type=button].ss-gizmo:after {
   margin-left: 3px;
 }
-button:hover,
-input[type=submit]:hover,
-input[type=search]:hover,
-input[type=button]:hover {
-  opacity: .75;
-}
 button.fs-number-arrow,
 input[type=submit].fs-number-arrow,
 input[type=search].fs-number-arrow,
@@ -5254,11 +5245,6 @@ input[type=button].fs-number-arrow {
 .epm-submit-chimp.ss-gizmo:after {
   margin-left: 3px;
 }
-.btn:hover,
-.button:hover,
-.epm-submit-chimp:hover {
-  opacity: .75;
-}
 .btn.fs-number-arrow,
 .button.fs-number-arrow,
 .epm-submit-chimp.fs-number-arrow {
@@ -5295,12 +5281,16 @@ input[type=button].fs-number-arrow {
 .epm-submit-chimp--primary:active {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
-  opacity: .9;
 }
 .btn--primary:hover,
 .button--primary:hover,
 .epm-submit-chimp--primary:hover {
   background-color: #000;
+  color: #fff;
+}
+.btn--primary:hover .feathericon,
+.button--primary:hover .feathericon,
+.epm-submit-chimp--primary:hover .feathericon {
   color: #fff;
 }
 .btn--secondary,
@@ -5824,22 +5814,6 @@ input[type=button].fs-number-arrow {
 .pinned__bottom {
   top: 100%;
 }
-.carousel-slide {
-  padding: 0 2px;
-  background: #fff;
-}
-.carousel_fade .fs-carousel-item {
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0s linear, visibility 0s linear;
-  transition-delay: 0.25s;
-}
-.carousel_fade .fs-carousel-item.fs-carousel-visible {
-  opacity: 1;
-  visibility: visible;
-  transition-duration: 0.25s;
-  transition-delay: 0s;
-}
 .header {
   box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
 }
@@ -6277,9 +6251,6 @@ input[type=button].fs-number-arrow {
 .home__hero .fs-background-container {
   transition: opacity 300ms ease;
 }
-.home__hero.is-active .fs-background-container {
-  opacity: .75;
-}
 .home__hero-link {
   z-index: 2;
 }
@@ -6303,6 +6274,12 @@ input[type=button].fs-number-arrow {
 }
 .home-module .hero .fs-background-container {
   transition: opacity 600ms ease;
+}
+.home-module a:hover {
+  color: #233def;
+}
+.home-module a:hover h3 {
+  color: #233def;
 }
 .home-module:hover .fs-background-container {
   opacity: .8;
@@ -6656,6 +6633,21 @@ input[type=button].fs-number-arrow {
   .commercial {
     text-align: left;
   }
+}
+.press-item__content {
+  z-index: 9;
+}
+.press-item__overlay {
+  z-index: 8;
+  background-color: rgba(0, 0, 0, 0.25);
+  transition: 500ms ease;
+}
+.press-item a {
+  border-bottom: 1px solid transparent;
+  transition: 500ms ease;
+}
+.press-item a:hover {
+  border-bottom: 1px solid #fff;
 }
 .press-releases__image {
   margin-bottom: 18.75px;
@@ -7103,4 +7095,34 @@ input[type=button].fs-number-arrow {
 .cart .button#update-cart {
   background-color: #F2F2F2;
   color: #000;
+}
+.carousel-slide {
+  padding: 0 2px;
+  background: #fff;
+}
+.carousel_fade .fs-carousel-item {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0s linear, visibility 0s linear;
+  transition-delay: 0.25s;
+}
+.carousel_fade .fs-carousel-item.fs-carousel-visible {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 0.25s;
+  transition-delay: 0s;
+}
+.wp .fs-carousel .fs-carousel-control {
+  background-color: transparent!important;
+}
+.wp .fs-carousel .fs-carousel-control_next {
+  background: url('/assets/img/arrow-right.svg') center center no-repeat !important;
+  background-size: contain;
+}
+.wp .fs-carousel .fs-carousel-control_previous {
+  background: url('/assets/img/arrow-left.svg') center center no-repeat !important;
+  background-size: contain;
+}
+.wp .fs-carousel .fs-carousel-control:before {
+  display: none;
 }

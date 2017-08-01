@@ -9,7 +9,9 @@ $images = get_field('gallery');
 ?>
 
 <article <?php post_class(); ?>>
-	<?php include locate_template('parts/page-header.php' ); ?>
+	<div class="page-header">
+    <h2 class="title title--md text-center capped spaced nomargin color--black"><?php the_title(); ?></h2>
+  </div>
 	<div class="hentry__content">
     <div class="press-releases fs-row">
 <?php foreach($images as $image): ?>

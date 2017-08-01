@@ -24,7 +24,7 @@
 
 </head>
 
-<body <?php body_class('fs-grid'); ?>>
+<body <?php body_class('fs-grid wp'); ?>>
 <div id="wrapper">
 
 <div id="header-main__notification" class="text-center">Free shipping on all U.S. orders</div>

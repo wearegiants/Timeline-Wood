@@ -14,7 +14,7 @@ $images = get_field('gallery');
       <div class="product-images">
         <div class="fs-row">
           <div class="fs-cell fs-lg-10 fs-md-5 fs-sm-threequarters">
-            <div class="product-carousel" data-carousel-options='{"autoHeight":true}'>
+            <div class="product-carousel" data-carousel-options='{"autoHeight":true,"pagination":false,"controls":true}'>
               <?php foreach($images as $image): ?>
               <div class="product-images--single">
                 <img class="img-responsive" src="<?php echo $image['sizes']['large']; ?>" alt="<?php echo $image['alt']; ?>" />

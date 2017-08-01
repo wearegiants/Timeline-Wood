@@ -4,7 +4,7 @@
 .animated(){
   &:active {
     transform: translateY(1px);
-    opacity: .9;
+    //opacity: .9;
   }
 }
 
@@ -31,7 +31,7 @@
   }
   transition: opacity 400ms ease;
   &:hover {
-    opacity: .75;
+    //opacity: .75;
   }
   &.fs-number-arrow {
     margin: 0;
@@ -73,9 +73,15 @@ input[type=button] {
     background-color: @white;
     box-shadow: 0 0 0 2px @black;
     color: @black;
+    .feathericon {
+      
+    }
     &:hover {
       background-color: @black;
       color: @white;
+      .feathericon {
+        color: @white;
+      }
     }
   }
 

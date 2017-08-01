@@ -1,7 +1,7 @@
 <div class="product-images">
   <div class="fs-row">
     <div class="fs-cell fs-lg-10 fs-md-5 fs-sm-threequarters">
-      <div class="product-carousel" data-carousel-options='{"autoHeight":true}'>
+      <div class="product-carousel" data-carousel-options='{"autoHeight":true,"pagination":false}'>
         {% for image in product.images %}
         <div class="product-images--single">
           <img class="img-responsive" src="{{ image | img_url: '1024x1024' }}" alt="{{ image.alt | escape }}" />

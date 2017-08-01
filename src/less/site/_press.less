@@ -1,4 +1,28 @@
 .press {
+  &-item {
+    &__content {
+      z-index: 9;
+    }
+    &__overlay {
+      z-index: 8;
+      background-color: @black25;
+      transition: 500ms ease;
+    }
+    a {
+      border-bottom: 1px solid transparent;
+      transition: 500ms ease;
+      &:hover {
+        border-bottom: 1px solid @white;
+      }
+    }
+    &:hover {
+      .press-item {
+        &__overlay {
+          //background-color: @black50;
+        }
+      }
+    }
+  }
   &-releases {
     &__image {
       margin-bottom: @spaced*.75;
