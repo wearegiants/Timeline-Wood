@@ -6610,6 +6610,13 @@ input[type=button].fs-number-arrow {
   font-size: 11px;
   font-size: 0.6875rem;
 }
+.retailer-logo-wrapper a {
+  background-color: #000;
+  display: block;
+}
+.retailer-logo-wrapper img {
+  opacity: .98;
+}
 .bag-checkout {
   background: #233def;
   color: #fff !important;
