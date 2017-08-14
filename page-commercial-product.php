@@ -40,7 +40,7 @@ $images = get_field('gallery');
       <?php the_content(); ?>
       <hr class="invisible compact">
       <a href="#order" class="lightbox btn btn--outlined">More Info</a>
-      <a href="#sample" class="btn btn--outlined">Order Samples</a>
+      <a href="<?php the_field('sample_url'); ?>#sample" class="btn btn--outlined">Order Samples</a>
     </div>
   </div>
   <div class="product-page__footer"></div>
