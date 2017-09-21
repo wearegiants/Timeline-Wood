@@ -6860,6 +6860,16 @@ input[type=button].fs-number-arrow {
 .product-item__thumb {
   background-color: #000;
 }
+@media screen and (min-width: 300px) {
+  .product-item__thumb-image {
+    height: 250px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .product-item__thumb-image {
+    height: 450px;
+  }
+}
 .product-item__image {
   transition: opacity 600ms ease;
   margin-bottom: 12.5px;

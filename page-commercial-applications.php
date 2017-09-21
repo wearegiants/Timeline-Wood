@@ -24,7 +24,7 @@
       $thumb_url = $thumb_url_array[0];
       $images = get_field('gallery');
     ?>
-    <div class="fs-cell fs-lg-third fs-md-half fs-sm-full">
+    <div class="fs-cell fs-lg-third fs-md-half fs-sm-half">
       <div class="product-item relative">
         <div class="relative">
           <?php if ($images): ?>
@@ -32,7 +32,8 @@
           <?php /*<a class="product-item__link covered lightbox" data-lightbox-gallery="gallery-<?php echo $counter;  ?>" href="<?php echo $thumb_url; ?>"></a> */ ?>
           <?php endif; ?>
           <div class="product-item__thumb">
-            <img class="product-item__image product-item__image--first img-responsive" src="<?php echo $thumb_url ?>" alt="{{ product.featured_image.alt | escape }}">
+            <div class="product-item__thumb-image wallpaper" data-background-options='{"source":"<?php echo $thumb_url; ?>"}'></div>
+            <?php /*<img class="product-item__image product-item__image--first img-responsive" src="<?php echo $thumb_url ?>" alt="{{ product.featured_image.alt | escape }}">*/?>
           </div>
         </div>
         <header class="text-center product-item__header">

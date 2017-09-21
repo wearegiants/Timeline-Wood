@@ -93,7 +93,8 @@
 }
 .fs_grid_cell_padded,
 .fs-grid .fs-row [class*="fs-cell"][class*="-padded"] {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   margin-left: 0;
   margin-right: 0;
   padding-left: 1.94166667%;
@@ -115,11 +116,13 @@
   margin-right: 0;
 }
 * {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 *:before,
 *:after {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 .fs-grid .fs-row .fs-all-fifth {
   width: 16.11666667%;
@@ -1088,7 +1091,9 @@
 .fs-carousel *,
 .fs-carousel *:after,
 .fs-carousel *:before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: none;
   transition: none;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
@@ -1131,6 +1136,7 @@
           backface-visibility: hidden;
   margin: 0;
   overflow: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
@@ -1138,6 +1144,7 @@
           transform: translate3d(0, 0, 0);
 }
 .fs-carousel-enabled.fs-carousel-auto_height .fs-carousel-canister {
+  -webkit-transition: height 0.5s ease, -webkit-transform 0.5s ease;
   transition: height 0.5s ease, -webkit-transform 0.5s ease;
   transition: height 0.5s ease, transform 0.5s ease;
   transition: height 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
@@ -1267,6 +1274,7 @@
 .fs-background,
 .fs-background-container,
 .fs-background-media {
+  -webkit-transition: none;
   transition: none;
 }
 .fs-background-container {
@@ -1284,6 +1292,7 @@
   opacity: 0;
 }
 .fs-background-media.fs-background-animated {
+  -webkit-transition: opacity 0.5s linear;
   transition: opacity 0.5s linear;
 }
 .fs-background-media img,
@@ -1381,7 +1390,9 @@
 .fs-number *,
 .fs-number *:after,
 .fs-number *:before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: none;
   transition: none;
 }
 .fs-number-element {
@@ -1633,7 +1644,8 @@
 }
 .fs-lightbox,
 .fs-lightbox *:not(input):not(textarea) {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
       -ms-user-select: none !important;
@@ -1646,6 +1658,7 @@
   margin: auto;
 }
 .fs-lightbox-animating {
+  -webkit-transition: height 0.25s ease, width 0.25s ease, opacity 0.25s linear, top 0.25s ease;
   transition: height 0.25s ease, width 0.25s ease, opacity 0.25s linear, top 0.25s ease;
 }
 .fs-lightbox-animating .fs-lightbox-content,
@@ -1653,24 +1666,31 @@
 .fs-lightbox-animating .fs-lightbox-tools,
 .fs-lightbox-animating .fs-lightbox-meta,
 .fs-lightbox-animating .fs-lightbox-control {
+  -webkit-transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
   transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
 }
 .fs-lightbox-mobile .fs-lightbox-image_container {
+  -webkit-transition: top 0.25s ease, left 0.25s ease;
   transition: top 0.25s ease, left 0.25s ease;
 }
 .fs-lightbox-mobile .fs-lightbox-image {
+  -webkit-transition: height 0.25s ease, width 0.25s ease, top 0.25s ease, left 0.25s ease;
   transition: height 0.25s ease, width 0.25s ease, top 0.25s ease, left 0.25s ease;
 }
 .fs-lightbox-mobile.fs-lightbox-scaling .fs-lightbox-image_container {
+  -webkit-transition: none !important;
   transition: none !important;
 }
 .fs-lightbox-mobile.fs-lightbox-scaling .fs-lightbox-image {
+  -webkit-transition: none !important;
   transition: none !important;
 }
 .fs-lightbox-mobile.fs-lightbox-zooming .fs-lightbox-image_container {
+  -webkit-transition: top 0.25s ease, left 0.25s ease !important;
   transition: top 0.25s ease, left 0.25s ease !important;
 }
 .fs-lightbox-mobile.fs-lightbox-zooming .fs-lightbox-image {
+  -webkit-transition: height 0.25s ease, width 0.25s ease, top 0.25s ease, left 0.25s ease !important;
   transition: height 0.25s ease, width 0.25s ease, top 0.25s ease, left 0.25s ease !important;
 }
 .fs-lightbox-overlay {
@@ -1684,6 +1704,7 @@
   z-index: 100;
   background: #000;
   opacity: 0;
+  -webkit-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear;
 }
 .fs-lightbox-open {
@@ -1837,6 +1858,7 @@
   opacity: 0.25;
   overflow: hidden;
   padding: 0;
+  -webkit-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear;
 }
 .fs-lightbox-thumbnail_item:last-child {
@@ -1861,6 +1883,7 @@
 .fs-lightbox-loading .fs-lightbox-meta,
 .fs-lightbox-loading .fs-lightbox-control {
   opacity: 0;
+  -webkit-transition: opacity 0.25s linear, visibility 0.25s linear;
   transition: opacity 0.25s linear, visibility 0.25s linear;
   visibility: hidden;
 }
@@ -1960,6 +1983,7 @@
   background: #222;
   -webkit-transform: translate(0, 100%);
           transform: translate(0, 100%);
+  -webkit-transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
@@ -1979,6 +2003,7 @@
   background: #111;
   -webkit-transform: translate(0, 100%);
           transform: translate(0, 100%);
+  -webkit-transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
@@ -2061,6 +2086,7 @@
           backface-visibility: hidden;
   margin: 0;
   overflow: hidden;
+  -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   transition: transform 0.5s ease;
   transition: transform 0.5s ease, -webkit-transform 0.5s ease;
@@ -2068,6 +2094,7 @@
           transform: translate3d(0, 0, 0);
 }
 .fs-carousel.fs-light.fs-carousel-enabled.fs-carousel-auto_height .fs-carousel-canister {
+  -webkit-transition: height 0.5s ease, -webkit-transform 0.5s ease;
   transition: height 0.5s ease, -webkit-transform 0.5s ease;
   transition: height 0.5s ease, transform 0.5s ease;
   transition: height 0.5s ease, transform 0.5s ease, -webkit-transform 0.5s ease;
@@ -2085,6 +2112,7 @@
   opacity: 0;
   overflow: hidden;
   text-indent: 200%;
+  -webkit-transition: opacity 0.15s ease, visibility 0.15s ease;
   transition: opacity 0.15s ease, visibility 0.15s ease;
   visibility: hidden;
   white-space: nowrap;
@@ -2258,7 +2286,8 @@
   bottom: 0;
   left: 0;
   background: #fff;
-  box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
+  -webkit-box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
+          box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
   content: '';
   margin: auto;
 }
@@ -2470,13 +2499,15 @@
   z-index: 101;
   background: #fff;
   border-radius: 2px;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   padding: 10px;
 }
 .fs-light.fs-lightbox-inline {
   padding: 30px;
 }
 .fs-light.fs-lightbox-animating {
+  -webkit-transition: height 0.25s ease, width 0.25s ease, opacity 0.25s linear, top 0.25s ease;
   transition: height 0.25s ease, width 0.25s ease, opacity 0.25s linear, top 0.25s ease;
 }
 .fs-light.fs-lightbox-animating .fs-lightbox-content,
@@ -2484,29 +2515,37 @@
 .fs-light.fs-lightbox-animating .fs-lightbox-tools,
 .fs-light.fs-lightbox-animating .fs-lightbox-meta,
 .fs-light.fs-lightbox-animating .fs-lightbox-control {
+  -webkit-transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
   transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-image_container {
+  -webkit-transition: top 0.25s ease, left 0.25s ease;
   transition: top 0.25s ease, left 0.25s ease;
 }
 .fs-light.fs-lightbox-mobile .fs-lightbox-image {
+  -webkit-transition: height 0.25s ease, width 0.25s ease, top 0.25s ease, left 0.25s ease;
   transition: height 0.25s ease, width 0.25s ease, top 0.25s ease, left 0.25s ease;
 }
 .fs-light.fs-lightbox-mobile.fs-lightbox-scaling .fs-lightbox-image_container {
+  -webkit-transition: none !important;
   transition: none !important;
 }
 .fs-light.fs-lightbox-mobile.fs-lightbox-scaling .fs-lightbox-image {
+  -webkit-transition: none !important;
   transition: none !important;
 }
 .fs-light.fs-lightbox-mobile.fs-lightbox-zooming .fs-lightbox-image_container {
+  -webkit-transition: top 0.25s ease, left 0.25s ease !important;
   transition: top 0.25s ease, left 0.25s ease !important;
 }
 .fs-light.fs-lightbox-mobile.fs-lightbox-zooming .fs-lightbox-image {
+  -webkit-transition: height 0.25s ease, width 0.25s ease, top 0.25s ease, left 0.25s ease !important;
   transition: height 0.25s ease, width 0.25s ease, top 0.25s ease, left 0.25s ease !important;
 }
 .fs-light.fs-lightbox-overlay {
   z-index: 100;
   background: #141A1E;
+  -webkit-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear;
 }
 .fs-light.fs-lightbox-overlay.fs-lightbox-open {
@@ -2539,6 +2578,7 @@
   margin: auto;
   text-align: center;
   text-indent: 0;
+  -webkit-transition: color 0.15s linear;
   transition: color 0.15s linear;
 }
 .fs-lightbox.fs-light .fs-lightbox-loading_icon {
@@ -2553,6 +2593,7 @@
   display: block;
   margin: auto;
   opacity: 0;
+  -webkit-transition: opacity 0.25s linear, visibility 0.25s linear;
   transition: opacity 0.25s linear, visibility 0.25s linear;
   visibility: hidden;
 }
@@ -2614,10 +2655,12 @@
   z-index: 105;
   background: #fff;
   border-radius: 100%;
-  box-shadow: 0 0 5px rgba(20, 26, 30, 0.25);
+  -webkit-box-shadow: 0 0 5px rgba(20, 26, 30, 0.25);
+          box-shadow: 0 0 5px rgba(20, 26, 30, 0.25);
   opacity: 1;
   overflow: hidden;
   text-indent: 200%;
+  -webkit-transition: opacity 0.15s linear, visibility 0.15s linear;
   transition: opacity 0.15s linear, visibility 0.15s linear;
   visibility: visible;
 }
@@ -2703,6 +2746,7 @@
   height: 50px;
   margin: 0 10px 0 0;
   opacity: 0.25;
+  -webkit-transition: opacity 0.25s linear;
   transition: opacity 0.25s linear;
 }
 .fs-lightbox.fs-light .fs-lightbox-thumbnail_item:last-child {
@@ -2718,6 +2762,7 @@
 .fs-light.fs-lightbox-loading .fs-lightbox-meta,
 .fs-light.fs-lightbox-loading .fs-lightbox-control {
   opacity: 0;
+  -webkit-transition: opacity 0.25s linear, visibility 0.25s linear;
   transition: opacity 0.25s linear, visibility 0.25s linear;
   visibility: hidden;
 }
@@ -2772,7 +2817,8 @@
   min-height: 50px;
   background: #F2F2F2;
   border-radius: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 .no-touchevents .fs-light.fs-lightbox-mobile .fs-lightbox-control:hover {
   background: #F2F2F2;
@@ -2855,8 +2901,10 @@
 .fs-light.fs-lightbox-mobile.fs-lightbox-touch .fs-lightbox-meta {
   z-index: 104;
   background: #424242;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   padding: 15px 15px 65px;
+  -webkit-transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
@@ -2866,8 +2914,10 @@
   height: 130px;
   z-index: 104;
   background: #424242;
-  box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 25px rgba(0, 0, 0, 0.1);
   padding: 15px 0 65px;
+  -webkit-transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s;
   transition: transform 0.25s ease, opacity 0.25s linear 0.25s, visibility 0.25s linear 0.25s, -webkit-transform 0.25s ease;
@@ -2958,7 +3008,9 @@
 .fs-navigation *,
 .fs-navigation *:after,
 .fs-navigation *:before {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: none;
   transition: none;
   -webkit-user-select: none !important;
      -moz-user-select: none !important;
@@ -3009,13 +3061,15 @@
   visibility: hidden;
 }
 .fs-light.fs-navigation-reveal-nav.fs-navigation-animated {
+  -webkit-transition: visibility 0.001s linear 0.2s;
   transition: visibility 0.001s linear 0.2s;
 }
 .fs-light.fs-navigation-push-nav.fs-navigation-animated,
 .fs-light.fs-navigation-overlay-nav.fs-navigation-animated {
-  transition: box-shadow 0.001s linear 0.2s, visibility 0.001s linear 0.2s, -webkit-transform 0.2s ease;
+  -webkit-transition: visibility 0.001s linear 0.2s, -webkit-box-shadow 0.001s linear 0.2s, -webkit-transform 0.2s ease;
+  transition: visibility 0.001s linear 0.2s, -webkit-box-shadow 0.001s linear 0.2s, -webkit-transform 0.2s ease;
   transition: box-shadow 0.001s linear 0.2s, transform 0.2s ease, visibility 0.001s linear 0.2s;
-  transition: box-shadow 0.001s linear 0.2s, transform 0.2s ease, visibility 0.001s linear 0.2s, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.001s linear 0.2s, transform 0.2s ease, visibility 0.001s linear 0.2s, -webkit-box-shadow 0.001s linear 0.2s, -webkit-transform 0.2s ease;
 }
 .fs-light.fs-navigation-push-nav.fs-navigation-enabled,
 .fs-light.fs-navigation-reveal-nav.fs-navigation-enabled {
@@ -3043,25 +3097,30 @@
 }
 .fs-light.fs-navigation-overlay-nav.fs-navigation-enabled {
   z-index: 3;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
 }
 .fs-light.fs-navigation-overlay-left-nav.fs-navigation-open {
-  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 0 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 0 2px rgba(0, 0, 0, 0.15);
 }
 .fs-light.fs-navigation-overlay-right-nav.fs-navigation-open {
-  box-shadow: -2px 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: -2px 0 2px rgba(0, 0, 0, 0.15);
+          box-shadow: -2px 0 2px rgba(0, 0, 0, 0.15);
 }
 .fs-light.fs-navigation-reveal-nav.fs-navigation-open {
   visibility: visible;
+  -webkit-transition: visibility 0.001s ease;
   transition: visibility 0.001s ease;
 }
 .fs-light.fs-navigation-push-nav.fs-navigation-open,
 .fs-light.fs-navigation-overlay-nav.fs-navigation-open {
   -webkit-transform: translateX(0);
           transform: translateX(0);
-  transition: box-shadow 0.001s ease, visibility 0.001s ease, -webkit-transform 0.2s ease;
+  -webkit-transition: visibility 0.001s ease, -webkit-box-shadow 0.001s ease, -webkit-transform 0.2s ease;
+  transition: visibility 0.001s ease, -webkit-box-shadow 0.001s ease, -webkit-transform 0.2s ease;
   transition: box-shadow 0.001s ease, transform 0.2s ease, visibility 0.001s ease;
-  transition: box-shadow 0.001s ease, transform 0.2s ease, visibility 0.001s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.001s ease, transform 0.2s ease, visibility 0.001s ease, -webkit-box-shadow 0.001s ease, -webkit-transform 0.2s ease;
   visibility: visible;
 }
 .csstransforms3d .fs-light.fs-navigation-push-nav.fs-navigation-open,
@@ -3101,6 +3160,7 @@
   background: #fff;
   background: rgba(255, 255, 255, 0.75);
   opacity: 0;
+  -webkit-transition: opacity 0.2s ease, visibility 0.2s ease;
   transition: opacity 0.2s ease, visibility 0.2s ease;
   visibility: hidden;
 }
@@ -3111,7 +3171,8 @@
 .fs-light.fs-navigation-reveal-content.fs-navigation-enabled,
 .fs-light.fs-navigation-push-content.fs-navigation-enabled {
   z-index: 1;
-  box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -3122,17 +3183,20 @@
 }
 .fs-light.fs-navigation-reveal-content.fs-navigation-animated,
 .fs-light.fs-navigation-push-content.fs-navigation-animated {
-  transition: box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+  -webkit-transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
+  transition: -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
   transition: box-shadow 0.2s ease, transform 0.2s ease;
-  transition: box-shadow 0.2s ease, transform 0.2s ease, -webkit-transform 0.2s ease;
+  transition: box-shadow 0.2s ease, transform 0.2s ease, -webkit-box-shadow 0.2s ease, -webkit-transform 0.2s ease;
 }
 .fs-light.fs-navigation-reveal-left-content.fs-navigation-enabled,
 .fs-light.fs-navigation-push-left-content.fs-navigation-enabled {
-  box-shadow: -2px 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: -2px 0 2px rgba(0, 0, 0, 0.15);
+          box-shadow: -2px 0 2px rgba(0, 0, 0, 0.15);
 }
 .fs-light.fs-navigation-reveal-right-content.fs-navigation-enabled,
 .fs-light.fs-navigation-push-right-content.fs-navigation-enabled {
-  box-shadow: 2px 0 2px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 2px 0 2px rgba(0, 0, 0, 0.15);
+          box-shadow: 2px 0 2px rgba(0, 0, 0, 0.15);
 }
 .fs-light.fs-navigation-reveal-left-content.fs-navigation-open,
 .fs-light.fs-navigation-push-left-content.fs-navigation-open {
@@ -3165,7 +3229,8 @@
   right: 15px;
   bottom: 0;
   background: #9e9e9e;
-  box-shadow: 0 5px 0 #9e9e9e, 0 -5px 0 #9e9e9e;
+  -webkit-box-shadow: 0 5px 0 #9e9e9e, 0 -5px 0 #9e9e9e;
+          box-shadow: 0 5px 0 #9e9e9e, 0 -5px 0 #9e9e9e;
   content: '';
   display: block;
   margin: auto 0;
@@ -3175,7 +3240,8 @@
   height: 15px;
   background: transparent;
   border: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #9e9e9e;
   content: "\00d7";
   font-size: 22px;
@@ -3422,7 +3488,8 @@
   bottom: 0;
   left: 0;
   background: #fff;
-  box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
+  -webkit-box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
+          box-shadow: 3px 0 0 #fff, -3px 0 0 #fff;
   content: '';
   margin: auto;
 }
@@ -3568,6 +3635,7 @@
  */
 .fs-tooltip.fs-light {
   z-index: 10;
+  -webkit-transition: opacity 0.15s linear;
   transition: opacity 0.15s linear;
 }
 .fs-tooltip.fs-light .fs-tooltip-content {
@@ -3636,6 +3704,10 @@
   margin: 0;
   padding: 25px;
   text-align: center;
+  -webkit-transition: background 0.15s linear,
+			border 0.15s linear,
+			color 0.15s linear,
+			opacity 0.15s linear;
   transition: background 0.15s linear,
 			border 0.15s linear,
 			color 0.15s linear,
@@ -3675,6 +3747,7 @@
   position: relative;
   background: #fafafa;
   overflow: hidden;
+  -webkit-transition: none;
   transition: none;
   height: 300px;
 }
@@ -3694,6 +3767,7 @@
   opacity: 1;
   -webkit-transform: translate3D(0, 0, 0);
           transform: translate3D(0, 0, 0);
+  -webkit-transition: opacity 0.25s ease;
   transition: opacity 0.25s ease;
 }
 .fs-viewer.fs-light.fs-viewer-loading .fs-viewer-container {
@@ -3703,9 +3777,11 @@
   position: absolute;
 }
 .fs-viewer.fs-light.fs-viewer-scaling .fs-viewer-container {
+  -webkit-transition: none !important;
   transition: none !important;
 }
 .fs-viewer.fs-light.fs-viewer-scaling .fs-viewer-image {
+  -webkit-transition: none !important;
   transition: none !important;
 }
 .fs-viewer.fs-light .fs-viewer-controls {
@@ -3718,7 +3794,8 @@
   z-index: 4;
   background: #fff;
   border-radius: 4px;
-  box-shadow: 0 0 5px rgba(20, 26, 30, 0.25);
+  -webkit-box-shadow: 0 0 5px rgba(20, 26, 30, 0.25);
+          box-shadow: 0 0 5px rgba(20, 26, 30, 0.25);
   margin: 0 auto;
   padding: 5px;
 }
@@ -3821,6 +3898,7 @@
   display: block;
   margin: auto;
   opacity: 0;
+  -webkit-transition: opacity 0.25s linear, visibility 0.25s linear;
   transition: opacity 0.25s linear, visibility 0.25s linear;
   visibility: hidden;
 }
@@ -4032,7 +4110,8 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   height: 0;
 }
 /**
@@ -4138,7 +4217,8 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */
@@ -4159,7 +4239,8 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 2 */
 }
 /**
@@ -4246,6 +4327,7 @@ th {
   left: 0;
   top: 0;
   padding: 0 8px;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .mfp-container:before {
@@ -4275,10 +4357,12 @@ th {
 }
 .mfp-zoom-out-cur,
 .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
+  cursor: -webkit-zoom-out;
   cursor: zoom-out;
 }
 .mfp-zoom {
   cursor: pointer;
+  cursor: -webkit-zoom-in;
   cursor: zoom-in;
 }
 .mfp-auto-cursor .mfp-content {
@@ -4333,6 +4417,7 @@ button.mfp-arrow {
   outline: none;
   padding: 0;
   z-index: 1046;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 button::-moz-focus-inner {
@@ -4481,7 +4566,8 @@ button::-moz-focus-inner {
   left: 0;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   background: #000;
 }
 /* Main image in popup */
@@ -4491,6 +4577,7 @@ img.mfp-img {
   height: auto;
   display: block;
   line-height: 0;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 40px 0 40px;
   margin: 0 auto;
@@ -4510,7 +4597,8 @@ img.mfp-img {
   width: auto;
   height: auto;
   z-index: -1;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+          box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
   background: #444;
 }
 .mfp-figure small {
@@ -4569,6 +4657,7 @@ img.mfp-img {
     top: auto;
     padding: 3px 5px;
     position: fixed;
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
   }
   .mfp-img-mobile .mfp-bottom-bar:empty {
@@ -4829,6 +4918,7 @@ img.rounded {
 *:visited,
 *:active,
 *:focus {
+  -webkit-transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
   transition: background-color 0.1s linear, border-color 0.1s linear, color 0.1s linear, opacity 0.1s linear;
 }
 *:focus,
@@ -5014,6 +5104,7 @@ select {
   height: 50px;
   line-height: 50px;
   -webkit-font-smoothing: antialiased;
+  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease;
   font-size: 15px;
   font-size: 0.9375rem;
@@ -5165,7 +5256,9 @@ input[type=button] {
   height: 50px;
   line-height: 50px;
   -webkit-font-smoothing: antialiased;
+  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease;
+  -webkit-transition: background-color 300ms ease;
   transition: background-color 300ms ease;
   background: #222222;
   color: #fff;
@@ -5219,6 +5312,7 @@ input[type=button].fs-number-arrow {
   height: 50px;
   line-height: 50px;
   -webkit-font-smoothing: antialiased;
+  -webkit-transition: opacity 400ms ease;
   transition: opacity 400ms ease;
   text-decoration: none;
 }
@@ -5273,7 +5367,8 @@ input[type=button].fs-number-arrow {
 .button--primary,
 .epm-submit-chimp--primary {
   background-color: #fff;
-  box-shadow: 0 0 0 2px #000;
+  -webkit-box-shadow: 0 0 0 2px #000;
+          box-shadow: 0 0 0 2px #000;
   color: #000;
 }
 .btn--primary:active,
@@ -5309,7 +5404,8 @@ input[type=button].fs-number-arrow {
 .button--outlined,
 .epm-submit-chimp--outlined {
   background: transparent!important;
-  box-shadow: inset 0 0 0 2px #000;
+  -webkit-box-shadow: inset 0 0 0 2px #000;
+          box-shadow: inset 0 0 0 2px #000;
   color: #000 !important;
   letter-spacing: 1px;
   text-transform: uppercase;
@@ -5391,6 +5487,7 @@ input[type=button].fs-number-arrow {
   border-left: 10px solid transparent;
   border-right: 10px solid transparent;
   border-radius: 0;
+  -webkit-transition: none;
   transition: none;
   margin: 0 -10px;
   margin-right: 0!important;
@@ -5418,7 +5515,8 @@ input[type=button].fs-number-arrow {
   width: 1em;
   height: 1px;
   background: rgba(0, 0, 0, 0.25);
-  box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25), 0 8px 0 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25), 0 8px 0 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 0 0 rgba(0, 0, 0, 0.25), 0 8px 0 0 rgba(0, 0, 0, 0.25);
 }
 .btn--hamburg__white,
 .button--hamburg__white,
@@ -5432,7 +5530,8 @@ input[type=button].fs-number-arrow {
 .button--hamburg__white:before,
 .epm-submit-chimp--hamburg__white:before {
   background: #fff;
-  box-shadow: 0 4px 0 0 #fff, 0 8px 0 0 #fff;
+  -webkit-box-shadow: 0 4px 0 0 #fff, 0 8px 0 0 #fff;
+          box-shadow: 0 4px 0 0 #fff, 0 8px 0 0 #fff;
 }
 .btn--hamburg.right,
 .button--hamburg.right,
@@ -5456,7 +5555,8 @@ input[type=button].fs-number-arrow {
   width: 1em;
   height: 1px;
   background: rgba(0, 0, 0, 0.25);
-  box-shadow: 0 0.25em 0 0 rgba(0, 0, 0, 0.25), 0 0.5em 0 0 rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0 0.25em 0 0 rgba(0, 0, 0, 0.25), 0 0.5em 0 0 rgba(0, 0, 0, 0.25);
+          box-shadow: 0 0.25em 0 0 rgba(0, 0, 0, 0.25), 0 0.5em 0 0 rgba(0, 0, 0, 0.25);
 }
 .btn--arrow,
 .button--arrow,
@@ -5575,7 +5675,8 @@ input[type=button].fs-number-arrow {
 @media screen and (min-width: 740px) {
   .gform_wrapper {
     padding: 10px 0px 10px 17px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
   }
 }
 @media screen and (min-width: 980px) {
@@ -5609,6 +5710,7 @@ input[type=button].fs-number-arrow {
   position: absolute;
   width: 100%;
   top: 0;
+  -webkit-transition: 300ms ease;
   transition: 300ms ease;
   height: 100vh;
   background-color: #fff;
@@ -5815,7 +5917,8 @@ input[type=button].fs-number-arrow {
   top: 100%;
 }
 .header {
-  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0 1px 0px rgba(0, 0, 0, 0.05);
 }
 .header__product-btn {
   position: static;
@@ -5928,6 +6031,7 @@ input[type=button].fs-number-arrow {
   font-size: 0.75rem;
 }
 #header-main__wrapper {
+  -webkit-transition: 500ms ease;
   transition: 500ms ease;
   position: relative;
   z-index: 89;
@@ -5965,7 +6069,8 @@ input[type=button].fs-number-arrow {
   text-align: left;
   margin-left: -1px;
   display: none;
-  box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 0 1px rgba(0, 0, 0, 0.1);
   border-top: 0;
   left: 0;
 }
@@ -5994,6 +6099,7 @@ input[type=button].fs-number-arrow {
   display: block;
 }
 #header-products {
+  -webkit-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
   opacity: 0;
   pointer-events: none;
@@ -6010,6 +6116,7 @@ input[type=button].fs-number-arrow {
   position: absolute;
   width: 100%;
   z-index: 88;
+  -webkit-transition: 400ms;
   transition: 400ms;
   top: 0;
   background: #fffd38;
@@ -6202,6 +6309,7 @@ input[type=button].fs-number-arrow {
 }
 .footer-credits__wrapper {
   position: relative;
+  -webkit-transition: 300ms ease;
   transition: 300ms ease;
 }
 .footer-credits__wrapper:hover {
@@ -6225,6 +6333,7 @@ input[type=button].fs-number-arrow {
   background-color: #035DA9 !important;
   border-radius: 50%!important;
   margin-bottom: 4px;
+  -webkit-transition: 400ms ease;
   transition: 400ms ease;
 }
 .footer .epm-sign-up-form label {
@@ -6249,6 +6358,7 @@ input[type=button].fs-number-arrow {
   background-color: #999999;
 }
 .home__hero .fs-background-container {
+  -webkit-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
 }
 .home__hero-link {
@@ -6273,6 +6383,7 @@ input[type=button].fs-number-arrow {
   background-color: #000;
 }
 .home-module .hero .fs-background-container {
+  -webkit-transition: opacity 600ms ease;
   transition: opacity 600ms ease;
 }
 .home-module a:hover {
@@ -6399,6 +6510,7 @@ input[type=button].fs-number-arrow {
 .mfp-bg.mfp-subscribe {
   opacity: 0;
   background: #fff;
+  -webkit-transition: opacity 500ms ease;
   transition: opacity 500ms ease;
 }
 .mfp-bg.mfp-subscribe.mfp-ready {
@@ -6409,6 +6521,7 @@ input[type=button].fs-number-arrow {
 }
 .mfp-wrap.mfp-subscribe {
   opacity: 0;
+  -webkit-transition: opacity 500ms ease;
   transition: opacity 500ms ease;
 }
 .mfp-wrap.mfp-subscribe.mfp-ready {
@@ -6525,7 +6638,8 @@ input[type=button].fs-number-arrow {
 .contact__subscribe-textarea,
 .wpcf7 #epm-email,
 .contact__subscribe #epm-email {
-  box-shadow: 0 0 0 1px #CBCBD2;
+  -webkit-box-shadow: 0 0 0 1px #CBCBD2;
+          box-shadow: 0 0 0 1px #CBCBD2;
   border-radius: 1px;
   margin-bottom: 25px !important;
   color: #222222;
@@ -6613,9 +6727,11 @@ input[type=button].fs-number-arrow {
   text-align: center;
   color: #000;
   opacity: 0;
+  -webkit-transition: 300ms ease;
   transition: 300ms ease;
 }
 .swatch img {
+  -webkit-transition: opacity 300ms ease;
   transition: opacity 300ms ease;
 }
 .swatch:hover img {
@@ -6640,10 +6756,12 @@ input[type=button].fs-number-arrow {
 .press-item__overlay {
   z-index: 8;
   background-color: rgba(0, 0, 0, 0.25);
+  -webkit-transition: 500ms ease;
   transition: 500ms ease;
 }
 .press-item a {
   border-bottom: 1px solid transparent;
+  -webkit-transition: 500ms ease;
   transition: 500ms ease;
 }
 .press-item a:hover {
@@ -6688,6 +6806,7 @@ input[type=button].fs-number-arrow {
 .press-gallery__image-wrapper {
   position: relative;
   text-align: center;
+  -webkit-transition: 300ms ease;
   transition: 300ms ease;
   border-radius: 2px;
 }
@@ -6727,6 +6846,7 @@ input[type=button].fs-number-arrow {
   font-weight: 600;
   color: #FF2816;
   opacity: 0;
+  -webkit-transition: 300ms ease;
   transition: 300ms ease;
   font-size: 11px;
   font-size: 0.6875rem;
@@ -6802,6 +6922,7 @@ input[type=button].fs-number-arrow {
   background: #F2F2F2;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
+  -webkit-transition: 300ms ease;
   transition: 300ms ease;
   z-index: 99;
 }
@@ -6953,6 +7074,7 @@ input[type=button].fs-number-arrow {
 }
 .product-item__info {
   opacity: 0;
+  -webkit-transition: opacity 1200ms ease;
   transition: opacity 1200ms ease;
   background: rgba(255, 255, 255, 0.8);
   z-index: 10;
@@ -6963,10 +7085,12 @@ input[type=button].fs-number-arrow {
   font-size: 1.125rem;
   color: rgba(0, 0, 0, 0.9);
   margin-bottom: 0;
+  -webkit-transition: opacity 1200ms ease;
   transition: opacity 1200ms ease;
 }
 .product-item__title {
   font-weight: 400;
+  -webkit-transition: color 600ms ease;
   transition: color 600ms ease;
 }
 .product-item__price {
@@ -6984,7 +7108,18 @@ input[type=button].fs-number-arrow {
 .product-item__thumb {
   background-color: #000;
 }
+@media screen and (min-width: 300px) {
+  .product-item__thumb-image {
+    height: 250px;
+  }
+}
+@media screen and (min-width: 740px) {
+  .product-item__thumb-image {
+    height: 450px;
+  }
+}
 .product-item__image {
+  -webkit-transition: opacity 600ms ease;
   transition: opacity 600ms ease;
   margin-bottom: 12.5px;
 }
@@ -7110,13 +7245,17 @@ input[type=button].fs-number-arrow {
 .carousel_fade .fs-carousel-item {
   opacity: 0;
   visibility: hidden;
+  -webkit-transition: opacity 0s linear, visibility 0s linear;
   transition: opacity 0s linear, visibility 0s linear;
+  -webkit-transition-delay: 0.25s;
   transition-delay: 0.25s;
 }
 .carousel_fade .fs-carousel-item.fs-carousel-visible {
   opacity: 1;
   visibility: visible;
+  -webkit-transition-duration: 0.25s;
   transition-duration: 0.25s;
+  -webkit-transition-delay: 0s;
   transition-delay: 0s;
 }
 .wp .fs-carousel .fs-carousel-control {

@@ -46,6 +46,14 @@
 
   &__thumb {
     background-color: @black;
+    &-image {
+      @media @min {
+        height: 250px;
+      }
+      @media @tablet {
+        height: 450px;
+      }
+    }
   }
 
   &__image {
