@@ -18,12 +18,13 @@
 	</div>
 	<div class="fs-cell fs-lg-8 fs-lg-push-1 fs-md-4 fs-sm-3">
 		<div class="contact-map">
-			<img src="<?php echo $thumb_url; ?>" class="img-responsive" alt="Timeline Contact" />
+			<?php the_field('map'); ?>
+			<?php /*<img src="<?php echo $thumb_url; ?>" class="img-responsive" alt="Timeline Contact" />*/?>
 		</div>
 	</div>
 </div>
 
-<hr class="invisible big">
+<hr class="divider big">
 <?php #Join the Newsletter ?>
 <?php
   $form_action = get_field('mailchimp_action_url', 11);
@@ -37,6 +38,7 @@
 	</div>
 </div>
 
+<?php /*
 <hr class="invisible big">
 <?php #Contact ?>
 <div class="fs-row">
@@ -44,6 +46,7 @@
 	<?php $contact = get_field('contact_shortcode'); ?>
 	<div class="fs-cell fs-lg-8 fs-lg-push-1 fs-md-4 fs-sm-3"><?php echo do_shortcode($contact); ?></div>
 </div>
+*/?>
 
 <hr class="invisible">
 
