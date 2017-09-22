@@ -2561,6 +2561,12 @@
 		"oAP": "\/parts\/page-header.php",
 		"oF": 0
 		},
+	"\/parts\/retailer.php": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/parts\/retailer.php",
+		"oF": 0
+		},
 	"\/parts\/store\/shopify--bag.php": {
 		"ft": 8192,
 		"oA": 0,

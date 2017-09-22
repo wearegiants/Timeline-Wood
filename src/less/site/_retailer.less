@@ -1,13 +1,43 @@
 .retailer {
-  &-logo {
-    &-wrapper {
-      a {
-        background-color: @black;
-        display: block;
-      }
+
+  & &-thumb {
+    //background-color: #f8f8f8;
+    border: 1px solid @bgGray;
+    margin-bottom: @spaced;
+    display: block;
+    &__image {
+      position: relative;
+      height: 170px;
+      margin: 0 @spaced;
       img {
-        opacity: .98;
+        mix-blend-mode: multiply;
+        .center();
+        max-width: 100%;
+        display: block;
+        height: auto;
       }
     }
   }
+
+  & &-nav {
+    &__btn {
+      color: @gray;
+      padding: 0 10px; 
+      &.fs-swap-active {
+        color: @red;
+      }
+    }
+  }
+
+  & &-tab {
+    margin-bottom: @spaced;
+    &__content {
+      padding-top: @spaced*2;
+      display: none;
+      &.fs-swap-active {
+        display: block;
+      }
+    }
+  }
+
 }

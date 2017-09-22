@@ -6610,12 +6610,42 @@ input[type=button].fs-number-arrow {
   font-size: 11px;
   font-size: 0.6875rem;
 }
-.retailer-logo-wrapper a {
-  background-color: #000;
+.retailer .retailer-thumb {
+  border: 1px solid #F2F2F2;
+  margin-bottom: 25px;
   display: block;
 }
-.retailer-logo-wrapper img {
-  opacity: .98;
+.retailer .retailer-thumb__image {
+  position: relative;
+  height: 170px;
+  margin: 0 25px;
+}
+.retailer .retailer-thumb__image img {
+  mix-blend-mode: multiply;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+.retailer .retailer-nav__btn {
+  color: #999999;
+  padding: 0 10px;
+}
+.retailer .retailer-nav__btn.fs-swap-active {
+  color: #FF2816;
+}
+.retailer .retailer-tab {
+  margin-bottom: 25px;
+}
+.retailer .retailer-tab__content {
+  padding-top: 50px;
+  display: none;
+}
+.retailer .retailer-tab__content.fs-swap-active {
+  display: block;
 }
 .bag-checkout {
   background: #233def;
