@@ -7,8 +7,10 @@ $thumb_url = $thumb_url_array[0];
 $images = get_field('gallery');
 
 ?>
-<hr class="invisible">
 <div id="product">
+  <div class="page-header">
+    <h2 class="title title--md text-center capped spaced nomargin color--black"><a href="<?php echo get_the_permalink(488); ?>"><?php echo get_the_title(488); ?></a></h2>
+  </div>
   <div class="fs-row">
     <div class="fs-cell fs-xl-7 fs-lg-7 fs-md-6 fs-sm-3">
       <div class="product-images">
@@ -34,36 +36,29 @@ $images = get_field('gallery');
     </div>
     <hr class="invisible fs-cell fs-lg-hide fs-md-6 fs-sm-3">
     <div class="fs-cell fs-xl-5 fs-lg-5 fs-md-6 fs-sm-3">
-      <a href="<?php echo get_permalink(488); ?>" class="product-subtitle color--gray">Commercial Applications</a>
       <h1 class="product-title" itemprop="name"><?php the_title(); ?></h1>
       <hr class="invisible compact">
       <?php the_content(); ?>
       <hr class="invisible compact">
-      <a href="#order" class="lightbox btn btn--outlined">More Info</a>
-      <a href="<?php the_field('sample_url'); ?>#sample" class="btn btn--outlined">Order Samples</a>
+      <a href="#order" class="lightbox btn btn--outlined">Orders &amp; Info</a>
+      <a href="#sample" class="lightbox btn btn--outlined">Order Samples</a>
     </div>
   </div>
   <div class="product-page__footer"></div>
 </div>
 <hr class="invisible">
 
+<div id="sample" style="display:none">
+  <div id="product-order-modal" class="product-order-modal wrapper">
+    <h2>Samples</h2>
+    <?php the_field('samples', 488); ?>
+  </div>
+</div>
+
 <div id="order" style="display:none">
   <div id="product-order-modal" class="product-order-modal wrapper">
     <h2>Ordering</h2>
-    <div class="color--red">
-      +1 503 765 8056<br>
-      <a href="mailto:order@timelinewood.com">orders@timelinewood.com</a>
-    </div>
-    <hr class="invisible compact">
-    <div class="color--black">
-      To place an order, please call or email the Timeline studio and a sales
-      associate will assist you. Each product from our Color Series is available in 5 plank widths,
-      2 plank lenghts and 3 edge options and overed in unlimited supply.
-    </div>
-    <hr class="invisible compact">
-    <div class="color--gray">
-      Selected sock is avaiable at the Tiemline facility in Hilsboro, Oregon. <br>Please contact us for a price list.
-    </div>
+    <?php the_field('order', 488); ?>
   </div>
 </div>
 
