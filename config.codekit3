@@ -3294,6 +3294,12 @@
 		"oAP": "\/shopify\/templates\/search.liquid",
 		"oF": 0
 		},
+	"\/shopify\/theme.lock": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/shopify\/theme.lock",
+		"oF": 0
+		},
 	"\/sidebar.php": {
 		"ft": 8192,
 		"oA": 0,

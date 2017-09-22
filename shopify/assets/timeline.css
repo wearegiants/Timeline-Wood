@@ -6750,6 +6750,9 @@ input[type=button].fs-number-arrow {
     text-align: left;
   }
 }
+.commercial:last-child hr {
+  background-color: transparent;
+}
 .press-item__content {
   z-index: 9;
 }
@@ -6984,6 +6987,18 @@ input[type=button].fs-number-arrow {
 }
 #bag--wrapper {
   padding-top: 0;
+}
+.collection-comingsoon span {
+  background-color: #000;
+  color: #fff;
+  padding: 12.5px 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  letter-spacing: 1px;
+  display: inline-block;
+  -webkit-transform: rotate(-1deg);
+          transform: rotate(-1deg);
 }
 .collection-item__thumb {
   margin-bottom: 25px;
