@@ -14,9 +14,9 @@
       $.cookie("subscribe", 1);
     });
 
-    //var cookieValue = $.cookie("subscribe");
+    var cookieValue = $.cookie("subscribe");
 
-    //if (!cookieValue) {
+    if (!cookieValue) {
       if ( $('body').hasClass('home')) {
         $.magnificPopup.open({
           items: {
@@ -29,6 +29,6 @@
           mainClass: 'mfp-subscribe fs-grid',
         });
       }
-    //}
+    }
   });
 </script>
