@@ -87,11 +87,9 @@
 		<div class='fs-cell fs-all-full'>
 			<span class="">&copy; 2009-<?php echo date('Y'); ?> <?php bloginfo('name' );?>.</span>&nbsp;
 			<div class="fs-lg-hide fs-md-hide"></div>
-			<?php /*
-			<a href="<?php echo the_permalink(13); ?>#<?php echo get_post(18)->post_name; ?>" class=""><u><?php echo get_the_title(18); ?></u>.</a>&nbsp;
-			<a href="<?php echo the_permalink(13); ?>#<?php echo get_post(20)->post_name; ?>" class=""><u><?php echo get_the_title(20); ?></u>.</a>&nbsp;
-			<a href="<?php echo the_permalink(13); ?>#<?php echo get_post(22)->post_name; ?>" class=""><u><?php echo get_the_title(22); ?></u>.</a>&nbsp;
-			*/ ?>
+			<a href="<?php echo the_permalink(18); ?>" class=""><u><?php echo get_the_title(18); ?></u>.</a>&nbsp;
+			<a href="<?php echo the_permalink(20); ?>" class=""><u><?php echo get_the_title(20); ?></u>.</a>&nbsp;
+			<a href="<?php echo the_permalink(22); ?>" class=""><u><?php echo get_the_title(22); ?></u>.</a>&nbsp;
 			<div class="fs-lg-hide fs-md-hide fs-sm-hide"></div>
       <span class="footer-credits fl--right text-right">
       	<span class="footer-credits__wrapper">
