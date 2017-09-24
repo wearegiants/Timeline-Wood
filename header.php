@@ -26,8 +26,13 @@
 
 <body <?php body_class('fs-grid wp'); ?>>
 <div id="wrapper">
-
-<div id="header-main__notification" class="text-center">Free shipping on all U.S. orders</div>
+<?php
+  $enabled = get_field('notification_enable', 4);
+  $notify = get_field('notification', 4);
+  if($enabled):
+?>
+<div id="header-main__notification" class="text-center"><?php echo $notify; ?></div>
+<?php endif; ?>
 <header id="header" class="mobile-menu relative fs-grid-fluid">
   <div id="header-main__wrapper">
     <div class="fs-row relative header header--sm">

@@ -34,7 +34,14 @@
 
 <body id="{{ page_title | handle }}" class="fs-grid {% if customer %}customer-logged-in {% endif %}template-{{ template | replace: '.', ' ' | truncatewords: 1, '' | handle }}" >
 <div id="wrapper">
-<div id="header-main__notification" class="text-center">Free shipping on all U.S. orders</div>
+
+{% assign notify = settings.notification-bar %}
+{% assign enable = settings.notification-enable %}
+
+{% if enable %} 
+<div id="header-main__notification" class="text-center">{{ notify }}</div>
+{% endif %}
+
 {% include 'header' with shopURL %}
 <div id="content-wrapper" class='fs-grid'>
 {{ content_for_layout }}
