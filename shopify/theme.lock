@@ -5,5 +5,7 @@ config/settings_schema.json:
   development: 2017-09-24T11:26:50-04:00   c9fce564fb7f54afad86d4633027ce7e
 layout/theme.liquid:
   development: 2017-09-24T11:28:31-04:00   edc90ade6d318756ee3c94ae53a2dfd9
+snippets/footer.liquid:
+  development: 2017-09-24T20:00:17-04:00   cf56a111918d9f9927e4a8694af0adc6
 templates/collection.liquid:
   development: 2017-09-22T18:11:18-04:00   069c32c8ea4970f5623c92de23f94dbe
