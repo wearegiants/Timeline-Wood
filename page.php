@@ -10,7 +10,10 @@ $thumb_url = $thumb_url_array[0];
 ?>
 
 <article <?php post_class(); ?>>
-	<?php include locate_template('parts/page-header.php' ); ?>
+	<div class="page-header">
+    <h2 class="title title--md text-center capped spaced nomargin color--black"><?php the_title(); ?></h2>
+  </div>
+
 	<div class="hentry__content">
 		<div class="fs-row">
 			<div class="fs-cell fs-lg-8 fs-md-5 fs-sm-3 fs-centered">
