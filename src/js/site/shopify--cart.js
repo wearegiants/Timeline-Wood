@@ -87,7 +87,7 @@ function cartStuff(){
 }
 cartStuff();
 
-$(".product-add__btn").on('click', function(){
+$(".product-add__btnss").on('click', function(){
 	$('#items').empty();
 	$('#bagtotal').empty();
 	cartStuff();

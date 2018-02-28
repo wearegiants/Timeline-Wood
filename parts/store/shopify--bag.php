@@ -1,4 +1,5 @@
-<a id="open_bag" class="btn--nav btn header__icon--bag" href="#">
+<?php /*<a id="open_bag" class="btn--nav btn header__icon--bag" href="#">*/ ?>
+<a id="" class="btn--nav btn header__icon--bag" href="http://shop.timelinewood.com/cart">  
   <span>Bag</span>&nbsp;(<span class="cart-count">0</span>)&nbsp;
   <img src="/assets/img/bag.svg" alt="Search">
 </a>

@@ -27,7 +27,7 @@
           <div class="fs-cell fs-lg-5 fs-md-4 fs-sm-half fs-contained cart-item__cell title">
             {% assign title = item.title | split: ' - ' %}
             <div>
-              <h2><a href="/collections/{{ item.product.collections.first.title | downcase }}#{{ item.product.handle }}">{{ title[0] }}</a></h2>
+              <h2><a href="{{ item.product.url }}">{{ title[0] }}</a></h2>
               <small class="color--gray">{{ title[1] }}</small>
             </div>
           </div>

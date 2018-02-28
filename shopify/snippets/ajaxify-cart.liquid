@@ -95,9 +95,9 @@ Shopify.AjaxifyCart = (function($) {
             window.setTimeout(function(){
               $addToCartBtn.prop('disabled', false).removeClass('disabled').removeClass('inverted');
               _setText($addToCartBtn,_config.addToCartBtnLabel);
-              setTimeout(function(){
-                $.magnificPopup.close();  
-              }, 1000);
+              //setTimeout(function(){
+              //  $.magnificPopup.close();  
+              //}, 1000);
             }, _config.howLongTillBtnReturnsToNormal);
             // Update cart count and show cart link.
             $.getJSON(_config.shopifyAjaxCartURL, function(cart) {
