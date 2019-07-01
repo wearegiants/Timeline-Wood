@@ -104,7 +104,7 @@
 	</div>
 </footer>
 
-<?php if(is_front_page()){ include locate_template('parts/footer-mailchimp-easy.php' ); } ?>
+<?php #if(is_front_page()){ include locate_template('parts/footer-mailchimp-easy.php' ); } ?>
 <?php include locate_template('parts/footer-search.php' ); ?>
 
 </div><!--Wrapper-->
