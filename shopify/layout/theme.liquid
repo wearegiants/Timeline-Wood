@@ -18,6 +18,7 @@
 {{ content_for_header }}
 
 {{ 'timeline.css' | asset_url | stylesheet_tag }}
+{{ 'swatches.css' | asset_url | stylesheet_tag }}
 <script type='text/javascript' src='//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js?ver=1.11.1'></script>
 
 <!--[if lt IE 9]>
@@ -60,5 +61,21 @@
 
 {% include 'ajaxify-cart' %}
 {{ 'timeline.js'  | asset_url | script_tag }}
+
+<script>
+jQuery(function() {
+  jQuery('.swatch :radio').change(function() {
+    var optionIndex = jQuery(this).closest('.swatch').attr('data-option-index');
+    var optionValue = jQuery(this).val();
+    jQuery(this)
+      .closest('form')
+      .find('.single-option-selector')
+      .eq(optionIndex)
+      .val(optionValue)
+      .trigger('change');
+  });
+});
+</script>
+
 </body>
 </html>
