@@ -10,43 +10,44 @@
 /* Label */
 .swatch .header {
   margin: 0.5em 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 11px;
+  box-shadow: none;
 }
 /* Hide radio buttons.*/
 .swatch input { 
   display:none;
 }
 .swatch label {
-  /* Rounded corners */
-  -webkit-border-radius:2px;
-  -moz-border-radius:2px;
-  border-radius:2px;
   /* To give width and height */
-  float:left;
+  display: inline-block;
   /* Color swatches contain no text so they need to have a width. */
-  min-width:{{ width }} !important; 
-  height:{{ height }} !important;
+  min-width: {{ width }} !important; 
+  height: {{ height }} !important;
   /* No extra spacing between them */
   margin:0;
+  cursor:pointer;
   /* The border when the button is not selected */
-  border:#ccc 1px solid;
+  border: #ccc 2px solid;
   /* Background color */
-  background-color:#ddd;
+  background-color: transparent;
   /* Styling text */
-  font-size:13px;
+  font-size:11px;
+  font-weight: 700;
+  letter-spacing: 1px;
   text-align:center;
-  line-height:{{ height }};
+  line-height: 32px ;
   white-space:nowrap;
   text-transform:uppercase;
 }
-.swatch-element label { padding:0 10px; }
+.swatch-element label { padding:0 15px; }
 .color.swatch-element label { padding:0; }
 /* Styling selected swatch */
 /* Slightly raised */
-.swatch input:checked + label {
-  -webkit-box-shadow:0px 1px 2px rgba(0,0,0,0.8);
-  -moz-box-shadow:0px 1px 2px rgba(0,0,0,0.8);
-  box-shadow:0px 1px 2px rgba(0,0,0,0.8);
-  border-color:transparent;
+.swatch input:checked + label,
+.swatch label:hover {
+  border: #000 2px solid;
 } 
 .swatch .swatch-element {
   float:left;

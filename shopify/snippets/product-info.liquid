@@ -56,10 +56,10 @@
           <div class="product-add fs-cell fs-lg-half fs-md-half fs-sm-3" id="product-add">
             <input type="submit" name="add" id="add" class="product-add__btn primary btn btn--full btn--outlined ss-gizmo ss-right right" value="{{ add_to_cart | escape }}">
           </div>
-          {% if collection.handle == 'skinnies' %}
+          {% if collection.handle == 'skinnies' or collection.handle == 'shiplap' %}
           <div class="fs-cell fs-all-full">
-            <hr class="invisible compact">
             <a id="product-sample-btn" href="#product-samples" class="lightbox">Order a sample of {{ product.title }}</a>
+            <hr class="divider compact">
           </div>
           {% endif %}
         </div>

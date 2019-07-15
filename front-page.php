@@ -77,8 +77,16 @@
 		<hr class="invisible">
 	</div>
 	<?php endif; ?>
+
 	<?php if($i == 3): ?>
+	<div class="fs-cell"></div>
+
+	<?php if(isset($_GET['preview'])): ?>
+	<div class="home-module fs-cell fs-lg-8 fs-md-3 fs-sm-full">
+	<?php else: ?>
 	<div class="home-module fs-cell fs-all-full">
+	<?php endif; ?>
+
 		<?php if($article_video): ?>
 		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
 		<?php else: ?>
@@ -94,8 +102,30 @@
 		<hr class="invisible">
 	</div>
 	<?php endif; ?>
+
+	<?php if(isset($_GET['preview'])): ?>
+	<?php if($i == 4): ?>
+	<div class="home-module fs-cell fs-lg-4 fs-md-3 fs-sm-full">
+		<?php if($article_video): ?>
+		<div class="hero wallpaper bg--bgGray relative" data-background-options='{"source":{"autoPlay":true,"video":"<?php echo $article_video; ?>"}}'></div>
+		<?php else: ?>
+		<a href="<?php echo $article_link; ?>" class="hero wallpaper bg--bgGray relative" data-background-options='{"source":"<?php echo $article_image; ?>"}'></a>
+		<?php endif; ?>
+		<div class="text-center">
+			<br>
+			<a href="<?php echo $article_link; ?>">
+				<span class="accent accent--sm color--gray"><?php echo $article_subtitle; ?></span>
+				<h3 class="nomargin"><?php echo $article_title; ?></h3>
+			</a>
+		</div>
+		<hr class="invisible">
+	</div>
+	<?php endif; ?>
+	<?php endif; ?>
+
 	<?php $i++; endforeach; ?>
 	<?php endif; ?>
+
 </div>
 
 <hr class="invisible">
