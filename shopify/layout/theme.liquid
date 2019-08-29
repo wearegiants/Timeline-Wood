@@ -60,6 +60,8 @@
 </div>
 
 {% include 'ajaxify-cart' %}
+{{ 'fastclick.min.js' | asset_url | script_tag }}
+{{ 'timber.js' | asset_url | script_tag }}
 {{ 'timeline.js'  | asset_url | script_tag }}
 
 <script>

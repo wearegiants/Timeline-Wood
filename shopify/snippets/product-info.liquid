@@ -3,6 +3,8 @@
     <meta itemprop="url" content="{{ shop.url }}{{ product.url }}" />
     <meta itemprop="image" content="{{ product | img_url: 'grande' }}" />
 
+    {% assign current_variant = product.selected_or_first_available_variant %}
+
     {% unless collection.title == '' %}<h4 class="product-collection"><a href="{{ collection.url }}">{{ collection.title }}</a></h4>{% endunless %}
     <h1 class="product-title" itemprop="name">{{ product.title }}</h1>
 
@@ -16,10 +18,15 @@
       <span class="color--black">
         {% assign variant = product.selected_or_first_available_variant %}
         {% if product.compare_at_price > product.price %}
-        <span class="product-price on-sale" itemprop="price">{{ variant.price | money }}</span>
-        <s class="product-compare-price">{{ variant.compare_at_price | money }}</s>
+        <span id="ProductPrice" class="h2" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+          {{ current_variant.price | money }}
+        </span>
+        &nbsp;|&nbsp;
+        <small id="ComparePrice" class="product-compare-price">{{ variant.compare_at_price | money }}</small>
         {% else %}
-        <span class="product-price" itemprop="price">{{ variant.price | money }}</span>
+        <span id="ProductPrice" class="h2" itemprop="price" content="{{ current_variant.price | divided_by: 100.00 }}">
+          {{ current_variant.price | money }}
+        </span>
         {% endif %}
       </span>
     </div>
@@ -84,6 +91,11 @@
 
 <script>
   var selectCallback = function(variant, selector) {
+    timber.productPage({
+      money_format: "{{ shop.money_format }}",
+      variant: variant,
+      selector: selector
+    });
     if (variant) {
       var form = jQuery('#' + selector.domIdPrefix).closest('form');
       for (var i=0,length=variant.options.length; i<length; i++) {
