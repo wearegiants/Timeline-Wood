@@ -2,7 +2,6 @@ development:
   password: 5cf591bcd1c77e4b658fcfda4dd9e1dc
   theme_id: "38390300735"
   store: timeline-wood.myshopify.com
-
 production:
   password: 5cf591bcd1c77e4b658fcfda4dd9e1dc
   theme_id: "64745541"
