@@ -1,4 +1,4 @@
-<div class="bg-black relative">
+<div class="bg-black relative -mt-px">
   <div class="absolute inset-0 flex items-center justify-center z-10">
     <div class="container text-center">
       <div class="text-white">
@@ -16,5 +16,5 @@
   <div class="absolute inset-0 z-0">
     <img src="{{ get_field('feature_image', 4)['sizes']['large'] }}" class="w-full h-full object-cover">
   </div>
-  <div class="aspect-ratio-square sm:aspect-ratio-4/3 lg:aspect-ratio-16/9"></div>
+  <div class="aspect-ratio-square sm:aspect-ratio-4/3 lg:aspect-ratio-16/9 xl:aspect-ratio-21/9"></div>
 </div>

@@ -1,6 +1,8 @@
 @tailwind base;
 
 @import url('https://rsms.me/inter/inter.css');
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import '~tiny-slider/dist/tiny-slider.css';
 
 @font-face {
   font-family: 'SuperGroteskPro';
@@ -15,18 +17,6 @@
   font-style: normal;
   src: url('../fonts/SuperGroteskWeb.woff') format('woff2');
 }
-
-@font-face {
-  font-family: 'SuperGroteskPro';
-  src:  url('../fonts/SuperGroteskPro.eot?#iefix') format('embedded-opentype'),  
-        url('../fonts/SuperGroteskPro.otf')  format('opentype'),
-        url('../fonts/SuperGroteskPro.woff') format('woff'), 
-        url('../fonts/SuperGroteskPro.ttf')  format('truetype'), 
-        url('../fonts/SuperGroteskPro.svg#SuperGroteskPro') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 
 @tailwind components;
 @tailwind utilities;

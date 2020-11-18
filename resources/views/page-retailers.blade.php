@@ -12,7 +12,7 @@
 
 <div x-data="{ tab: window.location.hash ? window.location.hash.substring(1) : 'on_retailers' }">
 
-  <div class="container flex justify-center items-center text-gray-300 space-x-4 mb-4">
+  <div class="container md:flex justify-center items-center text-gray-300 space-x-4 mb-4 text-center">
     @if($on)<button @click.prevent="tab = 'on_retailers'; window.location.hash = 'on_retailers'" :class="{ 'text-brand-red': tab === 'on_retailers' }" class="hover:text-brand-red transition ease duration-300">Online Retailers</button>@endif
     @if($ca)<button @click.prevent="tab = 'ca_retailers'; window.location.hash = 'ca_retailers'" :class="{ 'text-brand-red': tab === 'ca_retailers' }" class="hover:text-brand-red transition ease duration-300">California Retailers</button>@endif
     @if($or)<button @click.prevent="tab = 'or_retailers'; window.location.hash = 'or_retailers'" :class="{ 'text-brand-red': tab === 'or_retailers' }" class="hover:text-brand-red transition ease duration-300">Oregon Retailers</button>@endif
@@ -22,7 +22,7 @@
 
   <div x-show="tab === 'on_retailers'" class="container">
     <span class="sr-only">Online Retailers</span>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 py-5 md:gap-8 md:py-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 pt-5 md:gap-8 md:pt-8">
       @foreach($on as $image)
         @include('components.retailer')
       @endforeach
@@ -31,7 +31,7 @@
 
   <div x-show="tab === 'ca_retailers'" class="container">
     <span class="sr-only">California Retailers</span>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 py-5 md:gap-8 md:py-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 pt-5 md:gap-8 md:pt-8">
       @foreach($ca as $image)
         @include('components.retailer')
       @endforeach
@@ -40,7 +40,7 @@
 
   <div x-show="tab === 'or_retailers'" class="container">
     <span class="sr-only">Oregon Retailers</span>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 py-5 md:gap-8 md:py-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 pt-5 md:gap-8 md:pt-8">
       @foreach($or as $image)
         @include('components.retailer')
       @endforeach
@@ -49,7 +49,7 @@
 
   <div x-show="tab === 'co_retailers'" class="container">
     <span class="sr-only">Colorado Retailers</span>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 py-5 md:gap-8 md:py-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 pt-5 md:gap-8 md:pt-8">
       @foreach($co as $image)
         @include('components.retailer')
       @endforeach
@@ -58,7 +58,7 @@
 
   <div x-show="tab === 'sk_retailers'" class="container">
     <span class="sr-only">South Korea Retailers</span>
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-5 py-5 md:gap-8 md:py-8">
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-5 pt-5 md:gap-8 md:pt-8">
       @foreach($sk as $image)
         @include('components.retailer')
       @endforeach

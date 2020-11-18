@@ -1,23 +1,23 @@
-<footer class="bg-brand-gray">
+<footer class="bg-brand-gray @if(!is_front_page()) mt-20 @endif">
   <div class="container flex flex-wrap py-12">
     <div class="w-full mb-6 lg:mb-0 lg:w-2/3 flex leading-loose">
-      <ul class="text-xs w-full">
-        <li><a href="">Products</a></li>
-        <li><a href="">Commercial Orders</a></li>
-        <li><a href="">Retailers</a></li>
-        <li><a href="">Contact</a></li>
+      <ul class="text-sm w-full">
+        <li><a href="//shop.timelinewood.com">Products</a></li>
+        <li><a href="/commercial-orders">Commercial Orders</a></li>
+        <li><a href="/retailers">Retailers</a></li>
+        <li><a href="/contact">Contact</a></li>
       </ul>
-      <ul class="text-xs w-full">
-        <li><a href="">Facebook</a></li>
-        <li><a href="">Instagram</a></li>
-        <li><a href="">Twitter</a></li>
-        <li><a href="">YouTube</a></li>
+      <ul class="text-sm w-full">
+        <li><a class="text-brand-blue" target="_blank" href="//www.facebook.com/TimelineWood/?fref=ts">Facebook</a></li>
+        <li><a class="text-brand-blue" target="_blank" href="//www.instagram.com/timelinewood/">Instagram</a></li>
+        <li><a class="text-brand-blue" target="_blank" href="//twitter.com/TimelineWood">Twitter</a></li>
       </ul>
-      <div class="text-xs w-full">
+      <div class="text-sm w-full">
         Timeline Studio<br>
         3217 NW Guam Street<br>
-        Portland OR 97210<br>
-        <a href="#">info@timelinewood.com</a>
+        Portland, OR 97210<br>
+        +1 503 765 8056<br>
+        <a href="mailto:info@timelinewood.com" class="text-brand-green">info@timelinewood.com</a>
       </div>
     </div>
     <div class="w-full lg:w-1/3">
@@ -30,14 +30,19 @@
       </div>
     </div>
   </div>
-  <div class="container flex justify-between text-xs uppercase tracking-wide text-gray-400 pb-12">
-    <ul class="flex items-center space-x-4">
-      <li>© 2009-2020 TIMELINE PRODUCTS, LLC.</li>
-      <li><a href="">Word</a></li>
-      <li><a href="">Privacy Policy</a></li>
-      <li><a href="">Terms & Conditions</a></li>
-      <li><a href="">Cookies</a></li>
+  <div class="container lg:flex lg:justify-between text-tiny uppercase tracking-widest text-gray-400 pb-12 font-mono">
+    <ul class="md:space-x-4 md:flex md:items-center md:h-8 justify-center space-y-2 md:space-y-0 mb-4 md:mb-0">
+      <li class="">© 2009-2020 TIMELINE PRODUCTS, LLC.</li>
+      <li class=""><a class="hover:text-gray-600" href="/privacy-policy">Privacy Policy.</a></li>
+      <li class=""><a class="hover:text-gray-600" href="/terms-conditions">Terms & Conditions.</a></li>
+      <li class=""><a class="hover:text-gray-600" href="/cookies">Cookies.</a></li>
     </ul>
-    <button class="uppercase">+ Site Credits</button>
+    <div class="text-center md:text-right relative group lg:overflow-hidden lg:h-8">
+      <div class="uppercase transition ease duration-300 lg:transform group-hover:-translate-y-full whitespace-no-wrap h-8 hidden lg:inline-flex items-center">+ Site Credits</div>
+      <div class="uppercase transition ease duration-300 lg:transform whitespace-no-wrap group-hover:-translate-y-full lg:h-8 lg:flex items-center text-left md:text-center">
+        <a class="hover:text-gray-600" target="_blank" href="//hassanrahim.com" class="">Design by 12:01</a> | 
+        <a class="hover:text-gray-600" target="_blank" href="//madebyhowler.com" class="">Code by HOWLER</a>
+      </div>
+    </div>
   </div>
 </footer>
