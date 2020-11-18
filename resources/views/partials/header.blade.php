@@ -17,10 +17,10 @@
         <li class="relative group">
           <a class="hover:text-brand-blue" href="//shop.timelinewood.com/">Products</a>
           <ul class="bg-white top-full px-10 py-6 -ml-10 absolute shadow-xl space-y-2 hidden group-hover:block">
-            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="/retailers">Skinnies</a></li>
-            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="/about">Classic Shiplap</a></li>
-            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="/press-room">Oak Shiplap</a></li>
-            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="/contact">Trim</a></li>
+            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="//shop.timelinewood.com/collections/skinnies">Skinnies</a></li>
+            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="//shop.timelinewood.com/collections/shiplap">Classic Shiplap</a></li>
+            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="//shop.timelinewood.com/collections/oak-shiplap">Oak Shiplap</a></li>
+            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="//shop.timelinewood.com/collections/trim">Trim</a></li>
           </ul>
         </li>
         <li><a class="hover:text-brand-blue" href="/retailers">Retailers</a></li>
