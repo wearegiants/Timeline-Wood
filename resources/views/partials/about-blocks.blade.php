@@ -13,8 +13,8 @@
 <div class="">
   @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
     <div class="">
-      <div class="container md:grid grid-cols-3 gap-8 border-b last:border-0 border-gray-100 pb-10 mb-10">
-        <div class="col-span-2 lg:order-last bg-gray-100 mb-4 md:mb-0">
+      <div class="container lg:grid grid-cols-3 gap-8 border-b last:border-0 border-gray-100 pb-10 mb-10">
+        <div class="col-span-2 lg:order-last mb-4 lg:mb-0">
           <div class="relative">
             @php $images = get_field('gallery') @endphp
             @foreach($images as $image)
