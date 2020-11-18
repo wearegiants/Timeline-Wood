@@ -1,3 +1,5 @@
-<div class="page-header">
-  <h1>{!! $title !!}</h1>
+<div class="page-header py-12 lg:py-20">
+  <div class="text-center">
+    <h1 class="font-bold uppercase text-lg tracking-wide">{!! $title !!}</h1>
+  </div>
 </div>

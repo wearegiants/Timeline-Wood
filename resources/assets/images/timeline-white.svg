@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="506px" height="50px" viewBox="0 0 506 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Untitled 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="timeline" fill="#FFFFFF">
+            <g id="Group">
+                <polygon id="Shape" points="0 0.002 0 10.86 17.491 10.86 17.491 49.957 32.592 49.957 32.592 10.86 50.148 10.86 50.148 0.002"></polygon>
+                <rect id="Rectangle-path" x="60.488" y="0" width="15.161" height="49.955"></rect>
+                <polygon id="Shape" points="132.948 0.002 122.672 29.269 112.526 0.002 90.993 0.002 90.993 49.957 105.05 49.957 105.05 13.016 116.814 49.957 128.331 49.957 140.173 13.016 140.173 49.957 154.156 49.957 154.156 0.002"></polygon>
+                <polygon id="Shape" points="169.499 0.002 169.499 49.957 216.655 49.957 216.655 39.096 184.66 39.096 184.66 29.734 209.695 29.734 209.695 19.839 184.66 19.839 184.66 10.536 213.479 10.536 213.479 0.002"></polygon>
+                <polygon id="Shape" points="307.745 0.002 307.745 49.957 350.091 49.957 350.091 39.096 322.91 39.096 322.91 0.002"></polygon>
+                <rect id="Rectangle-path" x="361.472" y="0" width="15.161" height="49.955"></rect>
+                <polygon id="Shape" points="428.538 0.002 428.538 29.401 409.222 0.002 391.989 0.002 391.989 49.957 406.032 49.957 406.032 19.574 426.586 49.957 442.581 49.957 442.581 0.002"></polygon>
+                <polygon id="Shape" points="457.94 0.002 457.94 49.957 505.094 49.957 505.094 39.096 473.087 39.096 473.087 29.734 498.141 29.734 498.141 19.839 473.087 19.839 473.087 10.536 501.909 10.536 501.909 0.002"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

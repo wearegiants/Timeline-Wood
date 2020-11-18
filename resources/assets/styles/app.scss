@@ -1,12 +1,32 @@
-/** Config */
-@import 'config/variables';
-@import 'config/external';
+@tailwind base;
 
-/** Common */
-@import 'common/global';
+@import url('https://rsms.me/inter/inter.css');
 
-/** Components */
-@import 'components';
+@font-face {
+  font-family: 'SuperGroteskPro';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/SuperGroteskWeb-Medium.woff') format('woff2');
+}
 
-/** Partials */
-@import 'partials/header';
+@font-face {
+  font-family: 'SuperGroteskPro';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/SuperGroteskWeb.woff') format('woff2');
+}
+
+@font-face {
+  font-family: 'SuperGroteskPro';
+  src:  url('../fonts/SuperGroteskPro.eot?#iefix') format('embedded-opentype'),  
+        url('../fonts/SuperGroteskPro.otf')  format('opentype'),
+        url('../fonts/SuperGroteskPro.woff') format('woff'), 
+        url('../fonts/SuperGroteskPro.ttf')  format('truetype'), 
+        url('../fonts/SuperGroteskPro.svg#SuperGroteskPro') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@tailwind components;
+@tailwind utilities;

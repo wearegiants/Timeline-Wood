@@ -16,7 +16,10 @@ require('laravel-mix-copy-watched');
 
 mix
   .setPublicPath('./dist')
-  .browserSync('sage.test');
+  .browserSync({
+    proxy: 'timelinewood.dev.cc',
+    notify: false,
+  });
 
 mix
   .sass('resources/assets/styles/app.scss', 'styles')
@@ -29,6 +32,7 @@ mix
 
 mix
   .js('resources/assets/scripts/app.js', 'scripts')
+  //.js('resources/assets/scripts/marquee.js', 'scripts')
   .js('resources/assets/scripts/customizer.js', 'scripts')
   .blocks('resources/assets/scripts/editor.js', 'scripts')
   .extract();
@@ -39,6 +43,11 @@ mix
 
 mix
   .autoload({ jquery: ['$', 'window.jQuery'] })
-  .options({ processCssUrls: false })
+  .options({ 
+    processCssUrls: false,
+    postCss: [
+      require('tailwindcss')('./tailwind.config.js'),
+    ]
+  })
   .sourceMaps(false, 'source-map')
   .version();
