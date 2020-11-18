@@ -28,11 +28,14 @@ module.exports = {
         brand: {
           yellow: '#fffd38',
           gray: '#f2f2f2',
+          red: '#FF2816',
         }
       },
     },
   },
-  variants: {},
+  variants: {
+    scale: ['responsive', 'hover', 'focus', 'group-hover'],
+  },
   plugins: [
     require('@tailwindcss/ui'),
     require('tailwindcss-aspect-ratio'),
