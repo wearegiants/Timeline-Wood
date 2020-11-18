@@ -2,7 +2,10 @@
 
 @import url('https://rsms.me/inter/inter.css');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+/* purgecss start ignore */
 @import '~tiny-slider/dist/tiny-slider.css';
+/* purgecss end ignore */
 
 @font-face {
   font-family: 'SuperGroteskPro';

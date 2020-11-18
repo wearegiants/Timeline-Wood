@@ -21,13 +21,62 @@ mix
     notify: false,
   });
 
+const purgecssWordpress = {
+  whitelistPatterns: [
+      /^(is-|has-|will-|js-|fs-|feather-|word-|aos-|wp-|aspect-|embed-|tns-|alm-|form-)/,
+      /^rtl(-.*)?$/,
+      /^home(-.*)?$/,
+      /^blog(-.*)?$/,
+      /^archive(-.*)?$/,
+      /^date(-.*)?$/,
+      /^error404(-.*)?$/,
+      /^logged-in(-.*)?$/,
+      /^admin-bar(-.*)?$/,
+      /^no-customize-support(-.*)?$/,
+      /^wp-custom-logo(-.*)?$/,
+      /^search(-.*)?$/,
+      /^nav(-.*)?$/,
+      /^wp(-.*)?$/,
+      /^screen(-.*)?$/,
+      /^navigation(-.*)?$/,
+      /^(.*)-template(-.*)?$/,
+      /^(.*)?-?single(-.*)?$/,
+      /^postid-(.*)?$/,
+      /^post-(.*)?$/,
+      /^attachmentid-(.*)?$/,
+      /^attachment(-.*)?$/,
+      /^page(-.*)?$/,
+      /^(post-type-)?archive(-.*)?$/,
+      /^author(-.*)?$/,
+      /^gallery(-.*)?$/,
+      /^category(-.*)?$/,
+      /^tag(-.*)?$/,
+      /^card(-.*)?$/,
+      /^menu(-.*)?$/,
+      /^tags(-.*)?$/,
+      /^tax-(.*)?$/,
+      /^term-(.*)?$/,
+      /^date-(.*)?$/,
+      /^(.*)?-?paged(-.*)?$/,
+      /^says(-.*)?$/,
+      /^depth(-.*)?$/,
+      /^comment(-.*)?$/,
+      /^comments(-.*)?$/,
+      /^children(-.*)?$/,
+      /^crnb(-.*)?$/,
+      /^custom(-.*)?$/,
+      /^custom-background(-.*)?$/,
+      /^port-description(-.*)?$/
+  ]
+};
+
 mix
   .sass('resources/assets/styles/app.scss', 'styles')
   .sass('resources/assets/styles/editor.scss', 'styles')
   .purgeCss({
     extend: { content: [path.join(__dirname, 'index.php')] },
     whitelist: require('purgecss-with-wordpress').whitelist,
-    whitelistPatterns: require('purgecss-with-wordpress').whitelistPatterns,
+    whitelistPatterns: purgecssWordpress.whitelistPatterns
   });
 
 mix
