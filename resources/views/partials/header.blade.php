@@ -1,6 +1,8 @@
+@if(get_field('notification_enable', 4))
 <div class="h-10 bg-black text-white text-tiny sm:text-xs font-bold tracking-widest flex items-center justify-center">
-  <span>WE'RE SHIPPING AS USUAL + FREE FOR U.S. ORDERS</span>
+  <span class="uppercase">{!! get_field('notification', 4) !!}</span>
 </div>
+@endif
 <div x-data='{ open : false }' class="sticky top-0 z-50">
   <header class="banner flex justify-between items-center bg-white z-10">
     <button @click="open = !open" class="h-16 container mx-0 w-1/5 lg:w-auto flex-none lg:hidden">
