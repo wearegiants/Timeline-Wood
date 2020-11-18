@@ -71,6 +71,7 @@ module.exports = {
     scale: ['responsive', 'hover', 'focus', 'group-hover'],
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
     translate: ['responsive', 'hover', 'focus', 'group-hover'],
+    display: ['responsive', 'hover', 'focus', 'group-hover'],
     borderWidth: ['last'],
   },
   plugins: [

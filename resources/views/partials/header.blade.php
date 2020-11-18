@@ -13,13 +13,21 @@
       <a class="bg-black inline-flex text-white brand items-center justify-center h-16 px-6" href="{{ home_url('/') }}">
         <img class="block h-4 w-auto" src="@asset('images/timeline-white.svg')" alt="{{ $siteName }}">
       </a>
-      <nav class="nav-primary space-x-10 px-10 hidden lg:block text-gray-700">
-        <a class="hover:text-brand-blue" href="//shop.timelinewood.com/">Products</a>
-        <a class="hover:text-brand-blue" href="/retailers">Retailers</a>
-        <a class="hover:text-brand-blue" href="/about">About</a>
-        <a class="hover:text-brand-blue" href="/press-room">Press</a>
-        <a class="hover:text-brand-blue" href="/contact">Contact</a>
-      </nav>
+      <ul class="nav-primary space-x-10 px-10 hidden lg:flex text-gray-700 items-center">
+        <li class="relative group">
+          <a class="hover:text-brand-blue" href="//shop.timelinewood.com/">Products</a>
+          <ul class="bg-white top-full px-10 py-6 -ml-10 absolute shadow-xl space-y-2 hidden group-hover:block">
+            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="/retailers">Skinnies</a></li>
+            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="/about">Classic Shiplap</a></li>
+            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="/press-room">Oak Shiplap</a></li>
+            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="/contact">Trim</a></li>
+          </ul>
+        </li>
+        <li><a class="hover:text-brand-blue" href="/retailers">Retailers</a></li>
+        <li><a class="hover:text-brand-blue" href="/about">About</a></li>
+        <li><a class="hover:text-brand-blue" href="/press-room">Press</a></li>
+        <li><a class="hover:text-brand-blue" href="/contact">Contact</a></li>
+      </ul>
     </div>
     <div class="w-1/5 lg:w-auto flex items-center">
       <a class="inline-flex text-black items-center justify-end xl:justify-center h-16 w-full container mx-0" href="//shop.timelinewood.com/cart">
