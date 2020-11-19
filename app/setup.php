@@ -147,3 +147,5 @@ add_action('widgets_init', function () {
         'id' => 'sidebar-footer'
     ] + $config);
 });
+
+add_filter('show_admin_bar', '__return_false');
