@@ -72,7 +72,7 @@ module.exports = {
     opacity: ['responsive', 'hover', 'focus', 'group-hover'],
     translate: ['responsive', 'hover', 'focus', 'group-hover'],
     display: ['responsive', 'hover', 'focus', 'group-hover'],
-    borderWidth: ['last'],
+    borderWidth: ['responsive', 'hover', 'focus', 'group-hover','last'],
   },
   plugins: [
     require('@tailwindcss/ui'),
