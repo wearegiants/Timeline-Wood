@@ -6,6 +6,7 @@
         <li><a href="/commercial-orders">Commercial Orders</a></li>
         <li><a href="/retailers">Retailers</a></li>
         <li><a href="/contact">Contact</a></li>
+        <li><a href="/faq">FAQ</a></li>
       </ul>
       <ul class="text-sm w-full">
         <li><a class="text-brand-blue" target="_blank" href="//www.facebook.com/TimelineWood/?fref=ts">Facebook</a></li>
