@@ -1,5 +1,5 @@
 @if(get_field('notification_enable', 4))
-<div class="h-10 bg-black text-white text-tiny sm:text-xs font-bold tracking-widest flex items-center justify-center">
+<div class="h-10 bg-brand-header text-white text-tiny sm:text-xs font-bold tracking-widest flex items-center justify-center">
   <span class="uppercase">{!! get_field('notification', 4) !!}</span>
 </div>
 @endif
@@ -11,7 +11,7 @@
     </button>
     <div class="flex items-center">
       <a class="bg-black inline-flex text-white brand items-center justify-center h-16 px-6" href="{{ home_url('/') }}">
-        <img class="block h-4 w-auto" src="@asset('images/timeline-white.svg')" alt="{{ $siteName }}">
+        <img class="block h-6 w-auto" src="@asset('images/timeline-white.svg')" alt="{{ $siteName }}">
       </a>
       <ul class="nav-primary space-x-10 px-10 hidden lg:flex text-gray-700 items-center">
         <li class="relative group">
