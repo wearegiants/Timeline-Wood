@@ -2,12 +2,12 @@
   <div class="absolute inset-0 flex items-center justify-center z-10">
     <div class="container text-center">
       <div class="text-white">
-        <div class="text-4xl md:text-6xl md:leading-tight">{{ the_field('feature_headline') }}</div>
-        <div class="mb-4 md:mb-8 text-lg">{{ the_field('feature_subheadline') }}</div>
+        <div class="text-4xl md:text-6xl">{{ the_field('feature_headline') }}</div>
+        <div class="mb-4 md:mb-8 text-xl">{{ the_field('feature_subheadline') }}</div>
       </div>
       <a
         href="{{ the_field('feature_link_url',4) }}" 
-        class="bg-white inline-flex items-center h-12 px-4 space-x-2 font-bold uppercase tracking-wide text-sm border-2 border-black hover:bg-black hover:text-white">
+        class="border-b text-white tracking-wider">
         <span>{{ the_field('feature_link_title',4) }}</span>
         <i height="16" width="16" data-feather="arrow-right"></i>
       </a>
