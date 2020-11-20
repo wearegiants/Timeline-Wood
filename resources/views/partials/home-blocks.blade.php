@@ -16,7 +16,7 @@
         </div>
         <div class="aspect-ratio-square"></div>
       </div>
-      <div class="py-4 text-center prose prose-2xl max-w-full lg:px-20">
+      <div class="py-4 text-center prose lg:prose-lg xl:prose-2xl max-w-full lg:px-20">
         <div class="">{!! $item['title'] !!}</div>
         <span class="text-sm border-b border-black text-black tracking-widest uppercase">{!! $item['link']['title'] !!}</span>
       </div>
