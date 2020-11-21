@@ -13,7 +13,7 @@
       <a class="bg-black inline-flex text-white brand items-center justify-center h-16 px-6" href="{{ home_url('/') }}">
         <img class="block h-6 w-auto" src="@asset('images/timeline-white.svg')" alt="{{ $siteName }}">
       </a>
-      <ul class="nav-primary space-x-10 px-10 hidden lg:flex text-gray-700 items-center">
+      <ul class="nav-primary space-x-10 px-10 hidden lg:flex text-gray-700 items-center text-xl">
         <li class="relative group">
           <a class="hover:text-brand-blue" href="//shop.timelinewood.com/">Products</a>
           <ul class="bg-white top-full px-10 py-6 -ml-10 absolute shadow-xl space-y-2 hidden group-hover:block">

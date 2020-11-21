@@ -3,13 +3,12 @@
     <div class="container text-center">
       <div class="text-white">
         <div class="text-4xl md:text-6xl">{{ the_field('feature_headline') }}</div>
-        <div class="mb-4 md:mb-8 text-xl">{{ the_field('feature_subheadline') }}</div>
+        <div class="mb-4 md:mb-8 text-2xl">{{ the_field('feature_subheadline') }}</div>
       </div>
       <a
         href="{{ the_field('feature_link_url',4) }}" 
         class="border-b text-white tracking-wider">
         <span>{{ the_field('feature_link_title',4) }}</span>
-        <i height="16" width="16" data-feather="arrow-right"></i>
       </a>
     </div>
   </div>
