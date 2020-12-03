@@ -21,6 +21,7 @@
   src: url('../fonts/SuperGroteskWeb.woff') format('woff2');
 }
 
+/* purgecss start ignore */
 .videoEmbed {
   iframe,
   embed,
@@ -35,6 +36,7 @@
     border: 0;
   }
 }
+/* purgecss end ignore */
 
 @tailwind components;
 @tailwind utilities;
