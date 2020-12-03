@@ -86,7 +86,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/ui'),
+    require('tailwindcss-responsive-embed'),
     require('tailwindcss-aspect-ratio'),
-    require('tailwindcss-responsive-embed')
   ],
 }

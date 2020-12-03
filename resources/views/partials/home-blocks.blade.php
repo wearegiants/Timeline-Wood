@@ -18,16 +18,18 @@
 
     <a id="item-{!! $i !!}" href="{{ $item['link']['url'] }}" class="relative block group {!! $span !!}">
       <div class="relative bg-gray-200">
-        <div class="absolute inset-0 bg-black overflow-hidden">
-          @if($item['video'])
-            {!! $item['video'] !!}
-          @else
-          <img 
-            src="{!! $item['image']['sizes']['large'] !!}" 
-            class="object-cover w-full h-full transform transition ease duration-700 group-hover:scale-105">
-          @endif
-        </div>
-        <div class="h-block-sm md:h-block-md lg:h-block-lg"></div>
+        @if($item['video'])
+          <div class="videoEmbed h-block-sm md:h-block-md lg:h-block-lg bg-black">
+            @include('components.video', [ 'video' => $item['video']])
+          </div>
+        @else
+          <div class="absolute inset-0 bg-black overflow-hidden">
+            <img 
+              src="{!! $item['image']['sizes']['large'] !!}" 
+              class="object-cover w-full h-full transform transition ease duration-700 group-hover:scale-105">
+          </div>
+          <div class="h-block-sm md:h-block-md lg:h-block-lg"></div>
+        @endif
       </div>
       <div class="py-4 text-center prose lg:prose-lg xl:prose-xl max-w-full">
         <div class="">{!! $item['title'] !!}</div>
