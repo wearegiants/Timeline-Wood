@@ -57,6 +57,7 @@
     "popper.js": "^1.16.1",
     "tailwindcss": "^1.9.6",
     "tailwindcss-aspect-ratio": "^3.0.0",
+    "tailwindcss-responsive-embed": "^1.0.0",
     "tiny-slider": "^2.9.3"
   }
 }

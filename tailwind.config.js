@@ -10,6 +10,10 @@ module.exports = {
     typography: (theme) => ({
       default: {
         css: {
+          small: {
+            fontSize: theme('fontSize.sm'),
+            letterSpacing: theme('letterSpacing.widest'),
+          },
           li: {
             marginBottom: '0',
             marginTop: '0',
@@ -55,6 +59,11 @@ module.exports = {
       fontSize: {
         'tiny': '10px',
       },
+      spacing: {
+        'block-sm':'350px',
+        'block-md':'400px',
+        'block-lg':'535px',
+      },
       colors: {
         brand: {
           yellow: '#fffd38',
@@ -63,7 +72,7 @@ module.exports = {
           blue: '#035DA9',
           orange: '#EB7366',
           green: '#76C28E',
-          header: '#787880'
+          header: '#000'
         }
       },
     },
@@ -78,5 +87,6 @@ module.exports = {
   plugins: [
     require('@tailwindcss/ui'),
     require('tailwindcss-aspect-ratio'),
+    require('tailwindcss-responsive-embed')
   ],
 }
