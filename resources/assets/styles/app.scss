@@ -3,9 +3,9 @@
 @import url('https://rsms.me/inter/inter.css');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
 
-/* purgecss start ignore */
+/*! purgecss start ignore */
 @import '~tiny-slider/dist/tiny-slider.css';
-/* purgecss end ignore */
+/*! purgecss end ignore */
 
 @font-face {
   font-family: 'SuperGroteskPro';
@@ -21,7 +21,28 @@
   src: url('../fonts/SuperGroteskWeb.woff') format('woff2');
 }
 
-/* purgecss start ignore */
+/*! purgecss start ignore */
+.nav-primary .menu-item {
+  @apply relative;
+}
+.nav-primary .menu-item a:hover {
+  @apply text-brand-blue;
+}
+.nav-primary .menu-item .sub-menu {
+  @apply bg-white top-full px-10 py-6 -ml-10 absolute shadow-xl hidden;
+}
+.nav-primary .menu-item:hover .sub-menu {
+  @apply block;
+}
+.nav-primary .menu-item:hover .sub-menu .menu-item {
+  @apply mb-2;
+}
+.nav-primary .menu-item:hover .sub-menu .menu-item:last-child {
+  @apply mb-0;
+}
+/*! purgecss end ignore */
+
+/*! purgecss start ignore */
 .videoEmbed {
   iframe,
   embed,
@@ -36,7 +57,7 @@
     border: 0;
   }
 }
-/* purgecss end ignore */
+/*! purgecss end ignore */
 
 @tailwind components;
 @tailwind utilities;
