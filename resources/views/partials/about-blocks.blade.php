@@ -12,7 +12,7 @@
 
 <section>
   @php while ( $parent->have_posts() ) : $parent->the_post(); @endphp
-    <div data-aos="fade-up">
+    <div data-aos="fade-up" class="ease duration-500">
       <div class="container lg:grid grid-cols-3 gap-8 border-b last:border-0 border-gray-100 pb-10 mb-10">
         <div class="col-span-2 lg:order-last mb-4 lg:mb-0">
           <div class="relative">
