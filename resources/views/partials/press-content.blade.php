@@ -16,7 +16,7 @@
       <div class="absolute inset-0 flex items-center justify-center z-20 bg-black bg-opacity-25">
         <h1 class="text-center text-white text-3xl">@php the_title(); @endphp</h1>
       </div>
-      <div class="relative mb-3 overflow-hidden">
+      <div class="relative overflow-hidden">
         @include('components.image',[
           'image' => get_post_thumbnail_id(),
           'size'  => 'large',
