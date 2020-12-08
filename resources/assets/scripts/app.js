@@ -5,6 +5,9 @@ import 'jquery';
 const feather = require('feather-icons')
 import 'alpinejs'
 import { tns } from "tiny-slider/src/tiny-slider"
+import AOS from 'aos';
+
+AOS.init();
 
 $(document).ready(() => {
   feather.replace();

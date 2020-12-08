@@ -16,7 +16,7 @@
     } 
   @endphp
 
-    <a id="item-{!! $i !!}" href="{{ $item['link']['url'] }}" class="relative block group {!! $span !!}">
+    <a data-aos="fade-up" id="item-{!! $i !!}" href="{{ $item['link']['url'] }}" class="relative block group {!! $span !!}">
       <div class="relative bg-gray-200">
         @if($item['video'])
           <div class="videoEmbed h-block-sm md:h-block-md lg:h-block-lg bg-black">
