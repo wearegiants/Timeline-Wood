@@ -1,18 +1,12 @@
 <footer class="bg-brand-gray @if(!is_front_page()) mt-20 @endif">
   <div class="container flex flex-wrap py-12">
     <div class="w-full mb-6 lg:mb-0 lg:w-2/3 flex leading-loose">
-      <ul class="text-sm w-full">
-        <li><a href="//shop.timelinewood.com">Products</a></li>
-        <li><a href="/commercial-orders">Commercial Orders</a></li>
-        <li><a href="/retailers">Retailers</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <!-- <li><a href="/faq">FAQ</a></li> -->
-      </ul>
-      <ul class="text-sm w-full">
-        <li><a class="text-brand-blue" target="_blank" href="//www.facebook.com/TimelineWood/?fref=ts">Facebook</a></li>
-        <li><a class="text-brand-blue" target="_blank" href="//www.instagram.com/timelinewood/">Instagram</a></li>
-        <li><a class="text-brand-blue" target="_blank" href="//twitter.com/TimelineWood">Twitter</a></li>
-      </ul>
+      @if (has_nav_menu('footer_first'))
+        {!! wp_nav_menu(['theme_location' => 'footer_first', 'menu_class' => 'text-sm w-full', 'container'=> false, 'echo' => false]) !!}
+      @endif
+      @if (has_nav_menu('footer_second'))
+        {!! wp_nav_menu(['theme_location' => 'footer_second', 'menu_class' => 'text-sm w-full text-brand-blue', 'container'=> false, 'echo' => false]) !!}
+      @endif
       <div class="text-sm w-full">
         Timeline Studio<br>
         3217 NW Guam Street<br>
