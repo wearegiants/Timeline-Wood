@@ -16,13 +16,7 @@
       </div>
     </div>
     <div class="w-full lg:w-1/3">
-      <label class="mb-1 block">Join Our Newsletter</label>
-      <div class="relative">
-        <input class="block w-full h-12 px-4" type="text" placeholder="Email Address">
-        <button 
-          class="h-6 w-6 bg-blue-500 rounded-full absolute right-0 top-0 m-3" 
-          type="submit"><span class="sr-only">Submit</span></button>
-      </div>
+      @include('components.subscribe')
     </div>
   </div>
   <div class="container lg:flex lg:justify-between text-tiny uppercase tracking-widest text-gray-400 pb-12 font-mono">

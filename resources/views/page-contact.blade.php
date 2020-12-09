@@ -26,10 +26,7 @@
       {!! get_field('join') !!}
     </div>
     <div class="col-span-2 space-y-2">
-      <input class="block w-full h-12 md:h-16 px-6 border border-gray-200 rounded" type="text" placeholder="Email Address">
-      <div class="text-right">
-        <button class="block md:inline-block w-full md:w-auto rounded h-12 px-6 border-0 bg-brand-orange text-white font-bold" type="submit">Sign Up Now</button>
-      </div>
+      @include('components.subscribe-contact')
     </div>
   </div>
 </div>
