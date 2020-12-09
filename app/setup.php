@@ -73,6 +73,7 @@ add_action('after_setup_theme', function () {
         'primary_navigation' => __('Primary Navigation', 'sage'),
         'footer_first' => __('Footer First', 'sage'),
         'footer_second' => __('Footer Second', 'sage'),
+        'footer_terms' => __('Footer Terms', 'sage'),
     ]);
 
     /**

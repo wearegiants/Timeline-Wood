@@ -26,17 +26,14 @@
     </div>
   </div>
   <div class="container lg:flex lg:justify-between text-tiny uppercase tracking-widest text-gray-400 pb-12 font-mono">
-    <ul class="md:space-x-4 md:flex md:items-center md:h-8 justify-center space-y-2 md:space-y-0 mb-4 md:mb-0">
-      <li class="">© 2009-2020 TIMELINE PRODUCTS, LLC.</li>
-      <li class=""><a class="hover:text-gray-600" href="/privacy-policy">Privacy Policy.</a></li>
-      <li class=""><a class="hover:text-gray-600" href="/terms-conditions">Terms & Conditions.</a></li>
-      <li class=""><a class="hover:text-gray-600" href="/cookies">Cookies.</a></li>
-    </ul>
+    @if (has_nav_menu('footer_terms'))
+      {!! wp_nav_menu(['theme_location' => 'footer_terms', 'menu_class' => 'md:space-x-4 md:flex md:items-center md:h-8 justify-center space-y-2 md:space-y-0 mb-4 md:mb-0', 'container'=> false, 'echo' => false]) !!}
+    @endif
     <div class="text-center md:text-right relative group lg:overflow-hidden lg:h-8">
       <div class="uppercase transition ease duration-300 lg:transform group-hover:-translate-y-full whitespace-no-wrap h-8 hidden lg:inline-flex items-center">+ Site Credits</div>
       <div class="uppercase transition ease duration-300 lg:transform whitespace-no-wrap group-hover:-translate-y-full lg:h-8 lg:flex items-center text-left md:text-center">
         <a class="hover:text-gray-600" target="_blank" href="//hassanrahim.com" class="">Design by 12:01</a> | 
-        <a class="hover:text-gray-600" target="_blank" href="//madebyhowler.com" class="">Code by HOWLER</a>
+        <a class="hover:text-gray-600" target="_blank" href="//madebyhowler.com" class="">Made by HOWLER</a>
       </div>
     </div>
   </div>
