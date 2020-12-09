@@ -16,25 +16,10 @@
       @if (has_nav_menu('primary_navigation'))
         {!! wp_nav_menu(['theme_location' => 'primary_navigation', 'menu_class' => 'nav-primary space-x-10 px-10 hidden lg:flex text-gray-700 items-center', 'echo' => false]) !!}
       @endif
-      <!-- <ul class="nav-primary space-x-10 px-10 hidden lg:flex text-gray-700 items-center">
-        <li class="relative group">
-          <a class="hover:text-brand-blue" href="//shop.timelinewood.com/">Products</a>
-          <ul class="bg-white top-full px-10 py-6 -ml-10 absolute shadow-xl space-y-2 hidden group-hover:block">
-            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="//shop.timelinewood.com/collections/skinnies">Skinnies</a></li>
-            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="//shop.timelinewood.com/collections/shiplap">Classic Shiplap</a></li>
-            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="//shop.timelinewood.com/collections/oak-shiplap">Oak Shiplap</a></li>
-            <li class="whitespace-no-wrap"><a class="hover:text-brand-blue" href="//shop.timelinewood.com/collections/trim">Trim</a></li>
-          </ul>
-        </li>
-        <li><a class="hover:text-brand-blue" href="/retailers">Retailers</a></li>
-        <li><a class="hover:text-brand-blue" href="/about">About</a></li>
-        <li><a class="hover:text-brand-blue" href="/press-room">Press</a></li>
-        <li><a class="hover:text-brand-blue" href="/contact">Contact</a></li>
-      </ul> -->
     </div>
     <div class="w-1/5 lg:w-auto flex items-center">
       <a class="inline-flex text-black items-center justify-end xl:justify-center h-16 w-full container mx-0" href="//shop.timelinewood.com/cart">
-        <span class="text-center leading-tight">Bag(0)</span>
+        <i stroke-width="1" data-feather="shopping-bag"></i>
       </a>
       <a class="bg-brand-yellow text-black items-center justify-center h-16 px-6 hidden lg:flex flex-none" href="/commercial-applications">
         <span class="text-center leading-tight block">Commercial Products<br>for Architects + Designers</span>
