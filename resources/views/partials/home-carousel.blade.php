@@ -20,7 +20,7 @@
       </div>
       <a
         href="{{ the_field('feature_link_url',4) }}" 
-        class="border-b text-white tracking-wider">
+        class="border-b {{ $textColor }} tracking-wider">
         <span>{{ the_field('feature_link_title',4) }}</span>
       </a>
     </div>
