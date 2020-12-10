@@ -14,7 +14,7 @@
 <div class="bg-black relative -mt-px">
   <div class="absolute inset-0 flex items-center justify-center z-10">
     <div class="container text-center">
-      <div class="text-white">
+      <div class="{{ $textColor }}">
         <div class="text-4xl md:text-6xl">{{ the_field('feature_headline') }}</div>
         <div class="mb-4 md:mb-8 text-2xl">{{ the_field('feature_subheadline') }}</div>
       </div>
