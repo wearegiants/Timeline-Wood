@@ -1,3 +1,16 @@
+@php
+  $color = get_field('feature_headline_color');
+  if ($color == 'color--white') {
+    $textColor = 'text-white';
+  } elseif($color == 'color--black') {
+    $textColor = 'text-black';
+  } elseif($color == 'color--gray') {
+    $textColor = 'text-gray-500';
+  } else {
+    $textColor = 'text-black';
+  }
+@endphp
+
 <div class="bg-black relative -mt-px">
   <div class="absolute inset-0 flex items-center justify-center z-10">
     <div class="container text-center">
